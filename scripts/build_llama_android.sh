@@ -118,7 +118,7 @@ echo "Build completed. Checking for output files..."
 ls -la lib* 2>/dev/null || echo "No lib* files in current directory"
 
 # Копируем библиотеку в нужное место
-OUTPUT_DIR="../../android/app/src/main/jniLibs/$ANDROID_ABI"
+OUTPUT_DIR="$PROJECT_ROOT/android/app/src/main/jniLibs/$ANDROID_ABI"
 mkdir -p "$OUTPUT_DIR"
 
 # Ищем скомпилированную библиотеку
