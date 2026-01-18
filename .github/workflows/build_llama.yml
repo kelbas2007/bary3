@@ -34,6 +34,9 @@ jobs:
           chmod +x scripts/build_llama_android.sh
           export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
           export ANDROID_NDK_ROOT=$ANDROID_NDK_ROOT
+          echo "ANDROID_NDK_ROOT: $ANDROID_NDK_ROOT"
+          echo "ANDROID_NDK_HOME: $ANDROID_NDK_HOME"
+          ls -la $ANDROID_NDK_ROOT 2>/dev/null | head -10 || echo "NDK root not accessible"
           bash scripts/build_llama_android.sh
       
       - name: Check build artifacts

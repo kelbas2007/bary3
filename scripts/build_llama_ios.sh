@@ -67,12 +67,19 @@ fi
 
 # Компиляция
 echo "Building llama.cpp..."
-cmake --build . --config Release -j$(sysctl -n hw.logicalcpu 2>/dev/null || echo 4)
+CPU_COUNT=$(sysctl -n hw.logicalcpu 2>/dev/null || echo 4)
+echo "Using $CPU_COUNT parallel jobs"
+cmake --build . --config Release -j$CPU_COUNT || cmake --build . -j$CPU_COUNT
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Build failed"
+    echo "Build directory contents:"
+    ls -la
     exit 1
 fi
+
+echo "Build completed. Checking for output files..."
+ls -la lib* 2>/dev/null || echo "No lib* files in current directory"
 
 # Создаем framework
 echo "Creating framework..."

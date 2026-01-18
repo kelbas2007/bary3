@@ -49,9 +49,21 @@ ANDROID_ABI="arm64-v8a"
 echo ""
 echo "=== Building for $ARCH ==="
 
+# Проверяем наличие toolchain файла
+TOOLCHAIN_FILE="$NDK_PATH/build/cmake/android.toolchain.cmake"
+if [ ! -f "$TOOLCHAIN_FILE" ]; then
+    echo "ERROR: CMake toolchain file not found: $TOOLCHAIN_FILE"
+    echo "NDK Path: $NDK_PATH"
+    echo "Contents of NDK path:"
+    ls -la "$NDK_PATH" | head -20
+    exit 1
+fi
+
+echo "Using toolchain: $TOOLCHAIN_FILE"
+
 # Конфигурируем CMake
 cmake ../"$LLAMA_CPP_DIR" \
-    -DCMAKE_TOOLCHAIN_FILE="$NDK_PATH/build/cmake/android.toolchain.cmake" \
+    -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN_FILE" \
     -DANDROID_ABI="$ANDROID_ABI" \
     -DANDROID_PLATFORM=android-23 \
     -DANDROID_STL=c++_shared \
@@ -67,33 +79,78 @@ cmake ../"$LLAMA_CPP_DIR" \
 
 if [ $? -ne 0 ]; then
     echo "ERROR: CMake configuration failed"
+    echo "CMake version:"
+    cmake --version
     exit 1
 fi
 
 # Собираем
 echo "Building..."
-cmake --build . --config Release -j$(nproc)
+echo "Using $(nproc) parallel jobs"
+cmake --build . --config Release -j$(nproc) || cmake --build . -j$(nproc)
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Build failed"
+    echo "Build directory contents:"
+    ls -la
+    echo ""
+    echo "CMakeCache.txt (first 50 lines):"
+    head -50 CMakeCache.txt 2>/dev/null || echo "CMakeCache.txt not found"
     exit 1
 fi
+
+echo "Build completed. Checking for output files..."
+ls -la lib* 2>/dev/null || echo "No lib* files in current directory"
 
 # Копируем библиотеку в нужное место
 OUTPUT_DIR="../../android/app/src/main/jniLibs/$ANDROID_ABI"
 mkdir -p "$OUTPUT_DIR"
 
 # Ищем скомпилированную библиотеку
-if [ -f "libllama.so" ]; then
-    cp libllama.so "$OUTPUT_DIR/"
-    echo "✅ Copied libllama.so to $OUTPUT_DIR"
-elif [ -f "build/libllama.so" ]; then
-    cp build/libllama.so "$OUTPUT_DIR/"
-    echo "✅ Copied libllama.so to $OUTPUT_DIR"
-else
-    echo "WARNING: libllama.so not found in build directory"
-    echo "Searching for .so files..."
-    find . -name "*.so" -type f
+# CMake может создавать библиотеку в разных местах в зависимости от конфигурации
+LIB_FOUND=false
+
+# Проверяем возможные расположения
+POSSIBLE_PATHS=(
+    "libllama.so"
+    "lib/llama.so"
+    "lib/libllama.so"
+    "Release/libllama.so"
+    "lib/Release/libllama.so"
+    "build/libllama.so"
+)
+
+echo "Searching for libllama.so..."
+for path in "${POSSIBLE_PATHS[@]}"; do
+    if [ -f "$path" ]; then
+        echo "Found library at: $path"
+        cp "$path" "$OUTPUT_DIR/libllama.so"
+        echo "✅ Copied libllama.so to $OUTPUT_DIR"
+        LIB_FOUND=true
+        break
+    fi
+done
+
+# Если не нашли, ищем все .so файлы
+if [ "$LIB_FOUND" = false ]; then
+    echo "WARNING: libllama.so not found in expected locations"
+    echo "Searching for all .so files in build directory..."
+    find . -name "*.so" -type f | head -10
+    
+    # Попробуем найти любую библиотеку llama
+    FOUND_LIB=$(find . -name "*llama*.so" -type f | head -1)
+    if [ -n "$FOUND_LIB" ]; then
+        echo "Found llama library at: $FOUND_LIB"
+        cp "$FOUND_LIB" "$OUTPUT_DIR/libllama.so"
+        echo "✅ Copied to $OUTPUT_DIR/libllama.so"
+        LIB_FOUND=true
+    fi
+fi
+
+if [ "$LIB_FOUND" = false ]; then
+    echo "ERROR: Could not find compiled library"
+    echo "Build directory contents:"
+    ls -la
     exit 1
 fi
 
