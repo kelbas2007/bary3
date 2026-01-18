@@ -62,7 +62,7 @@ fi
 echo "Using toolchain: $TOOLCHAIN_FILE"
 
 # Конфигурируем CMake
-# Пробуем собрать shared библиотеку напрямую
+# Используем оба флага для надежности: BUILD_SHARED_LIBS и LLAMA_BUILD_SHARED_LIBS
 cmake ../"$LLAMA_CPP_DIR" \
     -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN_FILE" \
     -DANDROID_ABI="$ANDROID_ABI" \
@@ -70,6 +70,7 @@ cmake ../"$LLAMA_CPP_DIR" \
     -DANDROID_STL=c++_shared \
     -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_SHARED_LIBS=ON \
+    -DLLAMA_BUILD_SHARED_LIBS=ON \
     -DLLAMA_BUILD_EXAMPLES=OFF \
     -DLLAMA_BUILD_TESTS=OFF \
     -DLLAMA_BUILD_SERVER=OFF \
