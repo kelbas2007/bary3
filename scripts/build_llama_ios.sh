@@ -90,31 +90,112 @@ mkdir -p "$FRAMEWORK_DIR"
 
 # Ищем скомпилированную библиотеку
 LIB_FOUND=false
+FOUND_LIB=""
 
-if [ -f "$BUILD_DIR/libllama.dylib" ]; then
-    cp "$BUILD_DIR/libllama.dylib" "$FRAMEWORK_DIR/llama"
-    LIB_FOUND=true
-elif [ -f "$BUILD_DIR/Release/libllama.dylib" ]; then
-    cp "$BUILD_DIR/Release/libllama.dylib" "$FRAMEWORK_DIR/llama"
-    LIB_FOUND=true
-elif [ -f "$BUILD_DIR/libllama.a" ]; then
-    # Статическая библиотека - создаем framework из .a
-    cp "$BUILD_DIR/libllama.a" "$FRAMEWORK_DIR/llama"
-    LIB_FOUND=true
-elif [ -f "$BUILD_DIR/Release/libllama.a" ]; then
-    cp "$BUILD_DIR/Release/libllama.a" "$FRAMEWORK_DIR/llama"
-    LIB_FOUND=true
+# Проверяем возможные расположения
+POSSIBLE_PATHS=(
+    "$BUILD_DIR/libllama.dylib"
+    "$BUILD_DIR/Release/libllama.dylib"
+    "$BUILD_DIR/lib/llama.dylib"
+    "$BUILD_DIR/lib/libllama.dylib"
+    "$BUILD_DIR/libllama.a"
+    "$BUILD_DIR/Release/libllama.a"
+    "$BUILD_DIR/lib/llama.a"
+    "$BUILD_DIR/lib/libllama.a"
+)
+
+echo "Searching for compiled library..."
+for path in "${POSSIBLE_PATHS[@]}"; do
+    if [ -f "$path" ]; then
+        echo "Found library at: $path"
+        FOUND_LIB="$path"
+        LIB_FOUND=true
+        break
+    fi
+done
+
+# Если не нашли, ищем рекурсивно
+if [ "$LIB_FOUND" = false ]; then
+    echo "WARNING: Library not found in expected locations"
+    echo "Searching recursively..."
+    FOUND_LIB=$(find "$BUILD_DIR" -name "*llama*.dylib" -o -name "*llama*.a" 2>/dev/null | head -1)
+    if [ -n "$FOUND_LIB" ]; then
+        echo "Found library at: $FOUND_LIB"
+        LIB_FOUND=true
+    fi
 fi
 
 if [ "$LIB_FOUND" = false ]; then
-    echo "WARNING: libllama.dylib or libllama.a not found in expected locations"
-    echo "Searching for library files..."
-    find "$BUILD_DIR" -name "*.dylib" -o -name "*.a" | head -5
+    echo "ERROR: Could not find compiled library"
+    echo "Build directory contents:"
+    ls -la "$BUILD_DIR" | head -20
     echo ""
-    echo "Listing build directory contents:"
-    ls -la "$BUILD_DIR" | head -10
+    echo "Searching for all library files:"
+    find "$BUILD_DIR" -name "*.dylib" -o -name "*.a" 2>/dev/null | head -10
     exit 1
 fi
+
+# Копируем библиотеку в framework
+if [[ "$FOUND_LIB" == *.dylib ]]; then
+    # Shared library - просто копируем
+    cp "$FOUND_LIB" "$FRAMEWORK_DIR/llama"
+    echo "✅ Copied dylib to framework"
+elif [[ "$FOUND_LIB" == *.a ]]; then
+    # Статическая библиотека - создаем shared из неё
+    echo "Found static library, creating shared library from it..."
+    
+    # Получаем путь к компилятору
+    CLANGXX=$(xcrun --find clang++ 2>/dev/null || echo "clang++")
+    
+    if [ -n "$CLANGXX" ]; then
+        echo "Creating shared library from static using $CLANGXX..."
+        "$CLANGXX" \
+            -shared \
+            -o "$FRAMEWORK_DIR/llama" \
+            -Wl,-all_load "$FOUND_LIB" \
+            -Wl,-noall_load \
+            -framework Foundation \
+            -framework Metal \
+            -framework Accelerate \
+            -install_name "@rpath/llama.framework/llama" \
+            -compatibility_version 1.0.0 \
+            -current_version 1.0.0
+        
+        if [ -f "$FRAMEWORK_DIR/llama" ]; then
+            echo "✅ Created shared library from static library"
+        else
+            echo "WARNING: Failed to create shared library, copying static library as fallback"
+            cp "$FOUND_LIB" "$FRAMEWORK_DIR/llama"
+        fi
+    else
+        echo "WARNING: Could not find clang++, copying static library as fallback"
+        cp "$FOUND_LIB" "$FRAMEWORK_DIR/llama"
+    fi
+fi
+
+# Создаем Info.plist для framework (опционально, но рекомендуется)
+cat > "$FRAMEWORK_DIR/Info.plist" <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleExecutable</key>
+    <string>llama</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.example.llama</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundlePackageType</key>
+    <string>FMWK</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+</dict>
+</plist>
+EOF
 
 echo "✅ Framework created at $FRAMEWORK_DIR"
 
