@@ -62,6 +62,7 @@ fi
 echo "Using toolchain: $TOOLCHAIN_FILE"
 
 # Конфигурируем CMake
+# ВАЖНО: llama.cpp использует LLAMA_BUILD_SHARED_LIBS, а не BUILD_SHARED_LIBS
 cmake ../"$LLAMA_CPP_DIR" \
     -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN_FILE" \
     -DANDROID_ABI="$ANDROID_ABI" \
@@ -71,6 +72,7 @@ cmake ../"$LLAMA_CPP_DIR" \
     -DLLAMA_BUILD_EXAMPLES=OFF \
     -DLLAMA_BUILD_TESTS=OFF \
     -DLLAMA_BUILD_SERVER=OFF \
+    -DLLAMA_BUILD_SHARED_LIBS=ON \
     -DBUILD_SHARED_LIBS=ON \
     -DGGML_METAL=OFF \
     -DGGML_CUDA=OFF \
@@ -166,6 +168,7 @@ if [ "$LIB_FOUND" = false ]; then
         # Если это .a файл, нужно будет создать .so из него или использовать как есть
         if [[ "$FOUND_LIB" == *.a ]]; then
             echo "WARNING: Found static library (.a), but need shared library (.so)"
+            echo "This means LLAMA_BUILD_SHARED_LIBS=ON did not work."
             echo "Trying to use static library as fallback..."
             # Для Android можно использовать статическую библиотеку, но нужно изменить подход
             # Пока просто копируем и переименовываем
@@ -184,6 +187,12 @@ if [ "$LIB_FOUND" = false ]; then
     echo "ERROR: Could not find compiled library"
     echo "Build directory contents:"
     ls -la
+    echo ""
+    echo "Checking CMakeCache.txt for LLAMA_BUILD_SHARED_LIBS:"
+    grep -i "LLAMA_BUILD_SHARED_LIBS" CMakeCache.txt 2>/dev/null || echo "Not found in CMakeCache.txt"
+    echo ""
+    echo "Checking for any build artifacts:"
+    find . -type f -name "*.so" -o -name "*.a" -o -name "*.dylib" 2>/dev/null | head -20
     exit 1
 fi
 
