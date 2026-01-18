@@ -62,8 +62,8 @@ fi
 echo "Using toolchain: $TOOLCHAIN_FILE"
 
 # Конфигурируем CMake
-# Пробуем разные варианты флагов для shared library
-# llama.cpp может использовать разные флаги в зависимости от версии
+# Сначала пробуем собрать статическую библиотеку (по умолчанию)
+# Затем попробуем создать shared из статической, если нужно
 cmake ../"$LLAMA_CPP_DIR" \
     -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN_FILE" \
     -DANDROID_ABI="$ANDROID_ABI" \
@@ -73,9 +73,6 @@ cmake ../"$LLAMA_CPP_DIR" \
     -DLLAMA_BUILD_EXAMPLES=OFF \
     -DLLAMA_BUILD_TESTS=OFF \
     -DLLAMA_BUILD_SERVER=OFF \
-    -DLLAMA_SHARED=ON \
-    -DLLAMA_BUILD_SHARED_LIBS=ON \
-    -DBUILD_SHARED_LIBS=ON \
     -DGGML_METAL=OFF \
     -DGGML_CUDA=OFF \
     -DGGML_OPENBLAS=OFF \
@@ -167,19 +164,51 @@ if [ "$LIB_FOUND" = false ]; then
     FOUND_LIB=$(find . -name "*llama*.so" -o -name "*llama*.a" 2>/dev/null | head -1)
     if [ -n "$FOUND_LIB" ]; then
         echo "Found llama library at: $FOUND_LIB"
-        # Если это .a файл, нужно будет создать .so из него или использовать как есть
+        # Если это .a файл, попробуем создать .so из него
         if [[ "$FOUND_LIB" == *.a ]]; then
-            echo "WARNING: Found static library (.a), but need shared library (.so)"
-            echo "This means LLAMA_BUILD_SHARED_LIBS=ON did not work."
-            echo "Trying to use static library as fallback..."
-            # Для Android можно использовать статическую библиотеку, но нужно изменить подход
-            # Пока просто копируем и переименовываем
-            cp "$FOUND_LIB" "$OUTPUT_DIR/libllama.a"
-            echo "✅ Copied static library to $OUTPUT_DIR/libllama.a"
-            echo "NOTE: Static library may not work with FFI. Consider building as shared library."
+            echo "Found static library (.a), creating shared library (.so) from it..."
+            
+            # Получаем путь к компилятору из NDK
+            NDK_TOOLCHAIN="$NDK_PATH/toolchains/llvm/prebuilt/linux-x86_64"
+            if [ ! -d "$NDK_TOOLCHAIN" ]; then
+                # Пробуем альтернативные пути
+                NDK_TOOLCHAIN="$NDK_PATH/toolchains/llvm/prebuilt/$(uname -m | tr '[:upper:]' '[:lower:]')-$(uname -s | tr '[:upper:]' '[:lower:]')"
+            fi
+            
+            # Ищем clang++ для создания shared библиотеки
+            CLANGXX=$(find "$NDK_TOOLCHAIN" -name "clang++" -type f 2>/dev/null | head -1)
+            
+            if [ -n "$CLANGXX" ] && [ -f "$CLANGXX" ]; then
+                echo "Creating shared library from static library using $CLANGXX..."
+                "$CLANGXX" \
+                    -shared \
+                    -o "$OUTPUT_DIR/libllama.so" \
+                    -Wl,--whole-archive "$FOUND_LIB" \
+                    -Wl,--no-whole-archive \
+                    -Wl,-soname,libllama.so \
+                    -llog -landroid
+                
+                if [ -f "$OUTPUT_DIR/libllama.so" ]; then
+                    echo "✅ Created shared library from static library"
+                    LIB_FOUND=true
+                else
+                    echo "WARNING: Failed to create shared library, copying static library as fallback"
+                    cp "$FOUND_LIB" "$OUTPUT_DIR/libllama.a"
+                    echo "✅ Copied static library to $OUTPUT_DIR/libllama.a"
+                    echo "NOTE: Static library may not work with FFI. Consider building as shared library."
+                    LIB_FOUND=true
+                fi
+            else
+                echo "WARNING: Could not find clang++ in NDK, copying static library as fallback"
+                cp "$FOUND_LIB" "$OUTPUT_DIR/libllama.a"
+                echo "✅ Copied static library to $OUTPUT_DIR/libllama.a"
+                echo "NOTE: Static library may not work with FFI. Consider building as shared library."
+                LIB_FOUND=true
+            fi
         else
             cp "$FOUND_LIB" "$OUTPUT_DIR/libllama.so"
             echo "✅ Copied to $OUTPUT_DIR/libllama.so"
+            LIB_FOUND=true
         fi
         LIB_FOUND=true
     fi
