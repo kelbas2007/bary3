@@ -43,3 +43,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Large model files (use Git LFS or download separately)
+assets/aka/models/*.bin
+assets/aka/models/*.gguf
