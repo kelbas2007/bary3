@@ -1,0 +1,87 @@
+name: Build llama.cpp for AKA
+
+on:
+  workflow_dispatch: # Ручной запуск
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'scripts/build_llama_*.sh'
+      - '.github/workflows/build_llama.yml'
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Android NDK
+        uses: android-actions/setup-android-ndk@v2
+        with:
+          ndk-version: '26.3.11579264'
+      
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake build-essential git
+      
+      - name: Build for ARM64
+        run: |
+          chmod +x scripts/build_llama_android.sh
+          export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
+          bash scripts/build_llama_android.sh
+      
+      - name: Check build artifacts
+        run: |
+          if [ -f "android/app/src/main/jniLibs/arm64-v8a/libllama.so" ]; then
+            echo "✅ Library built successfully"
+            ls -lh android/app/src/main/jniLibs/arm64-v8a/
+          else
+            echo "❌ Library not found"
+            find . -name "libllama.so" -type f 2>/dev/null || echo "No .so files found"
+            exit 1
+          fi
+      
+      - name: Upload Android libraries
+        uses: actions/upload-artifact@v4
+        with:
+          name: llama-android-libs
+          path: android/app/src/main/jniLibs/
+          retention-days: 30
+          if-no-files-found: error
+
+  build-ios:
+    runs-on: macos-latest
+    timeout-minutes: 60
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Build for iOS
+        run: |
+          chmod +x scripts/build_llama_ios.sh
+          bash scripts/build_llama_ios.sh
+      
+      - name: Check build artifacts
+        run: |
+          if [ -d "ios/Frameworks/llama.framework" ]; then
+            echo "✅ Framework built successfully"
+            ls -lh ios/Frameworks/llama.framework/
+          else
+            echo "❌ Framework not found"
+            find . -name "llama.framework" -type d 2>/dev/null || echo "No framework found"
+            exit 1
+          fi
+      
+      - name: Upload iOS framework
+        uses: actions/upload-artifact@v4
+        with:
+          name: llama-ios-framework
+          path: ios/Frameworks/llama.framework/
+          retention-days: 30
+          if-no-files-found: error
