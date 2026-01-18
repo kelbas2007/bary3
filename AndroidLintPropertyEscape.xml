@@ -1,0 +1,28 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/android/local.properties</file>
+  <line>1</line>
+  <module>bary3_android</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/android/local.properties" />
+  <problem_class id="AndroidLintPropertyEscape" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Incorrect property escapes</problem_class>
+  <hints />
+  <description>&lt;html&gt;Windows file separators (&lt;code&gt;\&lt;/code&gt;) and drive letter separators (':') must be escaped (&lt;code&gt;\\&lt;/code&gt;) in property files; use C\:\\Users\\kolba\\AppData\\Local\\Android\\sdk&lt;/html&gt;</description>
+  <highlighted_element>C:\\Users\\kolba\\AppData\\Local\\Android\\sdk</highlighted_element>
+  <language>Properties</language>
+  <offset>8</offset>
+  <length>46</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/android/local.properties</file>
+  <line>2</line>
+  <module>bary3_android</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/android/local.properties" />
+  <problem_class id="AndroidLintPropertyEscape" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Incorrect property escapes</problem_class>
+  <hints />
+  <description>&lt;html&gt;Windows file separators (&lt;code&gt;\&lt;/code&gt;) and drive letter separators (':') must be escaped (&lt;code&gt;\\&lt;/code&gt;) in property files; use C\:\\flutter\\flutter&lt;/html&gt;</description>
+  <highlighted_element>C:\\flutter\\flutter</highlighted_element>
+  <language>Properties</language>
+  <offset>12</offset>
+  <length>20</length>
+</problem>
+</problems>

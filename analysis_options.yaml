@@ -1,0 +1,35 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Запрещаем хардкодные строки на русском языке
+    - avoid_print
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    
+    # Дополнительные правила для качества кода
+    - always_declare_return_types
+    - avoid_empty_else
+    - avoid_redundant_argument_values
+    - avoid_unnecessary_containers
+    - prefer_final_fields
+    - prefer_final_locals
+    - prefer_single_quotes
+    - sort_pub_dependencies
+    - use_key_in_widget_constructors
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "build/**"
+    - "lib/l10n/app_localizations*.dart"  # Сгенерированные файлы
+    - "scripts/**"
+    - "tools/**"
+    - "test/**"
+  
+  errors:
+    # Предупреждения о потенциальных проблемах
+    invalid_annotation_target: warning
+    missing_required_param: error
+    missing_return: error

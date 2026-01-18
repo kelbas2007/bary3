@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Actions Entity Strings -->
+    <string name="balance_entity">баланс, кошелёк, деньги</string>
+    <string name="screen_balance">баланс, кошелёк</string>
+    <string name="screen_piggy_banks">копилки, копилка, цели</string>
+    <string name="screen_calendar">календарь, события, планы</string>
+    <string name="screen_lessons">уроки, обучение</string>
+    <string name="screen_notes">заметки, записи</string>
+    <string name="screen_tools">инструменты, центр инструментов</string>
+    <string name="screen_earnings_lab">лаборатория заработка, заработок</string>
+    <string name="note_entity">заметка, запись</string>
+    <string name="event_entity">событие, план</string>
+    <string name="calc_piggy_plan">план копилки, расчёт копилки</string>
+    <string name="calc_goal_date">дата цели, когда достигну цель</string>
+    <string name="calc_monthly_budget">месячный бюджет, бюджет на месяц</string>
+    <string name="calc_subscriptions">подписки, расчёт подписок</string>
+    <string name="calc_can_i_buy">можно ли купить, хватит ли денег</string>
+    <string name="calc_price_comparison">сравнение цен, сравнить цены</string>
+    <string name="calc_24h_rule">правило 24 часов, подождать день</string>
+    <string name="calc_50_30_20">бюджет 50 30 20, правило 50 30 20</string>
+    <string name="calc_calendar_forecast">прогноз календаря, прогноз</string>
+    <string name="question_entity">вопрос, спросить</string>
+</resources>

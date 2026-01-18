@@ -1,0 +1,1407 @@
+{
+  "@@locale": "en",
+  "common_cancel": "Cancel",
+  "common_save": "Save",
+  "common_create": "Create",
+  "common_delete": "Delete",
+  "common_done": "Done",
+  "common_understand": "Got it",
+  "common_planCreated": "Plan created successfully!",
+  "common_purchasePlanned": "Purchase planned!",
+  "common_income": "Income",
+  "common_expense": "Expense",
+  "common_plan": "Plan",
+  "common_balance": "Balance",
+  "common_piggyBanks": "Piggy Banks",
+  "common_calendar": "Calendar",
+  "common_lessons": "Lessons",
+  "common_settings": "Settings",
+  "common_tools": "Tools",
+  "common_continue": "Continue",
+  "common_confirm": "Confirm",
+  "common_error": "Error",
+
+  "moneyValidator_enterAmount": "Please enter an amount",
+  "moneyValidator_notANumber": "That doesn't look like a number",
+  "moneyValidator_mustBePositive": "The amount must be greater than 0",
+  "moneyValidator_tooSmall": "The amount is too small",
+
+  "bariOverlay_tipOfDay": "Tip of the day",
+  "bariOverlay_defaultTip": "Remember: every coin brings you closer to your goal!",
+  "bariOverlay_instructions": "Tap Bari to open a tip. Double-tap for chat.",
+  "bariOverlay_openChat": "Open Chat",
+  "bariOverlay_moreTips": "Another tip",
+  "bariAvatar_happy": "😄",
+  "bariAvatar_encouraging": "🤔",
+  "bariAvatar_neutral": "😌",
+
+  "mainScreen_transferToPiggyBank": "Transfer to piggy bank \"{bankName}\" (from income)",
+  "@mainScreen_transferToPiggyBank": {
+    "placeholders": {
+      "bankName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "bariTip_income": "Great income! What will you spend it on?",
+  "bariTip_expense": "Spent. Was that in the plan?",
+  "bariTip_planCreated": "Plan created! Sticking to it is the key to success.",
+  "bariTip_planCompleted": "Plan completed! You are great!",
+  "bariTip_piggyBankCreated": "New piggy bank! What are we saving for?",
+  "bariTip_piggyBankCompleted": "Piggy bank is full! Congratulations on reaching your goal!",
+  "bariTip_lessonCompleted": "Lesson completed! New knowledge is a superpower!",
+
+  "period_day": "Day",
+  "period_week": "Week",
+  "period_month": "Month",
+  "period_inADay": "per day",
+  "period_inAWeek": "per week",
+  "period_inAMonth": "per month",
+  "period_everyDay": "Every Day",
+  "period_onceAWeek": "Once a Week",
+  "period_onceAMonth": "Once a Month",
+  "plural_days": "{count,plural, =1{day} other{{count} days}}",
+  "@plural_days": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "monthlyBudgetCalculator_title": "Monthly Expense Plan",
+  "monthlyBudgetCalculator_subtitle": "Set a limit and see the rest—it will be easier to control your money.",
+  "monthlyBudgetCalculator_step1": "Month",
+  "monthlyBudgetCalculator_step2": "Limit",
+  "monthlyBudgetCalculator_step3": "Result",
+  "monthlyBudgetCalculator_selectMonth": "1) Select month",
+  "monthlyBudgetCalculator_setLimit": "2) Set a limit",
+  "monthlyBudgetCalculator_limitForMonth": "Limit for the month",
+  "monthlyBudgetCalculator_result": "Result",
+  "monthlyBudgetCalculator_spent": "Spent",
+  "monthlyBudgetCalculator_remaining": "Remaining",
+  "monthlyBudgetCalculator_warningAlmostLimit": "⚠️ Limit almost reached! Try to reduce spending in the remaining days.",
+  "monthlyBudgetCalculator_warningOverLimit": "You are over the limit by {amount}. You can reconsider the limit or find where to save.",
+  "@monthlyBudgetCalculator_warningOverLimit": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "goalDateCalculator_title": "When Will I Reach My Goal?",
+  "goalDateCalculator_subtitle": "Enter the contribution amount and frequency—I'll show you the approximate achievement date.",
+  "goalDateCalculator_stepGoal": "Goal",
+  "goalDateCalculator_stepContribution": "Contribution",
+  "goalDateCalculator_stepFrequency": "Frequency",
+  "goalDateCalculator_headerGoal": "1) Goal",
+  "goalDateCalculator_piggyBankLabel": "Piggy Bank",
+  "goalDateCalculator_remainingToGoal": "Remaining: {amount}",
+  "@goalDateCalculator_remainingToGoal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_headerContribution": "2) How much do you set aside",
+  "goalDateCalculator_contributionAmountLabel": "Contribution amount",
+  "goalDateCalculator_headerFrequency": "3) Frequency",
+  "goalDateCalculator_result": "Result",
+  "goalDateCalculator_goalAlreadyReached": "The goal is already reached—you can set a new one!",
+  "goalDateCalculator_resultSummary": "In about {count} contributions (every {period})",
+  "@goalDateCalculator_resultSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_upcomingDates": "Upcoming dates:",
+  "goalDateCalculator_createPlanButton": "Create Contribution Plan",
+  "goalDateCalculator_dialogTitle": "Confirmation",
+  "goalDateCalculator_dialogSubtitle": "Creating scheduled events",
+  "goalDateCalculator_dialogContent": "Create scheduled events for contributions to the piggy bank \"{goalName}\"?",
+  "@goalDateCalculator_dialogContent": {
+    "placeholders": {
+      "goalName": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_defaultGoalName": "goal",
+  "goalDateCalculator_dialogContributionAmount": "Contribution amount: {amount}",
+  "@goalDateCalculator_dialogContributionAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_dialogFrequency": "Frequency: every {period}",
+  "@goalDateCalculator_dialogFrequency": {
+    "placeholders": {
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_eventName": "Contribution to piggy bank \"{goalName}\"",
+  "@goalDateCalculator_eventName": {
+    "placeholders": {
+      "goalName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyPlanCalculator_title": "Piggy Bank Plan",
+  "piggyPlanCalculator_subtitle": "I'll help you figure out how much and how often to save to reach your goal.",
+  "piggyPlanCalculator_stepGoal": "Goal",
+  "piggyPlanCalculator_stepDate": "Date",
+  "piggyPlanCalculator_stepFrequency": "Frequency",
+  "piggyPlanCalculator_headerSelectGoal": "1) Select a goal",
+  "piggyPlanCalculator_goalAmountLabel": "Goal (amount)",
+  "piggyPlanCalculator_currentAmountLabel": "Already have",
+  "piggyPlanCalculator_headerTargetDate": "2) When do you want to reach the goal?",
+  "piggyPlanCalculator_selectDate": "Select a date",
+  "piggyPlanCalculator_headerFrequency": "3) How often to save?",
+  "piggyPlanCalculator_result": "Result",
+  "piggyPlanCalculator_resultSummary": "Save about {amount} every {period} (total contributions: {count}).",
+  "@piggyPlanCalculator_resultSummary": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "piggyPlanCalculator_planCreatedSnackbar": "Plan created: {amount} every {period}",
+  "@piggyPlanCalculator_planCreatedSnackbar": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyPlanCalculator_scheduleFirstContributionButton": "Schedule First Contribution",
+  "piggyPlanCalculator_dialogContributionAmount": "Amount: {amount}",
+  "@piggyPlanCalculator_dialogContributionAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "canIBuyCalculator_title": "Can I buy it?",
+  "canIBuyCalculator_subtitle": "Let's check the purchase right now and considering the plans for the week.",
+  "canIBuyCalculator_stepPrice": "Price",
+  "canIBuyCalculator_stepMoney": "Money",
+  "canIBuyCalculator_stepRules": "Rules",
+  "canIBuyCalculator_headerPrice": "1) Purchase price",
+  "canIBuyCalculator_priceLabel": "Price",
+  "canIBuyCalculator_headerAvailableMoney": "2) How much money is available",
+  "canIBuyCalculator_walletBalanceLabel": "In the wallet now",
+  "canIBuyCalculator_headerRules": "3) Rules",
+  "canIBuyCalculator_ruleDontTouchPiggies": "Don't touch piggy banks",
+  "canIBuyCalculator_ruleDontTouchPiggiesSubtitleEnabled": "Counting only the wallet",
+  "canIBuyCalculator_ruleDontTouchPiggiesSubtitleDisabled": "Can use money from piggy banks as a reserve",
+  "canIBuyCalculator_ruleConsiderPlans": "Consider plans for 7 days",
+  "canIBuyCalculator_ruleConsiderPlansSubtitle": "Scheduled income/expenses from the calendar",
+  "canIBuyCalculator_result": "Result",
+  "canIBuyCalculator_statusYes": "You can buy it now",
+  "canIBuyCalculator_statusYesBut": "You can buy it now, but plans for the week might interfere",
+  "canIBuyCalculator_statusMaybeWithPiggies": "Possible, if you take some from a piggy bank",
+  "canIBuyCalculator_statusMaybeWithPlans": "Not enough yet, but plans/income for the week might help",
+  "canIBuyCalculator_statusNo": "Better to wait: you are short by {amount}",
+  "@canIBuyCalculator_statusNo": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "canIBuyCalculator_planPurchaseButton": "Plan the purchase",
+  "canIBuyCalculator_dialogTitle": "Confirmation",
+  "canIBuyCalculator_dialogSubtitle": "Creating a scheduled event",
+  "canIBuyCalculator_dialogContent": "Create a scheduled event for the purchase?",
+  "canIBuyCalculator_dialogAmount": "Amount: {amount}",
+  "@canIBuyCalculator_dialogAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "canIBuyCalculator_dialogInfo": "The event will be created for 7 days ahead.",
+  "canIBuyCalculator_defaultEventName": "Purchase",
+
+  "toolsHub_subtitle": "Calculate, plan, improve",
+  "toolsHub_bariTipTitle": "Bari's Tip",
+  "toolsHub_tipCalculators": "Calculators will help you plan and calculate. Try starting with the \"Piggy Bank Plan\"!",
+  "toolsHub_tipEarningsLab": "In the Earnings Lab, you can complete tasks and earn money. Start with the simple ones!",
+  "toolsHub_tipMiniTrainers": "60-second trainers will help you quickly improve your skills. Consistency is more important than speed!",
+  "toolsHub_tipBariRecommendations": "Bari's Tip of the Day is updated daily. Check back often for new ideas!",
+  "toolsHub_calendarForecastTitle": "Calendar Forecast",
+  "toolsHub_calendarForecastSubtitle": "Future balance and all scheduled events",
+  "toolsHub_calculatorsTitle": "Calculators",
+  "toolsHub_calculatorsSubtitle": "8 useful financial calculators",
+  "toolsHub_earningsLabTitle": "Earnings Lab",
+  "toolsHub_earningsLabSubtitle": "Tasks and missions to earn money",
+  "toolsHub_miniTrainersTitle": "60 Seconds",
+  "toolsHub_miniTrainersSubtitle": "Micro-exercises for training",
+  "toolsHub_recommendationsTitle": "Tip of the Day",
+  "toolsHub_recommendationsSubtitle": "A selection of tips and explanations from Bari",
+  "toolsHub_notesTitle": "Notes",
+  "toolsHub_notesSubtitle": "Create and organize your notes",
+  "toolsHub_tipNotes": "Notes will help you remember important thoughts. Pin the most important ones!",
+
+  "piggyBanks_explanationSimple": "A piggy bank is a separate goal. The money in it does not affect your balance.",
+  "piggyBanks_explanationPro": "A piggy bank is a separate goal for savings. The money you put in a piggy bank does not affect your main balance. This helps you see your progress towards a specific goal.",
+  "piggyBanks_deleteConfirmTitle": "Delete piggy bank?",
+  "piggyBanks_deleteConfirmMessage": "Are you sure you want to delete the piggy bank \"{name}\"? All related transactions will remain in history, but the piggy bank itself will be deleted.",
+  "@piggyBanks_deleteConfirmMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_deleteSuccess": "Piggy bank \"{name}\" deleted",
+  "@piggyBanks_deleteSuccess": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_deleteError": "Error deleting: {error}",
+  "@piggyBanks_deleteError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_emptyStateTitle": "No piggy banks",
+  "piggyBanks_createNewTooltip": "Create a new piggy bank",
+  "piggyBanks_createNewButton": "Create a piggy bank",
+  "piggyBanks_addNewButton": "Add a new piggy bank",
+  "piggyBanks_fabTooltip": "Create a piggy bank",
+
+  "piggyBanks_card_statusEmojiCompleted": "🎉",
+  "piggyBanks_card_statusEmojiAlmost": "🔥",
+  "piggyBanks_card_statusEmojiHalfway": "💪",
+  "piggyBanks_card_statusEmojiQuarter": "🌱",
+  "piggyBanks_card_statusEmojiStarted": "🎯",
+  "piggyBanks_card_deleteTooltip": "Delete",
+  "piggyBanks_card_goalReached": "✓ Goal reached!",
+  "piggyBanks_card_estimatedDate": "You will reach it by {date}",
+  "@piggyBanks_card_estimatedDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyBanks_progress_goalReached": "Goal reached! 🎉",
+  "piggyBanks_progress_almostThere": "Almost there! Just {amount} to go",
+  "@piggyBanks_progress_almostThere": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_progress_halfway": "More than halfway there! 💪",
+  "piggyBanks_progress_quarter": "A quarter of the way. {amount} to go",
+  "@piggyBanks_progress_quarter": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_progress_started": "A good start 🌱",
+  "piggyBanks_progress_initialGoal": "Goal is {amount}",
+  "@piggyBanks_progress_initialGoal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyBanks_createSheet_title": "New Piggy Bank",
+  "piggyBanks_createSheet_nameLabel": "Piggy bank name",
+  "piggyBanks_createSheet_nameHint": "e.g., New Phone",
+  "piggyBanks_createSheet_targetLabel": "Target amount",
+
+  "piggyBanks_detail_deleteTooltip": "Delete piggy bank",
+  "piggyBanks_detail_fromAmount": "of {amount}",
+  "@piggyBanks_detail_fromAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_detail_topUpButton": "Top Up",
+  "piggyBanks_detail_withdrawButton": "Withdraw",
+  "piggyBanks_detail_autofillTitle": "Auto-fill",
+  "piggyBanks_detail_autofillRuleLabel": "Rule",
+  "piggyBanks_detail_autofillTypePercent": "Percentage",
+  "piggyBanks_detail_autofillTypeFixed": "Fixed amount",
+  "piggyBanks_detail_autofillPercentLabel": "Percentage of income",
+  "piggyBanks_detail_autofillFixedLabel": "Fixed amount",
+  "piggyBanks_detail_autofillEnabledSnackbar": "Auto-saving is like an invisible habit.",
+  "piggyBanks_detail_whenToReachGoalTitle": "When will I reach the goal?",
+  "piggyBanks_detail_calculateButton": "Calculate",
+  "piggyBanks_detail_goalExceededTitle": "Goal will be exceeded!",
+  "piggyBanks_detail_goalExceededMessage": "When adding {amount} to the piggy bank \"{name}\", the new amount will be {newAmount}, which exceeds the goal of {targetAmount}. Continue?",
+  "@piggyBanks_detail_goalExceededMessage": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "amount": {"type": "String"},
+      "newAmount": {"type": "String"},
+      "targetAmount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_topUpTransactionNote": "Top up piggy bank \"{name}\"",
+  "@piggyBanks_detail_topUpTransactionNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_successAnimationGoalReached": "🎉 Goal reached!",
+  "piggyBanks_detail_successAnimationDaysCloser": "+{amount} • Goal is {count} {days} closer 🚀",
+  "@piggyBanks_detail_successAnimationDaysCloser": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "count": {"type": "int"},
+      "days": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_successAnimationSimpleTopUp": "Piggy bank topped up by {amount}",
+  "@piggyBanks_detail_successAnimationSimpleTopUp": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_noFundsError": "No funds in the piggy bank to withdraw.",
+  "piggyBanks_detail_noOtherPiggiesError": "No other piggy banks to transfer to.",
+  "piggyBanks_detail_insufficientFundsError": "Insufficient funds in the piggy bank.",
+  "piggyBanks_detail_withdrawToWalletNote": "Withdrawal from piggy bank \"{name}\" → wallet",
+  "@piggyBanks_detail_withdrawToWalletNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_withdrawToWalletSnackbar": "{amount} transferred to wallet",
+  "@piggyBanks_detail_withdrawToWalletSnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_spendFromPiggyNote": "Purchase from piggy bank \"{name}\"",
+  "@piggyBanks_detail_spendFromPiggyNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_spendFromPiggySnackbar": "Spent {amount} from the piggy bank",
+  "@piggyBanks_detail_spendFromPiggySnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_transferNote": "Transfer between piggy banks: \"{fromBank}\" → \"{toBank}\"",
+  "@piggyBanks_detail_transferNote": {
+    "placeholders": {
+      "fromBank": {"type": "String"},
+      "toBank": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_transferSnackbar": "{amount} transferred to \"{toBank}\"",
+  "@piggyBanks_detail_transferSnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "toBank": {"type": "String"}
+    }
+  },
+
+  "piggyBanks_operationSheet_addTitle": "Top up piggy bank",
+  "piggyBanks_operationSheet_transferTitle": "Transfer to another piggy bank",
+  "piggyBanks_operationSheet_spendTitle": "Spend from piggy bank",
+  "piggyBanks_operationSheet_withdrawTitle": "Withdraw to wallet",
+  "piggyBanks_operationSheet_amountLabel": "Amount",
+  "piggyBanks_operationSheet_maxAmountHint": "Maximum: {amount}",
+  "@piggyBanks_operationSheet_maxAmountHint": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_operationSheet_enterAmountHint": "Enter amount",
+  "piggyBanks_operationSheet_categoryLabel": "Category",
+  "piggyBanks_operationSheet_categoryHint": "Select category",
+  "piggyBanks_operationSheet_categoryFood": "Food",
+  "piggyBanks_operationSheet_categoryTransport": "Transport",
+  "piggyBanks_operationSheet_categoryEntertainment": "Entertainment",
+  "piggyBanks_operationSheet_categoryOther": "Other",
+  "piggyBanks_operationSheet_noteLabel": "Purchase name (optional)",
+  "piggyBanks_operationSheet_noteHint": "Enter name...",
+  "piggyBanks_operationSheet_errorTooMuch": "The amount exceeds the available funds",
+  "piggyBanks_operationSheet_errorInvalid": "Please enter a valid amount",
+
+  "piggyBanks_withdrawMode_title": "What to do with the money?",
+  "piggyBanks_withdrawMode_toWalletTitle": "To wallet",
+  "piggyBanks_withdrawMode_toWalletSubtitle": "Wallet +, Piggy Bank −",
+  "piggyBanks_withdrawMode_spendTitle": "Spend directly from piggy bank",
+  "piggyBanks_withdrawMode_spendSubtitle": "Wallet unchanged, Piggy Bank −",
+  "piggyBanks_withdrawMode_transferTitle": "Transfer to another piggy bank",
+  "piggyBanks_withdrawMode_transferSubtitle": "Wallet unchanged, Piggy Bank A −, Piggy Bank B +",
+
+  "piggyBanks_picker_title": "Choose a piggy bank to transfer to",
+  "piggyBanks_picker_defaultTitle": "Choose a piggy bank",
+
+  "common_tryAgain": "Try again",
+  "balance": "Balance",
+  "search": "Search",
+  "reset": "Reset",
+  "done": "Done",
+
+  "balance_currentBalance": "Current Balance",
+  "balance_forecast": "Forecast",
+  "balance_fact": "Fact",
+  "balance_withPlannedExpenses": "Including planned expenses",
+  "balance_forecastForDay": "Day forecast",
+  "balance_forecastForWeek": "Week forecast",
+  "balance_forecastForMonth": "Month forecast",
+  "balance_forecastFor3Months": "3 months forecast",
+  "balance_level": "Level {level}",
+  "@balance_level": {
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+  "balance_toolsDescription": "Calculators and tools for financial planning",
+  "balance_tools": "Tools",
+  "balance_filterDay": "Day",
+  "balance_filterWeek": "Week",
+  "balance_filterMonth": "Month",
+  "balance_emptyStateIncome": "Nothing here yet. Add some income!",
+  "balance_emptyStateNoTransactions": "No transactions for the selected period",
+  "balance_addIncome": "Add income",
+  "balance_addExpense": "Add expense",
+  "balance_amount": "Amount",
+  "balance_category": "Category",
+  "balance_selectCategory": "Select category",
+  "balance_toPiggyBank": "To piggy bank (optional)",
+  "balance_fromPiggyBank": "From piggy bank (optional)",
+  "balance_note": "Note",
+  "balance_noteHint": "Enter a note...",
+  "balance_save": "Save",
+  "balance_categories_food": "Food",
+  "balance_categories_transport": "Transport",
+  "balance_categories_games": "Games",
+  "balance_categories_clothing": "Clothing",
+  "balance_categories_entertainment": "Entertainment",
+  "balance_categories_other": "Other",
+  "balance_categories_pocketMoney": "Pocket money",
+  "balance_categories_gift": "Gift",
+  "balance_categories_sideJob": "Side job",
+
+  "settings_language": "Language",
+  "settings_selectCurrency": "Select currency",
+  "settings_appearance": "Appearance",
+  "settings_theme": "Theme",
+  "settings_themeBlue": "Blue",
+  "settings_themePurple": "Purple",
+  "settings_themeGreen": "Green",
+  "settings_explanationMode": "Explanation mode",
+  "settings_howToExplain": "How to explain",
+  "settings_uxSimple": "Simple",
+  "settings_uxPro": "Pro",
+  "settings_uxSimpleDescription": "Simple explanations",
+  "settings_uxProDescription": "Detailed explanations",
+  "settings_currency": "Currency",
+  "settings_notifications": "Notifications",
+  "settings_bari": "Bari Smart",
+  "settings_bariMode": "Bari mode",
+  "settings_bariModeOffline": "Offline",
+  "settings_bariModeOnline": "Online",
+  "settings_bariModeHybrid": "Hybrid",
+  "settings_showSources": "Show sources",
+  "settings_showSourcesDescription": "Show sources for tips",
+  "settings_smallTalk": "Small talk",
+  "settings_smallTalkDescription": "Allow small talk with Bari",
+  "settings_parentZone": "Parent zone",
+  "settings_parentZoneDescription": "Manage approvals and settings",
+  "settings_tools": "Tools",
+  "settings_toolsDescription": "Calculators and other tools",
+  "settings_exportData": "Export data",
+  "settings_importData": "Import data",
+  "settings_resetProgress": "Reset progress",
+  "settings_resetProgressWarning": "Are you sure you want to reset all progress? This action cannot be undone.",
+  "settings_cancel": "Cancel",
+  "settings_progressReset": "Progress reset",
+  "settings_enterPinToConfirm": "Enter PIN to confirm",
+  "settings_wrongPin": "Wrong PIN",
+
+  "priceComparisonCalculator_factSaved": "Fact saved",
+  "twentyFourHourRuleCalculator_enterItemName": "Enter item name",
+  "twentyFourHourRuleCalculator_reminderSet": "Reminder set",
+  "twentyFourHourRuleCalculator_no": "No",
+  "subscriptionsCalculator_no": "No",
+  "subscriptionsCalculator_repeatDaily": "Daily",
+  "subscriptionsCalculator_repeatWeekly": "Weekly",
+  "subscriptionsCalculator_repeatMonthly": "Monthly",
+  "subscriptionsCalculator_repeatYearly": "Yearly",
+  "subscriptionsCalculator_enterSubscriptionName": "Enter subscription name",
+
+  "calendar_completed": "Completed",
+  "calendar_edit": "Edit",
+  "calendar_reschedule": "Reschedule",
+  "calendar_completeNow": "Complete now",
+  "calendar_showTransaction": "Show transaction",
+  "calendar_restore": "Restore",
+  "calendar_eventAlreadyCompleted": "Event already completed",
+  "calendar_noPiggyBanks": "No piggy banks",
+  "calendar_eventAlreadyCompletedWithTx": "Event already completed. Transaction created.",
+  "calendar_sentToParentForApproval": "Sent to parent for approval",
+  "calendar_addedToPiggyBank": "added to piggy bank",
+  "calendar_eventCompletedWithAmount": "Event completed: {amount}",
+  "@calendar_eventCompletedWithAmount": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "calendar_planContinues": "Plan continues",
+  "calendar_cancelEvent": "Cancel event",
+  "calendar_cancelEventMessage": "Are you sure you want to cancel this event?",
+  "calendar_no": "No",
+  "calendar_yesCancel": "Yes, cancel",
+  "calendar_wantToReschedule": "Do you want to reschedule the event?",
+  "calendar_eventRestored": "Event restored",
+  "calendar_eventUpdated": "Event updated",
+  "calendar_deleteEventConfirm": "Delete event?",
+  "calendar_deleteEventSeriesMessage": "Delete entire event series?",
+  "calendar_deleteAllRepeatingConfirm": "All repeating events will be deleted. This action cannot be undone.",
+  "calendar_undo": "Undo",
+  "calendar_editScopeTitle": "What to edit?",
+  "calendar_editScopeSubtitle": "Select the scope of changes",
+  "calendar_editThisEventOnly": "This event only",
+  "calendar_editThisEventOnlyDesc": "Changes will affect only the selected event",
+  "calendar_editAllRepeating": "All repetitions",
+  "calendar_editAllRepeatingDesc": "Changes will apply to all events in the series",
+  "calendar_deleteScopeTitle": "What to delete?",
+  "calendar_deleteScopeSubtitle": "Select the scope of deletion",
+  "calendar_deleteAllRepeatingDesc": "All events in the series will be deleted",
+  "calendar_cancel": "Cancel",
+  "calendar_transactionNotFound": "Transaction not found",
+  "calendar_transaction": "Transaction",
+  "calendar_transactionAmount": "Amount",
+  "calendar_transactionDate": "Date",
+  "calendar_transactionCategory": "Category",
+  "calendar_transactionNote": "Note",
+  "deletedEvents_title": "Deleted events",
+  "deletedEvents_empty": "Trash is empty",
+  "deletedEvents_count": "{count} events",
+  "@deletedEvents_count": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deletedEvents_restore": "Restore",
+  "deletedEvents_deletePermanent": "Delete permanently",
+  "deletedEvents_deletedAt": "Deleted:",
+  "deletedEvents_restored": "Event restored",
+  "deletedEvents_deleted": "Event deleted permanently",
+  "deletedEvents_permanentDeleteTitle": "Delete permanently?",
+  "deletedEvents_permanentDeleteMessage": "This action cannot be undone. The event will be deleted without the possibility of recovery.",
+  "deletedEvents_clearOld": "Clear old",
+  "deletedEvents_clearOldTitle": "Clear old events?",
+  "deletedEvents_clearOldMessage": "Delete events that have been in the trash for more than 30 days?",
+  "deletedEvents_clearedCount": "Deleted {count} events",
+  "@deletedEvents_clearedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deletedEvents_restoreScopeTitle": "What to restore?",
+  "deletedEvents_restoreScopeMessage": "Select the scope of restoration",
+  "subscriptions_filter": "Filter",
+  "subscriptions_all": "All",
+  "subscriptions_income": "Income",
+  "subscriptions_expense": "Expenses",
+  "subscriptions_type": "Type",
+
+  "bariChat_title": "Chat with Bari",
+  "bariChat_welcomeDefault": "Hi! I'm Bari, your financial literacy assistant. How can I help?",
+  "bariChat_welcomeCalculator": "Hi! You're using a calculator. Need help with calculations?",
+  "bariChat_welcomePiggyBank": "Hi! Talking about a piggy bank? Tell me what you want to know!",
+  "bariChat_welcomePlannedEvent": "Hi! You have a planned event. Questions about planning?",
+  "bariChat_welcomeLesson": "Hi! You're taking a lesson. Something unclear? Ask me!",
+  "bariChat_welcomeTask": "Hi! Let's talk about the task \"{title}\"? I can help with the reward, time, or difficulty.",
+  "@bariChat_welcomeTask": {
+    "placeholders": { "title": {"type": "String"} }
+  },
+  "bariChat_fallbackResponse": "Sorry, I didn't understand. Try rephrasing your question.",
+  "bariChat_source": "Source",
+  "bariChat_close": "Close",
+  "bariChat_inputHint": "Type a message...",
+  "bariChat_thinking": "Thinking...",
+  "bariChat_task": "task",
+
+  "calculatorsList_title": "Calculators",
+  "calculatorsList_piggyPlan": "Piggy Bank Plan",
+  "calculatorsList_piggyPlanDesc": "How much to save for a goal",
+  "calculatorsList_goalDate": "When Will I Reach My Goal",
+  "calculatorsList_goalDateDesc": "Achievement date with regular contributions",
+  "calculatorsList_monthlyBudget": "Monthly Expense Plan",
+  "calculatorsList_monthlyBudgetDesc": "Limit and remaining for the month",
+  "calculatorsList_subscriptions": "Subscriptions & Regular Payments",
+  "calculatorsList_subscriptionsDesc": "How much regular expenses cost",
+  "calculatorsList_canIBuy": "Can I Buy It Now?",
+  "calculatorsList_canIBuyDesc": "Check purchase affordability",
+  "calculatorsList_priceComparison": "Price Comparison",
+  "calculatorsList_priceComparisonDesc": "What's a better deal",
+  "calculatorsList_24hRule": "24-Hour Rule",
+  "calculatorsList_24hRuleDesc": "Delay impulsive purchases",
+  "calculatorsList_budget503020": "50/30/20 Budget",
+  "calculatorsList_budget503020Desc": "Income distribution",
+
+  "earningsLab_title": "Earnings Lab",
+  "earningsLab_explanationSimple": "Plan a task → complete it in the calendar → get a reward.",
+  "earningsLab_explanationPro": "Earnings Lab: first plan a task for a date, then mark it complete in the calendar. The reward will be credited automatically. Planning helps you not forget important things.",
+  "earningsLab_taskAdded": "Task added!",
+  "earningsLab_tabQuick": "Quick",
+  "earningsLab_tabHome": "Home",
+  "earningsLab_tabProjects": "Projects",
+  "earningsLab_helpAtHome": "Help at Home",
+  "earningsLab_helpAtHomeDesc": "Choose one task: dishes / trash / dust / floor / table. Do it for 10-15 minutes and complete it.",
+  "earningsLab_learnPoem": "Learn a Poem",
+  "earningsLab_learnPoemDesc": "Read 3 times, learn line by line, then recite without hints.",
+  "earningsLab_cleanRoom": "Clean Your Room",
+  "earningsLab_cleanRoomDesc": "Tidy up for 10-15 minutes: toys in place, clean desk, trash thrown out.",
+  "earningsLab_readBook": "Read a Book",
+  "earningsLab_readBookDesc": "Read a chapter from an interesting book. Reading develops imagination and vocabulary.",
+  "earningsLab_helpCooking": "Help with Cooking",
+  "earningsLab_helpCookingDesc": "Help parents prepare lunch or dinner. You'll learn to cook simple dishes!",
+  "earningsLab_homework": "Do Homework",
+  "earningsLab_homeworkDesc": "Complete all homework neatly and on time. This is your main job!",
+  "earningsLab_helpShopping": "Help with Shopping",
+  "earningsLab_helpShoppingDesc": "Go to the store with parents and help carry groceries. You'll learn to plan expenses!",
+  "earningsLab_tagLearning": "learning",
+  "earningsLab_tagHelp": "help",
+  "earningsLab_tagCreativity": "creativity",
+
+  "rule24h_title": "24-Hour Rule",
+  "rule24h_subtitle": "Helps avoid impulsive purchases: delay the decision for a day and check yourself again.",
+  "rule24h_step1": "Want",
+  "rule24h_step2": "Price",
+  "rule24h_step3": "Pause",
+  "rule24h_wantToBuy": "I want to buy",
+  "rule24h_example": "For example: headphones",
+  "rule24h_price": "Price",
+  "rule24h_explanation": "If you still want it after 24 hours — the purchase is more conscious. If not — you saved money and boosted self-control.",
+  "rule24h_postpone": "Postpone for 24 hours",
+  "rule24h_reminderSet": "Reminder set. Come back in 24 hours to check your desire again.",
+  "rule24h_checkAgain": "Check again",
+  "rule24h_dialogTitle": "Confirmation",
+  "rule24h_dialogSubtitle": "Creating a reminder",
+  "rule24h_dialogContent": "Create a reminder in 24 hours to check if you still want to buy \"{itemName}\"?",
+  "@rule24h_dialogContent": {
+    "placeholders": { "itemName": {"type": "String"} }
+  },
+  "rule24h_reminderIn24h": "Reminder will come in 24 hours",
+  "rule24h_eventName": "Desire check: {itemName}",
+  "@rule24h_eventName": {
+    "placeholders": { "itemName": {"type": "String"} }
+  },
+  "rule24h_checkTitle": "Desire Check",
+  "rule24h_checkSubtitle": "24 hours have passed",
+  "rule24h_stillWant": "Do you still want to buy this?",
+  "rule24h_yes": "Yes",
+
+  "budget503020_title": "50/30/20 Budget",
+  "budget503020_subtitle": "Divide your income into 3 parts: needs, wants, and savings.",
+  "budget503020_step1": "Income",
+  "budget503020_step2": "Distribution",
+  "budget503020_step3": "Piggy Banks",
+  "budget503020_incomeLabel": "My monthly income",
+  "budget503020_needs50": "Needs (50%)",
+  "budget503020_wants30": "Wants (30%)",
+  "budget503020_savings20": "Savings (20%)",
+  "budget503020_tip": "Tip: if you want to save faster — try starting with 10% in savings and gradually increase.",
+  "budget503020_createPiggyBanks": "Create 3 piggy banks",
+  "budget503020_dialogTitle": "Confirmation",
+  "budget503020_dialogSubtitle": "Creating piggy banks using the 50/30/20 rule",
+
+  "priceComparison_title": "Price Comparison",
+  "priceComparison_subtitle": "Compare two options and find out which is better by unit price.",
+  "priceComparison_step1": "Option A",
+  "priceComparison_step2": "Option B",
+  "priceComparison_step3": "Result",
+  "priceComparison_priceA": "Price A",
+  "priceComparison_quantityA": "Quantity / weight A",
+  "priceComparison_priceB": "Price B",
+  "priceComparison_quantityB": "Quantity / weight B",
+  "priceComparison_result": "Result",
+  "priceComparison_pricePerUnitA": "Price per unit A",
+  "priceComparison_pricePerUnitB": "Price per unit B",
+  "priceComparison_betterOption": "Better: option {option} (savings ~{percent}%)",
+  "@priceComparison_betterOption": {
+    "placeholders": { "option": {"type": "String"}, "percent": {"type": "String"} }
+  },
+  "priceComparison_saveForBari": "Save conclusion for Bari",
+
+  "subscriptions_title": "Subscriptions & Regular Payments",
+  "subscriptions_regular": "Regular payment",
+
+  "calendar_today": "Today",
+  "calendar_noEvents": "No events",
+  "calendar_eventsCount": "{count} {events}",
+  "@calendar_eventsCount": {
+    "placeholders": { "count": {"type": "int"}, "events": {"type": "String"} }
+  },
+  "calendar_event": "event",
+  "calendar_events234": "events",
+  "calendar_events5plus": "events",
+  "calendar_freeDay": "Free day",
+  "calendar_noEventsOnDay": "Nothing planned for this day.\nMaybe it's time to add something?",
+  "calendar_startPlanning": "Start planning! 🚀",
+  "calendar_createFirstEvent": "Create your first event — it makes saving and remembering easier",
+  "calendar_createFirstPlan": "Create first plan",
+  "calendar_addEvent": "Add event",
+  "calendar_income": "Income",
+  "calendar_expense": "Expenses",
+  "calendar_done": "Done",
+  "calendar_confirmCompletion": "Confirm completion",
+  "calendar_amount": "Amount",
+  "calendar_confirm": "Confirm",
+  "calendar_rescheduleEvent": "Reschedule event",
+  "calendar_dateAndTime": "Date and time",
+  "calendar_notification": "Notification",
+  "calendar_move": "Move",
+  "calendar_whereToAdd": "Where to add {amount}?",
+  "@calendar_whereToAdd": {
+    "placeholders": { "amount": {"type": "String"} }
+  },
+  "calendar_toWallet": "To wallet",
+  "calendar_availableForSpending": "Available for spending",
+  "calendar_toPiggyBank": "To piggy bank",
+  "calendar_forGoal": "For a goal",
+  "calendar_selectPiggyBank": "Select piggy bank",
+  "calendar_eventCompleted": "Event completed! +15 XP",
+  "calendar_eventCancelled": "Event cancelled",
+  "calendar_eventDeleted": "Event deleted",
+  "calendar_eventCompletedXp": "Event completed! +15 XP",
+  "calendar_invalidAmount": "Please enter a valid amount",
+  "calendar_date": "Date",
+  "calendar_time": "Time",
+  "calendar_everyDay": "Every day",
+  "calendar_everyWeek": "Every week",
+  "calendar_everyMonth": "Every month",
+  "calendar_everyYear": "Every year",
+  "calendar_repeat": "Repeat",
+  "calendar_noRepeat": "None",
+  "calendar_deleteAction": "This action cannot be undone.",
+  "calendar_week": "Week",
+  "calendar_month": "Month",
+
+  "parentZone_title": "Parent Zone",
+  "parentZone_approvals": "Pending approvals",
+  "parentZone_statistics": "Statistics",
+  "parentZone_settings": "Settings",
+  "parentZone_pinMustBe4Digits": "PIN must contain 4 digits",
+  "parentZone_wrongPin": "Wrong PIN",
+  "parentZone_pinChanged": "PIN changed",
+  "parentZone_premiumUnlocked": "Premium unlocked",
+  "parentZone_resetData": "Reset data",
+  "parentZone_resetWarning": "WARNING! This action will delete ALL application data.",
+  "parentZone_enterPinToConfirm": "Enter PIN to confirm:",
+  "parentZone_pin": "PIN",
+  "parentZone_reset": "Reset",
+  "parentZone_allDataDeleted": "All data deleted",
+  "parentZone_resetError": "Reset error: {error}",
+  "@parentZone_resetError": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "parentZone_login": "Login",
+  "parentZone_unlockPremium": "Unlock premium",
+  "parentZone_edit": "Edit",
+  "parentZone_close": "Close",
+  "parentZone_earningsApproved": "Earnings approved",
+  "parentZone_earningsRejected": "Earnings rejected",
+  "exportImport_title": "Export/Import",
+  "exportImport_exportData": "Export data",
+  "exportImport_exportDescription": "Save all data to JSON file",
+  "exportImport_export": "Export",
+  "exportImport_importData": "Import data",
+  "exportImport_importDescription": "Load data from JSON file",
+  "exportImport_import": "Import",
+  "exportImport_dataCopied": "Data copied to clipboard",
+  "exportImport_exportError": "Export error: {error}",
+  "@exportImport_exportError": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "exportImport_importSuccess": "Data successfully imported",
+  "exportImport_importError": "Import error",
+  "exportImport_importErrorDetails": "Failed to import data:\n{error}",
+  "@exportImport_importErrorDetails": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "exportImport_pasteJson": "Paste JSON data",
+  "minitrainers_result": "Result",
+  "minitrainers_correctAnswers": "Correct answers: {score}/{total}\n+{xp} XP",
+  "@minitrainers_correctAnswers": {
+    "placeholders": { "score": {"type": "int"}, "total": {"type": "int"}, "xp": {"type": "int"} }
+  },
+  "minitrainers_great": "Great!",
+  "minitrainers_findExtraPurchase": "Find the extra purchase",
+  "minitrainers_answer": "Answer",
+  "minitrainers_xpEarned": "+{xp} XP",
+  "@minitrainers_xpEarned": {
+    "placeholders": { "xp": {"type": "int"} }
+  },
+  "minitrainers_buildBudget": "Build budget",
+  "minitrainers_check": "Check",
+  "minitrainers_wellDone": "Well done!",
+  "minitrainers_xp15": "+15 XP",
+  "minitrainers_discountOrTrap": "Discount or trap?",
+  "minitrainers_yes": "Yes",
+  "minitrainers_no": "No",
+  "minitrainers_correct": "Correct!",
+  "minitrainers_goodTry": "Good try",
+  "calculators_3PiggyBanksCreated": "3 piggy banks created",
+  "rule24h_xp50": "🎉 +50 XP for self-control!",
+  "subscriptions_frequency": "Frequency",
+  "statistics_title": "Statistics",
+  "calculators_nDaysSavings": "Savings for N days",
+  "calculators_weeklySavings": "Weekly savings",
+  "calculators_piggyGoal": "Piggy bank goal",
+  "earningsLab_schedule": "Schedule",
+  "recommendations_newTip": "New tip",
+  "earningsHistory_title": "Earnings history",
+  "earningsHistory_all": "All",
+  "calendarForecast_7days": "7 days",
+  "calendarForecast_30days": "30 days",
+  "calendarForecast_90days": "90 days",
+  "calendarForecast_year": "Year",
+  "calendarForecast_summary": "Summary",
+  "calendarForecast_categories": "Categories",
+  "calendarForecast_dates": "Dates",
+  "calendarForecast_month": "Month",
+  "calendarForecast_all": "All",
+  "calendarForecast_income": "Income",
+  "calendarForecast_expenses": "Expenses",
+  "calendarForecast_large": "Large",
+  "planEvent_amount": "Amount",
+  "planEvent_nameOptional": "Name (optional)",
+  "planEvent_category": "Category",
+  "planEvent_date": "Date",
+  "planEvent_time": "Time",
+  "planEvent_repeat": "Repeat",
+  "planEvent_notification": "Notification",
+  "planEvent_remindBefore": "Remind before",
+  "planEvent_atMoment": "At moment",
+  "planEvent_15minutes": "15 minutes before",
+  "planEvent_30minutes": "30 minutes before",
+  "planEvent_1hour": "1 hour before",
+  "planEvent_1day": "1 day before",
+  "planEvent_eventChanged": "Event changed",
+  "planEvent_repeatingEventWarning": "Repeating event",
+  "planEvent_repeatingEventDescription": "This event is part of a repeating series. Changes will apply to all future events.",
+  "calendar_editEvent": "Edit event",
+  "calendar_planEvent": "Plan event",
+  "planEvent_eventType": "Event type",
+  "transaction_income": "Income",
+  "transaction_expense": "Expense",
+  "category_food": "Food",
+  "category_transport": "Transport",
+  "category_entertainment": "Entertainment",
+  "category_other": "Other",
+  "minitrainers_60seconds": "60 seconds",
+  "earningsLab_wrongPin": "Wrong PIN. Parent approval required.",
+  "earningsLab_noPiggyBanks": "No piggy banks. Create a piggy bank first.",
+  "earningsLab_sentForApproval": "Sent to parent for approval",
+  "earningsLab_amountCannotBeNegative": "Amount cannot be negative",
+  "earningsLab_wallet": "Wallet",
+  "earningsLab_piggyBank": "Piggy Bank",
+  "earningsLab_no": "No",
+  "earningsLab_daily": "Daily",
+  "earningsLab_weekly": "Weekly",
+  "earningsLab_reminder": "Reminder",
+  "earningsLab_selectPiggyForReward": "Select piggy bank for reward",
+  "earningsLab_createPlan": "Create plan",
+  "earningsLab_discussWithBari": "Discuss with Bari",
+  "earningsLab_parentApprovalRequired": "Parent approval required",
+  "earningsLab_fillRequiredFields": "Please fill in required fields",
+  "earningsLab_completed": "Completed: {title}",
+  "@earningsLab_completed": {
+    "placeholders": { "title": {"type": "String"} }
+  },
+  "earningsLab_howMuchEarned": "How much did you earn?",
+  "earningsLab_whatWasDifficult": "What was difficult?",
+  "earningsLab_addCustomTask": "Add custom task",
+  "earningsLab_canRepeat": "Can repeat",
+  "earningsLab_requiresParent": "Requires parent",
+  "earningsLab_taskName": "Task name *",
+  "earningsLab_taskNameHint": "For example: Help grandma",
+  "earningsLab_description": "Description",
+  "earningsLab_descriptionHint": "What needs to be done?",
+  "earningsLab_descriptionOptional": "Description (optional)",
+  "earningsLab_descriptionOptionalHint": "For example: what exactly needs to be done",
+  "earningsLab_time": "Time *",
+  "earningsLab_timeHint": "For example: 30 min",
+  "earningsLab_reward": "Reward",
+  "earningsLab_xp": "XP",
+  "earningsLab_difficulty": "Difficulty",
+  "earningsLab_repeat": "Repeat",
+  "earningsLab_rewardMustBePositive": "Reward must be greater than zero",
+  "earningsLab_taskDescription": "No description",
+  "earningsLab_rewardHelper": "How much will you get for completion",
+  "earningsLab_taskNameRequired": "Enter task name",
+  "settings_aiModelGpt4oMini": "GPT-4o Mini (fast)",
+  "settings_aiModelGpt4o": "GPT-4o (smart)",
+  "settings_aiModelGpt4Turbo": "GPT-4 Turbo",
+  "settings_aiModelGpt35": "GPT-3.5 (cheap)",
+  "settings_geminiNano": "On-Device AI (Gemini Nano)",
+  "settings_geminiNanoDescription": "Free AI that works without internet",
+  "settings_geminiNanoStatus": "Status",
+  "settings_geminiNanoAvailable": "Available",
+  "settings_geminiNanoNotAvailable": "Not available on this device",
+  "settings_geminiNanoDownloaded": "Downloaded and ready",
+  "settings_geminiNanoNotDownloaded": "Not downloaded",
+  "settings_geminiNanoDownload": "Download model (~2.5 GB)",
+  "settings_geminiNanoDownloading": "Downloading...",
+  "settings_geminiNanoDelete": "Delete model",
+  "settings_geminiNanoAdvantages": "Advantages",
+  "settings_geminiNanoAdvantagesTitle": "Why download Gemini Nano?",
+  "settings_geminiNanoAdvantage1": "💰 Completely free — no limits",
+  "settings_geminiNanoAdvantage2": "⚡ Instant responses — no network delay",
+  "settings_geminiNanoAdvantage3": "🔒 100% privacy — data stays on device",
+  "settings_geminiNanoAdvantage4": "📱 Works offline — no internet needed",
+  "settings_geminiNanoAdvantage5": "🌍 Supports 3 languages — English, German, Russian",
+  "settings_geminiNanoRequirements": "Requirements",
+  "settings_geminiNanoRequirement1": "Android 14+ (Google Pixel 8+, Samsung S24+, OnePlus 12+)",
+  "settings_geminiNanoRequirement2": "~2.5 GB free space",
+  "settings_geminiNanoRequirement3": "6 GB RAM",
+  "settings_geminiNanoDownloadConfirm": "Download Gemini Nano model?",
+  "settings_geminiNanoDownloadConfirmDescription": "The model will take ~2.5 GB of space, but gives you free AI without internet.",
+  "settings_geminiNanoDeleteConfirm": "Delete model?",
+  "settings_geminiNanoDeleteConfirmDescription": "Will free ~2.5 GB of space, but on-device AI will stop working.",
+  "settings_geminiNanoError": "Error",
+  "settings_geminiNanoErrorDownload": "Failed to download model. Check your internet connection.",
+  "settings_geminiNanoErrorDelete": "Failed to delete model.",
+  "settings_geminiNanoSuccessDownload": "Model downloaded successfully!",
+  "settings_geminiNanoSuccessDelete": "Model deleted.",
+
+  "bari_emptyMessage": "Write a question 🙂",
+  "bari_emptyMessageAdvice": "For example: \"can I buy for 20€\" or \"what is inflation\"",
+  "bari_balance": "Balance",
+  "bari_piggyBanks": "Piggy Banks",
+
+  "bari_spending_noData": "Not enough data about your income and expenses yet.",
+  "bari_spending_noDataAdvice": "Keep recording transactions — then I can give better advice.",
+
+  "bari_goal_noPiggyBanks": "You don't have any piggy banks yet.",
+  "bari_goal_noPiggyBanksAdvice": "Create your first piggy bank with a goal — this is the main step to savings! What do you want to buy?",
+  "bari_goal_createPiggyBank": "Create Piggy Bank",
+  "bari_goal_whenWillReach": "When Will I Reach Goal",
+  "bari_goal_piggyBanks": "Piggy Banks",
+  "bari_goal_onePiggyBank": "You have 1 piggy bank with {amount} inside.",
+  "@bari_goal_onePiggyBank": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "bari_goal_multiplePiggyBanks": "You have {count} piggy banks, total saved {total}.",
+  "@bari_goal_multiplePiggyBanks": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "total": {"type": "String"}
+    }
+  },
+  "bari_goal_almostFull": "Piggy bank \"{name}\" is almost full ({percent}%)! 🎉 Goal soon!",
+  "@bari_goal_almostFull": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_goal_justStarted": "Piggy bank \"{name}\" just started ({percent}%). Time to top up!",
+  "@bari_goal_justStarted": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_goal_goodProgress": "Good progress! Keep saving regularly.",
+  "bari_goal_createFirst": "You don't have any piggy banks yet — create your first one!",
+  "bari_goal_createFirstAdvice": "Choose a goal: toy, gadget, gift. And start with small contributions.",
+  "bari_goal_deadlineSoon": "Top up \"{name}\" — {days} days left until deadline!",
+  "@bari_goal_deadlineSoon": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "days": {"type": "int"}
+    }
+  },
+  "bari_goal_closeToGoal": "I advise topping up \"{name}\" ({progress}%) — {remaining} left, you're close to the goal!",
+  "@bari_goal_closeToGoal": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "progress": {"type": "int"},
+      "remaining": {"type": "String"}
+    }
+  },
+  "bari_goal_allFullOrEmpty": "All piggy banks are full or empty. Create a new goal!",
+  "bari_goal_whichPiggyBankAdvice": "Better to top up the piggy bank that's closer to the goal or has a deadline soon.",
+  "bari_goal_alreadyEnough": "Yes, you already have enough money! 🎉",
+  "bari_goal_alreadyEnoughAdvice": "Total available {available} (wallet + piggy banks), need {target}.",
+  "@bari_goal_alreadyEnoughAdvice": {
+    "placeholders": {
+      "available": {"type": "String"},
+      "target": {"type": "String"}
+    }
+  },
+  "bari_goal_needToSave": "Need to save {needed} more",
+  "@bari_goal_needToSave": {
+    "placeholders": {
+      "needed": {"type": "String"}
+    }
+  },
+  "bari_goal_savePerMonth": "If you save {perMonth} per month, you'll make it! Create a piggy bank with a goal.",
+  "@bari_goal_savePerMonth": {
+    "placeholders": {
+      "perMonth": {"type": "String"}
+    }
+  },
+  "bari_goal_emptyWallet": "Wallet is almost empty ({balance}). Time to save up!",
+  "@bari_goal_emptyWallet": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_lowBalance": "Wallet has {balance} — can top up piggy bank or leave for expenses.",
+  "@bari_goal_lowBalance": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_goodBalance": "Wallet has {balance} — great balance! Can top up piggy banks.",
+  "@bari_goal_goodBalance": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_createFirstPiggyBank": "Create your first piggy bank — a goal motivates saving.",
+  "bari_goal_setDeadline": "Set a deadline for the piggy bank — easier to plan.",
+  "bari_goal_regularTopUps": "Top up piggy banks regularly, even with small amounts.",
+  "bari_goal_checkProgress": "Check piggy bank progress — it's motivating!",
+  "bari_goal_completeLessons": "Complete lessons on savings — you'll learn useful tips.",
+  "bari_goal_savingSecret": "The main secret of savings — regularity!",
+
+  "bari_math_percentOfResult": "{percent}% of {base} = {result}",
+  "@bari_math_percentOfResult": {
+    "placeholders": {
+      "percent": {"type": "String"},
+      "base": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_percentAdviceWithPercent": "Good to know: if you save {percent}% of income, it helps save regularly.",
+  "@bari_math_percentAdviceWithPercent": {
+    "placeholders": {
+      "percent": {"type": "String"}
+    }
+  },
+  "bari_math_calculator503020": "50/30/20 Calculator",
+  "bari_math_explainSimpler": "Explain Simpler",
+  "bari_math_monthlyToYearlyResult": "{monthly} per month = {yearly} per year",
+  "@bari_math_monthlyToYearlyResult": {
+    "placeholders": {
+      "monthly": {"type": "String"},
+      "yearly": {"type": "String"}
+    }
+  },
+  "bari_math_subscriptionsCalculator": "Subscriptions Calculator",
+  "bari_math_saveYearlyResult": "If you save {monthly} per month, you'll accumulate {yearly} per year",
+  "@bari_math_saveYearlyResult": {
+    "placeholders": {
+      "monthly": {"type": "String"},
+      "yearly": {"type": "String"}
+    }
+  },
+  "bari_math_savePerPeriodResult": "To save {target}, need to save {perPeriod} per {period}",
+  "@bari_math_savePerPeriodResult": {
+    "placeholders": {
+      "target": {"type": "String"},
+      "perPeriod": {"type": "String"},
+      "period": {"type": "String"}
+    }
+  },
+  "bari_math_createPiggyBank": "Create Piggy Bank",
+  "bari_math_whenWillReach": "When Will I Reach Goal",
+  "bari_math_remainingToSaveResult": "Need to save {remaining} more (already {percent}% of goal)",
+  "@bari_math_remainingToSaveResult": {
+    "placeholders": {
+      "remaining": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_math_multiplyResult": "{a} × {b} = {result}",
+  "@bari_math_multiplyResult": {
+    "placeholders": {
+      "a": {"type": "String"},
+      "b": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_divideResult": "{a} ÷ {b} = {result}",
+  "@bari_math_divideResult": {
+    "placeholders": {
+      "a": {"type": "String"},
+      "b": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_priceComparisonResult": "Option {better} is better! ({price1} per unit vs {price2})",
+  "@bari_math_priceComparisonResult": {
+    "placeholders": {
+      "better": {"type": "int"},
+      "price1": {"type": "String"},
+      "price2": {"type": "String"}
+    }
+  },
+  "bari_math_priceComparisonAdviceWithSavings": "Savings ~{savings}%. But check: will you use the larger package?",
+  "@bari_math_priceComparisonAdviceWithSavings": {
+    "placeholders": {
+      "savings": {"type": "int"}
+    }
+  },
+  "bari_math_priceComparisonCalculator": "Price Comparison",
+  "bari_math_rule72Result": "At {rate}% annual rate, money will double in approximately {years} years",
+  "@bari_math_rule72Result": {
+    "placeholders": {
+      "rate": {"type": "String"},
+      "years": {"type": "String"}
+    }
+  },
+  "bari_math_rule72AdviceWithRate": "This is the \"Rule of 72\" — a quick way to estimate savings growth. The higher the %, the faster the growth, but also the higher the risk.",
+  "@bari_math_rule72AdviceWithRate": {
+    "placeholders": {
+      "rate": {"type": "String"}
+    }
+  },
+  "bari_math_lessons": "Lessons",
+  "bari_math_inflationResult": "{amount} in {years} years will be \"worth\" as {realValue} today",
+  "@bari_math_inflationResult": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "years": {"type": "String"},
+      "realValue": {"type": "String"}
+    }
+  },
+  "bari_math_inflationAdviceWithAmount": "Inflation \"eats\" money. That's why it's important not only to save, but also to learn to invest (when you grow up).",
+  "@bari_math_inflationAdviceWithAmount": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "years": {"type": "String"}
+    }
+  },
+  "bari_math_calculators": "Calculators",
+  "bari_math_multiplyAdvice": "Multiplication helps count regular expenses: daily for a month, monthly for a year.",
+  "bari_math_divideAdvice": "Division helps understand how much to save per week/month for a goal.",
+  "bari_math_monthlyToYearlyAdvice": "Small regular amounts accumulate! Subscriptions are also worth counting per year.",
+  "bari_math_saveYearlyAdvice": "Regularity is more important than amount! Start small and increase gradually.",
+  "bari_math_savePerPeriodAdvice": "Create a piggy bank with this goal — easier not to forget!",
+  "bari_math_remainingAdvice": "You're on the right track! Keep up the pace.",
+  "bari_math_alreadyEnough": "You've already saved enough! 🎉",
+  "bari_math_alreadyEnoughAdvice": "Goal reached — you can spend or continue saving for something bigger.",
+  "bari_math_divideByZero": "Cannot divide by zero!",
+  "bari_math_divideByZeroAdvice": "It's like dividing pizza among zero friends — no one to eat.",
+
+  "achievement_firstTransaction": "First Transaction",
+  "achievement_firstTransactionDesc": "Create your first transaction",
+  "achievement_firstPiggy": "First Piggy Bank",
+  "achievement_firstPiggyDesc": "Create your first piggy bank",
+  "achievement_level5": "Experienced Financier",
+  "achievement_level5Desc": "Reach level 5",
+  "achievement_level10": "Financial Master",
+  "achievement_level10Desc": "Reach level 10",
+  "achievement_streak7": "Week of Activity",
+  "achievement_streak7Desc": "Activity for 7 days in a row",
+  "achievement_streak30": "Month of Activity",
+  "achievement_streak30Desc": "Activity for 30 days in a row",
+  "achievement_save100": "Saver",
+  "achievement_save100Desc": "Save 100 in piggy banks",
+  "achievement_save1000": "Big Saver",
+  "achievement_save1000Desc": "Save 1000 in piggy banks",
+  "achievement_transactions10": "Active User",
+  "achievement_transactions10Desc": "Create 10 transactions",
+  "achievement_transactions100": "Experienced User",
+  "achievement_transactions100Desc": "Create 100 transactions",
+  "achievement_selfControl80": "Self-Control",
+  "achievement_selfControl80Desc": "Reach 80 self-control points",
+  "achievement_completePiggy": "Goal Achieved",
+  "achievement_completePiggyDesc": "Fill piggy bank to goal",
+
+  "dailyTask_addTransaction": "Add Transaction",
+  "dailyTask_addTransactionDesc": "Create income or expense today",
+  "dailyTask_addPiggyDeposit": "Top Up Piggy Bank",
+  "dailyTask_addPiggyDepositDesc": "Add money to any piggy bank",
+  "dailyTask_planEvent": "Plan Event",
+  "dailyTask_planEventDesc": "Create a planned event",
+  "dailyTask_checkBalance": "Check Balance",
+  "dailyTask_checkBalanceDesc": "Open balance screen",
+
+  "earningsLab_explanationSimple": "Plan task → complete it in calendar → get reward.",
+  "earningsLab_explanationPro": "Earnings Lab: first plan a task for a date, then mark it as completed in the calendar. Reward will be credited automatically. Planning helps not to forget important things.",
+  "earningsLab_tabQuick": "Quick",
+  "earningsLab_tabHome": "Home",
+  "earningsLab_tabProjects": "Projects",
+  "earningsLab_piggyBankNotFound": "Piggy bank not found",
+  "earningsLab_noTransactions": "No transactions for this piggy bank yet",
+  "earningsLab_transactionHistory": "Transaction history for this piggy bank",
+  "earningsLab_topUp": "Piggy bank top-up",
+  "earningsLab_withdrawal": "Withdrawal from piggy bank",
+  "earningsLab_goalReached": "Goal reached 🎉",
+  "earningsLab_goalReachedSubtitle": "Well done! You can create a new goal or transfer money to wallet.",
+  "earningsLab_almostThere": "Almost there",
+  "earningsLab_almostThereSubtitle": "Think about making 1-2 more top-ups — and the goal will be closed.",
+  "earningsLab_halfway": "Halfway there",
+  "earningsLab_halfwaySubtitle": "If you top up the piggy bank regularly, you'll reach the goal much faster.",
+  "earningsLab_goodStart": "Good start",
+  "earningsLab_goodStartSubtitle": "Try setting up auto-top-up or adding a task in Earnings Lab specifically for this goal.",
+
+  "notes_title": "Notes",
+  "notes_listView": "List",
+  "notes_gridView": "Grid",
+  "notes_searchHint": "Search notes...",
+  "notes_all": "All",
+  "notes_pinned": "Pinned",
+  "notes_archived": "Archive",
+  "notes_linked": "Linked",
+  "notes_errorLoading": "Error loading notes",
+  "notes_emptyArchived": "Archive is empty",
+  "notes_emptyPinned": "No pinned notes",
+  "notes_empty": "No notes",
+  "notes_emptySubtitle": "Create your first note to save important thoughts",
+  "notes_createFirst": "Create first note",
+  "notes_deleteConfirm": "Delete note?",
+  "notes_deleteMessage": "Are you sure you want to delete note \"{noteTitle}\"?",
+  "@notes_deleteMessage": {
+    "placeholders": {
+      "noteTitle": {
+        "type": "String"
+      }
+    }
+  },
+  "notes_unpin": "Unpin",
+  "notes_pin": "Pin",
+  "notes_unarchive": "Unarchive",
+  "notes_archive": "Archive",
+  "notes_copy": "Copy",
+  "notes_share": "Share",
+  "notes_copied": "Note copied",
+  "notes_shareNotAvailable": "Share functionality temporarily unavailable",
+  "notes_edit": "Edit note",
+  "notes_create": "New note",
+  "notes_changeColor": "Change color",
+  "notes_editTags": "Edit tags",
+  "notes_selectColor": "Select color",
+  "notes_clearColor": "Clear color",
+  "notes_tagHint": "Add tag...",
+  "notes_titleRequired": "Please enter note title",
+  "notes_titleHint": "Note title...",
+  "notes_contentHint": "Start writing here...",
+  "notes_save": "Save note",
+  "notes_today": "Today",
+  "notes_yesterday": "Yesterday",
+  "notes_daysAgo": "{days} days ago",
+  "@notes_daysAgo": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "notes_templates": "Templates",
+  "notes_templateExpense": "Expense Planning",
+  "notes_templateGoal": "Goal",
+  "notes_templateIdea": "Idea",
+  "notes_templateMeeting": "Meeting",
+  "notes_templateLearning": "Learning",
+  "notes_templateExpenseDesc": "Plan your expenses",
+  "notes_templateGoalDesc": "Write down your goal",
+  "notes_templateIdeaDesc": "Save your idea",
+  "notes_templateMeetingDesc": "Meeting notes",
+  "notes_templateLearningDesc": "Lesson notes",
+  "notes_linkToEvent": "Link to event",
+  "notes_linkedToEvent": "Linked to event",
+  "notes_unlinkFromEvent": "Unlink from event",
+  "notes_selectEvent": "Select event",
+  "notes_noEvents": "No events available",
+  "notes_bariTip": "Bari's tip",
+  "notes_quickNote": "Quick note",
+  "notes_autoSave": "Auto-save",
+  "notes_preview": "Preview",
+  "notes_swipeToArchive": "Swipe left to archive",
+  "notes_swipeToDelete": "Swipe right to delete",
+  "notes_templateShoppingList": "Shopping List",
+  "notes_templateShoppingListDesc": "Organize your shopping",
+  "notes_templateReflection": "Reflection",
+  "notes_templateReflectionDesc": "Write down your thoughts",
+  "notes_templateGratitude": "Gratitude",
+  "notes_templateGratitudeDesc": "What I'm grateful for",
+  "notes_templateParentReport": "Parent Report",
+  "notes_templateParentReportDesc": "Automatic period report",
+  "calendarSync_title": "Calendar Sync",
+  "calendarSync_enable": "Enable sync",
+  "calendarSync_syncToCalendar": "Sync events to calendar",
+  "calendarSync_syncFromCalendar": "Import events from calendar",
+  "calendarSync_selectCalendars": "Select calendars",
+  "calendarSync_noCalendars": "No calendars available",
+  "calendarSync_requestPermissions": "Request permissions",
+  "calendarSync_permissionsGranted": "Permissions granted",
+  "calendarSync_permissionsDenied": "Permissions denied",
+  "calendarSync_syncNow": "Sync now",
+  "calendarSync_lastSync": "Last sync",
+  "calendarSync_never": "Never",
+  "calendarSync_conflictResolution": "Conflict resolution",
+  "calendarSync_appWins": "App wins",
+  "calendarSync_calendarWins": "Calendar wins",
+  "calendarSync_askUser": "Ask user",
+  "calendarSync_merge": "Merge",
+  "calendarSync_syncInterval": "Sync interval (hours)",
+  "calendarSync_showNotifications": "Show notifications",
+  "calendarSync_syncNotesAsEvents": "Sync notes as events",
+  "calendarSync_statistics": "Statistics",
+  "calendarSync_totalEvents": "Total events",
+  "calendarSync_syncedEvents": "Synced",
+  "calendarSync_localEvents": "Local",
+  "calendarSync_errorEvents": "Errors",
+  "calendarSync_successRate": "Success rate",
+  "calendarSync_syncInProgress": "Syncing..."
+}

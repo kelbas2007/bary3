@@ -1,0 +1,28 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/android/app/src/main/kotlin/com/example/bary3/GeminiNanoHandler.kt</file>
+  <line>29</line>
+  <module>bary3_android</module>
+  <package>com.example.bary3</package>
+  <entry_point TYPE="field" FQNAME="com.example.bary3.GeminiNanoHandler CHANNEL_NAME" />
+  <problem_class id="UnusedSymbol" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused symbol</problem_class>
+  <description>Property &quot;CHANNEL_NAME&quot; is never used</description>
+  <highlighted_element>CHANNEL_NAME</highlighted_element>
+  <language>kotlin</language>
+  <offset>26</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/android/app/src/main/kotlin/com/example/bary3/MainActivity.kt</file>
+  <line>7</line>
+  <module>bary3_android</module>
+  <package>com.example.bary3</package>
+  <entry_point TYPE="class" FQNAME="com.example.bary3.MainActivity" />
+  <problem_class id="UnusedSymbol" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused symbol</problem_class>
+  <description>Class &quot;MainActivity&quot; is never used</description>
+  <highlighted_element>MainActivity</highlighted_element>
+  <language>kotlin</language>
+  <offset>6</offset>
+  <length>12</length>
+</problem>
+</problems>

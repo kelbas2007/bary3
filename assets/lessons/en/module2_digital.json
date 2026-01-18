@@ -1,0 +1,767 @@
+[
+  {
+    "id": "m2_l01",
+    "moduleId": "digital",
+    "title": "In-Game Currency",
+    "description": "The real cost of gems and loot boxes",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l02",
+    "tags": ["#digital", "#gaming"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Gems, V-Bucks, Robux... 💎",
+        "text": "In-game currency is money inside games. Seems harmless, but it's a multi-billion dollar business!",
+        "mediaUrl": "assets/images/lessons/m2_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Why use game currency?",
+        "text": "Developers use gems to:\n\n🧠 Hide the real cost\n💸 Make you buy more\n🎰 Add gambling elements (loot boxes)",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "The Math of Deception 🔢",
+        "text": "1000 gems = €10\n\nSkin costs 800 gems.\nYou buy 1000 (minimum).\n200 gems left — not enough for anything.\nBuy another 1000... 💸",
+        "mediaUrl": "assets/images/lessons/m2_l01_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why do games use gems instead of euros?",
+        "options": ["Looks nicer", "To hide real prices", "Euros don't work in games", "Tradition"],
+        "correctIndex": 1,
+        "explanation": "Gems distract from real money! 💎→💶"
+      },
+      {
+        "type": "info",
+        "title": "Loot Boxes = Gambling 🎰",
+        "text": "Loot box = box with random contents.\n\n• Chance of rare skin — 1%\n• Chance of junk — 99%\n\nIt's like a casino, just for kids!",
+        "mediaUrl": "assets/images/lessons/m2_l01_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Real Numbers 📊",
+        "text": "To guarantee a rare skin (1% chance):\n\n100 loot boxes × €2 = €200\n\nFor €200 you could buy a whole game (or two)!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "How much to spend on loot boxes for a rare skin (1%)?",
+        "options": ["€10", "€50", "€200", "€1000"],
+        "correctIndex": 2,
+        "explanation": "100 tries × €2 = €200 on average! 🎰"
+      },
+      {
+        "type": "info",
+        "title": "How to protect yourself? 🛡️",
+        "text": "1. Convert gems to euros before buying\n2. Set monthly game spending limit\n3. Never buy loot boxes\n4. Remember: skins don't improve gameplay",
+        "mediaUrl": "assets/images/lessons/m2_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Calculate the real price! 💰",
+        "text": "How much have you spent on games? Check in the calculator!",
+        "buttonText": "Can I Buy?",
+        "targetScreen": "calculator_can_i_buy",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned the truth about game currency — always convert gems to real money!"
+  },
+  {
+    "id": "m2_l02",
+    "moduleId": "digital",
+    "title": "Subscription Trap",
+    "description": "Trials, auto-renewals, dark patterns",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l03",
+    "tags": ["#digital", "#subscriptions"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Free? Not quite... 🆓",
+        "text": "'7 days free!'\n'First month for €1!'\n\nSounds great, but it's the start of a subscription trap.",
+        "mediaUrl": "assets/images/lessons/m2_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "How the trap works? 🪤",
+        "text": "1. Sign up for 'free' trial\n2. Enter card 'for verification'\n3. Forget to cancel\n4. After 7 days — €15/month charge!",
+        "mediaUrl": "assets/images/lessons/m2_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Dark Patterns 🖤",
+        "text": "Dark Patterns are deceptive design:\n\n• 'Cancel' button hidden\n• 'Continue' is bright, 'Decline' is pale\n• 10 steps to unsubscribe",
+        "mediaUrl": "assets/images/lessons/m2_l02_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What is a Dark Pattern?",
+        "options": ["Dark app theme", "Design that deceives users", "A virus", "Secret feature"],
+        "correctIndex": 1,
+        "explanation": "Dark Patterns manipulate you to spend more! 🖤"
+      },
+      {
+        "type": "info",
+        "title": "Typical victims 📱",
+        "text": "• Spotify Premium\n• YouTube Premium\n• Adobe Creative Cloud\n• Gaming subscriptions\n• Fitness apps\n• VPN services",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Protection #1: Calendar 📅",
+        "text": "Signed up for a trial?\n\n➡️ IMMEDIATELY set a reminder 2 days before it ends!\n\nOr better — cancel right after signing up (trial still works).",
+        "mediaUrl": "assets/images/lessons/m2_l02_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "When's best to cancel a trial subscription?",
+        "options": ["Last day", "Right after signing up", "Never cancel", "After a year"],
+        "correctIndex": 1,
+        "explanation": "Cancel immediately — trial still works but you won't forget! 📅"
+      },
+      {
+        "type": "info",
+        "title": "Protection #2: Subscription Audit 🔍",
+        "text": "Monthly checkup:\n\n1. Settings → Subscriptions (iPhone/Android)\n2. Which are active?\n3. Which do you actually use?\n4. Cancel unnecessary ones!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Count your subscriptions! 📊",
+        "text": "How much do you pay for subscriptions per month?",
+        "buttonText": "Subscriptions Calculator",
+        "targetScreen": "calculator_subscriptions",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You uncovered subscription traps — set reminders and cancel trials immediately!"
+  },
+  {
+    "id": "m2_l03",
+    "moduleId": "digital",
+    "title": "EU Consumer Rights",
+    "description": "14-day returns and other rights",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l04",
+    "tags": ["#digital", "#rights", "#eu"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "The EU protects you! 🇪🇺",
+        "text": "The European Union is a leader in consumer protection. Knowing your rights = saving money!",
+        "mediaUrl": "assets/images/lessons/m2_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "14-Day Return 📦",
+        "text": "When buying online in the EU, you have 14 days to return items WITHOUT explanation!\n\nThis is called 'Right of Withdrawal'.",
+        "mediaUrl": "assets/images/lessons/m2_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "How many days to return online purchases in EU?",
+        "options": ["7 days", "14 days", "30 days", "Can't return"],
+        "correctIndex": 1,
+        "explanation": "14 days — your legal right in the EU! 📦"
+      },
+      {
+        "type": "info",
+        "title": "Exceptions ⚠️",
+        "text": "14 days DON'T apply to:\n\n• Digital goods (games, music) after download\n• Personalized items\n• Perishable products\n• Opened hygiene products",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "2-Year Warranty! 🔧",
+        "text": "EU minimum warranty is 2 years.\n\nIf a product breaks due to manufacturing defect within 2 years — seller must repair or replace FREE.",
+        "mediaUrl": "assets/images/lessons/m2_l03_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Minimum warranty on products in EU?",
+        "options": ["6 months", "1 year", "2 years", "No warranty"],
+        "correctIndex": 2,
+        "explanation": "2 years — EU law! Even if seller says '1 year'. 🔧"
+      },
+      {
+        "type": "info",
+        "title": "How to return? 📝",
+        "text": "1. Contact seller (email/website form)\n2. Provide order number\n3. Request return form\n4. Ship item (sometimes you pay shipping)\n5. Get refund within 14 days",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "GDPR — Data Protection 🔐",
+        "text": "GDPR (General Data Protection Regulation) gives you the right to:\n\n• Know what data they store about you\n• Demand data deletion\n• Opt out of advertising",
+        "mediaUrl": "assets/images/lessons/m2_l03_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Remember your rights!",
+        "text": "14-day returns + 2-year warranty = your EU protection.",
+        "buttonText": "To lessons",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned your EU rights — 14-day returns and 2-year warranty!"
+  },
+  {
+    "id": "m2_l04",
+    "moduleId": "digital",
+    "title": "Phishing & Scams",
+    "description": "How to avoid scammer hooks",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l05",
+    "tags": ["#digital", "#security"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Online Scammers 🎣",
+        "text": "Phishing (from 'fishing') is when scammers 'fish' for your data using fake sites and messages.",
+        "mediaUrl": "assets/images/lessons/m2_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What does phishing look like? 📧",
+        "text": "'Your account is blocked! Click here urgently...'\n\n'You won an iPhone! Enter card details for delivery...'\n\n'Mom, urgently send €100!'",
+        "mediaUrl": "assets/images/lessons/m2_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What is phishing?",
+        "options": ["Fishing game", "Stealing data via fake sites", "Antivirus", "Social network"],
+        "correctIndex": 1,
+        "explanation": "Phishing = 'fishing' for your data! 🎣"
+      },
+      {
+        "type": "info",
+        "title": "Phishing Signs 🚩",
+        "text": "• Urgency ('Immediately!', 'Last chance!')\n• Strange address (amaz0n.com instead of amazon.com)\n• Text errors\n• Asking for password or card data\n• Suspicious links",
+        "mediaUrl": "assets/images/lessons/m2_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What to do if you get a suspicious link?",
+        "options": ["Click to check", "Don't click, verify the source", "Forward to friends", "Enter data to test"],
+        "correctIndex": 1,
+        "explanation": "Never click suspicious links! 🛑"
+      },
+      {
+        "type": "info",
+        "title": "How to protect yourself? 🛡️",
+        "text": "1. Don't click links from messages\n2. Open sites manually (type address yourself)\n3. Check site address (https, correct domain)\n4. Never share passwords or SMS codes\n5. Enable 2FA everywhere",
+        "mediaUrl": "assets/images/lessons/m2_l04_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What if you fell for it? 🆘",
+        "text": "1. Immediately change passwords\n2. Call your bank (block card)\n3. Tell your parents\n4. Save the conversation (for police)\n5. Report scammer to platform",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Check your security!",
+        "text": "Next lesson — passwords and 2FA. Ready?",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about phishing — don't click suspicious links and verify sources!"
+  },
+  {
+    "id": "m2_l05",
+    "moduleId": "digital",
+    "title": "Passwords & 2FA",
+    "description": "Why birthdate is a bad password",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l06",
+    "tags": ["#digital", "#security"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Password = Key 🔑",
+        "text": "Your password protects:\n\n• Money on your card\n• Personal photos and messages\n• Game accounts\n• Social media reputation",
+        "mediaUrl": "assets/images/lessons/m2_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "TOP Bad Passwords 🙈",
+        "text": "1. 123456\n2. password\n3. qwerty\n4. Birthdate (01012010)\n5. Name + year (john2008)\n6. 111111\n\nHackers crack these in seconds!",
+        "mediaUrl": "assets/images/lessons/m2_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Which password is most secure?",
+        "options": ["password123", "Birthday2010", "Kf7$mP2@nL9x", "qwertyuiop"],
+        "correctIndex": 2,
+        "explanation": "Random characters are almost impossible to crack! 🔐"
+      },
+      {
+        "type": "info",
+        "title": "How to create a strong password? 💪",
+        "text": "Passphrase method:\n\n1. Take a favorite phrase\n2. 'My cat Whiskers loves sleep'\n3. First letters: McWls\n4. Add numbers and symbols: McW1s_2024!\n\n10+ characters = secure!",
+        "mediaUrl": "assets/images/lessons/m2_l05_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What is 2FA? 🔐",
+        "text": "2FA (Two-Factor Authentication).\n\n1st factor: Password (what you know)\n2nd factor: Code from SMS or app (what you have)\n\nEven if password is stolen — without the code, no access!",
+        "mediaUrl": "assets/images/lessons/m2_l05_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why use 2FA?",
+        "options": ["For looks", "Protection even if password leaks", "To make login harder", "It's ads"],
+        "correctIndex": 1,
+        "explanation": "2FA — a second lock on your door! 🔐"
+      },
+      {
+        "type": "info",
+        "title": "Security Rules 📋",
+        "text": "1. Unique password for each site\n2. Enable 2FA everywhere (especially: email, bank, social)\n3. Use password manager (Bitwarden, 1Password)\n4. Never share passwords!\n5. Change passwords after breaches",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Check your accounts!",
+        "text": "Enable 2FA on all important services right now.",
+        "buttonText": "Continue learning",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about strong passwords and 2FA — protect your accounts!"
+  },
+  {
+    "id": "m2_l06",
+    "moduleId": "digital",
+    "title": "GDPR & Your Data",
+    "description": "Why data is the new currency",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l07",
+    "tags": ["#digital", "#privacy", "#eu"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "You Are the Product 📦",
+        "text": "'If the service is free — you're the product.'\n\nGoogle, Facebook, TikTok make billions from your data!",
+        "mediaUrl": "assets/images/lessons/m2_l06_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What data do they collect? 🔍",
+        "text": "• Name, age, city\n• What you search online\n• What videos you watch\n• Who you chat with\n• Where you are (location)\n• What you buy",
+        "mediaUrl": "assets/images/lessons/m2_l06_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why do companies collect data?",
+        "options": ["For security", "To sell advertising", "For statistics", "By accident"],
+        "correctIndex": 1,
+        "explanation": "Data = targeted advertising = money! 💰"
+      },
+      {
+        "type": "info",
+        "title": "GDPR — Your Shield 🛡️",
+        "text": "GDPR (General Data Protection Regulation) — EU data protection law.\n\nCompanies MUST:\n• Ask permission to collect data\n• Explain why they need it\n• Delete data on request",
+        "mediaUrl": "assets/images/lessons/m2_l06_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Your GDPR Rights",
+        "text": "✅ Right to know what data they store\n✅ Right to correct data\n✅ Right to deletion ('right to be forgotten')\n✅ Right to opt out of ads\n✅ Right to download your data",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Can you demand deletion of your data?",
+        "options": ["No, it belongs to the company", "Yes, it's a GDPR right", "Only if you pay", "Only adults can"],
+        "correctIndex": 1,
+        "explanation": "GDPR gives the right to data deletion! 🗑️"
+      },
+      {
+        "type": "info",
+        "title": "How to protect data? 🔐",
+        "text": "1. Read app permissions\n2. Disable unnecessary access (camera, mic)\n3. Use 'Do Not Track' in browser\n4. Clear cookies regularly\n5. Don't give unnecessary info",
+        "mediaUrl": "assets/images/lessons/m2_l06_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Check permissions!",
+        "text": "Go to phone settings and see which apps have camera and location access.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about GDPR and data protection — control who collects your info!"
+  },
+  {
+    "id": "m2_l07",
+    "moduleId": "digital",
+    "title": "Influencer Marketing",
+    "description": "How bloggers sell you products",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l08",
+    "tags": ["#digital", "#marketing"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Blogger Recommends! 📱",
+        "text": "'I love this product!'\n'Use it every day!'\n'Best thing I've tried!'\n\nSound familiar? This is influencer marketing.",
+        "mediaUrl": "assets/images/lessons/m2_l07_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "How does it work? 💰",
+        "text": "1. Brand pays blogger (€100 to €100,000)\n2. Blogger posts 'recommendation'\n3. Followers buy\n4. Brand profits\n\nBloggers get paid for every mention!",
+        "mediaUrl": "assets/images/lessons/m2_l07_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why do bloggers promote products?",
+        "options": ["They like the product", "They get paid", "To help followers", "By accident"],
+        "correctIndex": 1,
+        "explanation": "Influencer marketing is a billion-dollar business! 💰"
+      },
+      {
+        "type": "info",
+        "title": "Signs of Advertising 🏷️",
+        "text": "By law they must say:\n• #ad\n• #sponsored\n• 'Promo'\n• 'Partnership'\n\nBut often in tiny text or 'forgotten'...",
+        "mediaUrl": "assets/images/lessons/m2_l07_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Hidden Ads 🕵️",
+        "text": "• 'Casually' shows brand\n• 'Just sharing' (but there's a promo code)\n• Unboxing 'gifts' from brands\n• Review without 'ad' label\n\nAll of this is paid content!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Blogger shows 'their' makeup without #ad label. This is...",
+        "options": ["Honest recommendation", "Probably hidden advertising", "Law violation", "Both B and C"],
+        "correctIndex": 3,
+        "explanation": "Hidden advertising violates EU law! 🚫"
+      },
+      {
+        "type": "info",
+        "title": "How not to fall for it? 🛡️",
+        "text": "1. Look for #ad, #sponsored\n2. Promo code = always advertising\n3. Read independent reviews\n4. Compare with other products\n5. Wait 24 hours before buying",
+        "mediaUrl": "assets/images/lessons/m2_l07_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Train your eye! 👁️",
+        "text": "Next time watching a blogger, look for signs of advertising.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You uncovered influencer marketing secrets — promo code = advertising!"
+  },
+  {
+    "id": "m2_l08",
+    "moduleId": "digital",
+    "title": "Fast Fashion",
+    "description": "The cost of cheap clothes for the planet",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l09",
+    "tags": ["#digital", "#sustainability"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "A €5 T-Shirt? 👕",
+        "text": "Shein, Primark, H&M — cheap clothes everywhere.\n\nBut low prices have a hidden cost...",
+        "mediaUrl": "assets/images/lessons/m2_l08_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What is Fast Fashion? ⚡",
+        "text": "Fast Fashion means:\n\n• New collections every week\n• Low quality\n• Cheap labor\n• Environmental pollution\n\nClothes worn 7-10 times then thrown away.",
+        "mediaUrl": "assets/images/lessons/m2_l08_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Environmental Cost 🌍",
+        "text": "Fashion industry:\n\n• 10% of all CO2 emissions\n• 20% of water pollution\n• 92 million tons of clothes in landfills/year\n• Microplastics in oceans\n\nSecond dirtiest industry after oil!",
+        "mediaUrl": "assets/images/lessons/m2_l08_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "How many tons of clothes are thrown away annually?",
+        "options": ["1 million", "10 million", "92 million", "500 million"],
+        "correctIndex": 2,
+        "explanation": "92 million tons! That's like 12,000 Eiffel Towers. 👕"
+      },
+      {
+        "type": "info",
+        "title": "Human Cost 👷",
+        "text": "For a €5 t-shirt:\n\n• Workers earn €2-3/day\n• 12-16 hour shifts\n• Child labor\n• Dangerous conditions\n\nKnow the true cost!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Alternatives 🌱",
+        "text": "1. Buy less, but better quality\n2. Secondhand (Vinted, Depop)\n3. Repair clothes\n4. Swap with friends\n5. Check brand ethics",
+        "mediaUrl": "assets/images/lessons/m2_l08_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What's the most eco-friendly option?",
+        "options": ["Buy new from Shein", "Buy secondhand", "Throw away old stuff", "Buy every week"],
+        "correctIndex": 1,
+        "explanation": "Secondhand — best for planet and wallet! ♻️"
+      },
+      {
+        "type": "action",
+        "title": "Try secondhand!",
+        "text": "Next lesson — how to safely buy and sell used items.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about Fast Fashion — buy less, wear longer, choose secondhand!"
+  },
+  {
+    "id": "m2_l09",
+    "moduleId": "digital",
+    "title": "Resale: Vinted/eBay",
+    "description": "How to safely sell your stuff",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l10",
+    "tags": ["#digital", "#resale"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Second Life for Things ♻️",
+        "text": "Resale is selling used items.\n\n• Vinted, Depop, eBay\n• Eco-friendly\n• Profitable\n• Frees up space!",
+        "mediaUrl": "assets/images/lessons/m2_l09_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "How much can you earn? 💰",
+        "text": "Average teen can recover:\n\n• 30-50% of clothing cost\n• 50-70% of tech cost\n• 40-60% of games/books cost\n\nYour 'junk' is someone's treasure!",
+        "mediaUrl": "assets/images/lessons/m2_l09_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "How much can you recover for used tech?",
+        "options": ["10-20%", "30-40%", "50-70%", "90-100%"],
+        "correctIndex": 2,
+        "explanation": "Tech holds value best! 📱"
+      },
+      {
+        "type": "info",
+        "title": "How to sell safely? 🛡️",
+        "text": "1. Use platform's built-in payment\n2. Never move to private messages\n3. Photograph the shipment\n4. Keep shipping receipt\n5. Don't accept payment outside platform",
+        "mediaUrl": "assets/images/lessons/m2_l09_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Buyer Red Flags 🚩",
+        "text": "• 'Let's chat on WhatsApp'\n• 'I'll pay through a friend'\n• 'I'll send a courier with cash'\n• 'I'll transfer now, you ship later'\n\nThese are scammers!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "What if buyer suggests moving to WhatsApp?",
+        "options": ["Agree", "Refuse and stay on platform", "Give phone number", "Ask for advance payment"],
+        "correctIndex": 1,
+        "explanation": "Platform protects both sides — don't leave! 🛡️"
+      },
+      {
+        "type": "info",
+        "title": "Selling Tips 📸",
+        "text": "1. Good photos (lighting, clean background)\n2. Honest description (mention defects!)\n3. Fair price (check similar items)\n4. Respond quickly to questions\n5. Ship on time",
+        "mediaUrl": "assets/images/lessons/m2_l09_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Try selling!",
+        "text": "Find 3 things you don't use and list them on Vinted.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about safe resale — sell through platforms, don't go to DMs!"
+  },
+  {
+    "id": "m2_l10",
+    "moduleId": "digital",
+    "title": "Digital Hygiene",
+    "description": "Final security quiz",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 5,
+    "xpReward": 100,
+    "unlocksLessonId": "m3_l01",
+    "tags": ["#digital", "#security", "#test"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "DIGITAL Module Final Boss! 🎮",
+        "text": "You've completed 9 lessons about the digital world:\n\n✅ Game currency\n✅ Subscriptions\n✅ EU rights\n✅ Phishing and passwords\n✅ GDPR\n✅ Influencers\n✅ Fast Fashion\n✅ Resale\n\nTime to test your knowledge!",
+        "mediaUrl": "assets/images/lessons/m2_l10_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 1: Why do games use gems instead of euros?",
+        "options": ["Looks nicer", "To hide real prices", "Legal requirement", "Tradition"],
+        "correctIndex": 1,
+        "explanation": "Gems distract from real money! 💎"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 2: How many days to return online purchases in EU?",
+        "options": ["7 days", "14 days", "30 days", "60 days"],
+        "correctIndex": 1,
+        "explanation": "14 days — your legal right! 📦"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 3: What is a Dark Pattern?",
+        "options": ["Dark theme", "Design that manipulates users", "Virus", "Font type"],
+        "correctIndex": 1,
+        "explanation": "Dark Patterns deceive users! 🖤"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 4: Which password is stronger?",
+        "options": ["password123", "MyCat2024!", "123456", "qwerty"],
+        "correctIndex": 1,
+        "explanation": "Phrase + symbols + numbers = secure! 🔐"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 5: A blogger's promo code means...",
+        "options": ["Blogger is generous", "It's advertising", "Product is good", "Discount is real"],
+        "correctIndex": 1,
+        "explanation": "Promo code = blogger gets % of sales! 💰"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 6: What to do with trial subscriptions?",
+        "options": ["Wait for auto-charge", "Cancel right after signup", "Forget about it", "Share with friends"],
+        "correctIndex": 1,
+        "explanation": "Cancel immediately — trial still works! 📅"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 7: 'Let's move to WhatsApp' from a buyer is...",
+        "options": ["Convenient", "A scammer red flag", "Normal", "Required"],
+        "correctIndex": 1,
+        "explanation": "Never leave the platform! 🚩"
+      },
+      {
+        "type": "info",
+        "title": "Your Digital Fortress 🏰",
+        "text": "You've mastered:\n\n🛡️ Scammer protection\n🔐 Strong passwords and 2FA\n📜 Your EU rights\n💰 Ad recognition\n♻️ Responsible consumption\n\nCongratulations on completing DIGITAL module!",
+        "mediaUrl": "assets/images/lessons/m2_l10_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Module Complete! 🏆",
+        "text": "Ready for WORK module about earning and banking?",
+        "buttonText": "To lessons",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Congratulations! You completed DIGITAL module and became a digital defender! 🛡️"
+  }
+]

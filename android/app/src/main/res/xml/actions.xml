@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App Actions для интеграции с Google Assistant -->
+<actions>
+    <!-- Действие: Показать баланс -->
+    <action intentName="actions.intent.GET_BALANCE">
+        <fulfillment urlTemplate="bary3://screen?screen=balance" />
+    </action>
+
+    <!-- Действие: Открыть экран -->
+    <action intentName="actions.intent.OPEN_APP_FEATURE">
+        <fulfillment urlTemplate="bary3://screen{?screen}">
+            <parameter-mapping
+                intentParameter="screen"
+                urlParameter="screen" />
+        </fulfillment>
+        <parameter name="screen">
+            <entity-set-reference entitySetId="ScreenEntity" />
+        </parameter>
+    </action>
+
+    <!-- Действие: Создать заметку -->
+    <action intentName="actions.intent.CREATE_THING">
+        <fulfillment urlTemplate="bary3://note/create{?title,content}">
+            <parameter-mapping
+                intentParameter="thing.name"
+                urlParameter="title" />
+            <parameter-mapping
+                intentParameter="thing.type"
+                urlParameter="content" />
+        </fulfillment>
+        <parameter name="thing.name">
+            <entity-set-reference entitySetId="NoteTitleEntity" />
+        </parameter>
+    </action>
+
+    <!-- Действие: Запланировать событие -->
+    <action intentName="actions.intent.CREATE_CALENDAR_EVENT">
+        <fulfillment urlTemplate="bary3://event/create{?name,date,amount}">
+            <parameter-mapping
+                intentParameter="event.name"
+                urlParameter="name" />
+            <parameter-mapping
+                intentParameter="event.startDate"
+                urlParameter="date" />
+            <parameter-mapping
+                intentParameter="event.amount"
+                urlParameter="amount" />
+        </fulfillment>
+        <parameter name="event.name">
+            <entity-set-reference entitySetId="EventNameEntity" />
+        </parameter>
+    </action>
+
+    <!-- Действие: Открыть калькулятор -->
+    <action intentName="actions.intent.CALCULATE">
+        <fulfillment urlTemplate="bary3://calculator{?type}">
+            <parameter-mapping
+                intentParameter="calculationType"
+                urlParameter="type" />
+        </fulfillment>
+        <parameter name="calculationType">
+            <entity-set-reference entitySetId="CalculatorEntity" />
+        </parameter>
+    </action>
+
+    <!-- Действие: Спросить у Бари -->
+    <action intentName="actions.intent.GET_ANSWER">
+        <fulfillment urlTemplate="bary3://bari/ask{?question}">
+            <parameter-mapping
+                intentParameter="question"
+                urlParameter="question" />
+        </fulfillment>
+        <parameter name="question">
+            <entity-set-reference entitySetId="QuestionEntity" />
+        </parameter>
+    </action>
+
+    <!-- Entity Sets для параметров -->
+    <entity-set entitySetId="BalanceEntity">
+    <entity name="balance" alternateName="@string/balance_entity" />
+</entity-set>
+
+<entity-set entitySetId="ScreenEntity">
+    <entity name="balance" alternateName="@string/screen_balance" />
+    <entity name="piggy_banks" alternateName="@string/screen_piggy_banks" />
+    <entity name="calendar" alternateName="@string/screen_calendar" />
+    <entity name="lessons" alternateName="@string/screen_lessons" />
+    <entity name="notes" alternateName="@string/screen_notes" />
+    <entity name="tools" alternateName="@string/screen_tools" />
+    <entity name="earnings_lab" alternateName="@string/screen_earnings_lab" />
+</entity-set>
+
+<entity-set entitySetId="NoteTitleEntity">
+    <entity name="note" alternateName="@string/note_entity" />
+</entity-set>
+
+<entity-set entitySetId="EventNameEntity">
+    <entity name="event" alternateName="@string/event_entity" />
+</entity-set>
+
+<entity-set entitySetId="CalculatorEntity">
+    <entity name="piggy_plan" alternateName="@string/calc_piggy_plan" />
+    <entity name="goal_date" alternateName="@string/calc_goal_date" />
+    <entity name="monthly_budget" alternateName="@string/calc_monthly_budget" />
+    <entity name="subscriptions" alternateName="@string/calc_subscriptions" />
+    <entity name="can_i_buy" alternateName="@string/calc_can_i_buy" />
+    <entity name="price_comparison" alternateName="@string/calc_price_comparison" />
+    <entity name="24h_rule" alternateName="@string/calc_24h_rule" />
+    <entity name="50_30_20" alternateName="@string/calc_50_30_20" />
+    <entity name="calendar_forecast" alternateName="@string/calc_calendar_forecast" />
+</entity-set>
+
+<entity-set entitySetId="QuestionEntity">
+    <entity name="question" alternateName="@string/question_entity" />
+    </entity-set>
+</actions>

@@ -1,0 +1,374 @@
+[
+  {
+    "id": "m5_l01",
+    "moduleId": "trending",
+    "title": "AI & Jobs",
+    "description": "How AI changes the job market",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m5_l02",
+    "tags": ["#trending", "#ai", "#future"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "AI Revolution 🤖",
+        "text": "ChatGPT, Midjourney, Copilot...\n\nAI is changing how we work. Some jobs disappear, new ones appear.",
+        "mediaUrl": "assets/images/lessons/m5_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Jobs at Risk ⚠️",
+        "text": "AI can replace:\n\n• Data entry\n• Basic writing/translation\n• Simple customer service\n• Basic coding\n• Routine analysis\n\nRepetitive = at risk!",
+        "mediaUrl": "assets/images/lessons/m5_l01_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Which jobs are most at risk from AI?",
+        "options": ["Creative jobs", "Repetitive routine jobs", "Jobs requiring empathy", "Physical jobs"],
+        "correctIndex": 1,
+        "explanation": "AI excels at repetitive tasks! 🤖"
+      },
+      {
+        "type": "info",
+        "title": "Jobs AI Can't Replace 🛡️",
+        "text": "Safe(r) from AI:\n\n• Creative thinking\n• Complex problem solving\n• Emotional intelligence\n• Physical skilled labor\n• Leadership & strategy\n• Unique human connection",
+        "mediaUrl": "assets/images/lessons/m5_l01_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "New Opportunities 🚀",
+        "text": "AI creates jobs:\n\n• AI trainers\n• Prompt engineers\n• AI ethicists\n• AI-human collaboration\n• Data specialists\n\nLearn to work WITH AI, not against it!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Best strategy for AI job market?",
+        "options": ["Ignore AI", "Learn to work with AI", "Only manual jobs", "Wait and see"],
+        "correctIndex": 1,
+        "explanation": "AI is a tool — learn to use it! 🛠️"
+      },
+      {
+        "type": "info",
+        "title": "Future-Proof Skills 💪",
+        "text": "Focus on:\n\n• Critical thinking\n• Creativity\n• Communication\n• Adaptability\n• Tech literacy\n• Emotional intelligence\n\nThese + AI knowledge = unstoppable!",
+        "mediaUrl": "assets/images/lessons/m5_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Start learning AI!",
+        "text": "Try ChatGPT or similar tools to understand AI capabilities.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about AI and jobs — learn to work with AI, not against it!"
+  },
+  {
+    "id": "m5_l02",
+    "moduleId": "trending",
+    "title": "Creator Economy",
+    "description": "Making money from content creation",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m5_l03",
+    "tags": ["#trending", "#creator"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Everyone Can Be a Creator 📱",
+        "text": "YouTube, TikTok, Twitch, Substack...\n\n50+ million people earn money creating content!\n\nCould you be one of them?",
+        "mediaUrl": "assets/images/lessons/m5_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "How Creators Earn 💰",
+        "text": "Revenue streams:\n\n• Ad revenue (YouTube, TikTok)\n• Sponsorships\n• Merchandise\n• Subscriptions (Patreon)\n• Courses/products\n• Affiliate marketing",
+        "mediaUrl": "assets/images/lessons/m5_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "How do most creators earn money?",
+        "options": ["Only ads", "Multiple income streams", "Government grants", "Only sponsorships"],
+        "correctIndex": 1,
+        "explanation": "Smart creators diversify income sources! 💰"
+      },
+      {
+        "type": "info",
+        "title": "The Reality Check ⚠️",
+        "text": "Truth:\n\n• Top 1% earn most money\n• Takes 1-3 years to monetize\n• Requires consistency\n• Burnout is real\n• Algorithm changes hurt\n\nNot as easy as it looks!",
+        "mediaUrl": "assets/images/lessons/m5_l02_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Realistic Expectations 📊",
+        "text": "YouTube:\n• Need 1,000 subs + 4,000 hours\n• €1-3 per 1,000 views\n• 100k views = €100-300\n\nMost creators earn <€500/month!\n\nDo it for passion, not just money.",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Best reason to start creating content?",
+        "options": ["Quick money", "Passion + skill building", "Fame", "To avoid real work"],
+        "correctIndex": 1,
+        "explanation": "Passion sustains you through the hard years! ❤️"
+      },
+      {
+        "type": "info",
+        "title": "Getting Started 🚀",
+        "text": "1. Choose your niche (what you love)\n2. Pick one platform\n3. Post consistently (quantity → quality)\n4. Engage with community\n5. Improve constantly\n6. Don't quit your day job (yet)!",
+        "mediaUrl": "assets/images/lessons/m5_l02_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Find your niche!",
+        "text": "What could you talk about for 100+ videos?",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about creator economy — passion + consistency = potential success!"
+  },
+  {
+    "id": "m5_l03",
+    "moduleId": "trending",
+    "title": "Sustainable Finance",
+    "description": "ESG investing and ethical money",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m5_l04",
+    "tags": ["#trending", "#esg", "#sustainability"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Money Can Change the World 🌍",
+        "text": "Where you put your money matters!\n\nInvesting in 'good' companies can push for positive change.",
+        "mediaUrl": "assets/images/lessons/m5_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What is ESG? 🌱",
+        "text": "ESG = Environmental, Social, Governance\n\n🌍 Environmental: Climate, pollution\n👥 Social: Workers, communities\n🏛️ Governance: Ethics, transparency\n\nCompanies scored on these factors!",
+        "mediaUrl": "assets/images/lessons/m5_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What does ESG stand for?",
+        "options": ["Extra Safe Gains", "Environmental Social Governance", "European Stock Guide", "Ethical Saving Goals"],
+        "correctIndex": 1,
+        "explanation": "ESG = Environmental, Social, Governance! 🌍"
+      },
+      {
+        "type": "info",
+        "title": "Sustainable Investing Options 💚",
+        "text": "• ESG ETFs (filtered companies)\n• Green bonds (fund eco projects)\n• Impact investing\n• Excluding 'sin stocks' (weapons, tobacco)\n\nYour values + your money = impact!",
+        "mediaUrl": "assets/images/lessons/m5_l03_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Performance Myth Busted 📈",
+        "text": "Old belief: 'Sustainable = lower returns'\n\nReality: ESG funds often match or beat regular funds!\n\n• Less risk from scandals\n• Future-proof industries\n• Growing demand",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Do ESG investments have lower returns?",
+        "options": ["Always lower", "Often match or beat regular investments", "Guaranteed higher", "They don't make money"],
+        "correctIndex": 1,
+        "explanation": "ESG often performs just as well or better! 📈"
+      },
+      {
+        "type": "info",
+        "title": "Beware of Greenwashing 🚩",
+        "text": "Greenwashing = pretending to be eco-friendly.\n\n• Check actual ESG scores\n• Read fund holdings\n• Look for certifications\n• Don't trust marketing alone!",
+        "mediaUrl": "assets/images/lessons/m5_l03_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Your money, your values!",
+        "text": "When you start investing, consider ESG options.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about ESG investing — align your money with your values!"
+  },
+  {
+    "id": "m5_l04",
+    "moduleId": "trending",
+    "title": "Digital Banking Revolution",
+    "description": "Neobanks, digital wallets, and the future",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m5_l05",
+    "tags": ["#trending", "#fintech"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Banking Without Banks 📱",
+        "text": "N26, Revolut, Wise, Monzo...\n\nNeobanks: 100% digital, no branches.\n\nChanging how we use money!",
+        "mediaUrl": "assets/images/lessons/m5_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Neobank Advantages 👍",
+        "text": "✅ Open account in minutes\n✅ No/low fees\n✅ Real-time notifications\n✅ Great apps\n✅ Easy international transfers\n✅ Spending insights",
+        "mediaUrl": "assets/images/lessons/m5_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Main advantage of neobanks?",
+        "options": ["Physical branches", "Digital-first, lower fees", "Better interest rates", "Government backing"],
+        "correctIndex": 1,
+        "explanation": "Neobanks = digital convenience + lower costs! 📱"
+      },
+      {
+        "type": "info",
+        "title": "Neobank Risks ⚠️",
+        "text": "Watch out for:\n\n• Less deposit protection (check!)\n• Customer service issues\n• Features can change\n• Not ideal for complex needs\n• Some aren't 'real' banks",
+        "mediaUrl": "assets/images/lessons/m5_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Digital Wallets 💳",
+        "text": "Apple Pay, Google Pay, PayPal...\n\n• Pay with phone\n• Store multiple cards\n• Online shopping easier\n• More secure than physical cards\n\nFuture is contactless!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Are digital wallets safe?",
+        "options": ["No, very risky", "Yes, often safer than physical cards", "Only for small amounts", "Same as cash"],
+        "correctIndex": 1,
+        "explanation": "Tokenization makes digital wallets very secure! 🔐"
+      },
+      {
+        "type": "info",
+        "title": "Best of Both Worlds 🏦",
+        "text": "Smart approach:\n\n• Traditional bank: savings, loans\n• Neobank: daily spending\n• Digital wallet: convenience\n\nUse each for its strengths!",
+        "mediaUrl": "assets/images/lessons/m5_l04_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Explore your options!",
+        "text": "Compare neobank features when you're ready for your first account.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about digital banking — use traditional and neo banks strategically!"
+  },
+  {
+    "id": "m5_l05",
+    "moduleId": "trending",
+    "title": "Financial Independence for Gen Z",
+    "description": "Your generation's unique path to success",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 5,
+    "xpReward": 100,
+    "unlocksLessonId": null,
+    "tags": ["#trending", "#genz", "#final"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "All Modules Complete! 🎉",
+        "text": "You've learned:\n\n💰 Budgeting & Saving\n🛡️ Digital Safety\n💼 Work & Banking\n📈 Investing & Future\n🚀 Trending Topics\n\n45 lessons of financial wisdom!",
+        "mediaUrl": "assets/images/lessons/m5_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Gen Z's Unique Challenges 😤",
+        "text": "Your generation faces:\n\n• Higher housing costs\n• Student debt (in some countries)\n• Climate uncertainty\n• Job market changes (AI)\n• Social media pressure\n\nBUT also unique advantages!",
+        "mediaUrl": "assets/images/lessons/m5_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Gen Z's Superpowers 💪",
+        "text": "You have:\n\n✅ Digital native skills\n✅ Global connectivity\n✅ Financial info access\n✅ Longest investment horizon\n✅ Side hustle culture\n✅ Awareness (climate, social)\n\nUse them wisely!",
+        "mediaUrl": "assets/images/lessons/m5_l05_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Gen Z's biggest financial advantage?",
+        "options": ["Higher salaries", "Time (longest investment horizon)", "Lower expenses", "Better education"],
+        "correctIndex": 1,
+        "explanation": "TIME is your superpower! Start investing NOW! ⏰"
+      },
+      {
+        "type": "info",
+        "title": "Your Roadmap 🗺️",
+        "text": "Ages 15-18:\n• Track spending\n• Save 20%+\n• Learn investing basics\n• Build skills\n\nAges 18-25:\n• Start investing\n• Build emergency fund\n• Grow career\n• Avoid bad debt",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "The Power of Starting Early 🚀",
+        "text": "You know what most adults don't:\n\n• Compound interest\n• Inflation protection\n• FIRE possibility\n• Investment basics\n\nYou're already ahead! 🏆",
+        "mediaUrl": "assets/images/lessons/m5_l05_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Most important thing you learned?",
+        "options": ["Money is evil", "Start early and be consistent", "Only rich people invest", "Spend everything now"],
+        "correctIndex": 1,
+        "explanation": "Start early + stay consistent = financial freedom! 🔥"
+      },
+      {
+        "type": "info",
+        "title": "Your Journey Continues! 🌟",
+        "text": "This is just the beginning.\n\n• Apply what you learned\n• Keep learning\n• Make mistakes (they teach!)\n• Help others learn too\n\nYour financial future is in YOUR hands!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Congratulations, Graduate! 🎓",
+        "text": "You've completed all 45 lessons! Now put your knowledge into action!",
+        "buttonText": "Back to Home",
+        "targetScreen": "balance",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "CONGRATULATIONS! You've completed all lessons and are ready for financial independence! 🎓🔥"
+  }
+]

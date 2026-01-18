@@ -1,0 +1,3040 @@
+[
+  {
+    "id": "m1_l01",
+    "moduleId": "basics",
+    "title": "Bedürfnisse vs Wünsche",
+    "description": "Wie man den Unterschied erkennt",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l02",
+    "tags": [
+      "#basics",
+      "#budgeting"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Bedürfnisse vs Wünsche",
+        "text": "Jeden Tag treffen wir Entscheidungen darüber, wofür wir Geld ausgeben. Aber nicht alle Ausgaben sind gleich wichtig!",
+        "mediaUrl": "assets/images/lessons/m1_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was sind BEDÜRFNISSE?",
+        "text": "Bedürfnisse sind Dinge, ohne die du nicht leben kannst:\n\n🍎 Essen und Wasser\n🏠 Wohnung\n👕 Grundlegende Kleidung\n📚 Schulmaterialien\n🚌 Transport zur Schule",
+        "mediaUrl": "assets/images/lessons/m1_l01_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was sind WÜNSCHE?",
+        "text": "Wünsche sind schön zu haben, aber nicht essentiell:\n\n🎮 Neue Videospiele\n👟 Designer-Sneaker\n🍕 Essenslieferung\n📱 Neuestes iPhone\n🎬 Netflix-Abo",
+        "mediaUrl": "assets/images/lessons/m1_l01_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Zu welcher Kategorie gehört der Kauf eines Game-Skins?",
+        "options": [
+          "Bedürfnis",
+          "Wunsch",
+          "Beides",
+          "Keins von beiden"
+        ],
+        "correctIndex": 1,
+        "explanation": "Skins sind ein Wunsch. Das Spiel funktioniert auch ohne sie! 🎮"
+      },
+      {
+        "type": "info",
+        "title": "Die Grauzone 🤔",
+        "text": "Manchmal ist die Grenze fließend:\n\n• Handy — Bedürfnis (Kommunikation), aber iPhone 15 Pro — Wunsch\n• Kleidung — Bedürfnis, aber Designer-Marken — Wunsch\n• Essen — Bedürfnis, aber Sushi-Lieferung — Wunsch",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was davon ist ein BEDÜRFNIS?",
+        "options": [
+          "AirPods Pro",
+          "Schulessen",
+          "Telegram-Sticker",
+          "Neue Handyhülle"
+        ],
+        "correctIndex": 1,
+        "explanation": "Essen ist ein Grundbedürfnis. Der Rest kann warten! 🍽️"
+      },
+      {
+        "type": "info",
+        "title": "Die goldene Regel",
+        "text": "Erst die BEDÜRFNISSE decken,\ndann über WÜNSCHE nachdenken.\n\nDas ist die Grundlage der Finanzkompetenz!",
+        "mediaUrl": "assets/images/lessons/m1_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Probier es selbst! 🎯",
+        "text": "Nutze den 50/30/20-Rechner, um dein Taschengeld zwischen Bedürfnissen, Wünschen und Sparen aufzuteilen.",
+        "buttonText": "Rechner öffnen",
+        "targetScreen": "calculator_50_30_20",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast gelernt, Bedürfnisse von Wünschen zu unterscheiden. Das ist der erste Schritt zu kluger Geldverwaltung!"
+  },
+  {
+    "id": "m1_l02",
+    "moduleId": "basics",
+    "title": "Der Latte-Effekt",
+    "description": "Wohin verschwindet dein Geld?",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l03",
+    "tags": [
+      "#basics",
+      "#spending"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Wohin geht das Geld? 💸",
+        "text": "Ist dir aufgefallen, dass dein Geld ausgeht, obwohl du nichts Besonderes gekauft hast?",
+        "mediaUrl": "assets/images/lessons/m1_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Der Latte-Effekt ☕",
+        "text": "Ökonom David Bach bemerkte: Kleine tägliche Ausgaben summieren sich zu riesigen Beträgen!\n\nLatte für 5€ täglich = 150€/Monat = 1800€/Jahr!",
+        "mediaUrl": "assets/images/lessons/m1_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Dein 'Latte' 🎯",
+        "text": "Teenager haben ihre eigenen 'Lattes':\n\n🍬 Snacks am Automaten — 2€/Tag = 60€/Monat\n🎮 Spiele-Donations — 5€/Woche = 20€/Monat\n🥤 Getränke — 3€/Tag = 90€/Monat\n📱 Sticker und Abos — 10€/Monat",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie viel 'frisst' 3€/Tag in einem Jahr?",
+        "options": [
+          "Etwa 100€",
+          "Etwa 500€",
+          "Etwa 1000€",
+          "Etwa 90€"
+        ],
+        "correctIndex": 2,
+        "explanation": "3€ × 365 Tage = 1095€! Fast ein iPhone! 📱"
+      },
+      {
+        "type": "info",
+        "title": "Wie bekämpft man es? 💪",
+        "text": "1. Alle Ausgaben tracken (auch kleine)\n2. Wöchentlich prüfen, wohin das Geld ging\n3. Limit für 'Kleinigkeiten' setzen\n4. Weniger Bargeld mitnehmen",
+        "mediaUrl": "assets/images/lessons/m1_l02_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was hilft, kleine Ausgaben zu kontrollieren?",
+        "options": [
+          "Mehr Geld mitnehmen",
+          "Alle Käufe tracken",
+          "Nicht ans Geld denken",
+          "Schneller ausgeben"
+        ],
+        "correctIndex": 1,
+        "explanation": "Wenn du Ausgaben trackst, siehst du das wahre Bild! 📝"
+      },
+      {
+        "type": "action",
+        "title": "Check deinen 'Latte'! ☕",
+        "text": "Schau dir deine Transaktionen der letzten Woche an. Wie viel ging für Kleinigkeiten drauf?",
+        "buttonText": "Meine Transaktionen",
+        "targetScreen": "balance",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast den Latte-Effekt kennengelernt — wie kleine Ausgaben sich zu großen Summen addieren!"
+  },
+  {
+    "id": "m1_l03",
+    "moduleId": "basics",
+    "title": "SMART-Ziele",
+    "description": "Wie man finanzielle Ziele setzt",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l04",
+    "tags": [
+      "#basics",
+      "#goals"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Traum vs Ziel 🎯",
+        "text": "Traum: 'Ich will ein neues Handy'\nZiel: 'Ich spare 500€ für ein iPhone in 5 Monaten, indem ich 100€/Monat spare'\n\nSpürst du den Unterschied?",
+        "mediaUrl": "assets/images/lessons/m1_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Die SMART-Methode",
+        "text": "SMART ist eine Formel für richtige Ziele:\n\nS — Spezifisch\nM — Messbar\nA — Attraktiv/Erreichbar\nR — Relevant\nT — Terminiert",
+        "mediaUrl": "assets/images/lessons/m1_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "S — Spezifisch 🎯",
+        "text": "❌ 'Ich will Geld sparen'\n✅ 'Ich will für eine PlayStation 5 sparen'\n\nJe spezifischer das Ziel, desto einfacher zu erreichen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "M — Messbar 📏",
+        "text": "❌ 'Ich spare viel Geld'\n✅ 'Ich spare 500 Euro'\n\nDu musst den genauen Betrag kennen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Welches Ziel ist SMART?",
+        "options": [
+          "Ich will reich sein",
+          "Ich spare irgendwann für ein Fahrrad",
+          "Ich spare 300€ für ein Fahrrad in 3 Monaten",
+          "Ich spare Geld"
+        ],
+        "correctIndex": 2,
+        "explanation": "Konkreter Betrag + Deadline = SMART-Ziel! 🎯"
+      },
+      {
+        "type": "info",
+        "title": "A — Attraktiv/Erreichbar 💪",
+        "text": "Wenn dein Taschengeld 50€/Monat ist, ist ein Ziel von 1000€ in einem Monat unrealistisch.\n\nSetze ambitionierte aber erreichbare Ziele!",
+        "mediaUrl": "assets/images/lessons/m1_l03_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "R — Relevant ❤️",
+        "text": "Das Ziel sollte DEIN Ziel sein, nicht das deiner Eltern oder Freunde.\n\nWenn dir das Ziel persönlich wichtig ist, findest du Motivation zum Sparen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "T — Terminiert ⏰",
+        "text": "❌ 'Ich spare irgendwann'\n✅ 'Ich spare bis zum 1. September'\n\nOhne Deadline wird ein Ziel nur ein Traum!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Wofür steht das T in SMART?",
+        "options": [
+          "Toll",
+          "Terminiert",
+          "Tapfer",
+          "Total"
+        ],
+        "correctIndex": 1,
+        "explanation": "Terminiert — Ziele brauchen Deadlines! ⏰"
+      },
+      {
+        "type": "action",
+        "title": "Erstelle ein SMART-Ziel! 🎯",
+        "text": "Erstelle dein erstes Sparschwein mit einem konkreten Betrag und Deadline.",
+        "buttonText": "Sparschwein erstellen",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast die SMART-Methode für finanzielle Ziele gemeistert!"
+  },
+  {
+    "id": "m1_l04",
+    "moduleId": "basics",
+    "title": "Die 24-Stunden-Regel",
+    "description": "Impulskäufe bekämpfen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l05",
+    "tags": [
+      "#basics",
+      "#impulse"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Kennst du das? 🛒",
+        "text": "Etwas Cooles gesehen → Sofort gekauft → Eine Woche später sammelt es Staub...\n\nDas ist ein Impulskauf!",
+        "mediaUrl": "assets/images/lessons/m1_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum kaufen wir impulsiv?",
+        "text": "🧠 Dopamin — das Glückshormon\n\nWenn wir etwas Cooles sehen, schüttet unser Gehirn Dopamin aus. Wir WOLLEN es JETZT kaufen!",
+        "mediaUrl": "assets/images/lessons/m1_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Die 24-Stunden-Regel ⏰",
+        "text": "Vor jedem nicht essentiellen Kauf — WARTE 24 STUNDEN.\n\nWenn du es nach einem Tag noch willst — kauf es.\nWenn du es vergessen hast — brauchtest du es nicht so sehr!",
+        "mediaUrl": "assets/images/lessons/m1_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum 24 Stunden vor dem Kauf warten?",
+        "options": [
+          "Damit der Preis sinkt",
+          "Damit das Dopamin nachlässt und die Entscheidung rational wird",
+          "Damit das Produkt ausverkauft ist",
+          "Es ist sinnlos"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nach 24 Stunden kühlt dein Gehirn ab und denkt rational! 🧠"
+      },
+      {
+        "type": "info",
+        "title": "Wie wendet man es an? 📝",
+        "text": "1. Etwas Cooles sehen\n2. Auf eine 'Wunschliste' setzen\n3. Datum notieren\n4. Nach 24 Stunden zurückkommen\n5. Wenn immer noch nötig — kaufen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Statistik 📊",
+        "text": "70% der Impulskäufe passieren nicht, wenn man 24 Stunden wartet!\n\nDas funktioniert sogar bei erwachsenen Millionären 💰",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Wann sollte man die 24-Stunden-Regel NICHT anwenden?",
+        "options": [
+          "Beim Kauf eines neuen Game-Skins",
+          "Beim Kauf von Mittagessen bei Hunger",
+          "Beim Kauf von AirPods",
+          "Beim Kauf eines Abos"
+        ],
+        "correctIndex": 1,
+        "explanation": "Essen ist ein Bedürfnis. Die Regel ist für Wünsche! 🍕"
+      },
+      {
+        "type": "action",
+        "title": "Probier es jetzt! 🎯",
+        "text": "Gibt es etwas, das du kaufen möchtest? Füge es zum 24-Stunden-Rechner hinzu und check morgen!",
+        "buttonText": "24-Stunden-Rechner",
+        "targetScreen": "calculator_24h",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast die 24-Stunden-Regel gelernt — eine mächtige Waffe gegen Impulskäufe!"
+  },
+  {
+    "id": "m1_l05",
+    "moduleId": "basics",
+    "title": "Die 50/30/20-Methode",
+    "description": "Einfaches Budget für Taschengeld",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l06",
+    "tags": [
+      "#basics",
+      "#budgeting"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Ein einfacher Weg, Geld zu verwalten",
+        "text": "Die 50/30/20-Methode ist ein einfaches System zur Geldaufteilung, das Millionen Menschen weltweit nutzen!",
+        "mediaUrl": "assets/images/lessons/m1_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "50% — Bedürfnisse",
+        "text": "Die Hälfte deines Geldes für Notwendiges:\n\n🍎 Schulessen\n🚌 Transport\n📚 Schulmaterialien\n📱 Handy-Rechnung (wenn du zahlst)",
+        "mediaUrl": "assets/images/lessons/m1_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "30% — Wünsche",
+        "text": "Ein Drittel für Spaß:\n\n🎮 Spiele und Donations\n🍕 Leckereien\n🎬 Unterhaltung\n👕 Mode",
+        "mediaUrl": "assets/images/lessons/m1_l05_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "20% — Sparen",
+        "text": "Ein Fünftel geht ins Sparen:\n\n💰 Für ein großes Ziel\n🎁 Für Geschenke\n🆘 Für Notfälle",
+        "mediaUrl": "assets/images/lessons/m1_l05_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wenn du 100€ bekommst, wie viel geht nach 50/30/20 ins Sparen?",
+        "options": [
+          "10€",
+          "20€",
+          "30€",
+          "50€"
+        ],
+        "correctIndex": 1,
+        "explanation": "20% von 100€ = 20€ ins Sparen! 💰"
+      },
+      {
+        "type": "info",
+        "title": "Beispiel für einen Teenager",
+        "text": "Taschengeld: 50€/Monat\n\n💡 25€ — Bedürfnisse (Essen, Transport)\n🎮 15€ — Wünsche (Spiele, Snacks)\n💰 10€ — Sparen",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Anpassen! 🔧",
+        "text": "Wenn Eltern für Essen und Transport zahlen, könnte deine Formel sein:\n\n40% Wünsche\n40% Sparen\n20% Geschenke für Freunde",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist das Wichtigste an 50/30/20?",
+        "options": [
+          "Prozentsätze genau einhalten",
+          "Einen Plan für dein Geld haben",
+          "Alles für Wünsche ausgeben",
+          "100% sparen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ein System zu haben ist der Schlüssel! Prozentsätze können angepasst werden. 📊"
+      },
+      {
+        "type": "action",
+        "title": "Berechne dein Budget! 📊",
+        "text": "Gib dein Taschengeld ein und bekomme einen personalisierten 50/30/20-Plan.",
+        "buttonText": "50/30/20-Rechner",
+        "targetScreen": "calculator_50_30_20",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast die 50/30/20-Methode gemeistert — ein einfaches System zur Geldverwaltung!"
+  },
+  {
+    "id": "m1_l06",
+    "moduleId": "basics",
+    "title": "Geld in der Familie",
+    "description": "Wie man Budget mit Eltern bespricht",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l07",
+    "tags": [
+      "#basics",
+      "#family"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Geld ist kein Tabu 💬",
+        "text": "Viele Familien vermeiden es, über Geld zu sprechen. Aber offene Budget-Gespräche sind ein Zeichen gesunder Beziehungen!",
+        "mediaUrl": "assets/images/lessons/m1_l06_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum darüber sprechen? 🤔",
+        "text": "• Du verstehst die finanzielle Situation der Familie\n• Du lernst, gemeinsam zu planen\n• Weniger Geldkonflikte\n• Eltern sehen deine Reife",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Wie anfangen?",
+        "text": "❌ 'Gib mir mehr Geld!'\n✅ 'Können wir über mein Taschengeld sprechen? Ich möchte lernen, ein Budget zu führen.'",
+        "mediaUrl": "assets/images/lessons/m1_l06_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist der beste Ansatz für Geldgespräche?",
+        "options": [
+          "Mehr fordern",
+          "Still schmollen",
+          "Vorschlagen, gemeinsam übers Budget zu sprechen",
+          "Bei Freunden beschweren"
+        ],
+        "correctIndex": 2,
+        "explanation": "Konstruktiver Dialog ist der Schlüssel zum Erfolg! 🔑"
+      },
+      {
+        "type": "info",
+        "title": "Idee: Finanzvertrag 📝",
+        "text": "Vereinbare mit Eltern:\n• Wie viel und wann du Taschengeld bekommst\n• Wofür du Boni verdienen kannst\n• Was du selbst zahlen musst\n• Was Eltern zahlen",
+        "mediaUrl": "assets/images/lessons/m1_l06_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Zeige Verantwortung! 💪",
+        "text": "Bestes Argument für mehr Taschengeld — zeige, dass du mit Geld umgehen kannst:\n\n• Ausgaben tracken\n• Für Ziele sparen\n• Nicht um Vorschüsse bitten",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was könnte Eltern überzeugen, das Taschengeld zu erhöhen?",
+        "options": [
+          "Ständig fragen",
+          "Zeigen, dass du mit Geld umgehen kannst",
+          "Mit Freunden vergleichen",
+          "Drohen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Verantwortung ist das beste Argument! 📊"
+      },
+      {
+        "type": "action",
+        "title": "Bereite das Gespräch vor",
+        "text": "Richte die App mit deinen Eltern in der Eltern-Zone ein.",
+        "buttonText": "Eltern-Zone",
+        "targetScreen": "parent_zone",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast gelernt, wie man mit Eltern über Geld spricht — eine wichtige Fähigkeit!"
+  },
+  {
+    "id": "m1_l07",
+    "moduleId": "basics",
+    "title": "Bargeld vs Digital",
+    "description": "Psychologie des Ausgebens mit Karte vs Bargeld",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l08",
+    "tags": [
+      "#basics",
+      "#psychology"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Interessante Tatsache 🧠",
+        "text": "Studien zeigen: Menschen geben 12-18% MEHR aus, wenn sie mit Karte statt Bargeld zahlen!",
+        "mediaUrl": "assets/images/lessons/m1_l07_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum passiert das?",
+        "text": "💵 Bargeld ist ein physischer Verlust. Du SIEHST, wie Geld weggeht.\n\n💳 Karte ist eine Abstraktion. Zahlen auf dem Bildschirm fühlen sich nicht wie 'Verlust' an.",
+        "mediaUrl": "assets/images/lessons/m1_l07_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum geben Menschen mehr mit Karte aus?",
+        "options": [
+          "Karten sind teurer",
+          "Ausgaben fühlen sich nicht wie Verlust an",
+          "Geschäfte betrügen",
+          "Zufall"
+        ],
+        "correctIndex": 1,
+        "explanation": "Das Gehirn nimmt Ziffern nicht als echten Verlust wahr! 🧠"
+      },
+      {
+        "type": "info",
+        "title": "Kontaktloses Zahlen 📱",
+        "text": "Apple Pay und Google Pay sind noch gefährlicher!\n\nEin Tippen — Geld weg. Keine Zeit zum Nachdenken.",
+        "mediaUrl": "assets/images/lessons/m1_l07_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Life-Hacks 💡",
+        "text": "1. Bargeld für Unterhaltung nutzen\n2. Kartenlimits setzen\n3. Kontaktlos für große Beträge deaktivieren\n4. Kontostand täglich prüfen",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Die Umschlag-Methode 📨",
+        "text": "Alte aber funktionierende Methode:\n\n1. Bargeld am Wochenanfang abheben\n2. In 'Umschläge' aufteilen (Essen, Spaß)\n3. Wenn Umschlag leer — stopp!",
+        "mediaUrl": "assets/images/lessons/m1_l07_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was hilft, Kartenausgaben zu kontrollieren?",
+        "options": [
+          "Kontostand ignorieren",
+          "Tägliche Limits setzen",
+          "Nur mit Karte zahlen",
+          "Kann nicht kontrolliert werden"
+        ],
+        "correctIndex": 1,
+        "explanation": "Limits sind dein finanzieller 'Sicherheitsschalter'! ⚙️"
+      },
+      {
+        "type": "action",
+        "title": "Check deinen Kontostand! 💰",
+        "text": "Öffne deinen Kontostand und sieh, wie viel du diese Woche ausgegeben hast.",
+        "buttonText": "Mein Kontostand",
+        "targetScreen": "balance",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast etwas über die Psychologie des Ausgebens gelernt — Bargeld hilft, weniger auszugeben!"
+  },
+  {
+    "id": "m1_l08",
+    "moduleId": "basics",
+    "title": "Rabatte & Marketing",
+    "description": "Tricks der Geschäfte wie '3 zum Preis von 2'",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l09",
+    "tags": [
+      "#basics",
+      "#marketing"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Rabatte sind nicht immer Schnäppchen! 🏷️",
+        "text": "Geschäfte geben Milliarden aus, damit du mehr ausgibst. Zeit, ihre Tricks zu lernen!",
+        "mediaUrl": "assets/images/lessons/m1_l08_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Trick #1: Ankerpreis ⚓",
+        "text": "War: 100€\nJetzt: 59€\n\n'Wow, spare 41€!'\n\nAber... vielleicht kostete es immer 59€? 🤔",
+        "mediaUrl": "assets/images/lessons/m1_l08_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Trick #2: 3 zum Preis von 2 🛒",
+        "text": "Du wolltest 1 Schokoriegel für 2€.\nAngebot: 3 zum Preis von 2 (4€).\n\nDu hast 2€ 'gespart' aber 2€ MEHR ausgegeben!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Du wolltest 1 T-Shirt für 20€. Angebot: 2 für 30€. Wie viel extra 'zahlst du drauf'?",
+        "options": [
+          "Spare 10€",
+          "Zahle 10€ drauf",
+          "Ausgeglichen",
+          "Spare 20€"
+        ],
+        "correctIndex": 1,
+        "explanation": "Wolltest 20€ ausgeben, hast 30€ ausgegeben = +10€! 💸"
+      },
+      {
+        "type": "info",
+        "title": "Trick #3: 9,99€-Preise 🔢",
+        "text": "9,99€ scheint viel billiger als 10€.\n\nDein Gehirn liest die erste Ziffer und 'rundet ab'.\n\nDer tatsächliche Unterschied ist nur 1 Cent!",
+        "mediaUrl": "assets/images/lessons/m1_l08_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Trick #4: Zeitdruck ⏰",
+        "text": "'Nur heute!'\n'Noch 2 Stunden!'\n'Letztes Stück!'\n\nZiel: dich JETZT zum Kaufen bringen ohne nachzudenken.",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was tun, wenn du 'Nur heute!' siehst?",
+        "options": [
+          "Dringend kaufen",
+          "Die 24-Stunden-Regel anwenden",
+          "Sicherheitshalber 2 kaufen",
+          "Freunde anrufen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Wenn das Angebot echt ist, kommt es wieder. Nicht hetzen! ⏰"
+      },
+      {
+        "type": "info",
+        "title": "Wie schützt man sich? 🛡️",
+        "text": "1. Liste VOR dem Einkaufen machen\n2. Preise in verschiedenen Geschäften vergleichen\n3. Fragen: 'Würde ich auch ohne Rabatt kaufen?'\n4. Die 24-Stunden-Regel nutzen",
+        "mediaUrl": "assets/images/lessons/m1_l08_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Preise vergleichen! 📊",
+        "text": "Vor deinem nächsten Kauf, nutze den Preisvergleich-Rechner.",
+        "buttonText": "Preisvergleich",
+        "targetScreen": "calculator_price_comparison",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast Marketing-Geheimnisse aufgedeckt — Rabatte werden dich nicht mehr täuschen!"
+  },
+  {
+    "id": "m1_l09",
+    "moduleId": "basics",
+    "title": "Geld leihen an Freunde",
+    "description": "Finanzielle Etikette",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l10",
+    "tags": [
+      "#basics",
+      "#friends"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Geld und Freundschaft 🤝",
+        "text": "'Leih mir 10€ bis Montag'\n\nKennst du das? Geld zwischen Freunden ist ein Minenfeld!",
+        "mediaUrl": "assets/images/lessons/m1_l09_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum ist es kompliziert? 😬",
+        "text": "• Peinlich, an die Schuld zu erinnern\n• Freund könnte 'vergessen'\n• Groll auf beiden Seiten\n• Freundschaft in Gefahr",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Die goldene Regel 🥇",
+        "text": "Leihe nur, was du bereit bist zu VERSCHENKEN.\n\nWenn sie es nicht zurückgeben — verlierst du weder Geld (mental abgeschrieben) noch einen Freund.",
+        "mediaUrl": "assets/images/lessons/m1_l09_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie viel kannst du einem Freund leihen?",
+        "options": [
+          "Was immer sie fragen",
+          "Nur was du zu verlieren bereit bist",
+          "Niemals etwas",
+          "Alles was du hast"
+        ],
+        "correctIndex": 1,
+        "explanation": "Leihe nur, was du nicht vermissen würdest! 💡"
+      },
+      {
+        "type": "info",
+        "title": "Wie höflich ablehnen?",
+        "text": "❌ 'Nein, ich vertraue dir nicht'\n✅ 'Sorry, ich bin gerade knapp'\n✅ 'Mein Budget ist schon verplant'\n✅ 'Ich kann dir maximal 5€ leihen'",
+        "mediaUrl": "assets/images/lessons/m1_l09_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Wenn du dir leihst 📝",
+        "text": "1. Ein GENAUES Rückgabedatum nennen\n2. Erinnerung für dich selbst setzen\n3. Wenn möglich FRÜHER zurückgeben\n4. Dem Freund danken",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was tun, wenn du dir Geld geliehen hast?",
+        "options": [
+          "Auf Erinnerungen warten",
+          "Pünktlich oder früher zurückgeben",
+          "'Vergessen'",
+          "Mehr verlangen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pünktliche Rückgabe baut Vertrauen auf! ⏰"
+      },
+      {
+        "type": "info",
+        "title": "Life-Hack: Splitwise 📱",
+        "text": "Für gemeinsame Ausgaben (Pizza für die Gruppe, Geschenke), nutze Rechnungsteil-Apps.\n\nAlles ist transparent, kein Groll!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Schuldenrückzahlung planen",
+        "text": "Wenn du jemandem schuldest — füge eine Erinnerung in deinen Kalender ein!",
+        "buttonText": "Kalender öffnen",
+        "targetScreen": "calendar",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast finanzielle Etikette gelernt — wie man Freunde und Geld behält!"
+  },
+  {
+    "id": "m1_l10",
+    "moduleId": "basics",
+    "title": "Mein erster FinPlan",
+    "description": "Ein Monatsbudget erstellen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 100,
+    "unlocksLessonId": "m2_l01",
+    "tags": [
+      "#basics",
+      "#budgeting",
+      "#practice"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Modul-Endboss! 🎮",
+        "text": "Du hast 9 Lektionen abgeschlossen und gelernt:\n✅ Bedürfnisse vs Wünsche\n✅ Latte-Effekt\n✅ SMART-Ziele\n✅ 24-Stunden-Regel\n✅ 50/30/20-Methode\n\nZeit, alles anzuwenden!",
+        "mediaUrl": "assets/images/lessons/m1_l10_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was ist ein FinPlan?",
+        "text": "Ein Finanzplan ist deine Landkarte:\n\n📍 Woher das Geld kommt\n📍 Wohin das Geld geht\n📍 Wie viel du sparst\n📍 Welche Ziele du erreichst",
+        "mediaUrl": "assets/images/lessons/m1_l10_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Schritt 1: Einnahmen 💰",
+        "text": "Liste ALLE Geldquellen auf:\n\n• Taschengeld von Eltern\n• Geschenke (Monatsdurchschnitt)\n• Nebenjob (falls vorhanden)\n• Zurückgezahlte Schulden",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Sollten Geschenke ins Budget aufgenommen werden?",
+        "options": [
+          "Nein, ist zufälliges Geld",
+          "Ja, als Durchschnitt über mehrere Monate",
+          "Nur wenn das Geschenk groß ist",
+          "Geschenke zählen nicht"
+        ],
+        "correctIndex": 1,
+        "explanation": "Durchschnittliches Geschenk über 3-6 Monate gibt ein realistisches Bild! 🎁"
+      },
+      {
+        "type": "info",
+        "title": "Schritt 2: Fixe Ausgaben 📌",
+        "text": "Ausgaben, die sich monatlich wiederholen:\n\n• Schultransport\n• Mittagessen (wenn du zahlst)\n• Abos (Spotify, Netflix)\n• Handyrechnung",
+        "mediaUrl": "assets/images/lessons/m1_l10_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Schritt 3: Variable Ausgaben 🔄",
+        "text": "Ausgaben, die sich ändern:\n\n• Unterhaltung\n• Essen gehen\n• Kleidung\n• Geschenke für Freunde",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Schritt 4: Sparen 🎯",
+        "text": "ERST sparen, DANN ausgeben!\n\nSobald du Geld bekommst — überweise 20% ins Sparen. Das nennt man 'zuerst an sich selbst zahlen'.",
+        "mediaUrl": "assets/images/lessons/m1_l10_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wann ist die beste Zeit zum Sparen?",
+        "options": [
+          "Ende des Monats, was übrig ist",
+          "Direkt nach Geldeingang",
+          "Wenn du Lust hast",
+          "Niemals"
+        ],
+        "correctIndex": 1,
+        "explanation": "'Zuerst an sich selbst zahlen' — die Schlüsselregel fürs Sparen! 💰"
+      },
+      {
+        "type": "info",
+        "title": "Dein erster Plan 📋",
+        "text": "Beispiel für 100€/Monat:\n\n💰 Einnahmen: 100€\n📌 Fix: 30€ (Transport, Essen)\n🔄 Variabel: 50€ (Limit!)\n🎯 Sparen: 20€\n\nGesamt: 100€ = 100€ ✓",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Erstelle deinen FinPlan! 🚀",
+        "text": "Nutze den Monatsbudget-Rechner, um deinen ersten Finanzplan zu erstellen.",
+        "buttonText": "Monatsbudget",
+        "targetScreen": "calculator_monthly_budget",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Herzlichen Glückwunsch! Du hast deinen ersten Finanzplan erstellt und das BASICS-Modul abgeschlossen! 🏆"
+  },
+  {
+    "id": "m2_l01",
+    "moduleId": "digital",
+    "title": "Spielwährung",
+    "description": "Die wahren Kosten von Gems und Lootboxen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l02",
+    "tags": [
+      "#digital",
+      "#gaming"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Gems, V-Bucks, Robux... 💎",
+        "text": "Spielwährung ist Geld in Spielen. Scheint harmlos, aber es ist ein Milliarden-Geschäft!",
+        "mediaUrl": "assets/images/lessons/m2_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum Spielwährung?",
+        "text": "Entwickler nutzen Gems um:\n\n🧠 Die wahren Kosten zu verstecken\n💸 Dich zum Mehrkaufen zu bringen\n🎰 Glücksspielelemente hinzuzufügen",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum nutzen Spiele Gems statt Euro?",
+        "options": [
+          "Sieht schöner aus",
+          "Um echte Preise zu verstecken",
+          "Euro funktionieren nicht",
+          "Tradition"
+        ],
+        "correctIndex": 1,
+        "explanation": "Gems lenken von echtem Geld ab! 💎→💶"
+      },
+      {
+        "type": "info",
+        "title": "Lootboxen = Glücksspiel 🎰",
+        "text": "Lootbox = Box mit zufälligem Inhalt.\n\n• Chance auf seltenen Skin — 1%\n• Chance auf Müll — 99%\n\nEs ist wie ein Casino, nur für Kinder!",
+        "mediaUrl": "assets/images/lessons/m2_l01_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Berechne den echten Preis! 💰",
+        "text": "Wie viel hast du für Spiele ausgegeben?",
+        "buttonText": "Kann ich kaufen?",
+        "targetScreen": "calculator_can_i_buy",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast die Wahrheit über Spielwährung gelernt — rechne Gems immer in echtes Geld um!"
+  },
+  {
+    "id": "m2_l02",
+    "moduleId": "digital",
+    "title": "Abo-Falle",
+    "description": "Testphasen, automatische Verlängerung, Dark Patterns",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l03",
+    "tags": [
+      "#digital",
+      "#subscriptions"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Kostenlos? Nicht ganz... 🆓",
+        "text": "'7 Tage gratis!'\n'Erster Monat für 1€!'\n\nKlingt super, aber es ist der Anfang einer Abo-Falle.",
+        "mediaUrl": "assets/images/lessons/m2_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Wie die Falle funktioniert? 🪤",
+        "text": "1. Für 'kostenloses' Probeabo anmelden\n2. Karte 'zur Verifizierung' eingeben\n3. Vergessen zu kündigen\n4. Nach 7 Tagen — 15€/Monat Abbuchung!",
+        "mediaUrl": "assets/images/lessons/m2_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist ein Dark Pattern?",
+        "options": [
+          "Dunkles App-Theme",
+          "Design das Nutzer täuscht",
+          "Ein Virus",
+          "Geheimfunktion"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dark Patterns manipulieren dich zu mehr Ausgaben! 🖤"
+      },
+      {
+        "type": "info",
+        "title": "Schutz: Kalender 📅",
+        "text": "Probeabo abgeschlossen?\n\n➡️ SOFORT Erinnerung 2 Tage vor Ende setzen!\n\nOder besser — direkt nach Anmeldung kündigen (Probezeit funktioniert trotzdem).",
+        "mediaUrl": "assets/images/lessons/m2_l02_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Zähle deine Abos! 📊",
+        "text": "Wie viel zahlst du für Abos pro Monat?",
+        "buttonText": "Abo-Rechner",
+        "targetScreen": "calculator_subscriptions",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast Abo-Fallen aufgedeckt — setze Erinnerungen und kündige Probeabos sofort!"
+  },
+  {
+    "id": "m2_l03",
+    "moduleId": "digital",
+    "title": "EU-Verbraucherrechte",
+    "description": "14-Tage Rückgabe und andere Rechte",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l04",
+    "tags": [
+      "#digital",
+      "#rights",
+      "#eu"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Die EU schützt dich! 🇪🇺",
+        "text": "Die Europäische Union ist führend im Verbraucherschutz. Deine Rechte zu kennen = Geld sparen!",
+        "mediaUrl": "assets/images/lessons/m2_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "14-Tage Rückgabe 📦",
+        "text": "Bei Online-Käufen in der EU hast du 14 Tage, um Artikel OHNE Begründung zurückzugeben!\n\nDas nennt sich 'Widerrufsrecht'.",
+        "mediaUrl": "assets/images/lessons/m2_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie viele Tage für Online-Rückgaben in der EU?",
+        "options": [
+          "7 Tage",
+          "14 Tage",
+          "30 Tage",
+          "Keine Rückgabe"
+        ],
+        "correctIndex": 1,
+        "explanation": "14 Tage — dein gesetzliches Recht in der EU! 📦"
+      },
+      {
+        "type": "info",
+        "title": "2 Jahre Garantie! 🔧",
+        "text": "EU-Mindestgarantie ist 2 Jahre.\n\nWenn ein Produkt wegen Herstellungsfehler innerhalb von 2 Jahren kaputt geht — Verkäufer muss KOSTENLOS reparieren oder ersetzen.",
+        "mediaUrl": "assets/images/lessons/m2_l03_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Merke dir deine Rechte!",
+        "text": "14-Tage Rückgabe + 2-Jahre Garantie = dein EU-Schutz.",
+        "buttonText": "Zu Lektionen",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast deine EU-Rechte gelernt — 14-Tage Rückgabe und 2-Jahre Garantie!"
+  },
+  {
+    "id": "m2_l04",
+    "moduleId": "digital",
+    "title": "Phishing & Scams",
+    "description": "Wie man Betrügerhaken vermeidet",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l05",
+    "tags": [
+      "#digital",
+      "#security"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Online-Betrüger 🎣",
+        "text": "Phishing (von 'fishing') ist wenn Betrüger mit gefälschten Seiten und Nachrichten nach deinen Daten 'angeln'.",
+        "mediaUrl": "assets/images/lessons/m2_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist Phishing?",
+        "options": [
+          "Angel-Spiel",
+          "Daten stehlen über gefälschte Seiten",
+          "Antivirus",
+          "Soziales Netzwerk"
+        ],
+        "correctIndex": 1,
+        "explanation": "Phishing = 'angeln' nach deinen Daten! 🎣"
+      },
+      {
+        "type": "info",
+        "title": "Phishing-Zeichen 🚩",
+        "text": "• Dringlichkeit ('Sofort!', 'Letzte Chance!')\n• Seltsame Adresse (amaz0n.com statt amazon.com)\n• Textfehler\n• Fragen nach Passwort oder Kartendaten",
+        "mediaUrl": "assets/images/lessons/m2_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Wie schützt man sich? 🛡️",
+        "text": "1. Nicht auf Links aus Nachrichten klicken\n2. Seiten manuell öffnen\n3. Seitenadresse prüfen (https, richtige Domain)\n4. Niemals Passwörter oder SMS-Codes teilen\n5. Überall 2FA aktivieren",
+        "mediaUrl": "assets/images/lessons/m2_l04_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Prüfe deine Sicherheit!",
+        "text": "Nächste Lektion — Passwörter und 2FA.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Phishing gelernt — klicke nicht auf verdächtige Links!"
+  },
+  {
+    "id": "m2_l05",
+    "moduleId": "digital",
+    "title": "Passwörter & 2FA",
+    "description": "Warum Geburtsdatum ein schlechtes Passwort ist",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l06",
+    "tags": [
+      "#digital",
+      "#security"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Passwort = Schlüssel 🔑",
+        "text": "Dein Passwort schützt:\n\n• Geld auf deiner Karte\n• Persönliche Fotos und Nachrichten\n• Spielkonten\n• Social-Media-Reputation",
+        "mediaUrl": "assets/images/lessons/m2_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "TOP Schlechte Passwörter 🙈",
+        "text": "1. 123456\n2. password\n3. qwerty\n4. Geburtsdatum (01012010)\n5. Name + Jahr (max2008)\n\nHacker knacken diese in Sekunden!",
+        "mediaUrl": "assets/images/lessons/m2_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Welches Passwort ist am sichersten?",
+        "options": [
+          "password123",
+          "Geburtstag2010",
+          "Kf7$mP2@nL9x",
+          "qwertyuiop"
+        ],
+        "correctIndex": 2,
+        "explanation": "Zufällige Zeichen sind fast unmöglich zu knacken! 🔐"
+      },
+      {
+        "type": "info",
+        "title": "Was ist 2FA? 🔐",
+        "text": "2FA (Zwei-Faktor-Authentifizierung).\n\n1. Faktor: Passwort (was du weißt)\n2. Faktor: Code von SMS oder App (was du hast)\n\nSelbst bei gestohlenem Passwort — ohne Code kein Zugang!",
+        "mediaUrl": "assets/images/lessons/m2_l05_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Prüfe deine Konten!",
+        "text": "Aktiviere 2FA bei allen wichtigen Diensten.",
+        "buttonText": "Weiterlernen",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über sichere Passwörter und 2FA gelernt — schütze deine Konten!"
+  },
+  {
+    "id": "m2_l06",
+    "moduleId": "digital",
+    "title": "DSGVO & Deine Daten",
+    "description": "Warum Daten die neue Währung sind",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l07",
+    "tags": [
+      "#digital",
+      "#privacy",
+      "#eu"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Du bist das Produkt 📦",
+        "text": "'Wenn der Dienst kostenlos ist — bist du das Produkt.'\n\nGoogle, Facebook, TikTok verdienen Milliarden mit deinen Daten!",
+        "mediaUrl": "assets/images/lessons/m2_l06_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum sammeln Unternehmen Daten?",
+        "options": [
+          "Für Sicherheit",
+          "Um Werbung zu verkaufen",
+          "Für Statistiken",
+          "Aus Versehen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Daten = gezielte Werbung = Geld! 💰"
+      },
+      {
+        "type": "info",
+        "title": "DSGVO — Dein Schutzschild 🛡️",
+        "text": "DSGVO (Datenschutz-Grundverordnung) — EU-Datenschutzgesetz.\n\nUnternehmen MÜSSEN:\n• Um Erlaubnis fragen\n• Erklären warum sie Daten brauchen\n• Daten auf Anfrage löschen",
+        "mediaUrl": "assets/images/lessons/m2_l06_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Kannst du die Löschung deiner Daten verlangen?",
+        "options": [
+          "Nein, gehört dem Unternehmen",
+          "Ja, es ist ein DSGVO-Recht",
+          "Nur wenn du bezahlst",
+          "Nur Erwachsene können das"
+        ],
+        "correctIndex": 1,
+        "explanation": "DSGVO gibt das Recht auf Datenlöschung! 🗑️"
+      },
+      {
+        "type": "action",
+        "title": "Prüfe Berechtigungen!",
+        "text": "Gehe in die Handyeinstellungen und sieh welche Apps Kamera- und Standortzugriff haben.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über DSGVO und Datenschutz gelernt — kontrolliere wer deine Daten sammelt!"
+  },
+  {
+    "id": "m2_l07",
+    "moduleId": "digital",
+    "title": "Influencer-Marketing",
+    "description": "Wie Blogger dir Produkte verkaufen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l08",
+    "tags": [
+      "#digital",
+      "#marketing"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Blogger empfiehlt! 📱",
+        "text": "'Ich liebe dieses Produkt!'\n'Nutze ich jeden Tag!'\n\nKennst du das? Das ist Influencer-Marketing.",
+        "mediaUrl": "assets/images/lessons/m2_l07_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum bewerben Blogger Produkte?",
+        "options": [
+          "Sie mögen das Produkt",
+          "Sie werden bezahlt",
+          "Um Followern zu helfen",
+          "Aus Versehen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Influencer-Marketing ist ein Milliarden-Geschäft! 💰"
+      },
+      {
+        "type": "info",
+        "title": "Zeichen für Werbung 🏷️",
+        "text": "Per Gesetz müssen sie sagen:\n• #Werbung\n• #Anzeige\n• 'Promo'\n• 'Kooperation'\n\nAber oft in winziger Schrift oder 'vergessen'...",
+        "mediaUrl": "assets/images/lessons/m2_l07_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Blogger zeigt 'sein' Makeup ohne #Werbung. Das ist...",
+        "options": [
+          "Ehrliche Empfehlung",
+          "Wahrscheinlich versteckte Werbung",
+          "Gesetzesverstoß",
+          "Sowohl B als auch C"
+        ],
+        "correctIndex": 3,
+        "explanation": "Versteckte Werbung verstößt gegen EU-Recht! 🚫"
+      },
+      {
+        "type": "action",
+        "title": "Trainiere dein Auge! 👁️",
+        "text": "Achte beim nächsten Blogger-Video auf Werbezeichen.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast Influencer-Marketing-Geheimnisse aufgedeckt — Rabattcode = Werbung!"
+  },
+  {
+    "id": "m2_l08",
+    "moduleId": "digital",
+    "title": "Fast Fashion",
+    "description": "Der Preis billiger Kleidung für den Planeten",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l09",
+    "tags": [
+      "#digital",
+      "#sustainability"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Ein 5€ T-Shirt? 👕",
+        "text": "Shein, Primark, H&M — überall billige Kleidung.\n\nAber niedrige Preise haben versteckte Kosten...",
+        "mediaUrl": "assets/images/lessons/m2_l08_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Umweltkosten 🌍",
+        "text": "Modeindustrie:\n\n• 10% aller CO2-Emissionen\n• 20% der Wasserverschmutzung\n• 92 Millionen Tonnen Kleidung auf Mülldeponien/Jahr",
+        "mediaUrl": "assets/images/lessons/m2_l08_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie viele Tonnen Kleidung werden jährlich weggeworfen?",
+        "options": [
+          "1 Million",
+          "10 Millionen",
+          "92 Millionen",
+          "500 Millionen"
+        ],
+        "correctIndex": 2,
+        "explanation": "92 Millionen Tonnen! Das sind 12.000 Eiffeltürme. 👕"
+      },
+      {
+        "type": "info",
+        "title": "Alternativen 🌱",
+        "text": "1. Weniger kaufen, aber bessere Qualität\n2. Secondhand (Vinted, Depop)\n3. Kleidung reparieren\n4. Mit Freunden tauschen\n5. Marken-Ethik prüfen",
+        "mediaUrl": "assets/images/lessons/m2_l08_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Probier Secondhand!",
+        "text": "Nächste Lektion — wie man sicher gebrauchte Sachen kauft und verkauft.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Fast Fashion gelernt — weniger kaufen, länger tragen, Secondhand wählen!"
+  },
+  {
+    "id": "m2_l09",
+    "moduleId": "digital",
+    "title": "Wiederverkauf: Vinted/eBay",
+    "description": "Wie man sicher seine Sachen verkauft",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m2_l10",
+    "tags": [
+      "#digital",
+      "#resale"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Zweites Leben für Dinge ♻️",
+        "text": "Wiederverkauf ist der Verkauf gebrauchter Sachen.\n\n• Vinted, Depop, eBay\n• Umweltfreundlich\n• Profitabel\n• Schafft Platz!",
+        "mediaUrl": "assets/images/lessons/m2_l09_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie viel kann man für gebrauchte Technik zurückbekommen?",
+        "options": [
+          "10-20%",
+          "30-40%",
+          "50-70%",
+          "90-100%"
+        ],
+        "correctIndex": 2,
+        "explanation": "Technik behält den Wert am besten! 📱"
+      },
+      {
+        "type": "info",
+        "title": "Käufer-Warnsignale 🚩",
+        "text": "• 'Lass uns auf WhatsApp chatten'\n• 'Ich zahle über einen Freund'\n• 'Ich schicke einen Kurier mit Bargeld'\n\nDas sind Betrüger!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was wenn ein Käufer vorschlägt, zu WhatsApp zu wechseln?",
+        "options": [
+          "Zustimmen",
+          "Ablehnen und auf Plattform bleiben",
+          "Telefonnummer geben",
+          "Um Vorauszahlung bitten"
+        ],
+        "correctIndex": 1,
+        "explanation": "Die Plattform schützt beide Seiten — nicht verlassen! 🛡️"
+      },
+      {
+        "type": "action",
+        "title": "Probier zu verkaufen!",
+        "text": "Finde 3 Dinge, die du nicht nutzt und stelle sie auf Vinted ein.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über sicheren Wiederverkauf gelernt — verkaufe über Plattformen, nicht privat!"
+  },
+  {
+    "id": "m2_l10",
+    "moduleId": "digital",
+    "title": "Digitale Hygiene",
+    "description": "Abschlussquiz zur Sicherheit",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 5,
+    "xpReward": 100,
+    "unlocksLessonId": "m3_l01",
+    "tags": [
+      "#digital",
+      "#security",
+      "#test"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "DIGITAL Modul-Endboss! 🎮",
+        "text": "Du hast 9 Lektionen über die digitale Welt abgeschlossen!\n\nZeit dein Wissen zu testen!",
+        "mediaUrl": "assets/images/lessons/m2_l10_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 1: Warum nutzen Spiele Gems statt Euro?",
+        "options": [
+          "Sieht schöner aus",
+          "Um echte Preise zu verstecken",
+          "Gesetzliche Anforderung",
+          "Tradition"
+        ],
+        "correctIndex": 1,
+        "explanation": "Gems lenken von echtem Geld ab! 💎"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 2: Wie viele Tage für Rückgaben in der EU?",
+        "options": [
+          "7 Tage",
+          "14 Tage",
+          "30 Tage",
+          "60 Tage"
+        ],
+        "correctIndex": 1,
+        "explanation": "14 Tage — dein gesetzliches Recht! 📦"
+      },
+      {
+        "type": "quiz",
+        "question": "Test 3: Welches Passwort ist stärker?",
+        "options": [
+          "password123",
+          "MeineKatze2024!",
+          "123456",
+          "qwerty"
+        ],
+        "correctIndex": 1,
+        "explanation": "Phrase + Symbole + Zahlen = sicher! 🔐"
+      },
+      {
+        "type": "info",
+        "title": "Deine Digitale Festung 🏰",
+        "text": "Du hast gemeistert:\n\n🛡️ Betrügerschutz\n🔐 Starke Passwörter und 2FA\n📜 Deine EU-Rechte\n💰 Werbungserkennung\n♻️ Verantwortungsvoller Konsum",
+        "mediaUrl": "assets/images/lessons/m2_l10_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Modul Abgeschlossen! 🏆",
+        "text": "Bereit für das WORK Modul über Verdienen und Banking?",
+        "buttonText": "Zu Lektionen",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Herzlichen Glückwunsch! Du hast das DIGITAL Modul abgeschlossen! 🛡️"
+  },
+  {
+    "id": "m3_l01",
+    "moduleId": "work",
+    "title": "Aktives vs Passives Einkommen",
+    "description": "Zeit = Geld vs Geld verdient Geld",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l02",
+    "tags": [
+      "#work",
+      "#income"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Zwei Arten von Einkommen 💰",
+        "text": "Alles Geld kommt auf zwei Wegen:\n\n⏰ Aktiv — du tauschst Zeit gegen Geld\n📈 Passiv — Geld arbeitet für dich",
+        "mediaUrl": "assets/images/lessons/m3_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Welche Art von Einkommen ist Nachhilfe?",
+        "options": [
+          "Passiv",
+          "Aktiv",
+          "Gemischt",
+          "Kein Einkommen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nachhilfe = deine Zeit für ihr Geld = aktiv! ⏰"
+      },
+      {
+        "type": "info",
+        "title": "Passive Einkommensideen 💡",
+        "text": "• Digitale Güter verkaufen\n• Blog/Kanal starten\n• App/Spiel erstellen\n• Sparkonto-Zinsen",
+        "mediaUrl": "assets/images/lessons/m3_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Analysiere dein Einkommen",
+        "text": "Welche Einkommensarten hast du jetzt?",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast den Unterschied zwischen aktivem und passivem Einkommen gelernt!"
+  },
+  {
+    "id": "m3_l02",
+    "moduleId": "work",
+    "title": "Legale Nebenjobs",
+    "description": "Was du unter 16/18 tun darfst",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l03",
+    "tags": [
+      "#work",
+      "#legal",
+      "#eu"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Gesetze schützen dich 🛡️",
+        "text": "Kinderarbeitsgesetze existieren aus gutem Grund!\n\nDie EU schützt deine:\n• Gesundheit\n• Bildung\n• Entwicklung",
+        "mediaUrl": "assets/images/lessons/m3_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Unter 15 Jahren",
+        "text": "Nur leichte Arbeit erlaubt:\n\n✅ Babysitten\n✅ Hunde ausführen\n✅ Rasen mähen\n✅ Nachhilfe\n\n❌ Fabrikarbeit\n❌ Nachtschichten",
+        "mediaUrl": "assets/images/lessons/m3_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Kann ein 14-Jähriger in einer Fabrik arbeiten?",
+        "options": [
+          "Ja, mit Erlaubnis",
+          "Nein, gesetzlich verboten",
+          "Ja, Teilzeit",
+          "Kommt auf das Land an"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fabrikarbeit ist für unter 15-Jährige in der EU verboten! 🚫"
+      },
+      {
+        "type": "action",
+        "title": "Erkunde Optionen!",
+        "text": "Welche Jobs passen zu deinem Alter und Interessen?",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über legale Arbeitsoptionen für verschiedene Alter gelernt!"
+  },
+  {
+    "id": "m3_l03",
+    "moduleId": "work",
+    "title": "Brutto vs Netto",
+    "description": "Wohin gehen die Steuern?",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l04",
+    "tags": [
+      "#work",
+      "#taxes"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Warum ist das Gehalt weniger? 🤔",
+        "text": "Stellenanzeige: 15€/Stunde\nGehaltsabrechnung: 11€/Stunde\n\nWo sind 4€ hin?!",
+        "mediaUrl": "assets/images/lessons/m3_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Brutto vs Netto",
+        "text": "💰 BRUTTO — Gehalt VOR Abzügen\n\n💵 NETTO — was du tatsächlich bekommst\n\nBrutto - Steuern - Sozialabgaben = Netto",
+        "mediaUrl": "assets/images/lessons/m3_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist das NETTO-Gehalt?",
+        "options": [
+          "Vor Steuern",
+          "Nach Abzügen",
+          "Bonus",
+          "Jahresgehalt"
+        ],
+        "correctIndex": 1,
+        "explanation": "Netto = was tatsächlich auf dein Konto kommt! 💵"
+      },
+      {
+        "type": "info",
+        "title": "Aber warum Steuern zahlen? 🤷",
+        "text": "Deine Steuern finanzieren:\n\n🏫 Kostenlose Schulen\n🏥 Krankenhäuser\n🛣️ Straßen\n👮 Polizei\n🚒 Feuerwehr",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Frag immer nach NETTO!",
+        "text": "Bei der Jobsuche frage: 'Ist das brutto oder netto?'",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Brutto vs Netto gelernt — frag immer was du tatsächlich bekommst!"
+  },
+  {
+    "id": "m3_l04",
+    "moduleId": "work",
+    "title": "Bankkonten (IBAN/SEPA)",
+    "description": "Wie man Kontodaten liest",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l05",
+    "tags": [
+      "#work",
+      "#banking",
+      "#eu"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Dein erstes Bankkonto 🏦",
+        "text": "Um Gehalt zu bekommen, brauchst du ein Bankkonto.\n\nIn der EU nutzen alle Konten Standardformate:\nIBAN und SEPA.",
+        "mediaUrl": "assets/images/lessons/m3_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was ist IBAN? 🔢",
+        "text": "IBAN = Internationale Bankkontonummer\n\nBeispiel: DE89370400440532013000\n\nDE = Land\n89 = Prüfziffern\n37040044 = Bankleitzahl\n0532013000 = Kontonummer",
+        "mediaUrl": "assets/images/lessons/m3_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was bedeutet 'DE' am Anfang der IBAN?",
+        "options": [
+          "Bankname",
+          "Ländercode",
+          "Währung",
+          "Kontotyp"
+        ],
+        "correctIndex": 1,
+        "explanation": "Erste 2 Buchstaben = Land! DE=Deutschland, AT=Österreich, CH=Schweiz"
+      },
+      {
+        "type": "info",
+        "title": "Was ist SEPA? 💶",
+        "text": "SEPA = Einheitlicher Euro-Zahlungsverkehrsraum\n\n36 Länder wo Euro-Überweisungen:\n✅ Am selben Tag\n✅ Gleiche Kosten\n✅ Gleiche Regeln",
+        "mediaUrl": "assets/images/lessons/m3_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Lerne deine IBAN!",
+        "text": "Wenn du ein Konto hast, merke dir deine IBAN.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über IBAN und SEPA gelernt — EU-Banking-Grundlagen!"
+  },
+  {
+    "id": "m3_l05",
+    "moduleId": "work",
+    "title": "Debit- vs Kreditkarte",
+    "description": "Die Gefahr von Kredit und Dispo",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l06",
+    "tags": [
+      "#work",
+      "#banking"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Alle Karten sehen gleich aus 💳",
+        "text": "Aber sie funktionieren SEHR unterschiedlich!\n\n💚 Debit = dein Geld\n🔴 Kredit = Geld der Bank (geliehen)",
+        "mediaUrl": "assets/images/lessons/m3_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Welche Karte nutzt dein eigenes Geld?",
+        "options": [
+          "Kredit",
+          "Debit",
+          "Beide",
+          "Keine"
+        ],
+        "correctIndex": 1,
+        "explanation": "Debit = dein Geld. Kredit = geliehenes Geld! 💳"
+      },
+      {
+        "type": "info",
+        "title": "Kreditkarten-Schulden Beispiel 📊",
+        "text": "Du gibst 1000€ auf Kredit aus.\nMindestzahlung: 25€/Monat.\n\nBei 20% Zinsen:\n• Abbezahlen: 5+ Jahre\n• Gesamt gezahlt: 1.550€\n• Extra: 550€ Zinsen!",
+        "mediaUrl": "assets/images/lessons/m3_l05_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Die goldene Regel 🥇",
+        "text": "Bis du Finanzen beherrschst:\n\n1. Nur Debitkarten nutzen\n2. Dispo deaktivieren\n3. Nur ausgeben was du HAST",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Prüfe deine Karte!",
+        "text": "Stelle sicher, dass du eine Debitkarte ohne Dispo hast.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Debit vs Kredit gelernt — bleib bei Debit, vermeide Dispo!"
+  },
+  {
+    "id": "m3_l06",
+    "moduleId": "work",
+    "title": "Verträge",
+    "description": "Kleingedrucktes und Kündigungsbedingungen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l07",
+    "tags": [
+      "#work",
+      "#legal"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Verträge sind überall 📜",
+        "text": "Du unterschreibst Verträge für:\n\n• Jobs\n• Handys\n• Fitnessstudios\n• Streaming-Dienste\n• Apps (AGB)\n\nDie meisten lesen sie nicht... 😬",
+        "mediaUrl": "assets/images/lessons/m3_l06_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum sollte man das Kleingedruckte lesen?",
+        "options": [
+          "Es macht Spaß",
+          "Enthält versteckte Bedingungen",
+          "Gesetzlich vorgeschrieben",
+          "Lehrer testen es"
+        ],
+        "correctIndex": 1,
+        "explanation": "Im Kleingedruckten verstecken sich wichtige Bedingungen! 🔍"
+      },
+      {
+        "type": "info",
+        "title": "Was prüfen? ✅",
+        "text": "Vor dem Unterschreiben:\n\n1️⃣ Vertragsdauer\n2️⃣ Wie kündigen\n3️⃣ Kündigungsfrist\n4️⃣ Vorzeitige Kündigungsgebühren\n5️⃣ Auto-Verlängerung",
+        "mediaUrl": "assets/images/lessons/m3_l06_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Fang an zu lesen!",
+        "text": "Lies bei der nächsten App die AGB-Zusammenfassung.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast gelernt, Verträge zu lesen — prüfe immer Kündigungsbedingungen!"
+  },
+  {
+    "id": "m3_l07",
+    "moduleId": "work",
+    "title": "Gig Economy",
+    "description": "Als Kurier arbeiten: Vor- und Nachteile",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l08",
+    "tags": [
+      "#work",
+      "#gig"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Die Gig Economy 🚲",
+        "text": "Lieferando, Uber Eats, Bolt, Wolt...\n\nGig Economy = Kurzzeit-Jobs ohne festen Vertrag.\n\nBeliebt bei Studenten!",
+        "mediaUrl": "assets/images/lessons/m3_l07_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Vorteile 👍",
+        "text": "✅ Flexible Arbeitszeiten\n✅ Eigener Chef sein\n✅ Arbeiten wann du willst\n✅ Schneller Start",
+        "mediaUrl": "assets/images/lessons/m3_l07_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Nachteile 👎",
+        "text": "❌ Kein garantiertes Einkommen\n❌ Kein Krankengeld\n❌ Kein bezahlter Urlaub\n❌ Du zahlst Ausrüstung\n❌ Wetterabhängig",
+        "mediaUrl": "assets/images/lessons/m3_l07_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist ein Hauptrisiko bei Gig-Arbeit?",
+        "options": [
+          "Zu viel Geld",
+          "Kein garantiertes Einkommen",
+          "Zu einfach",
+          "Zu viel Spaß"
+        ],
+        "correctIndex": 1,
+        "explanation": "Keine Aufträge = kein Geld. Keine Garantien! 📉"
+      },
+      {
+        "type": "action",
+        "title": "Denke nach vor dem Giggen!",
+        "text": "Wenn du Gig-Arbeit überlegst, berechne zuerst die echten Kosten.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Gig Economy gelernt — flexibel aber riskant. Berechne echte Einnahmen!"
+  },
+  {
+    "id": "m3_l08",
+    "moduleId": "work",
+    "title": "Dein erster Lebenslauf",
+    "description": "Wie man einen CV ohne Erfahrung schreibt",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l09",
+    "tags": [
+      "#work",
+      "#cv"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Keine Erfahrung? Kein Problem! 📝",
+        "text": "Jeder fängt irgendwo an.\n\nDein erster CV fokussiert auf:\n• Fähigkeiten\n• Bildung\n• Aktivitäten\n• Potenzial",
+        "mediaUrl": "assets/images/lessons/m3_l08_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was zählt als Erfahrung? 🎯",
+        "text": "Das zählt:\n\n• Ehrenamt\n• Schulprojekte\n• Sportteams\n• Babysitten\n• Nachhilfe\n• Content Creation",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was kann Berufserfahrung im CV ersetzen?",
+        "options": [
+          "Leer lassen",
+          "Fähigkeiten und Aktivitäten",
+          "Über Jobs lügen",
+          "Nur Bildung"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fähigkeiten und Aktivitäten zeigen was du kannst! 💪"
+      },
+      {
+        "type": "info",
+        "title": "Häufige Fehler ❌",
+        "text": "Vermeide:\n\n• Tippfehler\n• Unprofessionelle Email\n• Zu lang (max 1 Seite)\n• Lügen!\n• Unprofessionelles Foto",
+        "mediaUrl": "assets/images/lessons/m3_l08_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Starte deinen CV!",
+        "text": "Nutze Canva oder Google Docs für deinen ersten CV.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast CV-Grundlagen gelernt — Fähigkeiten und Aktivitäten zählen auch ohne Erfahrung!"
+  },
+  {
+    "id": "m3_l09",
+    "moduleId": "work",
+    "title": "Ehrenamt",
+    "description": "Warum kostenlos arbeiten? Erfahrung & Soft Skills",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l10",
+    "tags": [
+      "#work",
+      "#volunteering"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Kostenlose Arbeit? Warum? 🤔",
+        "text": "Ehrenamt = freiwillig arbeiten.\n\nAber du verdienst trotzdem:\n• Erfahrung\n• Fähigkeiten\n• Kontakte\n• Referenzen",
+        "mediaUrl": "assets/images/lessons/m3_l09_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum ehrenamtlich arbeiten wenn unbezahlt?",
+        "options": [
+          "Kein Grund",
+          "Erfahrung und Kontakte",
+          "Weil gezwungen",
+          "Sieht schlecht im CV aus"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ehrenamt = Erfahrung + Netzwerk + Wirkung! 🌟"
+      },
+      {
+        "type": "info",
+        "title": "Ehrenamt-Optionen 🌍",
+        "text": "Wo ehrenamtlich arbeiten:\n\n• Tierheime\n• Umweltgruppen\n• Sportevents\n• Musikfestivals\n• Lokale Vereine\n• Online (Übersetzung, Design)",
+        "mediaUrl": "assets/images/lessons/m3_l09_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Finde Möglichkeiten!",
+        "text": "Suche nach Ehrenamt-Möglichkeiten in deiner Gegend.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Ehrenamt gelernt — kostenlose Arbeit die deine Zukunft aufbaut!"
+  },
+  {
+    "id": "m3_l10",
+    "moduleId": "work",
+    "title": "Gehaltssimulator",
+    "description": "Deinen ersten großen Lohn verteilen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 5,
+    "xpReward": 100,
+    "unlocksLessonId": "m4_l01",
+    "tags": [
+      "#work",
+      "#budgeting",
+      "#practice"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "WORK Modul Abgeschlossen! 🎮",
+        "text": "Du hast gelernt:\n\n✅ Aktives vs Passives Einkommen\n✅ Legale Arbeitsoptionen\n✅ Brutto vs Netto\n✅ Banking-Grundlagen\n✅ Kartentypen\n✅ Verträge\n✅ Gig Economy\n✅ CV schreiben\n✅ Ehrenamt",
+        "mediaUrl": "assets/images/lessons/m3_l10_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Dein erster echter Gehaltsscheck 💰",
+        "text": "Stell dir vor: Du hast Teilzeit gearbeitet.\nNetto-Gehalt: 400€/Monat.\n\nWie teilst du es auf?",
+        "mediaUrl": "assets/images/lessons/m3_l10_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Erster Gehaltsscheck 400€. Mit 50/30/20, wie viel sparen?",
+        "options": [
+          "40€",
+          "80€",
+          "120€",
+          "200€"
+        ],
+        "correctIndex": 1,
+        "explanation": "20% von 400€ = 80€ ins Sparen! 💰"
+      },
+      {
+        "type": "info",
+        "title": "Die smarte Aufteilung 📊",
+        "text": "400€ monatlich:\n\n💡 200€ (50%) — Notwendiges\n🎮 120€ (30%) — Wünsche\n💰 80€ (20%) — Sparen\n\nOder wenn Eltern Notwendiges decken:\n🎮 160€ Wünsche + 💰 240€ Sparen!",
+        "mediaUrl": "assets/images/lessons/m3_l10_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Plane deine Zukunft! 🚀",
+        "text": "Erstelle ein Sparziel für deinen ersten Gehaltsscheck.",
+        "buttonText": "Sparschwein erstellen",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Herzlichen Glückwunsch! Du hast das WORK Modul abgeschlossen! Bereit für FUTURE? 🏆"
+  },
+  {
+    "id": "m4_l01",
+    "moduleId": "future",
+    "title": "Inflation",
+    "description": "Warum 100€ heute > 100€ nächstes Jahr",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l02",
+    "tags": [
+      "#future",
+      "#inflation"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Geld verliert an Wert? 💸",
+        "text": "Deine Großeltern: 'Kaffee hat früher 50 Cent gekostet!'\n\nJetzt kostet Kaffee 4€.\n\nDas ist Inflation!",
+        "mediaUrl": "assets/images/lessons/m4_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was ist Inflation? 📈",
+        "text": "Inflation = Preise steigen über Zeit.\n\n• Gleiches Geld kauft WENIGER\n• 100€ heute ≠ 100€ in 10 Jahren\n• Durchschnittliche EU-Inflation: 2-3%/Jahr",
+        "mediaUrl": "assets/images/lessons/m4_l01_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was passiert mit 100€ unterm Kopfkissen nach 10 Jahren?",
+        "options": [
+          "Wächst",
+          "Bleibt gleich",
+          "Verliert Kaufkraft",
+          "Verschwindet"
+        ],
+        "correctIndex": 2,
+        "explanation": "100€ werden in 10 Jahren weniger kaufen wegen Inflation! 📉"
+      },
+      {
+        "type": "info",
+        "title": "Inflation schlagen 💪",
+        "text": "Um Wert zu erhalten:\n\n• Sparkonten (wenn Zinsen > Inflation)\n• Investitionen (Aktien, ETFs)\n• Reale Vermögenswerte\n\nZiel: Geld schneller wachsen lassen als Inflation!",
+        "mediaUrl": "assets/images/lessons/m4_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Verstehe die Macht der Zeit!",
+        "text": "Nächste Lektion: Zinseszins!",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Inflation gelernt — Geld verliert Wert wenn nicht investiert!"
+  },
+  {
+    "id": "m4_l02",
+    "moduleId": "future",
+    "title": "Zinseszins",
+    "description": "Die Magie der Zeit: Früh anfangen zu sparen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l03",
+    "tags": [
+      "#future",
+      "#investing"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Das 8. Weltwunder 🌟",
+        "text": "Einstein nannte Zinseszins (angeblich) 'das 8. Weltwunder.'\n\nWarum? Weil es MAGISCH ist!",
+        "mediaUrl": "assets/images/lessons/m4_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Einfach vs Zinseszins",
+        "text": "Einfach: 100€ × 5% = 5€/Jahr (immer 5€)\n\nZinseszins: Zinsen auf Zinsen!\n• Jahr 1: 100€ → 105€\n• Jahr 2: 105€ → 110,25€\n• Jahr 3: 110,25€ → 115,76€",
+        "mediaUrl": "assets/images/lessons/m4_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was macht Zinseszins besonders?",
+        "options": [
+          "Höherer Zinssatz",
+          "Zinsen verdienen Zinsen",
+          "Banken zahlen mehr",
+          "Es ist illegal"
+        ],
+        "correctIndex": 1,
+        "explanation": "Zinsen auf Zinsen = exponentielles Wachstum! 📈"
+      },
+      {
+        "type": "info",
+        "title": "Die 72er-Regel 🔢",
+        "text": "Schneller Rechentrick:\n\n72 ÷ Zinssatz = Jahre zur Verdopplung\n\n• 72 ÷ 6% = 12 Jahre\n• 72 ÷ 8% = 9 Jahre\n• 72 ÷ 10% = 7,2 Jahre",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Warum JETZT anfangen? 🚀",
+        "text": "Mit 15 vs 25 anfangen:\n\n50€/Monat bei 7% sparen:\n\n• Mit 15 anfangen: 131.000€ mit 65\n• Mit 25 anfangen: 65.000€ mit 65\n\n10 Jahre Unterschied = 66.000€! 😱",
+        "mediaUrl": "assets/images/lessons/m4_l02_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Starte deine Zinseszins-Reise!",
+        "text": "Selbst 10€/Monat jetzt ist besser als 100€/Monat später!",
+        "buttonText": "Sparschwein erstellen",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Zinseszins gelernt — ZEIT ist dein größtes Kapital!"
+  },
+  {
+    "id": "m4_l03",
+    "moduleId": "future",
+    "title": "BNPL: Jetzt kaufen, später zahlen",
+    "description": "Risiken von Diensten wie Klarna",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l04",
+    "tags": [
+      "#future",
+      "#debt"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Später zahlen? Klingt super! 🛒",
+        "text": "Klarna, Afterpay, PayPal in 4 Raten...\n\n'Jetzt kaufen, in 4 Raten zahlen!'\n'Zinsfrei!'\n\nWo ist der Haken? 🤔",
+        "mediaUrl": "assets/images/lessons/m4_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Die Falle 🪤",
+        "text": "Problem: Mehrere BNPLs\n\n• Schuhe: 25€/2 Wochen\n• Spiel: 15€/2 Wochen  \n• Kleidung: 30€/2 Wochen\n\nPlötzlich: 70€ alle 2 Wochen!\n\nSchulden schleichen sich schnell an. 😰",
+        "mediaUrl": "assets/images/lessons/m4_l03_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Hauptgefahr von BNPL?",
+        "options": [
+          "Hohe Zinsen",
+          "Leicht mehrere Schulden anzuhäufen",
+          "Komplexe App",
+          "Langsame Lieferung"
+        ],
+        "correctIndex": 1,
+        "explanation": "Mehrere kleine Schulden = ein großes Problem! 💸"
+      },
+      {
+        "type": "info",
+        "title": "Der Psychologie-Trick 🧠",
+        "text": "BNPL lässt dich MEHR ausgeben:\n\n• '25€ fühlt sich erschwinglich an'\n• Dopamin-Kick JETZT\n• Schmerz der Zahlung SPÄTER\n• Studien: 30-50% mehr Ausgaben!",
+        "mediaUrl": "assets/images/lessons/m4_l03_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Bessere Alternative: Erst sparen!",
+        "text": "Erstelle ein Sparschwein für Wünsche statt BNPL.",
+        "buttonText": "Sparschwein erstellen",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über BNPL-Risiken gelernt — nutze es nur wenn du das Geld schon hast!"
+  },
+  {
+    "id": "m4_l04",
+    "moduleId": "future",
+    "title": "Bonitätsbewertung (SCHUFA)",
+    "description": "Wie man seinen Ruf jung nicht ruiniert",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l05",
+    "tags": [
+      "#future",
+      "#credit"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Dein finanzieller Ruf 📊",
+        "text": "Bonitätsbewertung = deine 'Finanznote.'\n\nIn Deutschland: SCHUFA\nIn Österreich: KSV\n\nWichtig für deine Zukunft!",
+        "mediaUrl": "assets/images/lessons/m4_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum ist es wichtig? 🤔",
+        "text": "Schlechte Bonität beeinflusst:\n\n🏠 Wohnung mieten\n📱 Handyverträge\n💳 Kreditkarten bekommen\n🚗 Autokredite\n🏦 Hypotheken",
+        "mediaUrl": "assets/images/lessons/m4_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wer könnte deine Bonität prüfen?",
+        "options": [
+          "Nur Banken",
+          "Vermieter, Banken, Handyanbieter",
+          "Niemand",
+          "Nur Regierung"
+        ],
+        "correctIndex": 1,
+        "explanation": "Viele prüfen — es ist dein finanzieller Ruf! 📋"
+      },
+      {
+        "type": "info",
+        "title": "Was schadet deinem Score? 📉",
+        "text": "❌ Verspätete Zahlungen\n❌ Unbezahlte Rechnungen\n❌ Inkasso\n❌ Zu viele Kreditanfragen\n❌ BNPL-Ausfälle",
+        "mediaUrl": "assets/images/lessons/m4_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Schütze deinen Score!",
+        "text": "Setze Erinnerungen für alle Rechnungszahlungen.",
+        "buttonText": "Kalender öffnen",
+        "targetScreen": "calendar",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Bonitätsbewertung gelernt — zahle pünktlich für guten Ruf!"
+  },
+  {
+    "id": "m4_l05",
+    "moduleId": "future",
+    "title": "Versicherungs-Grundlagen",
+    "description": "Warum Haftpflicht in der EU wichtig ist",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l06",
+    "tags": [
+      "#future",
+      "#insurance"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Versicherung = Schutz 🛡️",
+        "text": "Versicherung schützt vor unerwarteten Kosten:\n\n• Unfälle\n• Krankheit\n• Schäden an anderen\n• Diebstahl",
+        "mediaUrl": "assets/images/lessons/m4_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Haftpflichtversicherung 🔥",
+        "text": "In der EU ist das ESSENTIELL!\n\nDeckt Schäden die DU an ANDEREN verursachst:\n\n• Kaffee auf Laptop verschüttet: 1000€\n• Fahrrad trifft Fußgänger: 50.000€+\n\nOhne Versicherung = du zahlst alles!",
+        "mediaUrl": "assets/images/lessons/m4_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was deckt Haftpflichtversicherung?",
+        "options": [
+          "Deine Verletzungen",
+          "Schäden die du anderen verursachst",
+          "Deine Sachen",
+          "Deine Gesundheit"
+        ],
+        "correctIndex": 1,
+        "explanation": "Haftpflicht = Schäden an ANDEREN Personen/Sachen! 🛡️"
+      },
+      {
+        "type": "info",
+        "title": "Teenager-Versicherungssituation",
+        "text": "Meist durch Eltern gedeckt bis 18-25:\n\n• Krankenversicherung: über Eltern\n• Haftpflicht: Familienpolice\n• Check mit deinen Eltern!\n\nNach 18-25: brauchst du eigene!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Sprich mit Eltern!",
+        "text": "Frag sie: 'Bin ich durch eure Haftpflicht abgedeckt?'",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Versicherung gelernt — Haftpflicht ist essentiell in der EU!"
+  },
+  {
+    "id": "m4_l06",
+    "moduleId": "future",
+    "title": "Aktien & Anleihen",
+    "description": "Börsen-Grundlagen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l07",
+    "tags": [
+      "#future",
+      "#investing"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Was ist die Börse? 📈",
+        "text": "Ein Ort wo du Teile von Unternehmen (Aktien) kaufen oder ihnen Geld leihen (Anleihen) kannst.",
+        "mediaUrl": "assets/images/lessons/m4_l06_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Aktien = Eigentum 🏢",
+        "text": "Apple-Aktie kaufen = winzigen Teil von Apple besitzen!\n\n• Wenn Apple wächst → Aktienwert steigt 📈\n• Wenn Apple kämpft → Aktienwert sinkt 📉\n• Manche Aktien zahlen Dividenden (Gewinnanteil)",
+        "mediaUrl": "assets/images/lessons/m4_l06_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was bedeutet Aktien besitzen?",
+        "options": [
+          "Du arbeitest dort",
+          "Du besitzt Teil des Unternehmens",
+          "Du schuldest ihnen Geld",
+          "Du bekommst kostenlose Produkte"
+        ],
+        "correctIndex": 1,
+        "explanation": "Aktie = Eigentumsanteil eines Unternehmens! 📈"
+      },
+      {
+        "type": "info",
+        "title": "Anleihen = Leihen 💰",
+        "text": "Anleihe kaufen = Unternehmen/Regierung Geld leihen.\n\n• Sie versprechen Rückzahlung + Zinsen\n• Weniger Risiko als Aktien\n• Aber auch weniger potenzielle Rendite",
+        "mediaUrl": "assets/images/lessons/m4_l06_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Lerne mehr!",
+        "text": "Nächste Lektion: ETFs — der sicherste Einstieg ins Investieren.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Aktien und Anleihen gelernt — die Grundlagen des Investierens!"
+  },
+  {
+    "id": "m4_l07",
+    "moduleId": "future",
+    "title": "ETFs",
+    "description": "Der sicherste Einstieg ins Investieren",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l08",
+    "tags": [
+      "#future",
+      "#investing"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Was ist ein ETF? 🧺",
+        "text": "ETF = Exchange-Traded Fund (Börsengehandelter Fonds)\n\nStell dir einen Korb mit vielen Aktien vor.\n\nEinen ETF kaufen = Teil von hunderten Unternehmen kaufen!",
+        "mediaUrl": "assets/images/lessons/m4_l07_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum ETFs? 👍",
+        "text": "✅ Sofortige Diversifikation\n✅ Niedrige Gebühren\n✅ Einfach zu kaufen/verkaufen\n✅ Keine Aktienauswahl nötig\n✅ Perfekt für Anfänger!",
+        "mediaUrl": "assets/images/lessons/m4_l07_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Hauptvorteil von ETFs?",
+        "options": [
+          "Garantierte Gewinne",
+          "Diversifikation (viele Aktien auf einmal)",
+          "Kein Risiko",
+          "Gratis Geld"
+        ],
+        "correctIndex": 1,
+        "explanation": "ETF = viele Aktien in einem Kauf = Diversifikation! 🧺"
+      },
+      {
+        "type": "info",
+        "title": "Die Zahlen 📊",
+        "text": "50€/Monat in MSCI World (7% Durchschnittsrendite):\n\n• 10 Jahre: 8.600€\n• 20 Jahre: 26.000€\n• 30 Jahre: 61.000€\n• 40 Jahre: 131.000€\n\nVon nur 50€/Monat!",
+        "mediaUrl": "assets/images/lessons/m4_l07_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Plane für die Zukunft!",
+        "text": "Sprich mit Eltern über einen ETF-Sparplan.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über ETFs gelernt — der einfachste Einstieg ins Investieren!"
+  },
+  {
+    "id": "m4_l08",
+    "moduleId": "future",
+    "title": "Kryptowährungen",
+    "description": "Risiken, Volatilität, Unterschiede zu Aktien",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l09",
+    "tags": [
+      "#future",
+      "#crypto"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Was ist Krypto? 🪙",
+        "text": "Kryptowährung = digitales Geld nicht von Regierungen kontrolliert.\n\nBitcoin, Ethereum und 10.000+ andere.\n\nRevolutionäre Technologie, aber SEHR riskant!",
+        "mediaUrl": "assets/images/lessons/m4_l08_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Die Risiken ⚠️",
+        "text": "• EXTREME Volatilität (-80% in Monaten)\n• Überall Scams\n• Kein Schutz bei Hack\n• Steuerkomplikationen\n• Viele Coins werden wertlos",
+        "mediaUrl": "assets/images/lessons/m4_l08_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Hauptunterschied zwischen Aktien und Krypto?",
+        "options": [
+          "Krypto ist sicherer",
+          "Aktien repräsentieren echtes Unternehmenseigentum",
+          "Sie sind gleich",
+          "Krypto ist reguliert"
+        ],
+        "correctIndex": 1,
+        "explanation": "Aktien = Eigentum. Krypto = nur spekulativer Wert. 📈"
+      },
+      {
+        "type": "info",
+        "title": "Wenn du trotzdem Krypto willst 🎰",
+        "text": "Regeln:\n\n1. Nur Geld das du 100% verlieren kannst\n2. Nie mehr als 5-10% des Portfolios\n3. Bei BTC/ETH bleiben (größte)\n4. Regulierte Börsen nutzen\n5. Niemals Seed-Phrase teilen!",
+        "mediaUrl": "assets/images/lessons/m4_l08_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Erst lernen, dann investieren!",
+        "text": "Fokussiere auf Ersparnisse vor spekulativen Investments.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Krypto gelernt — hohes Risiko, nur investieren was du verlieren kannst!"
+  },
+  {
+    "id": "m4_l09",
+    "moduleId": "future",
+    "title": "Wohnung mieten",
+    "description": "Kaution, Nebenkosten, Wohnungssuche",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l10",
+    "tags": [
+      "#future",
+      "#housing"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Deine erste Wohnung 🏠",
+        "text": "Ausziehen ist aufregend!\n\nAber es kostet mehr als nur Miete...",
+        "mediaUrl": "assets/images/lessons/m4_l09_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Wahre Mietkosten 💶",
+        "text": "Monatsmiete: 800€\nTatsächliche Kosten:\n\n• Miete: 800€\n• Nebenkosten: 150€\n• Internet: 30€\n• Versicherung: 15€\n\nGesamt: 995€/Monat!",
+        "mediaUrl": "assets/images/lessons/m4_l09_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was sind 'Nebenkosten'?",
+        "options": [
+          "Miete",
+          "Zusatzkosten (Heizung, Wasser, Müll)",
+          "Versicherung",
+          "Kaution"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nebenkosten = Zusatzkosten zur Miete! 💡"
+      },
+      {
+        "type": "info",
+        "title": "Die Kaution 🔐",
+        "text": "Kaution = 2-3 Monatsmieten!\n\n800€ Miete × 3 = 2.400€ Kaution\n\n+ Erste Monatsmiete: 800€\n\nEinzugskosten: 3.200€! 😱",
+        "mediaUrl": "assets/images/lessons/m4_l09_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Starte einen Wohnfonds!",
+        "text": "Erstelle ein Sparschwein für deine zukünftige Wohnungskaution.",
+        "buttonText": "Sparschwein erstellen",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Mieten gelernt — Kaution + Nebenkosten = vorausplanen!"
+  },
+  {
+    "id": "m4_l10",
+    "moduleId": "future",
+    "title": "FIRE-Strategie",
+    "description": "Finanzielle Unabhängigkeit, früher Ruhestand",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 5,
+    "xpReward": 100,
+    "unlocksLessonId": "m5_l01",
+    "tags": [
+      "#future",
+      "#fire",
+      "#freedom"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "FUTURE Modul Abgeschlossen! 🏆",
+        "text": "Du hast gemeistert:\n\n✅ Inflation\n✅ Zinseszins\n✅ BNPL-Risiken\n✅ Bonitätsbewertung\n✅ Versicherung\n✅ Aktien & Anleihen\n✅ ETFs\n✅ Krypto\n✅ Mieten\n\nJetzt: das ultimative Ziel!",
+        "mediaUrl": "assets/images/lessons/m4_l10_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was ist FIRE? 🔥",
+        "text": "FIRE = Financial Independence, Retire Early\n(Finanzielle Unabhängigkeit, früher Ruhestand)\n\nZiel: Genug sparen dass Investmenteinnahmen Ausgaben decken.\n\nArbeit wird OPTIONAL, nicht erforderlich!",
+        "mediaUrl": "assets/images/lessons/m4_l10_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Die 4%-Regel 📊",
+        "text": "Studien zeigen: 4%/Jahr abheben, Geld reicht 30+ Jahre.\n\nBrauchst 2.000€/Monat (24.000€/Jahr)?\n\n24.000€ ÷ 4% = 600.000€ nötig\n\nDas ist deine 'FIRE-Zahl'!",
+        "mediaUrl": "assets/images/lessons/m4_l10_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wenn du 30.000€/Jahr brauchst, was ist deine FIRE-Zahl?",
+        "options": [
+          "300.000€",
+          "500.000€",
+          "750.000€",
+          "1.000.000€"
+        ],
+        "correctIndex": 2,
+        "explanation": "30.000€ ÷ 0,04 = 750.000€! 🔥"
+      },
+      {
+        "type": "info",
+        "title": "Mit 15 anfangen: Der Vorteil 🚀",
+        "text": "200€/Monat ab 15 investieren:\n\n• Mit 35: 100.000€+\n• Mit 45: 260.000€+\n• Mit 55: 600.000€+\n\nFIRE mit 55 mit nur 200€/Monat!\n\nJETZT anfangen = JAHRZEHNTE früher in Rente!",
+        "mediaUrl": "assets/images/lessons/m4_l10_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Herzlichen Glückwunsch! 🎉",
+        "text": "Du hast alle Kernmodule abgeschlossen! Check TRENDING für aktuelle Themen.",
+        "buttonText": "Zu Lektionen",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Herzlichen Glückwunsch! Du hast das FUTURE Modul abgeschlossen und den Weg zu FIRE gelernt! 🔥🏆"
+  },
+  {
+    "id": "m5_l01",
+    "moduleId": "trending",
+    "title": "KI & Jobs",
+    "description": "Wie KI den Arbeitsmarkt verändert",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m5_l02",
+    "tags": [
+      "#trending",
+      "#ai",
+      "#future"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "KI-Revolution 🤖",
+        "text": "ChatGPT, Midjourney, Copilot...\n\nKI verändert wie wir arbeiten. Manche Jobs verschwinden, neue entstehen.",
+        "mediaUrl": "assets/images/lessons/m5_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Gefährdete Jobs ⚠️",
+        "text": "KI kann ersetzen:\n\n• Dateneingabe\n• Einfaches Schreiben/Übersetzen\n• Einfacher Kundenservice\n• Einfaches Programmieren\n\nRepetitiv = gefährdet!",
+        "mediaUrl": "assets/images/lessons/m5_l01_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Welche Jobs sind am meisten durch KI gefährdet?",
+        "options": [
+          "Kreative Jobs",
+          "Repetitive Routine-Jobs",
+          "Jobs mit Empathie",
+          "Physische Jobs"
+        ],
+        "correctIndex": 1,
+        "explanation": "KI ist gut bei repetitiven Aufgaben! 🤖"
+      },
+      {
+        "type": "info",
+        "title": "Zukunftssichere Fähigkeiten 💪",
+        "text": "Fokussiere auf:\n\n• Kritisches Denken\n• Kreativität\n• Kommunikation\n• Anpassungsfähigkeit\n• Tech-Kompetenz\n• Emotionale Intelligenz",
+        "mediaUrl": "assets/images/lessons/m5_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Fang an KI zu lernen!",
+        "text": "Probiere ChatGPT oder ähnliche Tools um KI-Fähigkeiten zu verstehen.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über KI und Jobs gelernt — lerne MIT KI zu arbeiten, nicht gegen sie!"
+  },
+  {
+    "id": "m5_l02",
+    "moduleId": "trending",
+    "title": "Creator Economy",
+    "description": "Mit Content-Erstellung Geld verdienen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m5_l03",
+    "tags": [
+      "#trending",
+      "#creator"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Jeder kann Creator sein 📱",
+        "text": "YouTube, TikTok, Twitch, Substack...\n\n50+ Millionen Menschen verdienen Geld mit Content!\n\nKönntest du einer von ihnen sein?",
+        "mediaUrl": "assets/images/lessons/m5_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Wie Creators verdienen 💰",
+        "text": "Einnahmequellen:\n\n• Werbeeinnahmen\n• Sponsoring\n• Merchandise\n• Abonnements (Patreon)\n• Kurse/Produkte\n• Affiliate Marketing",
+        "mediaUrl": "assets/images/lessons/m5_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Realitäts-Check ⚠️",
+        "text": "Wahrheit:\n\n• Top 1% verdienen das meiste Geld\n• Dauert 1-3 Jahre zur Monetarisierung\n• Erfordert Konsistenz\n• Burnout ist real\n\nNicht so einfach wie es aussieht!",
+        "mediaUrl": "assets/images/lessons/m5_l02_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Bester Grund um Content zu erstellen?",
+        "options": [
+          "Schnelles Geld",
+          "Leidenschaft + Skill-Aufbau",
+          "Ruhm",
+          "Um echte Arbeit zu vermeiden"
+        ],
+        "correctIndex": 1,
+        "explanation": "Leidenschaft trägt durch die harten Jahre! ❤️"
+      },
+      {
+        "type": "action",
+        "title": "Finde deine Nische!",
+        "text": "Worüber könntest du 100+ Videos machen?",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über Creator Economy gelernt — Leidenschaft + Konsistenz = möglicher Erfolg!"
+  },
+  {
+    "id": "m5_l03",
+    "moduleId": "trending",
+    "title": "Nachhaltiges Investieren",
+    "description": "ESG-Investitionen und ethisches Geld",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m5_l04",
+    "tags": [
+      "#trending",
+      "#esg",
+      "#sustainability"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Geld kann die Welt verändern 🌍",
+        "text": "Wo du dein Geld anlegst ist wichtig!\n\nIn 'gute' Unternehmen investieren kann positive Veränderung bewirken.",
+        "mediaUrl": "assets/images/lessons/m5_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was ist ESG? 🌱",
+        "text": "ESG = Environmental, Social, Governance\n(Umwelt, Soziales, Unternehmensführung)\n\n🌍 Umwelt: Klima, Verschmutzung\n👥 Soziales: Arbeiter, Gemeinschaften\n🏛️ Governance: Ethik, Transparenz",
+        "mediaUrl": "assets/images/lessons/m5_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wofür steht ESG?",
+        "options": [
+          "Extra Safe Gains",
+          "Environmental Social Governance",
+          "European Stock Guide",
+          "Ethical Saving Goals"
+        ],
+        "correctIndex": 1,
+        "explanation": "ESG = Environmental, Social, Governance! 🌍"
+      },
+      {
+        "type": "info",
+        "title": "Vorsicht vor Greenwashing 🚩",
+        "text": "Greenwashing = vorgeben umweltfreundlich zu sein.\n\n• Echte ESG-Scores prüfen\n• Fondsbestände lesen\n• Nach Zertifizierungen schauen\n• Marketing nicht blind vertrauen!",
+        "mediaUrl": "assets/images/lessons/m5_l03_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Dein Geld, deine Werte!",
+        "text": "Wenn du anfängst zu investieren, ziehe ESG-Optionen in Betracht.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über ESG-Investitionen gelernt — richte dein Geld an deinen Werten aus!"
+  },
+  {
+    "id": "m5_l04",
+    "moduleId": "trending",
+    "title": "Digitale Banking-Revolution",
+    "description": "Neobanken, digitale Wallets und die Zukunft",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m5_l05",
+    "tags": [
+      "#trending",
+      "#fintech"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Banking ohne Banken 📱",
+        "text": "N26, Revolut, Wise, bunq...\n\nNeobanken: 100% digital, keine Filialen.\n\nVerändern wie wir Geld nutzen!",
+        "mediaUrl": "assets/images/lessons/m5_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Neobank-Vorteile 👍",
+        "text": "✅ Konto in Minuten eröffnen\n✅ Keine/niedrige Gebühren\n✅ Echtzeit-Benachrichtigungen\n✅ Tolle Apps\n✅ Einfache internationale Überweisungen",
+        "mediaUrl": "assets/images/lessons/m5_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Hauptvorteil von Neobanken?",
+        "options": [
+          "Physische Filialen",
+          "Digital-first, niedrigere Gebühren",
+          "Bessere Zinsen",
+          "Regierungsunterstützung"
+        ],
+        "correctIndex": 1,
+        "explanation": "Neobanken = digitale Bequemlichkeit + niedrigere Kosten! 📱"
+      },
+      {
+        "type": "info",
+        "title": "Das Beste aus beiden Welten 🏦",
+        "text": "Smarter Ansatz:\n\n• Traditionelle Bank: Sparen, Kredite\n• Neobank: Tägliche Ausgaben\n• Digitale Wallet: Bequemlichkeit\n\nJede für ihre Stärken nutzen!",
+        "mediaUrl": "assets/images/lessons/m5_l04_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Erkunde deine Optionen!",
+        "text": "Vergleiche Neobank-Features wenn du bereit für dein erstes Konto bist.",
+        "buttonText": "Weiter",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast über digitales Banking gelernt — nutze traditionelle und Neobanken strategisch!"
+  },
+  {
+    "id": "m5_l05",
+    "moduleId": "trending",
+    "title": "Finanzielle Unabhängigkeit für Gen Z",
+    "description": "Der einzigartige Weg deiner Generation zum Erfolg",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 5,
+    "xpReward": 100,
+    "unlocksLessonId": null,
+    "tags": [
+      "#trending",
+      "#genz",
+      "#final"
+    ],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Alle Module Abgeschlossen! 🎉",
+        "text": "Du hast gelernt:\n\n💰 Budgetieren & Sparen\n🛡️ Digitale Sicherheit\n💼 Arbeit & Banking\n📈 Investieren & Zukunft\n🚀 Trending Topics\n\n45 Lektionen Finanzwissen!",
+        "mediaUrl": "assets/images/lessons/m5_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Gen Zs einzigartige Herausforderungen 😤",
+        "text": "Deine Generation steht vor:\n\n• Höheren Wohnkosten\n• Klimaunsicherheit\n• Arbeitsmarkt-Änderungen (KI)\n• Social-Media-Druck\n\nABER auch einzigartige Vorteile!",
+        "mediaUrl": "assets/images/lessons/m5_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Gen Zs Superkräfte 💪",
+        "text": "Du hast:\n\n✅ Digital-Native-Skills\n✅ Globale Vernetzung\n✅ Zugang zu Finanzinfos\n✅ Längster Investitionshorizont\n✅ Side-Hustle-Kultur",
+        "mediaUrl": "assets/images/lessons/m5_l05_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Gen Zs größter finanzieller Vorteil?",
+        "options": [
+          "Höhere Gehälter",
+          "Zeit (längster Investitionshorizont)",
+          "Niedrigere Ausgaben",
+          "Bessere Bildung"
+        ],
+        "correctIndex": 1,
+        "explanation": "ZEIT ist deine Superkraft! Fang JETZT an zu investieren! ⏰"
+      },
+      {
+        "type": "info",
+        "title": "Deine Reise geht weiter! 🌟",
+        "text": "Das ist erst der Anfang.\n\n• Wende an was du gelernt hast\n• Lerne weiter\n• Mache Fehler (sie lehren!)\n• Hilf anderen zu lernen\n\nDeine finanzielle Zukunft liegt in DEINEN Händen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Herzlichen Glückwunsch, Absolvent! 🎓",
+        "text": "Du hast alle 45 Lektionen abgeschlossen! Jetzt setze dein Wissen in die Tat um!",
+        "buttonText": "Zurück zur Startseite",
+        "targetScreen": "balance",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "HERZLICHEN GLÜCKWUNSCH! Du hast alle Lektionen abgeschlossen und bist bereit für finanzielle Unabhängigkeit! 🎓🔥"
+  }
+]

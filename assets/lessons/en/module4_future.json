@@ -1,0 +1,739 @@
+[
+  {
+    "id": "m4_l01",
+    "moduleId": "future",
+    "title": "Inflation",
+    "description": "Why €100 today > €100 next year",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l02",
+    "tags": ["#future", "#inflation"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Money Loses Value? 💸",
+        "text": "Your grandparents: 'Coffee used to cost 50 cents!'\n\nNow coffee is €4.\n\nThis is inflation!",
+        "mediaUrl": "assets/images/lessons/m4_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What is Inflation? 📈",
+        "text": "Inflation = prices rising over time.\n\n• Same money buys LESS\n• €100 today ≠ €100 in 10 years\n• Average EU inflation: 2-3%/year",
+        "mediaUrl": "assets/images/lessons/m4_l01_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What happens to €100 under mattress for 10 years?",
+        "options": ["Grows", "Stays same", "Loses buying power", "Disappears"],
+        "correctIndex": 2,
+        "explanation": "€100 will buy less in 10 years due to inflation! 📉"
+      },
+      {
+        "type": "info",
+        "title": "Real Numbers 🔢",
+        "text": "At 3% annual inflation:\n\n€100 today = \n• €97 in 1 year\n• €86 in 5 years\n• €74 in 10 years\n\n(In terms of buying power!)",
+        "mediaUrl": "assets/images/lessons/m4_l01_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Why Does This Happen? 🤔",
+        "text": "Causes of inflation:\n\n💰 More money printed\n📦 Supply chain issues\n⚡ Energy prices up\n👥 High demand",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "How to protect money from inflation?",
+        "options": ["Keep under mattress", "Invest/grow it", "Spend it all now", "Convert to coins"],
+        "correctIndex": 1,
+        "explanation": "Money must grow faster than inflation! 📈"
+      },
+      {
+        "type": "info",
+        "title": "Beating Inflation 💪",
+        "text": "To preserve value:\n\n• Savings accounts (if rate > inflation)\n• Investments (stocks, ETFs)\n• Real assets (property)\n\nGoal: grow money faster than inflation!",
+        "mediaUrl": "assets/images/lessons/m4_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Understand the power of time!",
+        "text": "Next lesson: compound interest — how money grows exponentially!",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about inflation — money loses value over time if not invested!"
+  },
+  {
+    "id": "m4_l02",
+    "moduleId": "future",
+    "title": "Compound Interest",
+    "description": "The magic of time: start saving early",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l03",
+    "tags": ["#future", "#investing"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "The 8th Wonder of the World 🌟",
+        "text": "Einstein (supposedly) called compound interest 'the 8th wonder of the world.'\n\nWhy? Because it's MAGICAL!",
+        "mediaUrl": "assets/images/lessons/m4_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Simple vs Compound Interest",
+        "text": "Simple: €100 × 5% = €5/year (always €5)\n\nCompound: Interest on interest!\n• Year 1: €100 → €105\n• Year 2: €105 → €110.25\n• Year 3: €110.25 → €115.76",
+        "mediaUrl": "assets/images/lessons/m4_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What makes compound interest special?",
+        "options": ["Higher rate", "Interest earns interest", "Banks pay more", "It's illegal"],
+        "correctIndex": 1,
+        "explanation": "Interest on interest = exponential growth! 📈"
+      },
+      {
+        "type": "info",
+        "title": "The Power of Time ⏰",
+        "text": "€1000 at 7% annual return:\n\n• 10 years: €1,967\n• 20 years: €3,870\n• 30 years: €7,612\n• 40 years: €14,974\n\nSame investment, different time = HUGE difference!",
+        "mediaUrl": "assets/images/lessons/m4_l02_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Rule of 72 🔢",
+        "text": "Quick math trick:\n\n72 ÷ interest rate = years to double\n\n• 72 ÷ 6% = 12 years\n• 72 ÷ 8% = 9 years\n• 72 ÷ 10% = 7.2 years",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "At 6% return, how long to double money?",
+        "options": ["6 years", "12 years", "18 years", "24 years"],
+        "correctIndex": 1,
+        "explanation": "72 ÷ 6 = 12 years! The Rule of 72 works! 🔢"
+      },
+      {
+        "type": "info",
+        "title": "Why Start NOW? 🚀",
+        "text": "Starting at 15 vs 25:\n\nSave €50/month at 7%:\n\n• Start at 15: €131,000 by 65\n• Start at 25: €65,000 by 65\n\n10 years difference = €66,000! 😱",
+        "mediaUrl": "assets/images/lessons/m4_l02_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Start your compound journey!",
+        "text": "Even €10/month now is better than €100/month later!",
+        "buttonText": "Create Piggy Bank",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about compound interest — TIME is your biggest asset!"
+  },
+  {
+    "id": "m4_l03",
+    "moduleId": "future",
+    "title": "BNPL: Buy Now Pay Later",
+    "description": "Risks of services like Klarna",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l04",
+    "tags": ["#future", "#debt"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Pay Later? Sounds Great! 🛒",
+        "text": "Klarna, Afterpay, PayPal Pay in 4...\n\n'Buy now, pay in 4 installments!'\n'Interest-free!'\n\nWhat's the catch? 🤔",
+        "mediaUrl": "assets/images/lessons/m4_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "How BNPL Works",
+        "text": "1. See €100 item\n2. Choose 'Pay in 4'\n3. Pay €25 now\n4. €25 every 2 weeks\n\nSeems manageable... until:",
+        "mediaUrl": "assets/images/lessons/m4_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "The Trap 🪤",
+        "text": "Problem 1: Multiple BNPLs\n\n• Shoes: €25/2 weeks\n• Game: €15/2 weeks  \n• Clothes: €30/2 weeks\n\nSuddenly: €70 every 2 weeks!\n\nDebt sneaks up fast. 😰",
+        "mediaUrl": "assets/images/lessons/m4_l03_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Main BNPL danger?",
+        "options": ["High interest", "Easy to stack multiple debts", "Complex app", "Slow delivery"],
+        "correctIndex": 1,
+        "explanation": "Multiple small debts = one big problem! 💸"
+      },
+      {
+        "type": "info",
+        "title": "Late Fees & Credit Score 📉",
+        "text": "Miss a payment:\n\n⚠️ Late fees: €5-15\n⚠️ Can go to collections\n⚠️ Hurts credit score\n⚠️ Future loans harder to get",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "The Psychology Trick 🧠",
+        "text": "BNPL makes you spend MORE:\n\n• '€25 feels affordable'\n• Dopamine hit NOW\n• Pain of payment LATER\n• Studies: 30-50% more spending!",
+        "mediaUrl": "assets/images/lessons/m4_l03_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Best approach to BNPL?",
+        "options": ["Use for everything", "Only if you have full amount saved", "Always use for big purchases", "Use to build credit"],
+        "correctIndex": 1,
+        "explanation": "Only BNPL if you COULD pay full price now! 💰"
+      },
+      {
+        "type": "action",
+        "title": "Better alternative: Save first!",
+        "text": "Create a piggy bank for wants instead of BNPL.",
+        "buttonText": "Create Piggy Bank",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about BNPL risks — only use if you already have the money!"
+  },
+  {
+    "id": "m4_l04",
+    "moduleId": "future",
+    "title": "Credit Score (SCHUFA/KSV)",
+    "description": "How not to ruin your reputation young",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l05",
+    "tags": ["#future", "#credit"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Your Financial Reputation 📊",
+        "text": "Credit score = your 'financial grade.'\n\nIn Europe:\n• Germany: SCHUFA\n• Austria: KSV\n• UK: Experian, Equifax\n• Others: similar systems",
+        "mediaUrl": "assets/images/lessons/m4_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Why Does It Matter? 🤔",
+        "text": "Bad credit score affects:\n\n🏠 Renting apartments\n📱 Phone contracts\n💳 Getting credit cards\n🚗 Car loans\n🏦 Mortgages\n\nEven employers sometimes check!",
+        "mediaUrl": "assets/images/lessons/m4_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Who might check your credit score?",
+        "options": ["Only banks", "Landlords, banks, phone companies", "Nobody", "Only government"],
+        "correctIndex": 1,
+        "explanation": "Many people check — it's your financial reputation! 📋"
+      },
+      {
+        "type": "info",
+        "title": "What Hurts Your Score? 📉",
+        "text": "❌ Late payments\n❌ Unpaid bills\n❌ Debt collections\n❌ Too many credit applications\n❌ Bankruptcy\n❌ BNPL defaults",
+        "mediaUrl": "assets/images/lessons/m4_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What Helps Your Score? 📈",
+        "text": "✅ Pay bills on time\n✅ Keep old accounts open\n✅ Low credit utilization\n✅ Few credit applications\n✅ Mix of credit types\n✅ Long credit history",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Best way to build good credit?",
+        "options": ["Never use credit", "Pay everything on time", "Max out cards", "Apply for many cards"],
+        "correctIndex": 1,
+        "explanation": "On-time payments = best credit builder! ✅"
+      },
+      {
+        "type": "info",
+        "title": "Teen Credit Tips 💡",
+        "text": "Starting young:\n\n1. Pay phone bill on time\n2. Don't ignore small debts\n3. Be careful with BNPL\n4. Keep addresses updated\n5. Check your score annually (free!)",
+        "mediaUrl": "assets/images/lessons/m4_l04_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Protect your score!",
+        "text": "Set reminders for all bill payments in the calendar.",
+        "buttonText": "Open Calendar",
+        "targetScreen": "calendar",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about credit scores — pay on time to build good reputation!"
+  },
+  {
+    "id": "m4_l05",
+    "moduleId": "future",
+    "title": "Insurance Basics",
+    "description": "Why liability insurance is essential in EU",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l06",
+    "tags": ["#future", "#insurance"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Insurance = Protection 🛡️",
+        "text": "Insurance protects against unexpected costs:\n\n• Accidents\n• Illness\n• Damage to others\n• Theft",
+        "mediaUrl": "assets/images/lessons/m4_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Liability Insurance 🔥",
+        "text": "In EU, this is ESSENTIAL!\n\nCovers damage YOU cause to OTHERS:\n\n• Spill coffee on laptop: €1000\n• Bike hits pedestrian: €50,000+\n• Break store window: €500\n\nWithout insurance = you pay everything!",
+        "mediaUrl": "assets/images/lessons/m4_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What does liability insurance cover?",
+        "options": ["Your injuries", "Damage you cause to others", "Your stuff", "Your health"],
+        "correctIndex": 1,
+        "explanation": "Liability = damage to OTHER people/property! 🛡️"
+      },
+      {
+        "type": "info",
+        "title": "Types of Insurance 📋",
+        "text": "Common types:\n\n🏥 Health (often mandatory)\n🛡️ Liability (highly recommended)\n📱 Device (phones, laptops)\n✈️ Travel\n🚗 Car (mandatory)\n🏠 Home/Renters",
+        "mediaUrl": "assets/images/lessons/m4_l05_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Teen Insurance Situation",
+        "text": "Usually covered by parents until 18-25:\n\n• Health: through parents\n• Liability: family policy\n• Check with parents!\n\nAfter 18-25: need your own!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "When do you need your own liability insurance?",
+        "options": ["At birth", "Usually after 18-25", "Never", "Only if working"],
+        "correctIndex": 1,
+        "explanation": "Usually covered by family until 18-25, then you need your own! 🛡️"
+      },
+      {
+        "type": "info",
+        "title": "Insurance Tips 💡",
+        "text": "1. Ask parents what covers you\n2. Read what's excluded\n3. Compare prices online\n4. Liability is cheap (~€50/year)\n5. Don't over-insure small stuff",
+        "mediaUrl": "assets/images/lessons/m4_l05_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Talk to parents!",
+        "text": "Ask them: 'Am I covered by your liability insurance?'",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about insurance — liability is essential in EU!"
+  },
+  {
+    "id": "m4_l06",
+    "moduleId": "future",
+    "title": "Stocks & Bonds",
+    "description": "Stock market basics",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l07",
+    "tags": ["#future", "#investing"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "What is the Stock Market? 📈",
+        "text": "A place where you can buy pieces of companies (stocks) or lend money to them (bonds).",
+        "mediaUrl": "assets/images/lessons/m4_l06_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Stocks = Ownership 🏢",
+        "text": "Buy Apple stock = own tiny piece of Apple!\n\n• If Apple grows → stock value up 📈\n• If Apple struggles → stock value down 📉\n• Some stocks pay dividends (share of profits)",
+        "mediaUrl": "assets/images/lessons/m4_l06_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What does owning stock mean?",
+        "options": ["You work there", "You own part of company", "You owe them money", "You get free products"],
+        "correctIndex": 1,
+        "explanation": "Stock = ownership piece of a company! 📈"
+      },
+      {
+        "type": "info",
+        "title": "Bonds = Lending 💰",
+        "text": "Buy a bond = lend money to company/government.\n\n• They promise to pay back + interest\n• Lower risk than stocks\n• Lower potential reward too\n• Good for stability",
+        "mediaUrl": "assets/images/lessons/m4_l06_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Risk vs Reward ⚖️",
+        "text": "General rule:\n\n🔴 Stocks: Higher risk, higher potential reward\n🟢 Bonds: Lower risk, lower reward\n\nYoung people can take more risk (time to recover!)",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Why can young people take more investment risk?",
+        "options": ["They're smarter", "More time to recover from losses", "Laws allow it", "Less to lose"],
+        "correctIndex": 1,
+        "explanation": "Time = your advantage! Losses can recover over years. ⏰"
+      },
+      {
+        "type": "info",
+        "title": "Important! ⚠️",
+        "text": "• Never invest money you can't afford to lose\n• Past performance ≠ future results\n• Diversify (don't put all eggs in one basket)\n• Long-term > short-term gambling",
+        "mediaUrl": "assets/images/lessons/m4_l06_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Learn more!",
+        "text": "Next lesson: ETFs — the safest way to start investing.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about stocks and bonds — the basics of investing!"
+  },
+  {
+    "id": "m4_l07",
+    "moduleId": "future",
+    "title": "ETFs",
+    "description": "The safest start to investing",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l08",
+    "tags": ["#future", "#investing"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "What is an ETF? 🧺",
+        "text": "ETF = Exchange-Traded Fund\n\nImagine a basket containing many stocks.\n\nBuy one ETF = buy piece of hundreds of companies!",
+        "mediaUrl": "assets/images/lessons/m4_l07_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Why ETFs? 👍",
+        "text": "✅ Instant diversification\n✅ Low fees\n✅ Easy to buy/sell\n✅ No need to pick stocks\n✅ Transparent\n✅ Perfect for beginners!",
+        "mediaUrl": "assets/images/lessons/m4_l07_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Main advantage of ETFs?",
+        "options": ["Guaranteed profits", "Diversification (many stocks at once)", "No risk", "Free money"],
+        "correctIndex": 1,
+        "explanation": "ETF = many stocks in one purchase = diversification! 🧺"
+      },
+      {
+        "type": "info",
+        "title": "Popular ETFs 🌍",
+        "text": "• S&P 500 ETF: Top 500 US companies\n• MSCI World: 1,500+ global companies\n• Euro Stoxx 50: Top EU companies\n\nOne purchase = invest in whole economy!",
+        "mediaUrl": "assets/images/lessons/m4_l07_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "How to Start? 🚀",
+        "text": "1. Open broker account (18+, or with parents)\n2. Choose broad ETF (MSCI World is popular)\n3. Set up automatic monthly investment\n4. Forget about it for 20 years\n5. Let compound interest work!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Best ETF strategy for beginners?",
+        "options": ["Buy and sell daily", "Automatic monthly investment", "Only buy during crashes", "Ask social media"],
+        "correctIndex": 1,
+        "explanation": "Regular automatic investment = 'Dollar Cost Averaging' = best strategy! 📈"
+      },
+      {
+        "type": "info",
+        "title": "The Numbers 📊",
+        "text": "€50/month into MSCI World (7% avg return):\n\n• 10 years: €8,600\n• 20 years: €26,000\n• 30 years: €61,000\n• 40 years: €131,000\n\nFrom just €50/month!",
+        "mediaUrl": "assets/images/lessons/m4_l07_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Plan for the future!",
+        "text": "Talk to parents about starting an ETF savings plan.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about ETFs — the easiest way to start investing!"
+  },
+  {
+    "id": "m4_l08",
+    "moduleId": "future",
+    "title": "Cryptocurrency",
+    "description": "Risks, volatility, differences from stocks",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l09",
+    "tags": ["#future", "#crypto"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "What is Crypto? 🪙",
+        "text": "Cryptocurrency = digital money not controlled by governments.\n\nBitcoin, Ethereum, and 10,000+ others.\n\nRevolutionary technology, but VERY risky!",
+        "mediaUrl": "assets/images/lessons/m4_l08_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Why So Popular? 🚀",
+        "text": "• Bitcoin: €100 in 2010 → millions now\n• Stories of overnight millionaires\n• 'Freedom from banks'\n• FOMO (Fear Of Missing Out)\n\nBut... survivorship bias!",
+        "mediaUrl": "assets/images/lessons/m4_l08_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why do we hear about crypto millionaires?",
+        "options": ["Everyone profits", "Survivorship bias - losers don't brag", "Crypto is safe", "Government pays them"],
+        "correctIndex": 1,
+        "explanation": "We hear winners, not the many losers! 📉"
+      },
+      {
+        "type": "info",
+        "title": "The Risks ⚠️",
+        "text": "• EXTREME volatility (-80% in months)\n• Scams everywhere\n• No protection if hacked\n• Tax complications\n• Many coins go to zero\n• No underlying value",
+        "mediaUrl": "assets/images/lessons/m4_l08_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Crypto vs Stocks 📊",
+        "text": "Stocks:\n• Own part of real company\n• Company makes products/profits\n• Regulated, protected\n\nCrypto:\n• Own digital token\n• Value = what others will pay\n• Mostly unregulated",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Main difference between stocks and crypto?",
+        "options": ["Crypto is safer", "Stocks represent real company ownership", "They're the same", "Crypto is regulated"],
+        "correctIndex": 1,
+        "explanation": "Stocks = ownership. Crypto = speculative value only. 📈"
+      },
+      {
+        "type": "info",
+        "title": "If You Still Want Crypto 🎰",
+        "text": "Rules:\n\n1. Only money you can 100% lose\n2. Never more than 5-10% of portfolio\n3. Stick to BTC/ETH (biggest)\n4. Use regulated exchanges\n5. Never share seed phrase!\n6. Don't chase 'moon' coins",
+        "mediaUrl": "assets/images/lessons/m4_l08_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Learn first, invest later!",
+        "text": "Focus on building savings before speculative investments.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about crypto — high risk, only invest what you can lose!"
+  },
+  {
+    "id": "m4_l09",
+    "moduleId": "future",
+    "title": "Renting an Apartment",
+    "description": "Deposits, utilities, apartment hunting",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m4_l10",
+    "tags": ["#future", "#housing"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Your First Apartment 🏠",
+        "text": "Moving out is exciting!\n\nBut it costs more than just rent...",
+        "mediaUrl": "assets/images/lessons/m4_l09_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "True Cost of Renting 💶",
+        "text": "Monthly rent: €800\nActual costs:\n\n• Rent: €800\n• Utilities (Nebenkosten): €150\n• Internet: €30\n• Insurance: €15\n\nTotal: €995/month!",
+        "mediaUrl": "assets/images/lessons/m4_l09_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What are 'Nebenkosten' (utilities)?",
+        "options": ["Rent", "Extra costs (heating, water, garbage)", "Insurance", "Deposit"],
+        "correctIndex": 1,
+        "explanation": "Nebenkosten = utilities on top of rent! 💡"
+      },
+      {
+        "type": "info",
+        "title": "The Deposit 🔐",
+        "text": "Kaution (deposit) = 2-3 months rent!\n\n€800 rent × 3 = €2,400 deposit\n\n+ First month rent: €800\n\nMove-in cost: €3,200! 😱",
+        "mediaUrl": "assets/images/lessons/m4_l09_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Budget Rule for Rent 📊",
+        "text": "Golden rule: Rent ≤ 30% of income\n\nIf you earn €2,000/month:\nMax rent: €600\n\nIf you earn €1,500/month:\nMax rent: €450\n\nOtherwise you'll struggle!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Max rent if you earn €1,800/month?",
+        "options": ["€900", "€540", "€1,000", "€1,800"],
+        "correctIndex": 1,
+        "explanation": "30% of €1,800 = €540 max rent! 🏠"
+      },
+      {
+        "type": "info",
+        "title": "Apartment Hunting Tips 🔍",
+        "text": "1. Start saving for deposit NOW\n2. Prepare documents (income proof, ID)\n3. Visit in person\n4. Check neighborhood at different times\n5. Read contract carefully\n6. Document condition at move-in!",
+        "mediaUrl": "assets/images/lessons/m4_l09_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Start a housing fund!",
+        "text": "Create a piggy bank for your future apartment deposit.",
+        "buttonText": "Create Piggy Bank",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about renting — deposit + utilities = plan ahead!"
+  },
+  {
+    "id": "m4_l10",
+    "moduleId": "future",
+    "title": "FIRE Strategy",
+    "description": "Financial Independence, Retire Early",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 5,
+    "xpReward": 100,
+    "unlocksLessonId": "m5_l01",
+    "tags": ["#future", "#fire", "#freedom"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "FUTURE Module Complete! 🏆",
+        "text": "You've mastered:\n\n✅ Inflation\n✅ Compound Interest\n✅ BNPL Risks\n✅ Credit Score\n✅ Insurance\n✅ Stocks & Bonds\n✅ ETFs\n✅ Crypto\n✅ Renting\n\nNow: the ultimate goal!",
+        "mediaUrl": "assets/images/lessons/m4_l10_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What is FIRE? 🔥",
+        "text": "FIRE = Financial Independence, Retire Early\n\nGoal: Save enough that investment income covers expenses.\n\nWork becomes OPTIONAL, not required!",
+        "mediaUrl": "assets/images/lessons/m4_l10_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "The 4% Rule 📊",
+        "text": "Studies show: withdraw 4%/year, money lasts 30+ years.\n\nNeed €2,000/month (€24,000/year)?\n\n€24,000 ÷ 4% = €600,000 needed\n\nThat's your 'FIRE number'!",
+        "mediaUrl": "assets/images/lessons/m4_l10_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "If you need €30,000/year, what's your FIRE number?",
+        "options": ["€300,000", "€500,000", "€750,000", "€1,000,000"],
+        "correctIndex": 2,
+        "explanation": "€30,000 ÷ 0.04 = €750,000! 🔥"
+      },
+      {
+        "type": "info",
+        "title": "FIRE Variations 🎯",
+        "text": "• Lean FIRE: Minimal lifestyle, retire fast\n• Fat FIRE: Luxurious retirement, save more\n• Barista FIRE: Part-time work + investments\n• Coast FIRE: Save hard early, coast later\n\nChoose your style!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Starting at 15: The Advantage 🚀",
+        "text": "Invest €200/month from age 15:\n\n• By 35: €100,000+\n• By 45: €260,000+\n• By 55: €600,000+\n\nFIRE by 55 with just €200/month!\n\nStart NOW = retire DECADES early!",
+        "mediaUrl": "assets/images/lessons/m4_l10_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why is starting young so powerful for FIRE?",
+        "options": ["Young people are smarter", "Compound interest has decades to work", "It's easier when young", "Laws favor young people"],
+        "correctIndex": 1,
+        "explanation": "TIME is the secret ingredient! Decades of compound growth! 📈"
+      },
+      {
+        "type": "info",
+        "title": "Your Financial Journey Starts NOW 🌟",
+        "text": "You now know:\n\n💰 How to budget\n🎯 How to save\n📈 How to invest\n🛡️ How to protect yourself\n🔥 The path to financial freedom\n\nThe rest is up to you!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Congratulations! 🎉",
+        "text": "You've completed all core modules! Check out TRENDING for the latest topics.",
+        "buttonText": "To Lessons",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Congratulations! You've completed FUTURE module and learned the path to FIRE! 🔥🏆"
+  }
+]

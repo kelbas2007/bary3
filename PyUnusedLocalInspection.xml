@@ -1,0 +1,38 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py</file>
+  <line>7</line>
+  <module>bary3</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py" />
+  <problem_class id="PyUnusedLocalInspection" severity="WEAK WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused local symbols</problem_class>
+  <description>Parameter 'bp_loc' value is not used</description>
+  <highlighted_element>bp_loc</highlighted_element>
+  <language>Python</language>
+  <offset>44</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py</file>
+  <line>7</line>
+  <module>bary3</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py" />
+  <problem_class id="PyUnusedLocalInspection" severity="WEAK WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused local symbols</problem_class>
+  <description>Parameter 'extra_args' value is not used</description>
+  <highlighted_element>extra_args</highlighted_element>
+  <language>Python</language>
+  <offset>52</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py</file>
+  <line>7</line>
+  <module>bary3</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py" />
+  <problem_class id="PyUnusedLocalInspection" severity="WEAK WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused local symbols</problem_class>
+  <description>Parameter 'intern_dict' value is not used</description>
+  <highlighted_element>intern_dict</highlighted_element>
+  <language>Python</language>
+  <offset>64</offset>
+  <length>11</length>
+</problem>
+</problems>

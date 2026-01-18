@@ -1,0 +1,6 @@
+﻿
+01-18 10:25:10.531 27000 27000 I flutter : [PerformanceMonitor] FPS: 60.0
+01-18 10:25:11.530 27000 27000 I flutter : [PerformanceMonitor] FPS: 60.0
+01-18 10:25:12.530 27000 27000 I flutter : [PerformanceMonitor] FPS: 60.0
+
+

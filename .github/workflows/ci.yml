@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Verify formatting
+        run: dart format --set-exit-if-changed .
+      - name: Analyze code
+        run: flutter analyze
+      - name: Check hardcoded strings
+        run: dart scripts/check_hardcoded_strings.dart
+      - name: Check translations completeness
+        run: dart scripts/check_translations.dart
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Generate localization files
+        run: flutter gen-l10n
+      - name: Run tests
+        run: flutter test
+      - name: Run localization tests
+        run: flutter test test/localization_test.dart
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Generate localization files
+        run: flutter gen-l10n
+      - name: Build APK
+        run: flutter build apk --release
+      - name: Build iOS (if on macOS)
+        if: runner.os == 'macOS'
+        run: flutter build ios --release --no-codesign

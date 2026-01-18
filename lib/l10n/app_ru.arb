@@ -1,0 +1,1683 @@
+{
+  "@@locale": "ru",
+  "common_cancel": "Отмена",
+  "common_save": "Сохранить",
+  "common_create": "Создать",
+  "common_delete": "Удалить",
+  "common_done": "Готово",
+  "common_understand": "Понятно",
+  "common_planCreated": "План успешно создан!",
+  "common_purchasePlanned": "Покупка запланирована!",
+  "common_income": "Доход",
+  "common_expense": "Расход",
+  "common_plan": "План",
+  "common_balance": "Баланс",
+  "common_piggyBanks": "Копилки",
+  "common_calendar": "Календарь",
+  "common_lessons": "Уроки",
+  "common_settings": "Настройки",
+  "common_tools": "Инструменты",
+  "common_continue": "Продолжить",
+  "common_confirm": "Подтвердить",
+  "common_error": "Ошибка",
+  "common_tryAgain": "Попробовать снова",
+  "balance": "Баланс",
+  "search": "Поиск",
+  "reset": "Сбросить",
+  "done": "Готово",
+
+  "moneyValidator_enterAmount": "Напиши сумму",
+  "moneyValidator_notANumber": "Не похоже на число",
+  "moneyValidator_mustBePositive": "Сумма должна быть больше 0",
+  "moneyValidator_tooSmall": "Сумма слишком маленькая",
+
+  "bariOverlay_tipOfDay": "Подсказка дня",
+  "bariOverlay_defaultTip": "Помни: каждая монета приближает тебя к цели!",
+  "bariOverlay_instructions": "Нажми на Бари — открыть подсказку. Двойной тап — чат.",
+  "bariOverlay_openChat": "Открыть чат",
+  "bariOverlay_moreTips": "Ещё подсказку",
+  "bariAvatar_happy": "😄",
+  "bariAvatar_encouraging": "🤔",
+  "bariAvatar_neutral": "😌",
+
+  "mainScreen_transferToPiggyBank": "Перевод в копилку \"{bankName}\" (из дохода)",
+  "@mainScreen_transferToPiggyBank": {
+    "placeholders": {
+      "bankName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "bariTip_income": "Отличный доход! Куда потратишь?",
+  "bariTip_expense": "Потрачено. Это было в планах?",
+  "bariTip_planCreated": "План создан! Следовать ему — ключ к успеху.",
+  "bariTip_planCompleted": "План выполнен! Ты молодец!",
+  "bariTip_piggyBankCreated": "Новая копилка! На что копим?",
+  "bariTip_piggyBankCompleted": "Копилка заполнена! Поздравляю с достижением цели!",
+  "bariTip_lessonCompleted": "Урок пройден! Новые знания — суперсила!",
+
+  "period_day": "День",
+  "period_week": "Неделя",
+  "period_month": "Месяц",
+  "period_inADay": "в день",
+  "period_inAWeek": "в неделю",
+  "period_inAMonth": "в месяц",
+  "period_everyDay": "Каждый день",
+  "period_onceAWeek": "Раз в неделю",
+  "period_onceAMonth": "Раз в месяц",
+  "plural_days": "{count,plural, =1{день} few{дня} many{дней} other{дней}}",
+  "@plural_days": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "monthlyBudgetCalculator_title": "План расходов на месяц",
+  "monthlyBudgetCalculator_subtitle": "Поставь лимит и посмотри остаток — деньги станет легче контролировать.",
+  "monthlyBudgetCalculator_step1": "Месяц",
+  "monthlyBudgetCalculator_step2": "Лимит",
+  "monthlyBudgetCalculator_step3": "Итог",
+  "monthlyBudgetCalculator_selectMonth": "1) Выбери месяц",
+  "monthlyBudgetCalculator_setLimit": "2) Поставь лимит",
+  "monthlyBudgetCalculator_limitForMonth": "Лимит на месяц",
+  "monthlyBudgetCalculator_result": "Итог",
+  "monthlyBudgetCalculator_spent": "Потрачено",
+  "monthlyBudgetCalculator_remaining": "Осталось",
+  "monthlyBudgetCalculator_warningAlmostLimit": "⚠️ Почти достигнут лимит! Попробуй снизить траты в оставшиеся дни.",
+  "monthlyBudgetCalculator_warningOverLimit": "Ты вышел за лимит на {amount}. Можно пересмотреть лимит или найти, где сэкономить.",
+  "@monthlyBudgetCalculator_warningOverLimit": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "goalDateCalculator_title": "Когда я достигну цели",
+  "goalDateCalculator_subtitle": "Введи сумму взноса и частоту — я покажу примерную дату достижения.",
+  "goalDateCalculator_stepGoal": "Цель",
+  "goalDateCalculator_stepContribution": "Взнос",
+  "goalDateCalculator_stepFrequency": "Частота",
+  "goalDateCalculator_headerGoal": "1) Цель",
+  "goalDateCalculator_piggyBankLabel": "Копилка",
+  "goalDateCalculator_remainingToGoal": "Осталось: {amount}",
+  "@goalDateCalculator_remainingToGoal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_headerContribution": "2) Сколько откладываешь",
+  "goalDateCalculator_contributionAmountLabel": "Сумма взноса",
+  "goalDateCalculator_headerFrequency": "3) Частота",
+  "goalDateCalculator_result": "Результат",
+  "goalDateCalculator_goalAlreadyReached": "Цель уже достигнута — можно поставить новую!",
+  "goalDateCalculator_resultSummary": "Примерно через {count} взносов (каждый {period})",
+  "@goalDateCalculator_resultSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_upcomingDates": "Ближайшие даты:",
+  "goalDateCalculator_createPlanButton": "Создать план взносов",
+  "goalDateCalculator_dialogTitle": "Подтверждение",
+  "goalDateCalculator_dialogSubtitle": "Создание запланированных событий",
+  "goalDateCalculator_dialogContent": "Создать запланированные события для взносов в копилку \"{goalName}\"?",
+  "@goalDateCalculator_dialogContent": {
+    "placeholders": {
+      "goalName": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_defaultGoalName": "цель",
+  "goalDateCalculator_dialogContributionAmount": "Сумма взноса: {amount}",
+  "@goalDateCalculator_dialogContributionAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_dialogFrequency": "Периодичность: каждый {period}",
+  "@goalDateCalculator_dialogFrequency": {
+    "placeholders": {
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_eventName": "Взнос в копилку \"{goalName}\"",
+  "@goalDateCalculator_eventName": {
+    "placeholders": {
+      "goalName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyPlanCalculator_title": "Копилка-план",
+  "piggyPlanCalculator_subtitle": "Подскажу, сколько и как часто откладывать, чтобы дойти до цели.",
+  "piggyPlanCalculator_stepGoal": "Цель",
+  "piggyPlanCalculator_stepDate": "Дата",
+  "piggyPlanCalculator_stepFrequency": "Частота",
+  "piggyPlanCalculator_headerSelectGoal": "1) Выбери цель",
+  "piggyPlanCalculator_goalAmountLabel": "Цель (сумма)",
+  "piggyPlanCalculator_currentAmountLabel": "Уже есть",
+  "piggyPlanCalculator_headerTargetDate": "2) Когда хочешь дойти до цели?",
+  "piggyPlanCalculator_selectDate": "Выбери дату",
+  "piggyPlanCalculator_headerFrequency": "3) Как часто откладывать?",
+  "piggyPlanCalculator_result": "Результат",
+  "piggyPlanCalculator_resultSummary": "Откладывай примерно {amount} каждый {period} (всего взносов: {count}).",
+  "@piggyPlanCalculator_resultSummary": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "piggyPlanCalculator_planCreatedSnackbar": "План создан: {amount} каждый {period}",
+  "@piggyPlanCalculator_planCreatedSnackbar": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyPlanCalculator_scheduleFirstContributionButton": "Запланировать первый взнос",
+  "piggyPlanCalculator_dialogContributionAmount": "Сумма: {amount}",
+  "@piggyPlanCalculator_dialogContributionAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "canIBuyCalculator_title": "Можно ли купить?",
+  "canIBuyCalculator_subtitle": "Проверим покупку прямо сейчас и с учётом планов на неделю.",
+  "canIBuyCalculator_stepPrice": "Цена",
+  "canIBuyCalculator_stepMoney": "Деньги",
+  "canIBuyCalculator_stepRules": "Правила",
+  "canIBuyCalculator_headerPrice": "1) Цена покупки",
+  "canIBuyCalculator_priceLabel": "Цена",
+  "canIBuyCalculator_headerAvailableMoney": "2) Сколько денег доступно",
+  "canIBuyCalculator_walletBalanceLabel": "В кошельке сейчас",
+  "canIBuyCalculator_headerRules": "3) Правила",
+  "canIBuyCalculator_ruleDontTouchPiggies": "Не трогать копилки",
+  "canIBuyCalculator_ruleDontTouchPiggiesSubtitleEnabled": "Считаем только кошелёк",
+  "canIBuyCalculator_ruleDontTouchPiggiesSubtitleDisabled": "Можно использовать деньги из копилок как резерв",
+  "canIBuyCalculator_ruleConsiderPlans": "Учитывать планы на 7 дней",
+  "canIBuyCalculator_ruleConsiderPlansSubtitle": "Запланированные доходы/расходы из календаря",
+  "canIBuyCalculator_result": "Результат",
+  "canIBuyCalculator_statusYes": "Можно сейчас",
+  "canIBuyCalculator_statusYesBut": "Можно сейчас, но планы на неделю могут помешать",
+  "canIBuyCalculator_statusMaybeWithPiggies": "Можно, если взять часть из копилки",
+  "canIBuyCalculator_statusMaybeWithPlans": "Пока не хватает, но планы/доходы на неделе могут помочь",
+  "canIBuyCalculator_statusNo": "Лучше подождать: не хватает {amount}",
+  "@canIBuyCalculator_statusNo": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "canIBuyCalculator_planPurchaseButton": "Запланировать покупку",
+  "canIBuyCalculator_dialogTitle": "Подтверждение",
+  "canIBuyCalculator_dialogSubtitle": "Создание запланированного события",
+  "canIBuyCalculator_dialogContent": "Создать запланированное событие для покупки?",
+  "canIBuyCalculator_dialogAmount": "Сумма: {amount}",
+  "@canIBuyCalculator_dialogAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "canIBuyCalculator_dialogInfo": "Событие будет создано на 7 дней вперед.",
+  "canIBuyCalculator_defaultEventName": "Покупка",
+
+  "toolsHub_subtitle": "Считай, планируй, прокачивайся",
+  "toolsHub_bariTipTitle": "Совет Бари",
+  "toolsHub_tipCalculators": "Калькуляторы помогут тебе планировать и считать. Попробуй начать с \"Копилка-план\"!",
+  "toolsHub_tipEarningsLab": "В Лаборатории заработка ты можешь выполнять задания и зарабатывать. Начни с простых!",
+  "toolsHub_tipMiniTrainers": "60-секундные тренажёры помогут быстро прокачать навыки. Регулярность важнее скорости!",
+  "toolsHub_tipBariRecommendations": "Совет дня от Бари обновляется каждый день. Заходи почаще за новыми идеями!",
+  "toolsHub_calendarForecastTitle": "Календарный прогноз",
+  "toolsHub_calendarForecastSubtitle": "Будущий баланс и все запланированные события",
+  "toolsHub_calculatorsTitle": "Калькуляторы",
+  "toolsHub_calculatorsSubtitle": "8 полезных калькуляторов для финансов",
+  "toolsHub_earningsLabTitle": "Лаборатория заработка",
+  "toolsHub_earningsLabSubtitle": "Задания и миссии для заработка",
+  "toolsHub_miniTrainersTitle": "60 секунд",
+  "toolsHub_miniTrainersSubtitle": "Микро-упражнения для тренировки",
+  "toolsHub_recommendationsTitle": "Совет дня",
+  "toolsHub_recommendationsSubtitle": "Подборка советов и объяснений от Бари",
+  "toolsHub_notesTitle": "Заметки",
+  "toolsHub_notesSubtitle": "Создавай и организуй свои заметки",
+  "toolsHub_tipNotes": "Заметки помогут тебе не забыть важные мысли. Закрепляй самые важные!",
+  
+  "piggyBanks_explanationSimple": "Копилка — это отдельная цель. Деньги в ней не влияют на баланс.",
+  "piggyBanks_explanationPro": "Копилка — это отдельная цель для накоплений. Деньги, которые ты кладёшь в копилку, не влияют на твой основной баланс. Это помогает видеть прогресс к конкретной цели.",
+  "piggyBanks_deleteConfirmTitle": "Удалить копилку?",
+  "piggyBanks_deleteConfirmMessage": "Вы уверены, что хотите удалить копилку \"{name}\"? Все связанные с ней операции останутся в истории, но сама копилка будет удалена.",
+  "@piggyBanks_deleteConfirmMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_deleteSuccess": "Копилка \"{name}\" удалена",
+    "@piggyBanks_deleteSuccess": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_deleteError": "Ошибка при удалении: {error}",
+  "@piggyBanks_deleteError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_emptyStateTitle": "Нет копилок",
+  "piggyBanks_createNewTooltip": "Создать новую копилку",
+  "piggyBanks_createNewButton": "Создать копилку",
+  "piggyBanks_addNewButton": "Добавить новую копилку",
+  "piggyBanks_fabTooltip": "Создать копилку",
+
+  "piggyBanks_card_statusEmojiCompleted": "🎉",
+  "piggyBanks_card_statusEmojiAlmost": "🔥",
+  "piggyBanks_card_statusEmojiHalfway": "💪",
+  "piggyBanks_card_statusEmojiQuarter": "🌱",
+  "piggyBanks_card_statusEmojiStarted": "🎯",
+  "piggyBanks_card_deleteTooltip": "Удалить",
+  "piggyBanks_card_goalReached": "✓ Цель достигнута!",
+  "piggyBanks_card_estimatedDate": "Достигнете к {date}",
+  "@piggyBanks_card_estimatedDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyBanks_progress_goalReached": "Цель достигнута! 🎉",
+  "piggyBanks_progress_almostThere": "Почти у цели! Ещё {amount}",
+  "@piggyBanks_progress_almostThere": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_progress_halfway": "Больше половины! 💪",
+  "piggyBanks_progress_quarter": "Четверть пути. Ещё {amount}",
+    "@piggyBanks_progress_quarter": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_progress_started": "Начало положено 🌱",
+  "piggyBanks_progress_initialGoal": "Цель — {amount}",
+  "@piggyBanks_progress_initialGoal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyBanks_createSheet_title": "Новая копилка",
+  "piggyBanks_createSheet_nameLabel": "Название копилки",
+  "piggyBanks_createSheet_nameHint": "Например: Новый телефон",
+  "piggyBanks_createSheet_targetLabel": "Целевая сумма",
+
+  "piggyBanks_detail_deleteTooltip": "Удалить копилку",
+  "piggyBanks_detail_fromAmount": "из {amount}",
+  "@piggyBanks_detail_fromAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_detail_topUpButton": "Пополнить",
+  "piggyBanks_detail_withdrawButton": "Снять",
+  "piggyBanks_detail_autofillTitle": "Автопополнение",
+  "piggyBanks_detail_autofillRuleLabel": "Правило",
+  "piggyBanks_detail_autofillTypePercent": "Процент",
+  "piggyBanks_detail_autofillTypeFixed": "Фиксированная",
+  "piggyBanks_detail_autofillPercentLabel": "Процент от дохода",
+  "piggyBanks_detail_autofillFixedLabel": "Фиксированная сумма",
+  "piggyBanks_detail_autofillEnabledSnackbar": "Автокопилка — это как невидимая привычка.",
+  "piggyBanks_detail_whenToReachGoalTitle": "Когда достигну цель?",
+  "piggyBanks_detail_calculateButton": "Рассчитать",
+  "piggyBanks_detail_goalExceededTitle": "Цель будет превышена!",
+  "piggyBanks_detail_goalExceededMessage": "При пополнении копилки \"{name}\" на {amount}, новая сумма составит {newAmount}, что превышает цель в {targetAmount}. Продолжить?",
+  "@piggyBanks_detail_goalExceededMessage": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "amount": {"type": "String"},
+      "newAmount": {"type": "String"},
+      "targetAmount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_topUpTransactionNote": "Пополнение копилки \"{name}\"",
+  "@piggyBanks_detail_topUpTransactionNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_successAnimationGoalReached": "🎉 Цель достигнута!",
+  "piggyBanks_detail_successAnimationDaysCloser": "+{amount} • Цель ближе на {count} {days} 🚀",
+  "@piggyBanks_detail_successAnimationDaysCloser": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "count": {"type": "int"},
+      "days": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_successAnimationSimpleTopUp": "Копилка пополнена на {amount}",
+  "@piggyBanks_detail_successAnimationSimpleTopUp": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_noFundsError": "В копилке нет средств для снятия.",
+  "piggyBanks_detail_noOtherPiggiesError": "Нет других копилок для перевода.",
+  "piggyBanks_detail_insufficientFundsError": "Недостаточно средств в копилке.",
+  "piggyBanks_detail_withdrawToWalletNote": "Снятие из копилки \"{name}\" → кошелёк",
+  "@piggyBanks_detail_withdrawToWalletNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_withdrawToWalletSnackbar": "{amount} переведено в кошелёк",
+    "@piggyBanks_detail_withdrawToWalletSnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_spendFromPiggyNote": "Покупка из копилки \"{name}\"",
+  "@piggyBanks_detail_spendFromPiggyNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_spendFromPiggySnackbar": "Потрачено {amount} из копилки",
+  "@piggyBanks_detail_spendFromPiggySnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_transferNote": "Перевод между копилками: \"{fromBank}\" → \"{toBank}\"",
+  "@piggyBanks_detail_transferNote": {
+    "placeholders": {
+      "fromBank": {"type": "String"},
+      "toBank": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_transferSnackbar": "{amount} переведено в \"{toBank}\"",
+  "@piggyBanks_detail_transferSnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "toBank": {"type": "String"}
+    }
+  },
+
+  "piggyBanks_operationSheet_addTitle": "Пополнить копилку",
+  "piggyBanks_operationSheet_transferTitle": "Перевести в другую копилку",
+  "piggyBanks_operationSheet_spendTitle": "Потратить из копилки",
+  "piggyBanks_operationSheet_withdrawTitle": "Снять в кошелёк",
+  "piggyBanks_operationSheet_amountLabel": "Сумма",
+  "piggyBanks_operationSheet_maxAmountHint": "Максимум: {amount}",
+  "@piggyBanks_operationSheet_maxAmountHint": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_operationSheet_enterAmountHint": "Введите сумму",
+  "piggyBanks_operationSheet_categoryLabel": "Категория",
+  "piggyBanks_operationSheet_categoryHint": "Выберите категорию",
+  "piggyBanks_operationSheet_categoryFood": "Еда",
+  "piggyBanks_operationSheet_categoryTransport": "Транспорт",
+  "piggyBanks_operationSheet_categoryEntertainment": "Развлечения",
+  "piggyBanks_operationSheet_categoryOther": "Другое",
+  "piggyBanks_operationSheet_noteLabel": "Название покупки (необязательно)",
+  "piggyBanks_operationSheet_noteHint": "Введите название...",
+  "piggyBanks_operationSheet_errorTooMuch": "Сумма превышает доступные средства",
+  "piggyBanks_operationSheet_errorInvalid": "Введите корректную сумму",
+
+  "piggyBanks_withdrawMode_title": "Что сделать с деньгами?",
+  "piggyBanks_withdrawMode_toWalletTitle": "В кошелёк",
+  "piggyBanks_withdrawMode_toWalletSubtitle": "Кошелёк +, Копилка −",
+  "piggyBanks_withdrawMode_spendTitle": "Потратить сразу из копилки",
+  "piggyBanks_withdrawMode_spendSubtitle": "Кошелёк не меняется, Копилка −",
+  "piggyBanks_withdrawMode_transferTitle": "Перевести в другую копилку",
+  "piggyBanks_withdrawMode_transferSubtitle": "Кошелёк не меняется, Копилка A −, Копилка B +",
+
+  "piggyBanks_picker_title": "Выбери копилку для перевода",
+  "piggyBanks_picker_defaultTitle": "Выбери копилку",
+
+  "balance_currentBalance": "Текущий баланс",
+  "balance_forecast": "Прогноз",
+  "balance_fact": "Факт",
+  "balance_withPlannedExpenses": "С учётом запланированных трат",
+  "balance_forecastForDay": "Прогноз на день",
+  "balance_forecastForWeek": "Прогноз на неделю",
+  "balance_forecastForMonth": "Прогноз на месяц",
+  "balance_forecastFor3Months": "Прогноз на 3 месяца",
+  "balance_level": "Уровень {level}",
+  "@balance_level": {
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+  "balance_toolsDescription": "Калькуляторы и инструменты для финансового планирования",
+  "balance_tools": "Инструменты",
+  "balance_filterDay": "День",
+  "balance_filterWeek": "Неделя",
+  "balance_filterMonth": "Месяц",
+  "balance_emptyStateIncome": "Пока пусто. Добавьте доход!",
+  "balance_emptyStateNoTransactions": "Нет транзакций за выбранный период",
+  "balance_addIncome": "Добавить доход",
+  "balance_addExpense": "Добавить расход",
+  "balance_amount": "Сумма",
+  "balance_category": "Категория",
+  "balance_selectCategory": "Выберите категорию",
+  "balance_toPiggyBank": "В копилку (необязательно)",
+  "balance_fromPiggyBank": "Из копилки (необязательно)",
+  "balance_note": "Заметка",
+  "balance_noteHint": "Введите заметку...",
+  "balance_save": "Сохранить",
+  "balance_categories_food": "Еда",
+  "balance_categories_transport": "Транспорт",
+  "balance_categories_games": "Игры",
+  "balance_categories_clothing": "Одежда",
+  "balance_categories_entertainment": "Развлечения",
+  "balance_categories_other": "Другое",
+  "balance_categories_pocketMoney": "Карманные",
+  "balance_categories_gift": "Подарок",
+  "balance_categories_sideJob": "Подработка",
+
+  "settings_language": "Язык",
+  "settings_selectCurrency": "Выбери валюту",
+  "settings_appearance": "Внешний вид",
+  "settings_theme": "Тема",
+  "settings_themeBlue": "Синяя",
+  "settings_themePurple": "Фиолетовая",
+  "settings_themeGreen": "Зелёная",
+  "settings_explanationMode": "Режим объяснений",
+  "settings_howToExplain": "Как объяснять",
+  "settings_uxSimple": "Simple",
+  "settings_uxPro": "Pro",
+  "settings_uxSimpleDescription": "Простые объяснения",
+  "settings_uxProDescription": "Подробные объяснения",
+  "settings_currency": "Валюта",
+  "settings_notifications": "Уведомления",
+  "settings_bari": "Bari Smart",
+  "settings_bariMode": "Режим Bari",
+  "settings_bariModeOffline": "Офлайн",
+  "settings_bariModeOnline": "Онлайн",
+  "settings_bariModeHybrid": "Гибридный",
+  "settings_showSources": "Показывать источники",
+  "settings_showSourcesDescription": "Показывать источники советов",
+  "settings_smallTalk": "Небольшие разговоры",
+  "settings_smallTalkDescription": "Разрешить небольшие разговоры с Bari",
+  "settings_parentZone": "Родительская зона",
+  "settings_parentZoneDescription": "Управление одобрениями и настройками",
+  "settings_tools": "Инструменты",
+  "settings_toolsDescription": "Калькуляторы и другие инструменты",
+  "settings_exportData": "Экспорт данных",
+  "settings_importData": "Импорт данных",
+  "settings_resetProgress": "Сбросить прогресс",
+  "settings_resetProgressWarning": "Вы уверены, что хотите сбросить весь прогресс? Это действие нельзя отменить.",
+  "settings_cancel": "Отмена",
+  "settings_progressReset": "Прогресс сброшен",
+  "settings_enterPinToConfirm": "Введите PIN для подтверждения",
+  "settings_wrongPin": "Неверный PIN",
+
+  "priceComparisonCalculator_factSaved": "Факт сохранён",
+  "twentyFourHourRuleCalculator_enterItemName": "Введите название предмета",
+  "twentyFourHourRuleCalculator_reminderSet": "Напоминание установлено",
+  "twentyFourHourRuleCalculator_no": "Нет",
+  "subscriptionsCalculator_no": "Нет",
+  "subscriptionsCalculator_repeatDaily": "Ежедневно",
+  "subscriptionsCalculator_repeatWeekly": "Еженедельно",
+  "subscriptionsCalculator_repeatMonthly": "Ежемесячно",
+  "subscriptionsCalculator_repeatYearly": "Ежегодно",
+  "subscriptionsCalculator_enterSubscriptionName": "Введите название подписки",
+
+  "calendar_completed": "Выполнено",
+  "calendar_edit": "Редактировать",
+  "calendar_reschedule": "Перенести",
+  "calendar_completeNow": "Выполнить сейчас",
+  "calendar_showTransaction": "Показать транзакцию",
+  "calendar_restore": "Восстановить",
+  "calendar_eventAlreadyCompleted": "Событие уже выполнено",
+  "calendar_noPiggyBanks": "Нет копилок",
+  "calendar_eventAlreadyCompletedWithTx": "Событие уже выполнено. Транзакция создана.",
+  "calendar_sentToParentForApproval": "Отправлено родителю на одобрение",
+  "calendar_addedToPiggyBank": "добавлено в копилку",
+  "calendar_eventCompletedWithAmount": "Событие выполнено: {amount}",
+  "@calendar_eventCompletedWithAmount": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "calendar_planContinues": "План продолжается",
+  "calendar_cancelEvent": "Отменить событие",
+  "calendar_cancelEventMessage": "Вы уверены, что хотите отменить это событие?",
+  "calendar_no": "Нет",
+  "calendar_yesCancel": "Да, отменить",
+  "calendar_wantToReschedule": "Хотите перенести событие?",
+  "calendar_eventRestored": "Событие восстановлено",
+  "calendar_eventUpdated": "Событие обновлено",
+  "calendar_deleteEventConfirm": "Удалить событие?",
+  "calendar_deleteEventSeriesMessage": "Удалить всю серию событий?",
+  "calendar_deleteAllRepeatingConfirm": "Все повторяющиеся события будут удалены. Это действие нельзя отменить.",
+  "calendar_undo": "Отменить",
+  "calendar_editScopeTitle": "Что редактировать?",
+  "calendar_editScopeSubtitle": "Выберите область применения изменений",
+  "calendar_editThisEventOnly": "Только это событие",
+  "calendar_editThisEventOnlyDesc": "Изменения коснутся только выбранного события",
+  "calendar_editAllRepeating": "Все повторения",
+  "calendar_editAllRepeatingDesc": "Изменения применятся ко всем событиям в серии",
+  "calendar_deleteScopeTitle": "Что удалить?",
+  "calendar_deleteScopeSubtitle": "Выберите область удаления",
+  "calendar_deleteAllRepeatingDesc": "Удалены будут все события в серии",
+  "calendar_cancel": "Отмена",
+  "calendar_transactionNotFound": "Транзакция не найдена",
+  "calendar_transaction": "Транзакция",
+  "calendar_transactionAmount": "Сумма",
+  "calendar_transactionDate": "Дата",
+  "calendar_transactionCategory": "Категория",
+  "calendar_transactionNote": "Заметка",
+  "deletedEvents_title": "Удаленные события",
+  "deletedEvents_empty": "Корзина пуста",
+  "deletedEvents_count": "{count} событий",
+  "@deletedEvents_count": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deletedEvents_restore": "Восстановить",
+  "deletedEvents_deletePermanent": "Удалить навсегда",
+  "deletedEvents_deletedAt": "Удалено:",
+  "deletedEvents_restored": "Событие восстановлено",
+  "deletedEvents_deleted": "Событие удалено навсегда",
+  "deletedEvents_permanentDeleteTitle": "Удалить навсегда?",
+  "deletedEvents_permanentDeleteMessage": "Это действие нельзя отменить. Событие будет удалено без возможности восстановления.",
+  "deletedEvents_clearOld": "Очистить старые",
+  "deletedEvents_clearOldTitle": "Очистить старые события?",
+  "deletedEvents_clearOldMessage": "Удалить события, которые находятся в корзине более 30 дней?",
+  "deletedEvents_clearedCount": "Удалено {count} событий",
+  "@deletedEvents_clearedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deletedEvents_restoreScopeTitle": "Что восстановить?",
+  "deletedEvents_restoreScopeMessage": "Выберите область восстановления",
+  "subscriptions_filter": "Фильтр",
+  "subscriptions_all": "Все",
+  "subscriptions_income": "Доходы",
+  "subscriptions_expense": "Расходы",
+  "subscriptions_type": "Тип",
+
+  "bariChat_title": "Чат с Бари",
+  "bariChat_welcomeDefault": "Привет! Я Бари, твой помощник в финансовой грамотности. Чем могу помочь?",
+  "bariChat_welcomeCalculator": "Привет! Ты используешь калькулятор. Нужна помощь с расчётами?",
+  "bariChat_welcomePiggyBank": "Привет! Говорим про копилку? Расскажи, что хочешь узнать!",
+  "bariChat_welcomePlannedEvent": "Привет! У тебя запланированное событие. Вопросы по планированию?",
+  "bariChat_welcomeLesson": "Привет! Ты проходишь урок. Что-то непонятно? Спрашивай!",
+  "bariChat_welcomeTask": "Привет! Поговорим про задание \"{title}\"? Могу помочь разобраться с наградой, временем или сложностью.",
+  "@bariChat_welcomeTask": {
+    "placeholders": { "title": {"type": "String"} }
+  },
+  "bariChat_fallbackResponse": "Извини, не понял. Попробуй переформулировать вопрос.",
+  "bariChat_source": "Источник",
+  "bariChat_close": "Закрыть",
+  "bariChat_inputHint": "Напиши сообщение...",
+  "bariChat_thinking": "Думаю...",
+  "bariChat_task": "задание",
+
+  "calculatorsList_title": "Калькуляторы",
+  "calculatorsList_piggyPlan": "Копилка-план",
+  "calculatorsList_piggyPlanDesc": "Сколько откладывать для цели",
+  "calculatorsList_goalDate": "Когда достигну цель",
+  "calculatorsList_goalDateDesc": "Дата достижения по регулярным взносам",
+  "calculatorsList_monthlyBudget": "План расходов на месяц",
+  "calculatorsList_monthlyBudgetDesc": "Лимит и остаток на месяц",
+  "calculatorsList_subscriptions": "Подписки и регулярки",
+  "calculatorsList_subscriptionsDesc": "Сколько съедают регулярные траты",
+  "calculatorsList_canIBuy": "Хочу купить — можно ли сейчас?",
+  "calculatorsList_canIBuyDesc": "Проверка доступности покупки",
+  "calculatorsList_priceComparison": "Сравнение цен",
+  "calculatorsList_priceComparisonDesc": "Что выгоднее купить",
+  "calculatorsList_24hRule": "Правило 24 часов",
+  "calculatorsList_24hRuleDesc": "Отложить импульсную покупку",
+  "calculatorsList_budget503020": "Бюджет 50/30/20",
+  "calculatorsList_budget503020Desc": "Распределение дохода",
+
+  "earningsLab_title": "Лаборатория заработка",
+  "earningsLab_explanationSimple": "Запланируй задание → выполни его в календаре → получи награду.",
+  "earningsLab_explanationPro": "Лаборатория заработка: сначала запланируй задание на дату, затем отметь его выполненным в календаре. Награда будет зачислена автоматически. Планирование помогает не забывать о важных делах.",
+  "earningsLab_taskAdded": "Задание добавлено!",
+  "earningsLab_tabQuick": "Быстрые",
+  "earningsLab_tabHome": "Домашние",
+  "earningsLab_tabProjects": "Проекты",
+  "earningsLab_helpAtHome": "Помочь по дому",
+  "earningsLab_helpAtHomeDesc": "Выбери одно дело: посуда / мусор / пыль / пол / стол. Сделай 10–15 минут и доведи до результата.",
+  "earningsLab_learnPoem": "Выучить стих",
+  "earningsLab_learnPoemDesc": "Прочитай 3 раза, выучи по строчкам, потом расскажи без подсказок.",
+  "earningsLab_cleanRoom": "Убрать комнату",
+  "earningsLab_cleanRoomDesc": "Наведи порядок 10–15 минут: игрушки на место, стол чистый, мусор выброшен.",
+  "earningsLab_readBook": "Прочитать книгу",
+  "earningsLab_readBookDesc": "Прочитай главу из интересной книги. Чтение развивает воображение и словарный запас.",
+  "earningsLab_helpCooking": "Помочь с готовкой",
+  "earningsLab_helpCookingDesc": "Помоги родителям приготовить обед или ужин. Научишься готовить простые блюда!",
+  "earningsLab_homework": "Выполнить домашнее задание",
+  "earningsLab_homeworkDesc": "Сделай все домашние задания аккуратно и вовремя. Это твоя главная работа!",
+  "earningsLab_helpShopping": "Помочь с покупками",
+  "earningsLab_helpShoppingDesc": "Сходи с родителями в магазин и помоги нести покупки. Учишься планировать расходы!",
+  "earningsLab_tagLearning": "обучение",
+  "earningsLab_tagHelp": "помощь",
+  "earningsLab_tagCreativity": "творчество",
+
+  "rule24h_title": "Правило 24 часов",
+  "rule24h_subtitle": "Помогает не делать импульсные покупки: отложи решение на сутки и проверь себя ещё раз.",
+  "rule24h_step1": "Хочу",
+  "rule24h_step2": "Цена",
+  "rule24h_step3": "Пауза",
+  "rule24h_wantToBuy": "Хочу купить",
+  "rule24h_example": "Например: наушники",
+  "rule24h_price": "Цена",
+  "rule24h_explanation": "Если через 24 часа всё ещё хочешь — покупка более осознанная. Если нет — ты сэкономил и прокачал самоконтроль.",
+  "rule24h_postpone": "Отложить на 24 часа",
+  "rule24h_reminderSet": "Напоминание установлено. Через 24 часа вернись и проверь желание ещё раз.",
+  "rule24h_checkAgain": "Проверить снова",
+  "rule24h_dialogTitle": "Подтверждение",
+  "rule24h_dialogSubtitle": "Создание напоминания",
+  "rule24h_dialogContent": "Создать напоминание через 24 часа для проверки желания купить \"{itemName}\"?",
+  "@rule24h_dialogContent": {
+    "placeholders": { "itemName": {"type": "String"} }
+  },
+  "rule24h_reminderIn24h": "Напоминание придет через 24 часа",
+  "rule24h_eventName": "Проверка желания: {itemName}",
+  "@rule24h_eventName": {
+    "placeholders": { "itemName": {"type": "String"} }
+  },
+  "rule24h_checkTitle": "Проверка желания",
+  "rule24h_checkSubtitle": "Прошло 24 часа",
+  "rule24h_stillWant": "Хочешь ещё купить это?",
+  "rule24h_yes": "Да",
+
+  "budget503020_title": "Бюджет 50/30/20",
+  "budget503020_subtitle": "Раздели доход на 3 части: нужное, желания и накопления.",
+  "budget503020_step1": "Доход",
+  "budget503020_step2": "Распределение",
+  "budget503020_step3": "Копилки",
+  "budget503020_incomeLabel": "Мой доход за месяц",
+  "budget503020_needs50": "Нужное (50%)",
+  "budget503020_wants30": "Желания (30%)",
+  "budget503020_savings20": "Коплю (20%)",
+  "budget503020_tip": "Совет: если хочешь быстрее копить — попробуй начать с 10% в накопления и постепенно увеличивать.",
+  "budget503020_createPiggyBanks": "Создать 3 копилки",
+  "budget503020_dialogTitle": "Подтверждение",
+  "budget503020_dialogSubtitle": "Создание копилок по правилу 50/30/20",
+
+  "priceComparison_title": "Сравнение цен",
+  "priceComparison_subtitle": "Сравни два варианта и узнай, какой выгоднее по цене за единицу.",
+  "priceComparison_step1": "Вариант A",
+  "priceComparison_step2": "Вариант B",
+  "priceComparison_step3": "Итог",
+  "priceComparison_priceA": "Цена A",
+  "priceComparison_quantityA": "Количество / вес A",
+  "priceComparison_priceB": "Цена B",
+  "priceComparison_quantityB": "Количество / вес B",
+  "priceComparison_result": "Итог",
+  "priceComparison_pricePerUnitA": "Цена за 1 единицу A",
+  "priceComparison_pricePerUnitB": "Цена за 1 единицу B",
+  "priceComparison_betterOption": "Выгоднее: вариант {option} (экономия ~{percent}%)",
+  "@priceComparison_betterOption": {
+    "placeholders": { "option": {"type": "String"}, "percent": {"type": "String"} }
+  },
+  "priceComparison_saveForBari": "Сохранить вывод для Бари",
+
+  "subscriptions_title": "Подписки и регулярки",
+  "subscriptions_regular": "Регулярка",
+
+  "calendar_today": "Сегодня",
+  "calendar_noEvents": "Нет событий",
+  "calendar_eventsCount": "{count} {events}",
+  "@calendar_eventsCount": {
+    "placeholders": { "count": {"type": "int"}, "events": {"type": "String"} }
+  },
+  "calendar_event": "событие",
+  "calendar_events234": "события",
+  "calendar_events5plus": "событий",
+  "calendar_freeDay": "Свободный день",
+  "calendar_noEventsOnDay": "На этот день ничего не запланировано.\nМожет, самое время что-то добавить?",
+  "calendar_startPlanning": "Начни планировать! 🚀",
+  "calendar_createFirstEvent": "Создай первое событие — так проще копить и не забывать о важном",
+  "calendar_createFirstPlan": "Создать первый план",
+  "calendar_addEvent": "Добавить событие",
+  "calendar_income": "Доходы",
+  "calendar_expense": "Расходы",
+  "calendar_done": "Выполнено",
+  "calendar_confirmCompletion": "Подтвердить выполнение",
+  "calendar_amount": "Сумма",
+  "calendar_confirm": "Подтвердить",
+  "calendar_rescheduleEvent": "Перенести событие",
+  "calendar_dateAndTime": "Дата и время",
+  "calendar_notification": "Уведомление",
+  "calendar_move": "Перенести",
+  "calendar_whereToAdd": "Куда добавить {amount}?",
+  "@calendar_whereToAdd": {
+    "placeholders": { "amount": {"type": "String"} }
+  },
+  "calendar_toWallet": "В кошелёк",
+  "calendar_availableForSpending": "Доступно для трат",
+  "calendar_toPiggyBank": "В копилку",
+  "calendar_forGoal": "На цель",
+  "calendar_selectPiggyBank": "Выбери копилку",
+  "calendar_eventCompleted": "Событие выполнено! +15 XP",
+  "calendar_eventCancelled": "Событие отменено",
+  "calendar_eventDeleted": "Событие удалено",
+  "calendar_eventCompletedXp": "Событие выполнено! +15 XP",
+  "calendar_invalidAmount": "Введите корректную сумму",
+  "calendar_date": "Дата",
+  "calendar_time": "Время",
+  "calendar_everyDay": "Каждый день",
+  "calendar_everyWeek": "Каждую неделю",
+  "calendar_everyMonth": "Каждый месяц",
+  "calendar_everyYear": "Каждый год",
+  "calendar_repeat": "Повтор",
+  "calendar_noRepeat": "Нет",
+  "calendar_deleteAction": "Это действие нельзя отменить.",
+  "calendar_week": "Неделя",
+  "calendar_month": "Месяц",
+
+  "parentZone_title": "Родительская зона",
+  "parentZone_approvals": "Ожидают одобрения",
+  "parentZone_statistics": "Статистика",
+  "parentZone_settings": "Настройки",
+  "parentZone_pinMustBe4Digits": "PIN должен содержать 4 цифры",
+  "parentZone_wrongPin": "Неверный PIN",
+  "parentZone_pinChanged": "PIN изменён",
+  "parentZone_premiumUnlocked": "Премиум разблокирован",
+  "parentZone_resetData": "Сброс данных",
+  "parentZone_resetWarning": "ВНИМАНИЕ! Это действие удалит ВСЕ данные приложения.",
+  "parentZone_enterPinToConfirm": "Введите PIN для подтверждения:",
+  "parentZone_pin": "PIN",
+  "parentZone_reset": "Сбросить",
+  "parentZone_allDataDeleted": "Все данные удалены",
+  "parentZone_resetError": "Ошибка сброса: {error}",
+  "@parentZone_resetError": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "parentZone_login": "Войти",
+  "parentZone_unlockPremium": "Разблокировать премиум",
+  "parentZone_edit": "Изменить",
+  "parentZone_close": "Закрыть",
+  "parentZone_earningsApproved": "Заработок одобрен",
+  "parentZone_earningsRejected": "Заработок отклонён",
+  "exportImport_title": "Экспорт/Импорт",
+  "exportImport_exportData": "Экспорт данных",
+  "exportImport_exportDescription": "Сохранить все данные в JSON файл",
+  "exportImport_export": "Экспортировать",
+  "exportImport_importData": "Импорт данных",
+  "exportImport_importDescription": "Загрузить данные из JSON файла",
+  "exportImport_import": "Импортировать",
+  "exportImport_dataCopied": "Данные скопированы в буфер обмена",
+  "exportImport_exportError": "Ошибка экспорта: {error}",
+  "@exportImport_exportError": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "exportImport_importSuccess": "Данные успешно импортированы",
+  "exportImport_importError": "Ошибка импорта",
+  "exportImport_importErrorDetails": "Не удалось импортировать данные:\n{error}",
+  "@exportImport_importErrorDetails": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "exportImport_pasteJson": "Вставьте JSON данные",
+  "minitrainers_result": "Результат",
+  "minitrainers_correctAnswers": "Правильных ответов: {score}/{total}\n+{xp} XP",
+  "@minitrainers_correctAnswers": {
+    "placeholders": { "score": {"type": "int"}, "total": {"type": "int"}, "xp": {"type": "int"} }
+  },
+  "minitrainers_great": "Отлично!",
+  "minitrainers_findExtraPurchase": "Найди лишнюю покупку",
+  "minitrainers_answer": "Ответить",
+  "minitrainers_xpEarned": "+{xp} XP",
+  "@minitrainers_xpEarned": {
+    "placeholders": { "xp": {"type": "int"} }
+  },
+  "minitrainers_buildBudget": "Собери бюджет",
+  "minitrainers_check": "Проверить",
+  "minitrainers_wellDone": "Молодец!",
+  "minitrainers_xp15": "+15 XP",
+  "minitrainers_discountOrTrap": "Скидка или ловушка?",
+  "minitrainers_yes": "Да",
+  "minitrainers_no": "Нет",
+  "minitrainers_correct": "Правильно!",
+  "minitrainers_goodTry": "Хорошая попытка",
+  "calculators_3PiggyBanksCreated": "3 копилки созданы",
+  "rule24h_xp50": "🎉 +50 XP за самоконтроль!",
+  "subscriptions_frequency": "Частота",
+  "statistics_title": "Статистика",
+  "calculators_nDaysSavings": "Накопления за N дней",
+  "calculators_weeklySavings": "Накопления по неделям",
+  "calculators_piggyGoal": "Цель копилки",
+  "earningsLab_schedule": "Запланировать",
+  "recommendations_newTip": "Новый совет",
+  "earningsHistory_title": "История заработка",
+  "earningsHistory_all": "Всё",
+  "calendarForecast_7days": "7 дн",
+  "calendarForecast_30days": "30 дн",
+  "calendarForecast_90days": "90 дн",
+  "calendarForecast_year": "Год",
+  "calendarForecast_summary": "Сводка",
+  "calendarForecast_categories": "Категории",
+  "calendarForecast_dates": "Даты",
+  "calendarForecast_month": "Месяц",
+  "calendarForecast_all": "Все",
+  "calendarForecast_income": "Доходы",
+  "calendarForecast_expenses": "Расходы",
+  "calendarForecast_large": "Крупные",
+  "planEvent_amount": "Сумма",
+  "planEvent_nameOptional": "Название (необязательно)",
+  "planEvent_category": "Категория",
+  "planEvent_date": "Дата",
+  "planEvent_time": "Время",
+  "planEvent_repeat": "Повтор",
+  "planEvent_notification": "Уведомление",
+  "planEvent_remindBefore": "Напомнить за",
+  "planEvent_atMoment": "В момент",
+  "planEvent_15minutes": "За 15 минут",
+  "planEvent_30minutes": "За 30 минут",
+  "planEvent_1hour": "За 1 час",
+  "planEvent_1day": "За 1 день",
+  "planEvent_eventChanged": "Событие изменено",
+  "planEvent_repeatingEventWarning": "Повторяющееся событие",
+  "planEvent_repeatingEventDescription": "Это событие является частью повторяющейся серии. Изменения применятся ко всем будущим событиям.",
+  "calendar_editEvent": "Изменить событие",
+  "calendar_planEvent": "Запланировать событие",
+  "planEvent_eventType": "Тип события",
+  "transaction_income": "Доход",
+  "transaction_expense": "Расход",
+  "category_food": "Еда",
+  "category_transport": "Транспорт",
+  "category_entertainment": "Развлечения",
+  "category_other": "Другое",
+  "minitrainers_60seconds": "60 секунд",
+  "earningsLab_wrongPin": "Неверный PIN. Нужно одобрение родителя.",
+  "earningsLab_noPiggyBanks": "Нет копилок. Сначала создай копилку.",
+  "earningsLab_sentForApproval": "Отправлено родителю на одобрение",
+  "earningsLab_amountCannotBeNegative": "Сумма не может быть отрицательной",
+  "earningsLab_wallet": "Кошелёк",
+  "earningsLab_piggyBank": "Копилка",
+  "earningsLab_no": "Нет",
+  "earningsLab_daily": "Ежедневно",
+  "earningsLab_weekly": "Еженедельно",
+  "earningsLab_reminder": "Напоминание",
+  "earningsLab_selectPiggyForReward": "Выбери копилку для награды",
+  "earningsLab_createPlan": "Создать план",
+  "earningsLab_discussWithBari": "Обсудить с Бари",
+  "earningsLab_parentApprovalRequired": "Нужно одобрение родителя",
+  "earningsLab_fillRequiredFields": "Заполните обязательные поля",
+  "earningsLab_completed": "Выполнено: {title}",
+  "@earningsLab_completed": {
+    "placeholders": { "title": {"type": "String"} }
+  },
+  "earningsLab_howMuchEarned": "Сколько получил?",
+  "earningsLab_whatWasDifficult": "Что было сложным?",
+  "earningsLab_addCustomTask": "Добавить своё задание",
+  "earningsLab_canRepeat": "Можно повторять",
+  "earningsLab_requiresParent": "Нужен родитель",
+  "earningsLab_taskName": "Название задания *",
+  "earningsLab_taskNameHint": "Например: Помочь бабушке",
+  "earningsLab_description": "Описание",
+  "earningsLab_descriptionHint": "Что нужно сделать?",
+  "earningsLab_descriptionOptional": "Описание (необязательно)",
+  "earningsLab_descriptionOptionalHint": "Например: что именно нужно сделать",
+  "earningsLab_time": "Время *",
+  "earningsLab_timeHint": "Например: 30 мин",
+  "earningsLab_reward": "Награда",
+  "earningsLab_xp": "XP",
+  "earningsLab_difficulty": "Сложность",
+  "earningsLab_repeat": "Повтор",
+  "earningsLab_rewardMustBePositive": "Награда должна быть больше нуля",
+  "earningsLab_taskDescription": "Описание не задано",
+  "earningsLab_rewardHelper": "Сколько ты получишь за выполнение",
+  "earningsLab_taskNameRequired": "Напиши название",
+  "settings_aiModelGpt4oMini": "GPT-4o Mini (быстрый)",
+  "settings_aiModelGpt4o": "GPT-4o (умный)",
+  "settings_aiModelGpt4Turbo": "GPT-4 Turbo",
+  "settings_aiModelGpt35": "GPT-3.5 (дешёвый)",
+  "settings_geminiNano": "AI на устройстве (Gemini Nano)",
+  "@settings_geminiNano": {
+    "description": "Заголовок секции Gemini Nano"
+  },
+  "settings_geminiNanoDescription": "Бесплатный AI, который работает без интернета",
+  "settings_geminiNanoStatus": "Статус",
+  "settings_geminiNanoAvailable": "Доступен",
+  "settings_geminiNanoNotAvailable": "Недоступен на этом устройстве",
+  "settings_geminiNanoDownloaded": "Скачан и готов к работе",
+  "settings_geminiNanoNotDownloaded": "Не скачан",
+  "settings_geminiNanoDownload": "Скачать модель (~2.5 GB)",
+  "settings_geminiNanoDownloading": "Скачивание...",
+  "settings_geminiNanoDelete": "Удалить модель",
+  "settings_geminiNanoAdvantages": "Преимущества",
+  "settings_geminiNanoAdvantagesTitle": "Почему стоит скачать Gemini Nano?",
+  "settings_geminiNanoAdvantage1": "💰 Полностью бесплатно — без ограничений",
+  "settings_geminiNanoAdvantage2": "⚡ Мгновенные ответы — без задержки сети",
+  "settings_geminiNanoAdvantage3": "🔒 100% приватность — данные не покидают устройство",
+  "settings_geminiNanoAdvantage4": "📱 Работает офлайн — без интернета",
+  "settings_geminiNanoAdvantage5": "🌍 Поддержка 3 языков — русский, английский, немецкий",
+  "settings_geminiNanoRequirements": "Требования",
+  "settings_geminiNanoRequirement1": "Android 14+ (Google Pixel 8+, Samsung S24+, OnePlus 12+)",
+  "settings_geminiNanoRequirement2": "~2.5 GB свободного места",
+  "settings_geminiNanoRequirement3": "6 GB оперативной памяти",
+  "settings_geminiNanoDownloadConfirm": "Скачать модель Gemini Nano?",
+  "settings_geminiNanoDownloadConfirmDescription": "Модель займёт ~2.5 GB места, но даст вам бесплатный AI без интернета.",
+  "settings_geminiNanoDeleteConfirm": "Удалить модель?",
+  "settings_geminiNanoDeleteConfirmDescription": "Освободит ~2.5 GB места, но AI на устройстве перестанет работать.",
+  "settings_geminiNanoError": "Ошибка",
+  "settings_geminiNanoErrorDownload": "Не удалось скачать модель. Проверьте подключение к интернету.",
+  "settings_geminiNanoErrorDelete": "Не удалось удалить модель.",
+  "settings_geminiNanoSuccessDownload": "Модель успешно скачана!",
+  "settings_geminiNanoSuccessDelete": "Модель удалена.",
+
+  "bari_goal_noPiggyBanks": "У тебя пока нет копилок.",
+  "bari_goal_noPiggyBanksAdvice": "Создай первую копилку с целью — это главный шаг к накоплениям! Что хочешь купить?",
+  "bari_goal_createPiggyBank": "Создать копилку",
+  "bari_goal_whenWillReach": "Когда достигну цели",
+  "bari_goal_onePiggyBank": "У тебя 1 копилка с {amount} внутри.",
+  "@bari_goal_onePiggyBank": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_multiplePiggyBanks": "У тебя {count} копилок, всего накоплено {total}.",
+  "@bari_goal_multiplePiggyBanks": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_almostFull": "Копилка \"{name}\" почти заполнена ({progress}%)! 🎉 Скоро цель!",
+  "@bari_goal_almostFull": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "progress": {
+        "type": "int"
+      }
+    }
+  },
+  "bari_goal_justStarted": "Копилка \"{name}\" только начата ({progress}%). Пора пополнить!",
+  "@bari_goal_justStarted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "progress": {
+        "type": "int"
+      }
+    }
+  },
+  "bari_goal_goodProgress": "Хороший прогресс! Продолжай откладывать регулярно.",
+  "bari_goal_piggyBanks": "Копилки",
+  "bari_goal_createFirst": "У тебя пока нет копилок — создай первую!",
+  "bari_goal_createFirstAdvice": "Выбери цель: игрушка, гаджет, подарок. И начни с маленьких взносов.",
+  "bari_goal_topUpSoonest": "Пополни \"{name}\" — до дедлайна осталось {days} дней!",
+  "@bari_goal_topUpSoonest": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bari_goal_topUpClosest": "Советую пополнить \"{name}\" ({progress}%) — осталось {remaining}, ты близко к цели!",
+  "@bari_goal_topUpClosest": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "progress": {
+        "type": "int"
+      },
+      "remaining": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_allFullOrEmpty": "Все копилки полные или пустые. Создай новую цель!",
+  "bari_goal_topUpAdvice": "Лучше пополнять ту копилку, которая ближе к цели или у которой скоро дедлайн.",
+  "bari_goal_walletAlmostEmpty": "Сейчас в кошельке почти пусто ({balance}). Время подкопить!",
+  "@bari_goal_walletAlmostEmpty": {
+    "placeholders": {
+      "balance": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_walletEnoughForSmall": "В кошельке {balance} — хватит на мелочи. Для большего нужен план.",
+  "@bari_goal_walletEnoughForSmall": {
+    "placeholders": {
+      "balance": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_walletGood": "В кошельке {balance} — неплохо! Но помни про цели в копилках.",
+  "@bari_goal_walletGood": {
+    "placeholders": {
+      "balance": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_walletExcellent": "В кошельке {balance} — отлично! Подумай, стоит ли часть перевести в копилку.",
+  "@bari_goal_walletExcellent": {
+    "placeholders": {
+      "balance": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_walletBalance": "Сейчас в кошельке {balance}",
+  "@bari_goal_walletBalance": {
+    "placeholders": {
+      "balance": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_canIBuy": "Можно ли купить?",
+  "bari_goal_balance": "Баланс",
+  "bari_goal_enoughMoney": "Да, у тебя уже достаточно денег! 🎉",
+  "bari_goal_enoughMoneyAdvice": "Всего есть {available} (кошелёк + копилки), а нужно {target}.",
+  "@bari_goal_enoughMoneyAdvice": {
+    "placeholders": {
+      "available": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_needToSave": "Нужно накопить ещё {needed}",
+  "@bari_goal_needToSave": {
+    "placeholders": {
+      "needed": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_needToSaveAdvice": "Если откладывать по {perMonth} в месяц, успеешь! Создай копилку с целью.",
+  "@bari_goal_needToSaveAdvice": {
+    "placeholders": {
+      "perMonth": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_goal_savingSecret": "Главный секрет накоплений — регулярность!",
+  "bari_goal_hardToSave": "Копить сложно, когда нет привычки — это нормально!",
+  "bari_goal_optimalPercent": "Оптимально откладывать 10-20% от каждого дохода.",
+  "bari_goal_createFirstPiggy": "Создай первую копилку — цель мотивирует откладывать.",
+
+  "bari_hint_highSpending": "За последнюю неделю у тебя много расходов.",
+  "bari_hint_highSpendingAdvice": "Давай посмотрим, куда больше всего уходит денег.",
+  "bari_hint_mainExpenses": "Основные траты",
+  "bari_hint_stalledPiggy": "Копилка \"{name}\" давно не пополнялась.",
+  "@bari_hint_stalledPiggy": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_hint_stalledPiggies": "Копилки немного \"застыли\".",
+  "bari_hint_stalledAdvice": "Могу помочь придумать задание в Лаборатории заработка.",
+  "bari_hint_earningsLab": "Лаборатория заработка",
+  "bari_hint_noLessons": "Уроки давно не открывали.",
+  "bari_hint_noLessonsAdvice": "Хочешь короткий урок на 3–5 минут?",
+  "bari_hint_lessons": "Уроки",
+  "bari_hint_noLessonsYet": "Ещё не проходили уроки?",
+  "bari_hint_noLessonsYetAdvice": "Пройди первый урок — это займёт всего 3 минуты!",
+  "bari_hint_lowBalance": "Баланс низкий, а скоро запланированы расходы.",
+  "bari_hint_lowBalanceAdvice": "Можешь заработать в Лаборатории заработка или посмотреть план.",
+  "bari_hint_calendar": "Календарь",
+  "bari_hint_highIncomeNoGoals": "У тебя хорошие доходы, но нет целей для накопления.",
+  "bari_hint_highIncomeNoGoalsAdvice": "Создай копилку для важной покупки!",
+  "bari_hint_manySpendingCategory": "Много трат на \"{category}\".",
+  "@bari_hint_manySpendingCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "bari_hint_manySpendingCategoryAdvice": "Проверь, не превышаешь ли ты бюджет. Открой калькулятор бюджета.",
+  "bari_hint_budgetCalculator": "Калькулятор бюджета",
+  "bari_hint_noPlannedEvents": "Нет запланированных событий.",
+  "bari_hint_noPlannedEventsAdvice": "Запланируй доходы и расходы, чтобы лучше управлять деньгами.",
+  "bari_hint_createPlan": "Создать план",
+  "bari_hint_tipTitle": "Подсказка Бари",
+
+  "bari_emptyMessage": "Напиши вопрос 🙂",
+  "bari_emptyMessageAdvice": "Например: \"можно ли купить за 20€\" или \"что такое инфляция\"",
+  "bari_balance": "Баланс",
+  "bari_piggyBanks": "Копилки",
+
+  "bari_math_percentOf": "{percent}% от {base} = {result}",
+  "@bari_math_percentOf": {
+    "placeholders": {
+      "percent": {"type": "String"},
+      "base": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_percentAdvice": "Полезно знать: если откладывать {percent}% от дохода, это поможет копить регулярно.",
+  "@bari_math_percentAdvice": {
+    "placeholders": {
+      "percent": {"type": "String"}
+    }
+  },
+  "bari_math_calculator503020": "Калькулятор 50/30/20",
+  "bari_math_explainSimpler": "Объясни проще",
+  "bari_math_monthlyToYearly": "{monthly} в месяц = {yearly} в год",
+  "@bari_math_monthlyToYearly": {
+    "placeholders": {
+      "monthly": {"type": "String"},
+      "yearly": {"type": "String"}
+    }
+  },
+  "bari_math_monthlyToYearlyAdvice": "Маленькие регулярные суммы накапливаются! Подписки тоже стоит считать за год.",
+  "bari_math_subscriptionsCalculator": "Калькулятор подписок",
+  "bari_math_saveYearly": "Если откладывать по {monthly} в месяц, за год накопится {yearly}",
+  "@bari_math_saveYearly": {
+    "placeholders": {
+      "monthly": {"type": "String"},
+      "yearly": {"type": "String"}
+    }
+  },
+  "bari_math_saveYearlyAdvice": "Регулярность важнее суммы! Начни с маленького и увеличивай постепенно.",
+  "bari_math_savePerPeriod": "Чтобы накопить {target}, нужно откладывать по {perPeriod} в {period}",
+  "@bari_math_savePerPeriod": {
+    "placeholders": {
+      "target": {"type": "String"},
+      "perPeriod": {"type": "String"},
+      "period": {"type": "String"}
+    }
+  },
+  "bari_math_savePerPeriodAdvice": "Создай копилку с этой целью — так проще не забывать!",
+  "bari_math_alreadyEnough": "Ты уже накопил(а) достаточно! 🎉",
+  "bari_math_alreadyEnoughAdvice": "Цель достигнута — можешь потратить или продолжить копить на что-то большее.",
+  "bari_math_remainingToSave": "Осталось накопить {remaining} (уже {percent}% от цели)",
+  "@bari_math_remainingToSave": {
+    "placeholders": {
+      "remaining": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_math_remainingAdvice": "Ты на правильном пути! Продолжай в том же темпе.",
+  "bari_math_multiply": "{a} × {b} = {result}",
+  "@bari_math_multiply": {
+    "placeholders": {
+      "a": {"type": "String"},
+      "b": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_multiplyAdvice": "Умножение помогает считать регулярные траты: ежедневные за месяц, месячные за год.",
+  "bari_math_calculators": "Калькуляторы",
+  "bari_math_divideByZero": "На ноль делить нельзя!",
+  "bari_math_divideByZeroAdvice": "Это как делить пиццу между нулём друзей — некому есть.",
+  "bari_math_divide": "{a} ÷ {b} = {result}",
+  "@bari_math_divide": {
+    "placeholders": {
+      "a": {"type": "String"},
+      "b": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_divideAdvice": "Деление помогает понять, сколько откладывать в неделю/месяц для цели.",
+  "bari_math_priceComparison": "Вариант {better} выгоднее! ({price1} за единицу vs {price2})",
+  "@bari_math_priceComparison": {
+    "placeholders": {
+      "better": {"type": "int"},
+      "price1": {"type": "String"},
+      "price2": {"type": "String"}
+    }
+  },
+  "bari_math_priceComparisonAdvice": "Экономия ~{savings}%. Но проверь: успеешь ли использовать большую упаковку?",
+  "@bari_math_priceComparisonAdvice": {
+    "placeholders": {
+      "savings": {"type": "int"}
+    }
+  },
+  "bari_math_priceComparisonCalculator": "Сравнение цен",
+  "bari_math_rule72": "При {rate}% годовых деньги удвоятся примерно за {years} лет",
+  "@bari_math_rule72": {
+    "placeholders": {
+      "rate": {"type": "String"},
+      "years": {"type": "String"}
+    }
+  },
+  "bari_math_rule72Advice": "Это \"Правило 72\" — быстрый способ оценить рост накоплений. Чем выше %, тем быстрее рост, но и риск выше.",
+  "@bari_math_rule72Advice": {
+    "placeholders": {
+      "rate": {"type": "String"}
+    }
+  },
+  "bari_math_lessons": "Уроки",
+  "bari_math_inflation": "{amount} через {years} лет будут \"стоить\" как {realValue} сегодня",
+  "@bari_math_inflation": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "years": {"type": "String"},
+      "realValue": {"type": "String"}
+    }
+  },
+  "bari_math_inflationAdvice": "Инфляция \"съедает\" деньги. Поэтому важно не только копить, но и учиться инвестировать (когда подрастёшь).",
+  "@bari_math_inflationAdvice": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "years": {"type": "String"}
+    }
+  },
+
+  "bari_spending_noData": "Пока мало данных о твоих доходах и расходах.",
+  "bari_spending_noDataAdvice": "Продолжай записывать операции — тогда я смогу подсказать больше.",
+
+  "bari_goal_noPiggyBanks": "У тебя пока нет копилок.",
+  "bari_goal_noPiggyBanksAdvice": "Создай первую копилку с целью — это главный шаг к накоплениям! Что хочешь купить?",
+  "bari_goal_createPiggyBank": "Создать копилку",
+  "bari_goal_whenWillReach": "Когда достигну цели",
+  "bari_goal_piggyBanks": "Копилки",
+  "bari_goal_onePiggyBank": "У тебя 1 копилка с {amount} внутри.",
+  "@bari_goal_onePiggyBank": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "bari_goal_multiplePiggyBanks": "У тебя {count} копилок, всего накоплено {total}.",
+  "@bari_goal_multiplePiggyBanks": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "total": {"type": "String"}
+    }
+  },
+  "bari_goal_almostFull": "Копилка \"{name}\" почти заполнена ({percent}%)! 🎉 Скоро цель!",
+  "@bari_goal_almostFull": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_goal_justStarted": "Копилка \"{name}\" только начата ({percent}%). Пора пополнить!",
+  "@bari_goal_justStarted": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_goal_goodProgress": "Хороший прогресс! Продолжай откладывать регулярно.",
+  "bari_goal_createFirst": "У тебя пока нет копилок — создай первую!",
+  "bari_goal_createFirstAdvice": "Выбери цель: игрушка, гаджет, подарок. И начни с маленьких взносов.",
+  "bari_goal_deadlineSoon": "Пополни \"{name}\" — до дедлайна осталось {days} дней!",
+  "@bari_goal_deadlineSoon": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "days": {"type": "int"}
+    }
+  },
+  "bari_goal_closeToGoal": "Советую пополнить \"{name}\" ({progress}%) — осталось {remaining}, ты близко к цели!",
+  "@bari_goal_closeToGoal": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "progress": {"type": "int"},
+      "remaining": {"type": "String"}
+    }
+  },
+  "bari_goal_allFullOrEmpty": "Все копилки полные или пустые. Создай новую цель!",
+  "bari_goal_whichPiggyBankAdvice": "Лучше пополнять ту копилку, которая ближе к цели или у которой скоро дедлайн.",
+  "bari_goal_alreadyEnough": "Да, у тебя уже достаточно денег! 🎉",
+  "bari_goal_alreadyEnoughAdvice": "Всего есть {available} (кошелёк + копилки), а нужно {target}.",
+  "@bari_goal_alreadyEnoughAdvice": {
+    "placeholders": {
+      "available": {"type": "String"},
+      "target": {"type": "String"}
+    }
+  },
+  "bari_goal_needToSave": "Нужно накопить ещё {needed}",
+  "@bari_goal_needToSave": {
+    "placeholders": {
+      "needed": {"type": "String"}
+    }
+  },
+  "bari_goal_savePerMonth": "Если откладывать по {perMonth} в месяц, успеешь! Создай копилку с целью.",
+  "@bari_goal_savePerMonth": {
+    "placeholders": {
+      "perMonth": {"type": "String"}
+    }
+  },
+  "bari_goal_emptyWallet": "Сейчас в кошельке почти пусто ({balance}). Время подкопить!",
+  "@bari_goal_emptyWallet": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_lowBalance": "В кошельке {balance} — можно пополнить копилку или оставить на расходы.",
+  "@bari_goal_lowBalance": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_goodBalance": "В кошельке {balance} — отличный баланс! Можно пополнить копилки.",
+  "@bari_goal_goodBalance": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_createFirstPiggyBank": "Создай первую копилку — цель мотивирует откладывать.",
+  "bari_goal_setDeadline": "Установи дедлайн для копилки — так проще планировать.",
+  "bari_goal_regularTopUps": "Пополняй копилки регулярно, даже маленькими суммами.",
+  "bari_goal_checkProgress": "Проверяй прогресс копилок — это мотивирует!",
+  "bari_goal_completeLessons": "Пройди уроки о накоплениях — узнаешь полезные советы.",
+  "bari_goal_savingSecret": "Главный секрет накоплений — регулярность!",
+
+  "bari_math_percentOfResult": "{percent}% от {base} = {result}",
+  "@bari_math_percentOfResult": {
+    "placeholders": {
+      "percent": {"type": "String"},
+      "base": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_percentAdviceWithPercent": "Полезно знать: если откладывать {percent}% от дохода, это поможет копить регулярно.",
+  "@bari_math_percentAdviceWithPercent": {
+    "placeholders": {
+      "percent": {"type": "String"}
+    }
+  },
+  "bari_math_calculator503020": "Калькулятор 50/30/20",
+  "bari_math_explainSimpler": "Объясни проще",
+  "bari_math_monthlyToYearlyResult": "{monthly} в месяц = {yearly} в год",
+  "@bari_math_monthlyToYearlyResult": {
+    "placeholders": {
+      "monthly": {"type": "String"},
+      "yearly": {"type": "String"}
+    }
+  },
+  "bari_math_subscriptionsCalculator": "Калькулятор подписок",
+  "bari_math_saveYearlyResult": "Если откладывать по {monthly} в месяц, за год накопится {yearly}",
+  "@bari_math_saveYearlyResult": {
+    "placeholders": {
+      "monthly": {"type": "String"},
+      "yearly": {"type": "String"}
+    }
+  },
+  "bari_math_savePerPeriodResult": "Чтобы накопить {target}, нужно откладывать по {perPeriod} в {period}",
+  "@bari_math_savePerPeriodResult": {
+    "placeholders": {
+      "target": {"type": "String"},
+      "perPeriod": {"type": "String"},
+      "period": {"type": "String"}
+    }
+  },
+  "bari_math_createPiggyBank": "Создать копилку",
+  "bari_math_whenWillReach": "Когда достигну цели",
+  "bari_math_remainingToSaveResult": "Осталось накопить {remaining} (уже {percent}% от цели)",
+  "@bari_math_remainingToSaveResult": {
+    "placeholders": {
+      "remaining": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_math_multiplyResult": "{a} × {b} = {result}",
+  "@bari_math_multiplyResult": {
+    "placeholders": {
+      "a": {"type": "String"},
+      "b": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_divideResult": "{a} ÷ {b} = {result}",
+  "@bari_math_divideResult": {
+    "placeholders": {
+      "a": {"type": "String"},
+      "b": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_priceComparisonResult": "Вариант {better} выгоднее! ({price1} за единицу vs {price2})",
+  "@bari_math_priceComparisonResult": {
+    "placeholders": {
+      "better": {"type": "int"},
+      "price1": {"type": "String"},
+      "price2": {"type": "String"}
+    }
+  },
+  "bari_math_priceComparisonAdviceWithSavings": "Экономия ~{savings}%. Но проверь: успеешь ли использовать большую упаковку?",
+  "@bari_math_priceComparisonAdviceWithSavings": {
+    "placeholders": {
+      "savings": {"type": "int"}
+    }
+  },
+  "bari_math_priceComparisonCalculator": "Сравнение цен",
+  "bari_math_rule72Result": "При {rate}% годовых деньги удвоятся примерно за {years} лет",
+  "@bari_math_rule72Result": {
+    "placeholders": {
+      "rate": {"type": "String"},
+      "years": {"type": "String"}
+    }
+  },
+  "bari_math_rule72AdviceWithRate": "Это \"Правило 72\" — быстрый способ оценить рост накоплений. Чем выше %, тем быстрее рост, но и риск выше.",
+  "@bari_math_rule72AdviceWithRate": {
+    "placeholders": {
+      "rate": {"type": "String"}
+    }
+  },
+  "bari_math_lessons": "Уроки",
+  "bari_math_inflationResult": "{amount} через {years} лет будут \"стоить\" как {realValue} сегодня",
+  "@bari_math_inflationResult": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "years": {"type": "String"},
+      "realValue": {"type": "String"}
+    }
+  },
+  "bari_math_inflationAdviceWithAmount": "Инфляция \"съедает\" деньги. Поэтому важно не только копить, но и учиться инвестировать (когда подрастёшь).",
+  "@bari_math_inflationAdviceWithAmount": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "years": {"type": "String"}
+    }
+  },
+  "bari_math_calculators": "Калькуляторы",
+  "bari_math_multiplyAdvice": "Умножение помогает считать регулярные траты: ежедневные за месяц, месячные за год.",
+  "bari_math_divideAdvice": "Деление помогает понять, сколько откладывать в неделю/месяц для цели.",
+  "bari_math_monthlyToYearlyAdvice": "Маленькие регулярные суммы накапливаются! Подписки тоже стоит считать за год.",
+  "bari_math_saveYearlyAdvice": "Регулярность важнее суммы! Начни с маленького и увеличивай постепенно.",
+  "bari_math_savePerPeriodAdvice": "Создай копилку с этой целью — так проще не забывать!",
+  "bari_math_remainingAdvice": "Ты на правильном пути! Продолжай в том же темпе.",
+  "bari_math_alreadyEnough": "Ты уже накопил(а) достаточно! 🎉",
+  "bari_math_alreadyEnoughAdvice": "Цель достигнута — можешь потратить или продолжить копить на что-то большее.",
+  "bari_math_divideByZero": "На ноль делить нельзя!",
+  "bari_math_divideByZeroAdvice": "Это как делить пиццу между нулём друзей — некому есть.",
+
+  "earningsLab_explanationSimple": "Запланируй задание → выполни его в календаре → получи награду.",
+  "earningsLab_explanationPro": "Лаборатория заработка: сначала запланируй задание на дату, затем отметь его выполненным в календаре. Награда будет зачислена автоматически. Планирование помогает не забывать о важных делах.",
+  "earningsLab_tabQuick": "Быстрые",
+  "earningsLab_tabHome": "Домашние",
+  "earningsLab_tabProjects": "Проекты",
+  "earningsLab_piggyBankNotFound": "Копилка не найдена",
+  "earningsLab_noTransactions": "По этой копилке ещё нет операций",
+  "earningsLab_transactionHistory": "История по этой копилке",
+  "earningsLab_topUp": "Пополнение копилки",
+  "earningsLab_withdrawal": "Снятие из копилки",
+  "earningsLab_goalReached": "Цель достигнута 🎉",
+  "earningsLab_goalReachedSubtitle": "Молодец! Можешь создать новую цель или перенести деньги в кошелёк.",
+  "earningsLab_almostThere": "Осталось совсем чуть-чуть",
+  "earningsLab_almostThereSubtitle": "Подумай, как сделать ещё 1–2 пополнения — и цель будет закрыта.",
+  "earningsLab_halfway": "Половина пути пройдена",
+  "earningsLab_halfwaySubtitle": "Если будешь пополнять копилку регулярно, достигнешь цели гораздо быстрее.",
+  "earningsLab_goodStart": "Хорошее начало",
+  "earningsLab_goodStartSubtitle": "Попробуй настроить автопополнение или добавить задание в Лаборатории заработка специально под эту цель.",
+
+  "notes_title": "Заметки",
+  "notes_listView": "Список",
+  "notes_gridView": "Сетка",
+  "notes_searchHint": "Поиск заметок...",
+  "notes_all": "Все",
+  "notes_pinned": "Закреплённые",
+  "notes_archived": "Архив",
+  "notes_linked": "Связанные",
+  "notes_errorLoading": "Ошибка загрузки заметок",
+  "notes_emptyArchived": "Архив пуст",
+  "notes_emptyPinned": "Нет закреплённых заметок",
+  "notes_empty": "Нет заметок",
+  "notes_emptySubtitle": "Создайте первую заметку, чтобы сохранить важные мысли",
+  "notes_createFirst": "Создать первую заметку",
+  "notes_deleteConfirm": "Удалить заметку?",
+  "notes_deleteMessage": "Вы уверены, что хотите удалить заметку \"{noteTitle}\"?",
+  "@notes_deleteMessage": {
+    "placeholders": {
+      "noteTitle": {
+        "type": "String"
+      }
+    }
+  },
+  "notes_unpin": "Открепить",
+  "notes_pin": "Закрепить",
+  "notes_unarchive": "Вернуть из архива",
+  "notes_archive": "В архив",
+  "notes_copy": "Копировать",
+  "notes_share": "Поделиться",
+  "notes_copied": "Заметка скопирована",
+  "notes_shareNotAvailable": "Функция шаринга временно недоступна",
+  "notes_edit": "Редактировать заметку",
+  "notes_create": "Новая заметка",
+  "notes_changeColor": "Изменить цвет",
+  "notes_editTags": "Редактировать теги",
+  "notes_selectColor": "Выберите цвет",
+  "notes_clearColor": "Очистить цвет",
+  "notes_tagHint": "Добавить тег...",
+  "notes_titleRequired": "Введите заголовок заметки",
+  "notes_titleHint": "Заголовок заметки...",
+  "notes_contentHint": "Начните писать здесь...",
+  "notes_save": "Сохранить заметку",
+  "notes_today": "Сегодня",
+  "notes_yesterday": "Вчера",
+  "notes_daysAgo": "{days} дн.",
+  "@notes_daysAgo": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "notes_templates": "Шаблоны",
+  "notes_templateExpense": "Планирование расходов",
+  "notes_templateGoal": "Цель",
+  "notes_templateIdea": "Идея",
+  "notes_templateMeeting": "Встреча",
+  "notes_templateLearning": "Обучение",
+  "notes_templateExpenseDesc": "Запланируй свои расходы",
+  "notes_templateGoalDesc": "Запиши свою цель",
+  "notes_templateIdeaDesc": "Сохрани свою идею",
+  "notes_templateMeetingDesc": "Заметки к встрече",
+  "notes_templateLearningDesc": "Заметки к уроку",
+  "notes_linkToEvent": "Привязать к событию",
+  "notes_linkedToEvent": "Привязано к событию",
+  "notes_unlinkFromEvent": "Отвязать от события",
+  "notes_selectEvent": "Выберите событие",
+  "notes_noEvents": "Нет доступных событий",
+  "notes_bariTip": "Совет от Бари",
+  "notes_quickNote": "Быстрая заметка",
+  "notes_autoSave": "Автосохранение",
+  "notes_preview": "Предпросмотр",
+  "notes_swipeToArchive": "Смахните влево для архива",
+  "notes_swipeToDelete": "Смахните вправо для удаления",
+  "notes_templateShoppingList": "Список покупок",
+  "notes_templateShoppingListDesc": "Организуй свои покупки",
+  "notes_templateReflection": "Размышления",
+  "notes_templateReflectionDesc": "Запиши свои мысли",
+  "notes_templateGratitude": "Благодарность",
+  "notes_templateGratitudeDesc": "За что я благодарен",
+  "notes_templateParentReport": "Отчет для родителей",
+  "notes_templateParentReportDesc": "Автоматический отчет за период",
+  "calendarSync_title": "Синхронизация с календарём",
+  "calendarSync_enable": "Включить синхронизацию",
+  "calendarSync_syncToCalendar": "Синхронизировать события в календарь",
+  "calendarSync_syncFromCalendar": "Импортировать события из календаря",
+  "calendarSync_selectCalendars": "Выбрать календари",
+  "calendarSync_noCalendars": "Нет доступных календарей",
+  "calendarSync_requestPermissions": "Запросить разрешения",
+  "calendarSync_permissionsGranted": "Разрешения предоставлены",
+  "calendarSync_permissionsDenied": "Разрешения не предоставлены",
+  "calendarSync_syncNow": "Синхронизировать сейчас",
+  "calendarSync_lastSync": "Последняя синхронизация",
+  "calendarSync_never": "Никогда",
+  "calendarSync_conflictResolution": "Разрешение конфликтов",
+  "calendarSync_appWins": "Приложение имеет приоритет",
+  "calendarSync_calendarWins": "Календарь имеет приоритет",
+  "calendarSync_askUser": "Спрашивать пользователя",
+  "calendarSync_merge": "Объединять",
+  "calendarSync_syncInterval": "Интервал синхронизации (часы)",
+  "calendarSync_showNotifications": "Показывать уведомления",
+  "calendarSync_syncNotesAsEvents": "Синхронизировать заметки как события",
+  "calendarSync_statistics": "Статистика",
+  "calendarSync_totalEvents": "Всего событий",
+  "calendarSync_syncedEvents": "Синхронизировано",
+  "calendarSync_localEvents": "Локальные",
+  "calendarSync_errorEvents": "Ошибки",
+  "calendarSync_successRate": "Успешность",
+  "calendarSync_syncInProgress": "Синхронизация..."
+}

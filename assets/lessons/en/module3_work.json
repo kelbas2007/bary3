@@ -1,0 +1,739 @@
+[
+  {
+    "id": "m3_l01",
+    "moduleId": "work",
+    "title": "Active vs Passive Income",
+    "description": "Time = Money vs Money Makes Money",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l02",
+    "tags": ["#work", "#income"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Two Types of Income 💰",
+        "text": "All money comes in two ways:\n\n⏰ Active — you trade time for money\n📈 Passive — money works for you",
+        "mediaUrl": "assets/images/lessons/m3_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Active Income ⏰",
+        "text": "You work = you earn\nYou don't work = you don't earn\n\nExamples:\n• Part-time job\n• Freelance\n• Tutoring\n• Babysitting",
+        "mediaUrl": "assets/images/lessons/m3_l01_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Passive Income 📈",
+        "text": "You earn even when sleeping!\n\nExamples:\n• Bank interest\n• Dividends from stocks\n• YouTube channel income\n• Renting out things",
+        "mediaUrl": "assets/images/lessons/m3_l01_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What type of income is tutoring?",
+        "options": ["Passive", "Active", "Mixed", "Not income"],
+        "correctIndex": 1,
+        "explanation": "Tutoring = your time for their money = active! ⏰"
+      },
+      {
+        "type": "info",
+        "title": "The Truth About Passive Income 🔍",
+        "text": "Important: 'Passive' doesn't mean 'free'!\n\n• YouTube needs videos first\n• Dividends need capital first\n• Renting needs assets first\n\nPassive income requires active effort at start!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Why isn't passive income 'free money'?",
+        "options": ["It's illegal", "Requires initial effort/capital", "It doesn't exist", "Only for adults"],
+        "correctIndex": 1,
+        "explanation": "Passive income requires work or investment first! 💪"
+      },
+      {
+        "type": "info",
+        "title": "Teen Passive Income Ideas 💡",
+        "text": "• Sell digital goods (presets, templates)\n• Start a blog/channel\n• Create an app/game\n• Rent out gaming equipment\n• Savings account interest",
+        "mediaUrl": "assets/images/lessons/m3_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Analyze your income",
+        "text": "What types of income do you have now? Plan future options!",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned the difference between active and passive income!"
+  },
+  {
+    "id": "m3_l02",
+    "moduleId": "work",
+    "title": "Legal Part-Time Jobs",
+    "description": "What you can do before 16/18",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l03",
+    "tags": ["#work", "#legal", "#eu"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Laws Protect You 🛡️",
+        "text": "Child labor laws exist for a reason!\n\nEU protects your:\n• Health\n• Education\n• Development",
+        "mediaUrl": "assets/images/lessons/m3_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Under 15 (14 in some countries)",
+        "text": "Only light work allowed:\n\n✅ Babysitting\n✅ Dog walking\n✅ Lawn mowing\n✅ Tutoring peers\n✅ Helping family business\n\n❌ Factory work\n❌ Night shifts\n❌ Hazardous jobs",
+        "mediaUrl": "assets/images/lessons/m3_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Can a 14-year-old work in a factory?",
+        "options": ["Yes, with permission", "No, prohibited by law", "Yes, part-time", "Depends on the country"],
+        "correctIndex": 1,
+        "explanation": "Factory work is prohibited for under-15s in EU! 🚫"
+      },
+      {
+        "type": "info",
+        "title": "Ages 15-16",
+        "text": "More options available:\n\n✅ Retail (cashier, stocker)\n✅ Food service (not cooking!)\n✅ Movie theater\n✅ Amusement park\n✅ Office work\n\n⏰ Max 2 hours/school day\n⏰ Max 8 hours/weekend day",
+        "mediaUrl": "assets/images/lessons/m3_l02_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Ages 16-18",
+        "text": "Almost all jobs allowed:\n\n✅ Restaurants (limited)\n✅ Retail\n✅ Internships\n✅ Freelance\n\n❌ Alcohol/tobacco sales\n❌ Gambling venues\n❌ Night work (generally)",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "What's the max work hours on school days for 15-year-olds?",
+        "options": ["1 hour", "2 hours", "4 hours", "8 hours"],
+        "correctIndex": 1,
+        "explanation": "Education comes first — max 2 hours on school days! 📚"
+      },
+      {
+        "type": "info",
+        "title": "Online Opportunities 💻",
+        "text": "Legal online work for teens:\n\n• Freelance (design, coding)\n• Content creation\n• Surveys (with parental consent)\n• Selling handmade items\n• Virtual assistance\n\nNo age restrictions for most!",
+        "mediaUrl": "assets/images/lessons/m3_l02_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Explore options!",
+        "text": "What jobs match your age and interests?",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about legal work options for different ages!"
+  },
+  {
+    "id": "m3_l03",
+    "moduleId": "work",
+    "title": "Gross vs Net",
+    "description": "Where do taxes go?",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l04",
+    "tags": ["#work", "#taxes"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Why is pay less than expected? 🤔",
+        "text": "Job ad says: €15/hour\nPaycheck says: €11/hour\n\nWhere did €4 go?!",
+        "mediaUrl": "assets/images/lessons/m3_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Gross vs Net",
+        "text": "💰 GROSS (Brutto) — salary BEFORE deductions\n\n💵 NET (Netto) — what you actually receive\n\nGross - Taxes - Social = Net",
+        "mediaUrl": "assets/images/lessons/m3_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What is NET salary?",
+        "options": ["Before taxes", "After deductions", "Bonus", "Annual salary"],
+        "correctIndex": 1,
+        "explanation": "Net = what actually hits your account! 💵"
+      },
+      {
+        "type": "info",
+        "title": "Where does money go? 📊",
+        "text": "From your gross salary:\n\n🏥 Healthcare: ~7-15%\n👴 Pension: ~10-20%\n💼 Unemployment: ~2-3%\n🏛️ Income Tax: 0-45%\n\nTotal: 25-50% depending on country!",
+        "mediaUrl": "assets/images/lessons/m3_l03_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "But why pay taxes? 🤷",
+        "text": "Your taxes fund:\n\n🏫 Free schools\n🏥 Hospitals\n🛣️ Roads\n👮 Police\n🚒 Fire department\n📚 Libraries",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "What are taxes used for?",
+        "options": ["Goes to politicians", "Public services", "Nothing useful", "Sent abroad"],
+        "correctIndex": 1,
+        "explanation": "Taxes = public services we all use! 🏫🏥"
+      },
+      {
+        "type": "info",
+        "title": "Student Tax Benefits 🎓",
+        "text": "Good news for students:\n\n• Low income = low/no tax\n• Tax-free allowance (€10-12k/year in most EU)\n• Student job deductions\n• Can claim refunds!",
+        "mediaUrl": "assets/images/lessons/m3_l03_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Always ask for NET salary!",
+        "text": "When job hunting, ask: 'Is that gross or net?'",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about gross vs net — always ask what you'll actually receive!"
+  },
+  {
+    "id": "m3_l04",
+    "moduleId": "work",
+    "title": "Bank Accounts (IBAN/SEPA)",
+    "description": "How to read account details",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l05",
+    "tags": ["#work", "#banking", "#eu"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Your First Bank Account 🏦",
+        "text": "To receive salary, you need a bank account.\n\nIn EU, all accounts use standard formats:\nIBAN and SEPA.",
+        "mediaUrl": "assets/images/lessons/m3_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What is IBAN? 🔢",
+        "text": "IBAN = International Bank Account Number\n\nExample: DE89370400440532013000\n\nDE = Country (Germany)\n89 = Check digits\n37040044 = Bank code\n0532013000 = Account number",
+        "mediaUrl": "assets/images/lessons/m3_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What does 'DE' at the start of IBAN mean?",
+        "options": ["Bank name", "Country code", "Currency", "Account type"],
+        "correctIndex": 1,
+        "explanation": "First 2 letters = country! DE=Germany, FR=France, NL=Netherlands"
+      },
+      {
+        "type": "info",
+        "title": "What is SEPA? 💶",
+        "text": "SEPA = Single Euro Payments Area\n\n36 countries where euro transfers:\n✅ Same day\n✅ Same cost (often free)\n✅ Same rules\n\nTransfer within EU like within one country!",
+        "mediaUrl": "assets/images/lessons/m3_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "BIC/SWIFT Code",
+        "text": "BIC = Bank Identifier Code\n(Also called SWIFT)\n\nExample: COBADEFFXXX\n\nNeeded for international transfers outside SEPA.\nWithin SEPA — IBAN is enough!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Do you need BIC for SEPA transfers?",
+        "options": ["Always", "Only IBAN needed", "Only for large amounts", "Never works without"],
+        "correctIndex": 1,
+        "explanation": "For SEPA, IBAN alone is enough! 💶"
+      },
+      {
+        "type": "info",
+        "title": "Teen Banking Options 📱",
+        "text": "EU teen-friendly banks:\n\n• N26 (18+, but 16+ with parent)\n• Revolut (18+, Junior for under 18)\n• Local bank youth accounts\n• Prepaid cards (any age)\n\nAsk parents to help set up!",
+        "mediaUrl": "assets/images/lessons/m3_l04_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Learn your IBAN!",
+        "text": "If you have an account, memorize (or save) your IBAN.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about IBAN and SEPA — EU banking basics!"
+  },
+  {
+    "id": "m3_l05",
+    "moduleId": "work",
+    "title": "Debit vs Credit Cards",
+    "description": "The danger of credit and overdraft",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l06",
+    "tags": ["#work", "#banking"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "All Cards Look the Same 💳",
+        "text": "But they work VERY differently!\n\n💚 Debit = your money\n🔴 Credit = bank's money (borrowed)",
+        "mediaUrl": "assets/images/lessons/m3_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Debit Card 💚",
+        "text": "You spend YOUR money.\n\n✅ Can't spend more than you have\n✅ No interest charges\n✅ Simple and safe\n✅ Perfect for teens!",
+        "mediaUrl": "assets/images/lessons/m3_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Credit Card 🔴",
+        "text": "You spend BANK's money.\n\n⚠️ Must repay monthly\n⚠️ Interest up to 20-25%/year!\n⚠️ Easy to overspend\n⚠️ Creates debt",
+        "mediaUrl": "assets/images/lessons/m3_l05_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Which card uses your own money?",
+        "options": ["Credit", "Debit", "Both", "Neither"],
+        "correctIndex": 1,
+        "explanation": "Debit = your money. Credit = borrowed money! 💳"
+      },
+      {
+        "type": "info",
+        "title": "The Overdraft Trap 🕳️",
+        "text": "Overdraft = spending more than you have on debit.\n\nSome banks allow this, but:\n\n💸 Fees: €5-10 per transaction\n💸 Interest: 15-20% per year\n💸 Debt spiral starts!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Credit Card Debt Example 📊",
+        "text": "You spend €1000 on credit.\nMinimum payment: €25/month.\n\nAt 20% interest:\n• To repay: 5+ years\n• Total paid: €1,550\n• Extra: €550 in interest!\n\nFor €1000 purchase! 😱",
+        "mediaUrl": "assets/images/lessons/m3_l05_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why are credit cards risky?",
+        "options": ["They break easily", "High interest on unpaid balance", "They're expensive to get", "Banks don't like them"],
+        "correctIndex": 1,
+        "explanation": "20-25% interest turns small debt into big debt! 📈"
+      },
+      {
+        "type": "info",
+        "title": "The Golden Rule 🥇",
+        "text": "Until you master finances:\n\n1. Use ONLY debit cards\n2. Disable overdraft\n3. Only spend what you HAVE\n4. Credit cards = for adults who can repay monthly",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Check your card!",
+        "text": "Make sure you have a debit card with no overdraft enabled.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about debit vs credit — stick to debit, avoid overdraft!"
+  },
+  {
+    "id": "m3_l06",
+    "moduleId": "work",
+    "title": "Contracts",
+    "description": "Reading fine print and exit terms",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l07",
+    "tags": ["#work", "#legal"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Contracts Are Everywhere 📜",
+        "text": "You sign contracts for:\n\n• Jobs\n• Phones\n• Gyms\n• Streaming services\n• Apps (Terms of Service)\n\nMost people don't read them... 😬",
+        "mediaUrl": "assets/images/lessons/m3_l06_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Why read contracts? 🔍",
+        "text": "Fine print can include:\n\n⚠️ Auto-renewal clauses\n⚠️ Cancellation fees\n⚠️ Price increases\n⚠️ Data usage rights\n⚠️ Binding arbitration",
+        "mediaUrl": "assets/images/lessons/m3_l06_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why should you read the fine print?",
+        "options": ["It's fun", "Contains hidden terms", "Required by law", "Teachers test on it"],
+        "correctIndex": 1,
+        "explanation": "Fine print hides important conditions! 🔍"
+      },
+      {
+        "type": "info",
+        "title": "Key Things to Check ✅",
+        "text": "Before signing, look for:\n\n1️⃣ Contract duration\n2️⃣ How to cancel\n3️⃣ Cancellation notice period\n4️⃣ Early termination fees\n5️⃣ Auto-renewal terms\n6️⃣ Price change clauses",
+        "mediaUrl": "assets/images/lessons/m3_l06_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Employment Contract Basics 💼",
+        "text": "For a job, check:\n\n• Hourly rate (gross or net?)\n• Working hours\n• Holiday/vacation days\n• Notice period\n• Job duties\n• Probation period",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "What's most important in a gym contract?",
+        "options": ["Colors of equipment", "Cancellation terms", "Number of TVs", "Opening hours"],
+        "correctIndex": 1,
+        "explanation": "Cancellation terms — or you might pay for years! 💸"
+      },
+      {
+        "type": "info",
+        "title": "Your Rights 🛡️",
+        "text": "In EU, unfair contract terms are void:\n\n❌ Hidden fees\n❌ One-sided changes\n❌ Unreasonable penalties\n\nIf something seems unfair — it might be illegal!",
+        "mediaUrl": "assets/images/lessons/m3_l06_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Start reading!",
+        "text": "Next app you download — read the Terms of Service summary.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned to read contracts — always check cancellation terms!"
+  },
+  {
+    "id": "m3_l07",
+    "moduleId": "work",
+    "title": "Gig Economy",
+    "description": "Working as a courier: pros and pitfalls",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l08",
+    "tags": ["#work", "#gig"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "The Gig Economy 🚲",
+        "text": "Deliveroo, Uber Eats, Bolt, Glovo...\n\nGig economy = short-term jobs without permanent contract.\n\nPopular among students!",
+        "mediaUrl": "assets/images/lessons/m3_l07_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Pros 👍",
+        "text": "✅ Flexible hours\n✅ Be your own boss\n✅ Work when you want\n✅ Quick start\n✅ No office politics",
+        "mediaUrl": "assets/images/lessons/m3_l07_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Cons 👎",
+        "text": "❌ No guaranteed income\n❌ No sick pay\n❌ No paid vacation\n❌ You pay for equipment\n❌ Weather dependent\n❌ Self-employment taxes",
+        "mediaUrl": "assets/images/lessons/m3_l07_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What's a main risk of gig work?",
+        "options": ["Too much money", "No guaranteed income", "Too easy", "Too fun"],
+        "correctIndex": 1,
+        "explanation": "No orders = no money. No guarantees! 📉"
+      },
+      {
+        "type": "info",
+        "title": "Hidden Costs 💸",
+        "text": "What gig workers pay themselves:\n\n🚲 Bike/car maintenance\n📱 Phone data\n🔧 Repairs\n🏥 Health insurance (in some countries)\n📝 Taxes & social security",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Calculate Your Real Hourly Rate",
+        "text": "Example:\n• Earn €50 in 4 hours\n• Minus €10 for expenses\n• Real earnings: €40\n• Real hourly: €10/hour\n\nNot €12.50 like it seemed!",
+        "mediaUrl": "assets/images/lessons/m3_l07_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "How to calculate real gig earnings?",
+        "options": ["Just look at payments", "Subtract all expenses", "Ask the app", "It doesn't matter"],
+        "correctIndex": 1,
+        "explanation": "Earnings minus expenses = real income! 🧮"
+      },
+      {
+        "type": "action",
+        "title": "Think before gigging!",
+        "text": "If considering gig work, calculate real costs first.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about gig economy — flexible but risky. Calculate real earnings!"
+  },
+  {
+    "id": "m3_l08",
+    "moduleId": "work",
+    "title": "Your First CV",
+    "description": "How to write a resume with no experience",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l09",
+    "tags": ["#work", "#cv"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "No Experience? No Problem! 📝",
+        "text": "Everyone starts somewhere.\n\nYour first CV focuses on:\n• Skills\n• Education\n• Activities\n• Potential",
+        "mediaUrl": "assets/images/lessons/m3_l08_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "CV Structure 📋",
+        "text": "1. Contact Info\n2. Profile/Objective\n3. Education\n4. Skills\n5. Activities/Achievements\n6. Languages\n\nKeep it to 1 page!",
+        "mediaUrl": "assets/images/lessons/m3_l08_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Skills That Count 💪",
+        "text": "Even without jobs, you have skills:\n\n• Computer skills (specific programs)\n• Languages\n• Communication\n• Organization\n• Problem-solving\n• Teamwork (sports, projects)",
+        "mediaUrl": "assets/images/lessons/m3_l08_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What can replace work experience on a CV?",
+        "options": ["Leave blank", "Skills and activities", "Lie about jobs", "Just education"],
+        "correctIndex": 1,
+        "explanation": "Skills and activities show what you can do! 💪"
+      },
+      {
+        "type": "info",
+        "title": "What Counts as Experience? 🎯",
+        "text": "Include these:\n\n• Volunteering\n• School projects\n• Sports teams (leadership!)\n• Babysitting\n• Tutoring classmates\n• Online content creation\n• Personal projects",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Common Mistakes ❌",
+        "text": "Avoid:\n\n• Typos (proofread!)\n• Personal email like xXgamer2009Xx@...\n• Too long (max 1 page)\n• Irrelevant info\n• Lying!\n• Unprofessional photo",
+        "mediaUrl": "assets/images/lessons/m3_l08_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "What email is best for a CV?",
+        "options": ["coolkid2009@gmail.com", "john.smith@gmail.com", "xxxdarkxxx@mail.ru", "Any works"],
+        "correctIndex": 1,
+        "explanation": "Professional = firstname.lastname! 📧"
+      },
+      {
+        "type": "action",
+        "title": "Start your CV!",
+        "text": "Use Canva or Google Docs to create your first CV.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned CV basics — skills and activities matter even without experience!"
+  },
+  {
+    "id": "m3_l09",
+    "moduleId": "work",
+    "title": "Volunteering",
+    "description": "Why work for free? Experience & soft skills",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m3_l10",
+    "tags": ["#work", "#volunteering"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Free Work? Why? 🤔",
+        "text": "Volunteering = working for free.\n\nBut you still earn:\n• Experience\n• Skills\n• Connections\n• References\n• Good karma!",
+        "mediaUrl": "assets/images/lessons/m3_l09_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "What You Gain 🎁",
+        "text": "Real benefits:\n\n📝 CV boost\n🤝 Networking\n💪 Soft skills\n🌍 Make a difference\n🎓 Sometimes course credit\n💼 Future job references",
+        "mediaUrl": "assets/images/lessons/m3_l09_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Why volunteer if it's unpaid?",
+        "options": ["No reason", "Experience and connections", "Because forced", "Looks bad on CV"],
+        "correctIndex": 1,
+        "explanation": "Volunteering = experience + networking + impact! 🌟"
+      },
+      {
+        "type": "info",
+        "title": "Volunteering Options 🌍",
+        "text": "Where to volunteer:\n\n• Animal shelters\n• Environmental groups\n• Sports events\n• Music festivals\n• Local charities\n• School events\n• Online (translation, design)",
+        "mediaUrl": "assets/images/lessons/m3_l09_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Strategic Volunteering 🎯",
+        "text": "Choose volunteering that:\n\n• Relates to career interests\n• Builds specific skills\n• Offers training\n• Provides references\n\nNot just random tasks!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "How to choose where to volunteer?",
+        "options": ["Anywhere", "Related to your interests/goals", "Only popular places", "Only local"],
+        "correctIndex": 1,
+        "explanation": "Strategic choice = maximum benefit! 🎯"
+      },
+      {
+        "type": "info",
+        "title": "European Solidarity Corps 🇪🇺",
+        "text": "EU program for 18-30 year olds:\n\n• Funded volunteering abroad\n• 2 weeks to 12 months\n• Free accommodation\n• Pocket money\n• Great experience!",
+        "mediaUrl": "assets/images/lessons/m3_l09_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Find opportunities!",
+        "text": "Search for volunteer opportunities in your area.",
+        "buttonText": "Continue",
+        "targetScreen": "lessons",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "You learned about volunteering — free work that builds your future!"
+  },
+  {
+    "id": "m3_l10",
+    "moduleId": "work",
+    "title": "Salary Simulator",
+    "description": "Distributing your first big paycheck",
+    "locale": "en",
+    "isPremium": false,
+    "readTimeMinutes": 5,
+    "xpReward": 100,
+    "unlocksLessonId": "m4_l01",
+    "tags": ["#work", "#budgeting", "#practice"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "WORK Module Complete! 🎮",
+        "text": "You've learned:\n\n✅ Active vs Passive Income\n✅ Legal work options\n✅ Gross vs Net\n✅ Banking basics\n✅ Card types\n✅ Contracts\n✅ Gig economy\n✅ CV writing\n✅ Volunteering",
+        "mediaUrl": "assets/images/lessons/m3_l10_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Your First Real Paycheck 💰",
+        "text": "Imagine: You worked part-time.\nNet salary: €400/month.\n\nHow do you split it?",
+        "mediaUrl": "assets/images/lessons/m3_l10_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "First paycheck of €400. Using 50/30/20, how much to save?",
+        "options": ["€40", "€80", "€120", "€200"],
+        "correctIndex": 1,
+        "explanation": "20% of €400 = €80 to savings! 💰"
+      },
+      {
+        "type": "info",
+        "title": "The Smart Split 📊",
+        "text": "€400 monthly:\n\n💡 €200 (50%) — essentials\n🎮 €120 (30%) — wants\n💰 €80 (20%) — savings\n\nOr if parents cover essentials:\n🎮 €160 wants + 💰 €240 savings!",
+        "mediaUrl": "assets/images/lessons/m3_l10_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "If parents cover your essentials, what should you do with the 50%?",
+        "options": ["Spend it all", "Save more", "Give to parents", "Hide it"],
+        "correctIndex": 1,
+        "explanation": "More savings = faster goals! 🎯"
+      },
+      {
+        "type": "info",
+        "title": "Annual Projection 📈",
+        "text": "€80/month savings:\n\n• 3 months: €240\n• 6 months: €480\n• 12 months: €960\n\nWith €240/month savings:\n• 12 months: €2,880!\n\nEnough for a vacation or laptop! 🎉",
+        "mediaUrl": "assets/images/lessons/m3_l10_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Pro Tips 💡",
+        "text": "1. Set up automatic savings transfer\n2. Save FIRST, spend later\n3. Track all expenses\n4. Review monthly\n5. Increase savings % as income grows",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Plan your future! 🚀",
+        "text": "Create a savings goal for your first paycheck.",
+        "buttonText": "Create Piggy Bank",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Congratulations! You completed WORK module! Ready for FUTURE? 🏆"
+  }
+]

@@ -1,0 +1,839 @@
+[
+  {
+    "id": "m1_l01",
+    "moduleId": "basics",
+    "title": "Bedürfnisse vs Wünsche",
+    "description": "Wie man den Unterschied erkennt",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l02",
+    "tags": ["#basics", "#budgeting"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Bedürfnisse vs Wünsche",
+        "text": "Jeden Tag treffen wir Entscheidungen darüber, wofür wir Geld ausgeben. Aber nicht alle Ausgaben sind gleich wichtig!",
+        "mediaUrl": "assets/images/lessons/m1_l01_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was sind BEDÜRFNISSE?",
+        "text": "Bedürfnisse sind Dinge, ohne die du nicht leben kannst:\n\n🍎 Essen und Wasser\n🏠 Wohnung\n👕 Grundlegende Kleidung\n📚 Schulmaterialien\n🚌 Transport zur Schule",
+        "mediaUrl": "assets/images/lessons/m1_l01_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was sind WÜNSCHE?",
+        "text": "Wünsche sind schön zu haben, aber nicht essentiell:\n\n🎮 Neue Videospiele\n👟 Designer-Sneaker\n🍕 Essenslieferung\n📱 Neuestes iPhone\n🎬 Netflix-Abo",
+        "mediaUrl": "assets/images/lessons/m1_l01_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Zu welcher Kategorie gehört der Kauf eines Game-Skins?",
+        "options": ["Bedürfnis", "Wunsch", "Beides", "Keins von beiden"],
+        "correctIndex": 1,
+        "explanation": "Skins sind ein Wunsch. Das Spiel funktioniert auch ohne sie! 🎮"
+      },
+      {
+        "type": "info",
+        "title": "Die Grauzone 🤔",
+        "text": "Manchmal ist die Grenze fließend:\n\n• Handy — Bedürfnis (Kommunikation), aber iPhone 15 Pro — Wunsch\n• Kleidung — Bedürfnis, aber Designer-Marken — Wunsch\n• Essen — Bedürfnis, aber Sushi-Lieferung — Wunsch",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was davon ist ein BEDÜRFNIS?",
+        "options": ["AirPods Pro", "Schulessen", "Telegram-Sticker", "Neue Handyhülle"],
+        "correctIndex": 1,
+        "explanation": "Essen ist ein Grundbedürfnis. Der Rest kann warten! 🍽️"
+      },
+      {
+        "type": "info",
+        "title": "Die goldene Regel",
+        "text": "Erst die BEDÜRFNISSE decken,\ndann über WÜNSCHE nachdenken.\n\nDas ist die Grundlage der Finanzkompetenz!",
+        "mediaUrl": "assets/images/lessons/m1_l01_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Probier es selbst! 🎯",
+        "text": "Nutze den 50/30/20-Rechner, um dein Taschengeld zwischen Bedürfnissen, Wünschen und Sparen aufzuteilen.",
+        "buttonText": "Rechner öffnen",
+        "targetScreen": "calculator_50_30_20",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast gelernt, Bedürfnisse von Wünschen zu unterscheiden. Das ist der erste Schritt zu kluger Geldverwaltung!"
+  },
+  {
+    "id": "m1_l02",
+    "moduleId": "basics",
+    "title": "Der Latte-Effekt",
+    "description": "Wohin verschwindet dein Geld?",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l03",
+    "tags": ["#basics", "#spending"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Wohin geht das Geld? 💸",
+        "text": "Ist dir aufgefallen, dass dein Geld ausgeht, obwohl du nichts Besonderes gekauft hast?",
+        "mediaUrl": "assets/images/lessons/m1_l02_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Der Latte-Effekt ☕",
+        "text": "Ökonom David Bach bemerkte: Kleine tägliche Ausgaben summieren sich zu riesigen Beträgen!\n\nLatte für 5€ täglich = 150€/Monat = 1800€/Jahr!",
+        "mediaUrl": "assets/images/lessons/m1_l02_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Dein 'Latte' 🎯",
+        "text": "Teenager haben ihre eigenen 'Lattes':\n\n🍬 Snacks am Automaten — 2€/Tag = 60€/Monat\n🎮 Spiele-Donations — 5€/Woche = 20€/Monat\n🥤 Getränke — 3€/Tag = 90€/Monat\n📱 Sticker und Abos — 10€/Monat",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie viel 'frisst' 3€/Tag in einem Jahr?",
+        "options": ["Etwa 100€", "Etwa 500€", "Etwa 1000€", "Etwa 90€"],
+        "correctIndex": 2,
+        "explanation": "3€ × 365 Tage = 1095€! Fast ein iPhone! 📱"
+      },
+      {
+        "type": "info",
+        "title": "Wie bekämpft man es? 💪",
+        "text": "1. Alle Ausgaben tracken (auch kleine)\n2. Wöchentlich prüfen, wohin das Geld ging\n3. Limit für 'Kleinigkeiten' setzen\n4. Weniger Bargeld mitnehmen",
+        "mediaUrl": "assets/images/lessons/m1_l02_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was hilft, kleine Ausgaben zu kontrollieren?",
+        "options": ["Mehr Geld mitnehmen", "Alle Käufe tracken", "Nicht ans Geld denken", "Schneller ausgeben"],
+        "correctIndex": 1,
+        "explanation": "Wenn du Ausgaben trackst, siehst du das wahre Bild! 📝"
+      },
+      {
+        "type": "action",
+        "title": "Check deinen 'Latte'! ☕",
+        "text": "Schau dir deine Transaktionen der letzten Woche an. Wie viel ging für Kleinigkeiten drauf?",
+        "buttonText": "Meine Transaktionen",
+        "targetScreen": "balance",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast den Latte-Effekt kennengelernt — wie kleine Ausgaben sich zu großen Summen addieren!"
+  },
+  {
+    "id": "m1_l03",
+    "moduleId": "basics",
+    "title": "SMART-Ziele",
+    "description": "Wie man finanzielle Ziele setzt",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l04",
+    "tags": ["#basics", "#goals"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Traum vs Ziel 🎯",
+        "text": "Traum: 'Ich will ein neues Handy'\nZiel: 'Ich spare 500€ für ein iPhone in 5 Monaten, indem ich 100€/Monat spare'\n\nSpürst du den Unterschied?",
+        "mediaUrl": "assets/images/lessons/m1_l03_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Die SMART-Methode",
+        "text": "SMART ist eine Formel für richtige Ziele:\n\nS — Spezifisch\nM — Messbar\nA — Attraktiv/Erreichbar\nR — Relevant\nT — Terminiert",
+        "mediaUrl": "assets/images/lessons/m1_l03_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "S — Spezifisch 🎯",
+        "text": "❌ 'Ich will Geld sparen'\n✅ 'Ich will für eine PlayStation 5 sparen'\n\nJe spezifischer das Ziel, desto einfacher zu erreichen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "M — Messbar 📏",
+        "text": "❌ 'Ich spare viel Geld'\n✅ 'Ich spare 500 Euro'\n\nDu musst den genauen Betrag kennen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Welches Ziel ist SMART?",
+        "options": [
+          "Ich will reich sein",
+          "Ich spare irgendwann für ein Fahrrad",
+          "Ich spare 300€ für ein Fahrrad in 3 Monaten",
+          "Ich spare Geld"
+        ],
+        "correctIndex": 2,
+        "explanation": "Konkreter Betrag + Deadline = SMART-Ziel! 🎯"
+      },
+      {
+        "type": "info",
+        "title": "A — Attraktiv/Erreichbar 💪",
+        "text": "Wenn dein Taschengeld 50€/Monat ist, ist ein Ziel von 1000€ in einem Monat unrealistisch.\n\nSetze ambitionierte aber erreichbare Ziele!",
+        "mediaUrl": "assets/images/lessons/m1_l03_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "R — Relevant ❤️",
+        "text": "Das Ziel sollte DEIN Ziel sein, nicht das deiner Eltern oder Freunde.\n\nWenn dir das Ziel persönlich wichtig ist, findest du Motivation zum Sparen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "T — Terminiert ⏰",
+        "text": "❌ 'Ich spare irgendwann'\n✅ 'Ich spare bis zum 1. September'\n\nOhne Deadline wird ein Ziel nur ein Traum!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Wofür steht das T in SMART?",
+        "options": ["Toll", "Terminiert", "Tapfer", "Total"],
+        "correctIndex": 1,
+        "explanation": "Terminiert — Ziele brauchen Deadlines! ⏰"
+      },
+      {
+        "type": "action",
+        "title": "Erstelle ein SMART-Ziel! 🎯",
+        "text": "Erstelle dein erstes Sparschwein mit einem konkreten Betrag und Deadline.",
+        "buttonText": "Sparschwein erstellen",
+        "targetScreen": "piggy_banks",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast die SMART-Methode für finanzielle Ziele gemeistert!"
+  },
+  {
+    "id": "m1_l04",
+    "moduleId": "basics",
+    "title": "Die 24-Stunden-Regel",
+    "description": "Impulskäufe bekämpfen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l05",
+    "tags": ["#basics", "#impulse"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Kennst du das? 🛒",
+        "text": "Etwas Cooles gesehen → Sofort gekauft → Eine Woche später sammelt es Staub...\n\nDas ist ein Impulskauf!",
+        "mediaUrl": "assets/images/lessons/m1_l04_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum kaufen wir impulsiv?",
+        "text": "🧠 Dopamin — das Glückshormon\n\nWenn wir etwas Cooles sehen, schüttet unser Gehirn Dopamin aus. Wir WOLLEN es JETZT kaufen!",
+        "mediaUrl": "assets/images/lessons/m1_l04_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Die 24-Stunden-Regel ⏰",
+        "text": "Vor jedem nicht essentiellen Kauf — WARTE 24 STUNDEN.\n\nWenn du es nach einem Tag noch willst — kauf es.\nWenn du es vergessen hast — brauchtest du es nicht so sehr!",
+        "mediaUrl": "assets/images/lessons/m1_l04_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum 24 Stunden vor dem Kauf warten?",
+        "options": [
+          "Damit der Preis sinkt",
+          "Damit das Dopamin nachlässt und die Entscheidung rational wird",
+          "Damit das Produkt ausverkauft ist",
+          "Es ist sinnlos"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nach 24 Stunden kühlt dein Gehirn ab und denkt rational! 🧠"
+      },
+      {
+        "type": "info",
+        "title": "Wie wendet man es an? 📝",
+        "text": "1. Etwas Cooles sehen\n2. Auf eine 'Wunschliste' setzen\n3. Datum notieren\n4. Nach 24 Stunden zurückkommen\n5. Wenn immer noch nötig — kaufen!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Statistik 📊",
+        "text": "70% der Impulskäufe passieren nicht, wenn man 24 Stunden wartet!\n\nDas funktioniert sogar bei erwachsenen Millionären 💰",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Wann sollte man die 24-Stunden-Regel NICHT anwenden?",
+        "options": [
+          "Beim Kauf eines neuen Game-Skins",
+          "Beim Kauf von Mittagessen bei Hunger",
+          "Beim Kauf von AirPods",
+          "Beim Kauf eines Abos"
+        ],
+        "correctIndex": 1,
+        "explanation": "Essen ist ein Bedürfnis. Die Regel ist für Wünsche! 🍕"
+      },
+      {
+        "type": "action",
+        "title": "Probier es jetzt! 🎯",
+        "text": "Gibt es etwas, das du kaufen möchtest? Füge es zum 24-Stunden-Rechner hinzu und check morgen!",
+        "buttonText": "24-Stunden-Rechner",
+        "targetScreen": "calculator_24h",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast die 24-Stunden-Regel gelernt — eine mächtige Waffe gegen Impulskäufe!"
+  },
+  {
+    "id": "m1_l05",
+    "moduleId": "basics",
+    "title": "Die 50/30/20-Methode",
+    "description": "Einfaches Budget für Taschengeld",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l06",
+    "tags": ["#basics", "#budgeting"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Ein einfacher Weg, Geld zu verwalten",
+        "text": "Die 50/30/20-Methode ist ein einfaches System zur Geldaufteilung, das Millionen Menschen weltweit nutzen!",
+        "mediaUrl": "assets/images/lessons/m1_l05_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "50% — Bedürfnisse",
+        "text": "Die Hälfte deines Geldes für Notwendiges:\n\n🍎 Schulessen\n🚌 Transport\n📚 Schulmaterialien\n📱 Handy-Rechnung (wenn du zahlst)",
+        "mediaUrl": "assets/images/lessons/m1_l05_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "30% — Wünsche",
+        "text": "Ein Drittel für Spaß:\n\n🎮 Spiele und Donations\n🍕 Leckereien\n🎬 Unterhaltung\n👕 Mode",
+        "mediaUrl": "assets/images/lessons/m1_l05_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "20% — Sparen",
+        "text": "Ein Fünftel geht ins Sparen:\n\n💰 Für ein großes Ziel\n🎁 Für Geschenke\n🆘 Für Notfälle",
+        "mediaUrl": "assets/images/lessons/m1_l05_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wenn du 100€ bekommst, wie viel geht nach 50/30/20 ins Sparen?",
+        "options": ["10€", "20€", "30€", "50€"],
+        "correctIndex": 1,
+        "explanation": "20% von 100€ = 20€ ins Sparen! 💰"
+      },
+      {
+        "type": "info",
+        "title": "Beispiel für einen Teenager",
+        "text": "Taschengeld: 50€/Monat\n\n💡 25€ — Bedürfnisse (Essen, Transport)\n🎮 15€ — Wünsche (Spiele, Snacks)\n💰 10€ — Sparen",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Anpassen! 🔧",
+        "text": "Wenn Eltern für Essen und Transport zahlen, könnte deine Formel sein:\n\n40% Wünsche\n40% Sparen\n20% Geschenke für Freunde",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist das Wichtigste an 50/30/20?",
+        "options": [
+          "Prozentsätze genau einhalten",
+          "Einen Plan für dein Geld haben",
+          "Alles für Wünsche ausgeben",
+          "100% sparen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ein System zu haben ist der Schlüssel! Prozentsätze können angepasst werden. 📊"
+      },
+      {
+        "type": "action",
+        "title": "Berechne dein Budget! 📊",
+        "text": "Gib dein Taschengeld ein und bekomme einen personalisierten 50/30/20-Plan.",
+        "buttonText": "50/30/20-Rechner",
+        "targetScreen": "calculator_50_30_20",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast die 50/30/20-Methode gemeistert — ein einfaches System zur Geldverwaltung!"
+  },
+  {
+    "id": "m1_l06",
+    "moduleId": "basics",
+    "title": "Geld in der Familie",
+    "description": "Wie man Budget mit Eltern bespricht",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l07",
+    "tags": ["#basics", "#family"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Geld ist kein Tabu 💬",
+        "text": "Viele Familien vermeiden es, über Geld zu sprechen. Aber offene Budget-Gespräche sind ein Zeichen gesunder Beziehungen!",
+        "mediaUrl": "assets/images/lessons/m1_l06_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum darüber sprechen? 🤔",
+        "text": "• Du verstehst die finanzielle Situation der Familie\n• Du lernst, gemeinsam zu planen\n• Weniger Geldkonflikte\n• Eltern sehen deine Reife",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Wie anfangen?",
+        "text": "❌ 'Gib mir mehr Geld!'\n✅ 'Können wir über mein Taschengeld sprechen? Ich möchte lernen, ein Budget zu führen.'",
+        "mediaUrl": "assets/images/lessons/m1_l06_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist der beste Ansatz für Geldgespräche?",
+        "options": [
+          "Mehr fordern",
+          "Still schmollen",
+          "Vorschlagen, gemeinsam übers Budget zu sprechen",
+          "Bei Freunden beschweren"
+        ],
+        "correctIndex": 2,
+        "explanation": "Konstruktiver Dialog ist der Schlüssel zum Erfolg! 🔑"
+      },
+      {
+        "type": "info",
+        "title": "Idee: Finanzvertrag 📝",
+        "text": "Vereinbare mit Eltern:\n• Wie viel und wann du Taschengeld bekommst\n• Wofür du Boni verdienen kannst\n• Was du selbst zahlen musst\n• Was Eltern zahlen",
+        "mediaUrl": "assets/images/lessons/m1_l06_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Zeige Verantwortung! 💪",
+        "text": "Bestes Argument für mehr Taschengeld — zeige, dass du mit Geld umgehen kannst:\n\n• Ausgaben tracken\n• Für Ziele sparen\n• Nicht um Vorschüsse bitten",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was könnte Eltern überzeugen, das Taschengeld zu erhöhen?",
+        "options": [
+          "Ständig fragen",
+          "Zeigen, dass du mit Geld umgehen kannst",
+          "Mit Freunden vergleichen",
+          "Drohen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Verantwortung ist das beste Argument! 📊"
+      },
+      {
+        "type": "action",
+        "title": "Bereite das Gespräch vor",
+        "text": "Richte die App mit deinen Eltern in der Eltern-Zone ein.",
+        "buttonText": "Eltern-Zone",
+        "targetScreen": "parent_zone",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast gelernt, wie man mit Eltern über Geld spricht — eine wichtige Fähigkeit!"
+  },
+  {
+    "id": "m1_l07",
+    "moduleId": "basics",
+    "title": "Bargeld vs Digital",
+    "description": "Psychologie des Ausgebens mit Karte vs Bargeld",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l08",
+    "tags": ["#basics", "#psychology"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Interessante Tatsache 🧠",
+        "text": "Studien zeigen: Menschen geben 12-18% MEHR aus, wenn sie mit Karte statt Bargeld zahlen!",
+        "mediaUrl": "assets/images/lessons/m1_l07_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum passiert das?",
+        "text": "💵 Bargeld ist ein physischer Verlust. Du SIEHST, wie Geld weggeht.\n\n💳 Karte ist eine Abstraktion. Zahlen auf dem Bildschirm fühlen sich nicht wie 'Verlust' an.",
+        "mediaUrl": "assets/images/lessons/m1_l07_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Warum geben Menschen mehr mit Karte aus?",
+        "options": [
+          "Karten sind teurer",
+          "Ausgaben fühlen sich nicht wie Verlust an",
+          "Geschäfte betrügen",
+          "Zufall"
+        ],
+        "correctIndex": 1,
+        "explanation": "Das Gehirn nimmt Ziffern nicht als echten Verlust wahr! 🧠"
+      },
+      {
+        "type": "info",
+        "title": "Kontaktloses Zahlen 📱",
+        "text": "Apple Pay und Google Pay sind noch gefährlicher!\n\nEin Tippen — Geld weg. Keine Zeit zum Nachdenken.",
+        "mediaUrl": "assets/images/lessons/m1_l07_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Life-Hacks 💡",
+        "text": "1. Bargeld für Unterhaltung nutzen\n2. Kartenlimits setzen\n3. Kontaktlos für große Beträge deaktivieren\n4. Kontostand täglich prüfen",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Die Umschlag-Methode 📨",
+        "text": "Alte aber funktionierende Methode:\n\n1. Bargeld am Wochenanfang abheben\n2. In 'Umschläge' aufteilen (Essen, Spaß)\n3. Wenn Umschlag leer — stopp!",
+        "mediaUrl": "assets/images/lessons/m1_l07_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Was hilft, Kartenausgaben zu kontrollieren?",
+        "options": [
+          "Kontostand ignorieren",
+          "Tägliche Limits setzen",
+          "Nur mit Karte zahlen",
+          "Kann nicht kontrolliert werden"
+        ],
+        "correctIndex": 1,
+        "explanation": "Limits sind dein finanzieller 'Sicherheitsschalter'! ⚙️"
+      },
+      {
+        "type": "action",
+        "title": "Check deinen Kontostand! 💰",
+        "text": "Öffne deinen Kontostand und sieh, wie viel du diese Woche ausgegeben hast.",
+        "buttonText": "Mein Kontostand",
+        "targetScreen": "balance",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast etwas über die Psychologie des Ausgebens gelernt — Bargeld hilft, weniger auszugeben!"
+  },
+  {
+    "id": "m1_l08",
+    "moduleId": "basics",
+    "title": "Rabatte & Marketing",
+    "description": "Tricks der Geschäfte wie '3 zum Preis von 2'",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l09",
+    "tags": ["#basics", "#marketing"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Rabatte sind nicht immer Schnäppchen! 🏷️",
+        "text": "Geschäfte geben Milliarden aus, damit du mehr ausgibst. Zeit, ihre Tricks zu lernen!",
+        "mediaUrl": "assets/images/lessons/m1_l08_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Trick #1: Ankerpreis ⚓",
+        "text": "War: 100€\nJetzt: 59€\n\n'Wow, spare 41€!'\n\nAber... vielleicht kostete es immer 59€? 🤔",
+        "mediaUrl": "assets/images/lessons/m1_l08_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Trick #2: 3 zum Preis von 2 🛒",
+        "text": "Du wolltest 1 Schokoriegel für 2€.\nAngebot: 3 zum Preis von 2 (4€).\n\nDu hast 2€ 'gespart' aber 2€ MEHR ausgegeben!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Du wolltest 1 T-Shirt für 20€. Angebot: 2 für 30€. Wie viel extra 'zahlst du drauf'?",
+        "options": ["Spare 10€", "Zahle 10€ drauf", "Ausgeglichen", "Spare 20€"],
+        "correctIndex": 1,
+        "explanation": "Wolltest 20€ ausgeben, hast 30€ ausgegeben = +10€! 💸"
+      },
+      {
+        "type": "info",
+        "title": "Trick #3: 9,99€-Preise 🔢",
+        "text": "9,99€ scheint viel billiger als 10€.\n\nDein Gehirn liest die erste Ziffer und 'rundet ab'.\n\nDer tatsächliche Unterschied ist nur 1 Cent!",
+        "mediaUrl": "assets/images/lessons/m1_l08_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Trick #4: Zeitdruck ⏰",
+        "text": "'Nur heute!'\n'Noch 2 Stunden!'\n'Letztes Stück!'\n\nZiel: dich JETZT zum Kaufen bringen ohne nachzudenken.",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was tun, wenn du 'Nur heute!' siehst?",
+        "options": [
+          "Dringend kaufen",
+          "Die 24-Stunden-Regel anwenden",
+          "Sicherheitshalber 2 kaufen",
+          "Freunde anrufen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Wenn das Angebot echt ist, kommt es wieder. Nicht hetzen! ⏰"
+      },
+      {
+        "type": "info",
+        "title": "Wie schützt man sich? 🛡️",
+        "text": "1. Liste VOR dem Einkaufen machen\n2. Preise in verschiedenen Geschäften vergleichen\n3. Fragen: 'Würde ich auch ohne Rabatt kaufen?'\n4. Die 24-Stunden-Regel nutzen",
+        "mediaUrl": "assets/images/lessons/m1_l08_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "action",
+        "title": "Preise vergleichen! 📊",
+        "text": "Vor deinem nächsten Kauf, nutze den Preisvergleich-Rechner.",
+        "buttonText": "Preisvergleich",
+        "targetScreen": "calculator_price_comparison",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast Marketing-Geheimnisse aufgedeckt — Rabatte werden dich nicht mehr täuschen!"
+  },
+  {
+    "id": "m1_l09",
+    "moduleId": "basics",
+    "title": "Geld leihen an Freunde",
+    "description": "Finanzielle Etikette",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 3,
+    "xpReward": 50,
+    "unlocksLessonId": "m1_l10",
+    "tags": ["#basics", "#friends"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Geld und Freundschaft 🤝",
+        "text": "'Leih mir 10€ bis Montag'\n\nKennst du das? Geld zwischen Freunden ist ein Minenfeld!",
+        "mediaUrl": "assets/images/lessons/m1_l09_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Warum ist es kompliziert? 😬",
+        "text": "• Peinlich, an die Schuld zu erinnern\n• Freund könnte 'vergessen'\n• Groll auf beiden Seiten\n• Freundschaft in Gefahr",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Die goldene Regel 🥇",
+        "text": "Leihe nur, was du bereit bist zu VERSCHENKEN.\n\nWenn sie es nicht zurückgeben — verlierst du weder Geld (mental abgeschrieben) noch einen Freund.",
+        "mediaUrl": "assets/images/lessons/m1_l09_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie viel kannst du einem Freund leihen?",
+        "options": [
+          "Was immer sie fragen",
+          "Nur was du zu verlieren bereit bist",
+          "Niemals etwas",
+          "Alles was du hast"
+        ],
+        "correctIndex": 1,
+        "explanation": "Leihe nur, was du nicht vermissen würdest! 💡"
+      },
+      {
+        "type": "info",
+        "title": "Wie höflich ablehnen?",
+        "text": "❌ 'Nein, ich vertraue dir nicht'\n✅ 'Sorry, ich bin gerade knapp'\n✅ 'Mein Budget ist schon verplant'\n✅ 'Ich kann dir maximal 5€ leihen'",
+        "mediaUrl": "assets/images/lessons/m1_l09_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Wenn du dir leihst 📝",
+        "text": "1. Ein GENAUES Rückgabedatum nennen\n2. Erinnerung für dich selbst setzen\n3. Wenn möglich FRÜHER zurückgeben\n4. Dem Freund danken",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Was tun, wenn du dir Geld geliehen hast?",
+        "options": [
+          "Auf Erinnerungen warten",
+          "Pünktlich oder früher zurückgeben",
+          "'Vergessen'",
+          "Mehr verlangen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pünktliche Rückgabe baut Vertrauen auf! ⏰"
+      },
+      {
+        "type": "info",
+        "title": "Life-Hack: Splitwise 📱",
+        "text": "Für gemeinsame Ausgaben (Pizza für die Gruppe, Geschenke), nutze Rechnungsteil-Apps.\n\nAlles ist transparent, kein Groll!",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Schuldenrückzahlung planen",
+        "text": "Wenn du jemandem schuldest — füge eine Erinnerung in deinen Kalender ein!",
+        "buttonText": "Kalender öffnen",
+        "targetScreen": "calendar",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Du hast finanzielle Etikette gelernt — wie man Freunde und Geld behält!"
+  },
+  {
+    "id": "m1_l10",
+    "moduleId": "basics",
+    "title": "Mein erster FinPlan",
+    "description": "Ein Monatsbudget erstellen",
+    "locale": "de",
+    "isPremium": false,
+    "readTimeMinutes": 4,
+    "xpReward": 100,
+    "unlocksLessonId": "m2_l01",
+    "tags": ["#basics", "#budgeting", "#practice"],
+    "slides": [
+      {
+        "type": "info",
+        "title": "Modul-Endboss! 🎮",
+        "text": "Du hast 9 Lektionen abgeschlossen und gelernt:\n✅ Bedürfnisse vs Wünsche\n✅ Latte-Effekt\n✅ SMART-Ziele\n✅ 24-Stunden-Regel\n✅ 50/30/20-Methode\n\nZeit, alles anzuwenden!",
+        "mediaUrl": "assets/images/lessons/m1_l10_1.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Was ist ein FinPlan?",
+        "text": "Ein Finanzplan ist deine Landkarte:\n\n📍 Woher das Geld kommt\n📍 Wohin das Geld geht\n📍 Wie viel du sparst\n📍 Welche Ziele du erreichst",
+        "mediaUrl": "assets/images/lessons/m1_l10_2.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Schritt 1: Einnahmen 💰",
+        "text": "Liste ALLE Geldquellen auf:\n\n• Taschengeld von Eltern\n• Geschenke (Monatsdurchschnitt)\n• Nebenjob (falls vorhanden)\n• Zurückgezahlte Schulden",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "quiz",
+        "question": "Sollten Geschenke ins Budget aufgenommen werden?",
+        "options": [
+          "Nein, ist zufälliges Geld",
+          "Ja, als Durchschnitt über mehrere Monate",
+          "Nur wenn das Geschenk groß ist",
+          "Geschenke zählen nicht"
+        ],
+        "correctIndex": 1,
+        "explanation": "Durchschnittliches Geschenk über 3-6 Monate gibt ein realistisches Bild! 🎁"
+      },
+      {
+        "type": "info",
+        "title": "Schritt 2: Fixe Ausgaben 📌",
+        "text": "Ausgaben, die sich monatlich wiederholen:\n\n• Schultransport\n• Mittagessen (wenn du zahlst)\n• Abos (Spotify, Netflix)\n• Handyrechnung",
+        "mediaUrl": "assets/images/lessons/m1_l10_3.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "info",
+        "title": "Schritt 3: Variable Ausgaben 🔄",
+        "text": "Ausgaben, die sich ändern:\n\n• Unterhaltung\n• Essen gehen\n• Kleidung\n• Geschenke für Freunde",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "info",
+        "title": "Schritt 4: Sparen 🎯",
+        "text": "ERST sparen, DANN ausgeben!\n\nSobald du Geld bekommst — überweise 20% ins Sparen. Das nennt man 'zuerst an sich selbst zahlen'.",
+        "mediaUrl": "assets/images/lessons/m1_l10_4.svg",
+        "mediaType": "svg"
+      },
+      {
+        "type": "quiz",
+        "question": "Wann ist die beste Zeit zum Sparen?",
+        "options": [
+          "Ende des Monats, was übrig ist",
+          "Direkt nach Geldeingang",
+          "Wenn du Lust hast",
+          "Niemals"
+        ],
+        "correctIndex": 1,
+        "explanation": "'Zuerst an sich selbst zahlen' — die Schlüsselregel fürs Sparen! 💰"
+      },
+      {
+        "type": "info",
+        "title": "Dein erster Plan 📋",
+        "text": "Beispiel für 100€/Monat:\n\n💰 Einnahmen: 100€\n📌 Fix: 30€ (Transport, Essen)\n🔄 Variabel: 50€ (Limit!)\n🎯 Sparen: 20€\n\nGesamt: 100€ = 100€ ✓",
+        "mediaUrl": null,
+        "mediaType": "none"
+      },
+      {
+        "type": "action",
+        "title": "Erstelle deinen FinPlan! 🚀",
+        "text": "Nutze den Monatsbudget-Rechner, um deinen ersten Finanzplan zu erstellen.",
+        "buttonText": "Monatsbudget",
+        "targetScreen": "calculator_monthly_budget",
+        "mediaUrl": null,
+        "mediaType": "none"
+      }
+    ],
+    "summary": "Herzlichen Glückwunsch! Du hast deinen ersten Finanzplan erstellt und das BASICS-Modul abgeschlossen! 🏆"
+  }
+]

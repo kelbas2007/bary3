@@ -1,0 +1,50 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py</file>
+  <line>5</line>
+  <module>bary3</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py" />
+  <problem_class id="PyUnresolvedReferencesInspection" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Unresolved references</problem_class>
+  <description>No module named 'lldb'</description>
+  <highlighted_element>lldb</highlighted_element>
+  <language>Python</language>
+  <offset>7</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py</file>
+  <line>15</line>
+  <module>bary3</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py" />
+  <problem_class id="PyUnresolvedReferencesInspection" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unresolved reference 'bytearray'</description>
+  <highlighted_element>bytearray</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py</file>
+  <line>21</line>
+  <module>bary3</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py" />
+  <problem_class id="PyUnresolvedReferencesInspection" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unresolved reference 'print'</description>
+  <highlighted_element>print</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py</file>
+  <line>32</line>
+  <module>bary3</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ios/Flutter/ephemeral/flutter_lldb_helper.py" />
+  <problem_class id="PyUnresolvedReferencesInspection" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unresolved reference 'print'</description>
+  <highlighted_element>print</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>5</length>
+</problem>
+</problems>

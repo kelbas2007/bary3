@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_local_notifications_windows/test/xml_test.dart</file>
+  <line>40</line>
+  <module>bary3</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_local_notifications_windows/test/xml_test.dart" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute defaultInput is not allowed here</description>
+  <highlighted_element>defaultInput</highlighted_element>
+  <language>XML</language>
+  <offset>40</offset>
+  <length>12</length>
+</problem>
+</problems>

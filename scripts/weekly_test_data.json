@@ -1,0 +1,317 @@
+{
+  "transactions": [
+    {
+      "id": "test_income_0",
+      "type": "income",
+      "amount": 100000,
+      "date": "2024-12-15T10:00:00.000Z",
+      "category": "Карманные деньги",
+      "note": "Тестовый доход: Карманные деньги",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_0_0",
+      "type": "expense",
+      "amount": 20000,
+      "date": "2024-12-15T14:00:00.000Z",
+      "category": "Еда",
+      "note": "Тестовый расход: Еда",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_income_3",
+      "type": "income",
+      "amount": 150000,
+      "date": "2024-12-12T10:00:00.000Z",
+      "category": "Помощь по дому",
+      "note": "Тестовый доход: Помощь по дому",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_3_0",
+      "type": "expense",
+      "amount": 50000,
+      "date": "2024-12-12T15:00:00.000Z",
+      "category": "Транспорт",
+      "note": "Тестовый расход: Транспорт",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_3_1",
+      "type": "expense",
+      "amount": 30000,
+      "date": "2024-12-12T18:00:00.000Z",
+      "category": "Развлечения",
+      "note": "Тестовый расход: Развлечения",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_income_6",
+      "type": "income",
+      "amount": 200000,
+      "date": "2024-12-09T10:00:00.000Z",
+      "category": "Подарок",
+      "note": "Тестовый доход: Подарок",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_6_0",
+      "type": "expense",
+      "amount": 80000,
+      "date": "2024-12-09T12:00:00.000Z",
+      "category": "Игрушки",
+      "note": "Тестовый расход: Игрушки",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_1_0",
+      "type": "expense",
+      "amount": 30000,
+      "date": "2024-12-14T13:00:00.000Z",
+      "category": "Книги",
+      "note": "Тестовый расход: Книги",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_2_0",
+      "type": "expense",
+      "amount": 50000,
+      "date": "2024-12-13T11:00:00.000Z",
+      "category": "Одежда",
+      "note": "Тестовый расход: Одежда",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_2_1",
+      "type": "expense",
+      "amount": 20000,
+      "date": "2024-12-13T16:00:00.000Z",
+      "category": "Еда",
+      "note": "Тестовый расход: Еда",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_4_0",
+      "type": "expense",
+      "amount": 100000,
+      "date": "2024-12-11T10:00:00.000Z",
+      "category": "Развлечения",
+      "note": "Тестовый расход: Развлечения",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_5_0",
+      "type": "expense",
+      "amount": 40000,
+      "date": "2024-12-10T14:00:00.000Z",
+      "category": "Транспорт",
+      "note": "Тестовый расход: Транспорт",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    },
+    {
+      "id": "test_expense_5_1",
+      "type": "expense",
+      "amount": 60000,
+      "date": "2024-12-10T17:00:00.000Z",
+      "category": "Игрушки",
+      "note": "Тестовый расход: Игрушки",
+      "source": "manual",
+      "parentApproved": true,
+      "affectsWallet": true
+    }
+  ],
+  "piggyBanks": [
+    {
+      "id": "test_piggy_0",
+      "name": "Новая игра",
+      "targetAmount": 500000,
+      "currentAmount": 250000,
+      "createdAt": "2024-11-15T10:00:00.000Z"
+    },
+    {
+      "id": "test_piggy_1",
+      "name": "Велосипед",
+      "targetAmount": 1500000,
+      "currentAmount": 800000,
+      "createdAt": "2024-11-05T10:00:00.000Z"
+    },
+    {
+      "id": "test_piggy_2",
+      "name": "Подарок маме",
+      "targetAmount": 300000,
+      "currentAmount": 300000,
+      "createdAt": "2024-11-25T10:00:00.000Z"
+    }
+  ],
+  "plannedEvents": [
+    {
+      "id": "test_event_0",
+      "name": "Покупка новой игры",
+      "amount": 500000,
+      "type": "expense",
+      "dateTime": "2024-12-16T10:00:00.000Z",
+      "status": "planned",
+      "repeat": "none",
+      "notificationEnabled": true,
+      "notificationMinutesBefore": 60,
+      "autoExecute": false,
+      "affectsWallet": true,
+      "syncStatus": "local",
+      "linkedNoteIds": [],
+      "syncToCalendar": false
+    },
+    {
+      "id": "test_event_1",
+      "name": "Подарок на день рождения друга",
+      "amount": 200000,
+      "type": "expense",
+      "dateTime": "2024-12-17T10:00:00.000Z",
+      "status": "planned",
+      "repeat": "none",
+      "notificationEnabled": true,
+      "notificationMinutesBefore": 60,
+      "autoExecute": false,
+      "affectsWallet": true,
+      "syncStatus": "local",
+      "linkedNoteIds": [],
+      "syncToCalendar": false
+    },
+    {
+      "id": "test_event_2",
+      "name": "Карманные деньги",
+      "amount": 100000,
+      "type": "income",
+      "dateTime": "2024-12-18T10:00:00.000Z",
+      "status": "planned",
+      "repeat": "none",
+      "notificationEnabled": true,
+      "notificationMinutesBefore": 60,
+      "autoExecute": false,
+      "affectsWallet": true,
+      "syncStatus": "local",
+      "linkedNoteIds": [],
+      "syncToCalendar": false
+    },
+    {
+      "id": "test_event_3",
+      "name": "Поход в кино",
+      "amount": 150000,
+      "type": "expense",
+      "dateTime": "2024-12-19T10:00:00.000Z",
+      "status": "planned",
+      "repeat": "none",
+      "notificationEnabled": true,
+      "notificationMinutesBefore": 60,
+      "autoExecute": false,
+      "affectsWallet": true,
+      "syncStatus": "local",
+      "linkedNoteIds": [],
+      "syncToCalendar": false
+    }
+  ],
+  "lessons": [],
+  "lessonProgress": [
+    {
+      "lessonId": "lesson_1",
+      "completed": true,
+      "score": 80,
+      "completedAt": "2024-12-09T15:00:00.000Z",
+      "earnedXp": 50
+    },
+    {
+      "lessonId": "lesson_2",
+      "completed": true,
+      "score": 85,
+      "completedAt": "2024-12-10T16:00:00.000Z",
+      "earnedXp": 60
+    },
+    {
+      "lessonId": "lesson_3",
+      "completed": true,
+      "score": 90,
+      "completedAt": "2024-12-11T17:00:00.000Z",
+      "earnedXp": 70
+    },
+    {
+      "lessonId": "lesson_4",
+      "completed": true,
+      "score": 95,
+      "completedAt": "2024-12-12T18:00:00.000Z",
+      "earnedXp": 80
+    },
+    {
+      "lessonId": "lesson_5",
+      "completed": true,
+      "score": 100,
+      "completedAt": "2024-12-13T19:00:00.000Z",
+      "earnedXp": 90
+    }
+  ],
+  "playerProfile": {
+    "xp": 350,
+    "level": 2,
+    "streakDays": 5,
+    "premiumUnlocked": false,
+    "lastActivityDate": "2024-12-15T10:00:00.000Z",
+    "selfControlScore": 65
+  },
+  "achievements": [],
+  "bariMemory": {
+    "mood": "happy",
+    "recentActions": [
+      {
+        "type": "lessonCompleted",
+        "timestamp": "2024-12-13T19:00:00.000Z",
+        "lessonId": "lesson_5",
+        "transactionId": null,
+        "piggyBankId": null,
+        "amount": null
+      },
+      {
+        "type": "income",
+        "timestamp": "2024-12-15T10:00:00.000Z",
+        "lessonId": null,
+        "transactionId": "test_income_0",
+        "piggyBankId": null,
+        "amount": 100000
+      },
+      {
+        "type": "planCreated",
+        "timestamp": "2024-12-14T10:00:00.000Z",
+        "lessonId": null,
+        "transactionId": null,
+        "piggyBankId": null,
+        "amount": null
+      }
+    ],
+    "recentTips": [
+      "hint_type:planning",
+      "hint_type:lesson",
+      "hint_type:earnings_lab"
+    ]
+  }
+}

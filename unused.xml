@@ -1,0 +1,68 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java</file>
+  <line>17</line>
+  <module>bary3_android</module>
+  <package>io.flutter.plugins</package>
+  <entry_point TYPE="method" FQNAME="io.flutter.plugins.GeneratedPluginRegistrant void registerWith(FlutterEngine flutterEngine)" />
+  <language>JAVA</language>
+  <offset>21</offset>
+  <length>12</length>
+  <highlighted_element>registerWith</highlighted_element>
+  <problem_class id="unused" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Method is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/android/app/src/main/kotlin/com/example/bary3/GeminiNanoHandler.kt</file>
+  <line>66</line>
+  <module>bary3_android</module>
+  <package>com.example.bary3</package>
+  <entry_point TYPE="method" FQNAME="com.example.bary3.GeminiNanoHandler java.lang.Object downloadModel(kotlin.jvm.functions.Function1&lt;? super java.lang.Double,kotlin.Unit&gt; callback, MethodChannel progressChannel, kotlin.coroutines.Continuation&lt;? super java.lang.Boolean&gt; $completion)" />
+  <problem_class id="unused" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused declaration</problem_class>
+  <hints>
+    <hint value="progressChannel" />
+  </hints>
+  <description>Parameter &lt;code&gt;progressChannel&lt;/code&gt; is not used</description>
+  <highlighted_element>progressChannel</highlighted_element>
+  <language>kotlin</language>
+  <offset>58</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/android/app/src/main/kotlin/com/example/bary3/GeminiNanoHandler.kt</file>
+  <line>214</line>
+  <module>bary3_android</module>
+  <package>com.example.bary3</package>
+  <entry_point TYPE="method" FQNAME="com.example.bary3.GeminiNanoHandler java.lang.String generateResponse(java.lang.String prompt, java.lang.String locale)" />
+  <problem_class id="unused" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused declaration</problem_class>
+  <hints>
+    <hint value="locale" />
+  </hints>
+  <description>Parameter &lt;code&gt;locale&lt;/code&gt; is not used</description>
+  <highlighted_element>locale</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java</file>
+  <line>15</line>
+  <module>bary3_android</module>
+  <package>io.flutter.plugins</package>
+  <entry_point TYPE="class" FQNAME="io.flutter.plugins.GeneratedPluginRegistrant" />
+  <language>JAVA</language>
+  <offset>19</offset>
+  <length>25</length>
+  <highlighted_element>GeneratedPluginRegistrant</highlighted_element>
+  <problem_class id="unused" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Class is never used.</description>
+</problem>
+</problems>

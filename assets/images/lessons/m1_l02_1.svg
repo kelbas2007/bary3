@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)" rx="20"/>
+  
+  <!-- Coffee cups -->
+  <text x="80" y="100" font-size="50">☕</text>
+  <text x="140" y="120" font-size="50">☕</text>
+  <text x="200" y="100" font-size="50">☕</text>
+  <text x="260" y="120" font-size="50">☕</text>
+  <text x="320" y="100" font-size="50">☕</text>
+  
+  <!-- Money flying away -->
+  <text x="100" y="180" font-size="30">💸</text>
+  <text x="180" y="200" font-size="30">💸</text>
+  <text x="260" y="180" font-size="30">💸</text>
+  
+  <!-- Text -->
+  <text x="200" y="260" text-anchor="middle" font-size="18" fill="#f59e0b" font-weight="bold">5€ × 365 = 1825€/год!</text>
+</svg>

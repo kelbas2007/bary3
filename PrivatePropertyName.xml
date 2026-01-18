@@ -1,0 +1,15 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/android/app/src/main/kotlin/com/example/bary3/MainActivity.kt</file>
+  <line>8</line>
+  <module>bary3_android</module>
+  <package>com.example.bary3</package>
+  <entry_point TYPE="field" FQNAME="com.example.bary3.MainActivity CHANNEL_NAME" />
+  <problem_class id="PrivatePropertyName" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Private property naming convention</problem_class>
+  <description>Private property name &lt;code&gt;CHANNEL_NAME&lt;/code&gt; should not contain underscores in the middle or the end #loc</description>
+  <highlighted_element>CHANNEL_NAME</highlighted_element>
+  <language>kotlin</language>
+  <offset>16</offset>
+  <length>12</length>
+</problem>
+</problems>

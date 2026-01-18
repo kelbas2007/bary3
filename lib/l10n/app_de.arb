@@ -1,0 +1,1294 @@
+{
+  "@@locale": "de",
+  "common_cancel": "Abbrechen",
+  "common_save": "Speichern",
+  "common_create": "Erstellen",
+  "common_delete": "Löschen",
+  "common_done": "Fertig",
+  "common_understand": "Verstanden",
+  "common_planCreated": "Plan erfolgreich erstellt!",
+  "common_purchasePlanned": "Kauf geplant!",
+  "common_income": "Einkommen",
+  "common_expense": "Ausgabe",
+  "common_plan": "Plan",
+  "common_balance": "Guthaben",
+  "common_piggyBanks": "Spardosen",
+  "common_calendar": "Kalender",
+  "common_lessons": "Lektionen",
+  "common_settings": "Einstellungen",
+  "common_tools": "Werkzeuge",
+  "common_continue": "Weiter",
+  "common_confirm": "Bestätigen",
+  "common_error": "Fehler",
+
+  "moneyValidator_enterAmount": "Bitte gib einen Betrag ein",
+  "moneyValidator_notANumber": "Das sieht nicht wie eine Zahl aus",
+  "moneyValidator_mustBePositive": "Der Betrag muss größer als 0 sein",
+  "moneyValidator_tooSmall": "Der Betrag ist zu klein",
+
+  "bariOverlay_tipOfDay": "Tipp des Tages",
+  "bariOverlay_defaultTip": "Denk dran: Jede Münze bringt dich näher an dein Ziel!",
+  "bariOverlay_instructions": "Tippe auf Bari für einen Tipp. Doppeltipp für den Chat.",
+  "bariOverlay_openChat": "Chat öffnen",
+  "bariOverlay_moreTips": "Nächster Tipp",
+  "bariAvatar_happy": "😄",
+  "bariAvatar_encouraging": "🤔",
+  "bariAvatar_neutral": "😌",
+
+  "mainScreen_transferToPiggyBank": "Überweisung in Spardose \"{bankName}\" (aus Einkommen)",
+  "@mainScreen_transferToPiggyBank": {
+    "placeholders": {
+      "bankName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "bariTip_income": "Tolles Einkommen! Wofür wirst du es ausgeben?",
+  "bariTip_expense": "Ausgegeben. War das geplant?",
+  "bariTip_planCreated": "Plan erstellt! Daran zu halten ist der Schlüssel zum Erfolg.",
+  "bariTip_planCompleted": "Plan abgeschlossen! Du bist großartig!",
+  "bariTip_piggyBankCreated": "Neue Spardose! Wofür sparen wir?",
+  "bariTip_piggyBankCompleted": "Spardose ist voll! Herzlichen Glückwunsch zum Erreichen deines Ziels!",
+  "bariTip_lessonCompleted": "Lektion abgeschlossen! Neues Wissen ist eine Superkraft!",
+
+  "period_day": "Tag",
+  "period_week": "Woche",
+  "period_month": "Monat",
+  "period_inADay": "pro Tag",
+  "period_inAWeek": "pro Woche",
+  "period_inAMonth": "pro Monat",
+  "period_everyDay": "Jeden Tag",
+  "period_onceAWeek": "Einmal pro Woche",
+  "period_onceAMonth": "Einmal im Monat",
+  "plural_days": "{count,plural, =1{Tag} other{{count} Tage}}",
+  "@plural_days": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "monthlyBudgetCalculator_title": "Monatlicher Ausgabenplan",
+  "monthlyBudgetCalculator_subtitle": "Setze ein Limit und sieh den Rest – es wird einfacher sein, dein Geld zu kontrollieren.",
+  "monthlyBudgetCalculator_step1": "Monat",
+  "monthlyBudgetCalculator_step2": "Limit",
+  "monthlyBudgetCalculator_step3": "Ergebnis",
+  "monthlyBudgetCalculator_selectMonth": "1) Monat auswählen",
+  "monthlyBudgetCalculator_setLimit": "2) Limit setzen",
+  "monthlyBudgetCalculator_limitForMonth": "Limit für den Monat",
+  "monthlyBudgetCalculator_result": "Ergebnis",
+  "monthlyBudgetCalculator_spent": "Ausgegeben",
+  "monthlyBudgetCalculator_remaining": "Übrig",
+  "monthlyBudgetCalculator_warningAlmostLimit": "⚠️ Limit fast erreicht! Versuche, die Ausgaben in den verbleibenden Tagen zu reduzieren.",
+  "monthlyBudgetCalculator_warningOverLimit": "Du hast das Limit um {amount} überschritten. Du kannst das Limit überdenken oder Sparmöglichkeiten finden.",
+  "@monthlyBudgetCalculator_warningOverLimit": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "goalDateCalculator_title": "Wann erreiche ich mein Ziel?",
+  "goalDateCalculator_subtitle": "Gib den Beitragsbetrag und die Häufigkeit ein – ich zeige dir das ungefähre Zieldatum.",
+  "goalDateCalculator_stepGoal": "Ziel",
+  "goalDateCalculator_stepContribution": "Beitrag",
+  "goalDateCalculator_stepFrequency": "Häufigkeit",
+  "goalDateCalculator_headerGoal": "1) Ziel",
+  "goalDateCalculator_piggyBankLabel": "Spardose",
+  "goalDateCalculator_remainingToGoal": "Übrig: {amount}",
+  "@goalDateCalculator_remainingToGoal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_headerContribution": "2) Wie viel legst du zurück",
+  "goalDateCalculator_contributionAmountLabel": "Beitragsbetrag",
+  "goalDateCalculator_headerFrequency": "3) Häufigkeit",
+  "goalDateCalculator_result": "Ergebnis",
+  "goalDateCalculator_goalAlreadyReached": "Das Ziel ist bereits erreicht – du kannst ein neues setzen!",
+  "goalDateCalculator_resultSummary": "In etwa {count} Beiträgen (jede {period})",
+  "@goalDateCalculator_resultSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_upcomingDates": "Nächste Termine:",
+  "goalDateCalculator_createPlanButton": "Beitragsplan erstellen",
+  "goalDateCalculator_dialogTitle": "Bestätigung",
+  "goalDateCalculator_dialogSubtitle": "Geplante Ereignisse erstellen",
+  "goalDateCalculator_dialogContent": "Geplante Ereignisse für Beiträge zur Spardose \"{goalName}\" erstellen?",
+  "@goalDateCalculator_dialogContent": {
+    "placeholders": {
+      "goalName": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_defaultGoalName": "Ziel",
+  "goalDateCalculator_dialogContributionAmount": "Beitragsbetrag: {amount}",
+  "@goalDateCalculator_dialogContributionAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_dialogFrequency": "Häufigkeit: jede {period}",
+  "@goalDateCalculator_dialogFrequency": {
+    "placeholders": {
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDateCalculator_eventName": "Beitrag zur Spardose \"{goalName}\"",
+  "@goalDateCalculator_eventName": {
+    "placeholders": {
+      "goalName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyPlanCalculator_title": "Spardosen-Plan",
+  "piggyPlanCalculator_subtitle": "Ich helfe dir herauszufinden, wie viel und wie oft du sparen musst, um dein Ziel zu erreichen.",
+  "piggyPlanCalculator_stepGoal": "Ziel",
+  "piggyPlanCalculator_stepDate": "Datum",
+  "piggyPlanCalculator_stepFrequency": "Häufigkeit",
+  "piggyPlanCalculator_headerSelectGoal": "1) Wähle ein Ziel",
+  "piggyPlanCalculator_goalAmountLabel": "Ziel (Betrag)",
+  "piggyPlanCalculator_currentAmountLabel": "Bereits vorhanden",
+  "piggyPlanCalculator_headerTargetDate": "2) Wann möchtest du das Ziel erreichen?",
+  "piggyPlanCalculator_selectDate": "Datum auswählen",
+  "piggyPlanCalculator_headerFrequency": "3) Wie oft sparen?",
+  "piggyPlanCalculator_result": "Ergebnis",
+  "piggyPlanCalculator_resultSummary": "Spare etwa {amount} jede {period} (insgesamt {count} Beiträge).",
+  "@piggyPlanCalculator_resultSummary": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "piggyPlanCalculator_planCreatedSnackbar": "Plan erstellt: {amount} jede {period}",
+  "@piggyPlanCalculator_planCreatedSnackbar": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyPlanCalculator_scheduleFirstContributionButton": "Ersten Beitrag planen",
+  "piggyPlanCalculator_dialogContributionAmount": "Betrag: {amount}",
+  "@piggyPlanCalculator_dialogContributionAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "canIBuyCalculator_title": "Kann ich das kaufen?",
+  "canIBuyCalculator_subtitle": "Lass uns den Kauf jetzt und unter Berücksichtigung der Wochenpläne prüfen.",
+  "canIBuyCalculator_stepPrice": "Preis",
+  "canIBuyCalculator_stepMoney": "Geld",
+  "canIBuyCalculator_stepRules": "Regeln",
+  "canIBuyCalculator_headerPrice": "1) Kaufpreis",
+  "canIBuyCalculator_priceLabel": "Preis",
+  "canIBuyCalculator_headerAvailableMoney": "2) Wie viel Geld ist verfügbar",
+  "canIBuyCalculator_walletBalanceLabel": "Im Geldbeutel jetzt",
+  "canIBuyCalculator_headerRules": "3) Regeln",
+  "canIBuyCalculator_ruleDontTouchPiggies": "Spardosen nicht anrühren",
+  "canIBuyCalculator_ruleDontTouchPiggiesSubtitleEnabled": "Zählt nur den Geldbeutel",
+  "canIBuyCalculator_ruleDontTouchPiggiesSubtitleDisabled": "Kann Geld aus Spardosen als Reserve verwenden",
+  "canIBuyCalculator_ruleConsiderPlans": "Pläne für 7 Tage berücksichtigen",
+  "canIBuyCalculator_ruleConsiderPlansSubtitle": "Geplante Einnahmen/Ausgaben aus dem Kalender",
+  "canIBuyCalculator_result": "Ergebnis",
+  "canIBuyCalculator_statusYes": "Du kannst es jetzt kaufen",
+  "canIBuyCalculator_statusYesBut": "Du kannst es jetzt kaufen, aber die Wochenpläne könnten stören",
+  "canIBuyCalculator_statusMaybeWithPiggies": "Möglich, wenn du etwas aus einer Spardose nimmst",
+  "canIBuyCalculator_statusMaybeWithPlans": "Noch nicht genug, aber Pläne/Einkommen für die Woche könnten helfen",
+  "canIBuyCalculator_statusNo": "Besser warten: es fehlen {amount}",
+  "@canIBuyCalculator_statusNo": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "canIBuyCalculator_planPurchaseButton": "Kauf planen",
+  "canIBuyCalculator_dialogTitle": "Bestätigung",
+  "canIBuyCalculator_dialogSubtitle": "Ein geplantes Ereignis erstellen",
+  "canIBuyCalculator_dialogContent": "Ein geplantes Ereignis für den Kauf erstellen?",
+  "canIBuyCalculator_dialogAmount": "Betrag: {amount}",
+  "@canIBuyCalculator_dialogAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "canIBuyCalculator_dialogInfo": "Das Ereignis wird für 7 Tage im Voraus erstellt.",
+  "canIBuyCalculator_defaultEventName": "Kauf",
+
+  "toolsHub_subtitle": "Rechnen, planen, verbessern",
+  "toolsHub_bariTipTitle": "Baris Tipp",
+  "toolsHub_tipCalculators": "Rechner helfen dir beim Planen und Kalkulieren. Beginne mit dem \"Spardosen-Plan\"!",
+  "toolsHub_tipEarningsLab": "Im Verdienst-Labor kannst du Aufgaben erledigen und Geld verdienen. Beginne mit den einfachen!",
+  "toolsHub_tipMiniTrainers": "60-Sekunden-Trainer helfen dir, deine Fähigkeiten schnell zu verbessern. Beständigkeit ist wichtiger als Geschwindigkeit!",
+  "toolsHub_tipBariRecommendations": "Baris Tipp des Tages wird täglich aktualisiert. Schau oft für neue Ideen vorbei!",
+  "toolsHub_calendarForecastTitle": "Kalenderprognose",
+  "toolsHub_calendarForecastSubtitle": "Zukünftiges Guthaben und alle geplanten Ereignisse",
+  "toolsHub_calculatorsTitle": "Rechner",
+  "toolsHub_calculatorsSubtitle": "8 nützliche Finanzrechner",
+  "toolsHub_earningsLabTitle": "Verdienst-Labor",
+  "toolsHub_earningsLabSubtitle": "Aufgaben und Missionen zum Geldverdienen",
+  "toolsHub_miniTrainersTitle": "60 Sekunden",
+  "toolsHub_miniTrainersSubtitle": "Mikro-Übungen zum Trainieren",
+  "toolsHub_recommendationsTitle": "Tipp des Tages",
+  "toolsHub_recommendationsSubtitle": "Eine Auswahl an Tipps und Erklärungen von Bari",
+
+  "piggyBanks_explanationSimple": "Eine Spardose ist ein separates Ziel. Das Geld darin beeinflusst nicht dein Guthaben.",
+  "piggyBanks_explanationPro": "Eine Spardose ist ein separates Sparziel. Das Geld, das du in eine Spardose legst, beeinflusst nicht dein Hauptguthaben. Das hilft dir, deinen Fortschritt zu einem bestimmten Ziel zu sehen.",
+  "piggyBanks_deleteConfirmTitle": "Spardose löschen?",
+  "piggyBanks_deleteConfirmMessage": "Möchtest du die Spardose \"{name}\" wirklich löschen? Alle zugehörigen Transaktionen bleiben im Verlauf, aber die Spardose selbst wird gelöscht.",
+  "@piggyBanks_deleteConfirmMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_deleteSuccess": "Spardose \"{name}\" gelöscht",
+  "@piggyBanks_deleteSuccess": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_deleteError": "Fehler beim Löschen: {error}",
+  "@piggyBanks_deleteError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_emptyStateTitle": "Keine Spardosen",
+  "piggyBanks_createNewTooltip": "Neue Spardose erstellen",
+  "piggyBanks_createNewButton": "Spardose erstellen",
+  "piggyBanks_addNewButton": "Neue Spardose hinzufügen",
+  "piggyBanks_fabTooltip": "Spardose erstellen",
+
+  "piggyBanks_card_statusEmojiCompleted": "🎉",
+  "piggyBanks_card_statusEmojiAlmost": "🔥",
+  "piggyBanks_card_statusEmojiHalfway": "💪",
+  "piggyBanks_card_statusEmojiQuarter": "🌱",
+  "piggyBanks_card_statusEmojiStarted": "🎯",
+  "piggyBanks_card_deleteTooltip": "Löschen",
+  "piggyBanks_card_goalReached": "✓ Ziel erreicht!",
+  "piggyBanks_card_estimatedDate": "Du wirst es bis zum {date} erreichen",
+  "@piggyBanks_card_estimatedDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyBanks_progress_goalReached": "Ziel erreicht! 🎉",
+  "piggyBanks_progress_almostThere": "Fast geschafft! Nur noch {amount}",
+  "@piggyBanks_progress_almostThere": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_progress_halfway": "Mehr als die Hälfte geschafft! 💪",
+  "piggyBanks_progress_quarter": "Ein Viertel des Weges. Noch {amount}",
+  "@piggyBanks_progress_quarter": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_progress_started": "Ein guter Anfang 🌱",
+  "piggyBanks_progress_initialGoal": "Ziel ist {amount}",
+  "@piggyBanks_progress_initialGoal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+
+  "piggyBanks_createSheet_title": "Neue Spardose",
+  "piggyBanks_createSheet_nameLabel": "Name der Spardose",
+  "piggyBanks_createSheet_nameHint": "z.B. Neues Telefon",
+  "piggyBanks_createSheet_targetLabel": "Zielbetrag",
+
+  "piggyBanks_detail_deleteTooltip": "Spardose löschen",
+  "piggyBanks_detail_fromAmount": "von {amount}",
+  "@piggyBanks_detail_fromAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "piggyBanks_detail_topUpButton": "Aufladen",
+  "piggyBanks_detail_withdrawButton": "Abheben",
+  "piggyBanks_detail_autofillTitle": "Automatisch füllen",
+  "piggyBanks_detail_autofillRuleLabel": "Regel",
+  "piggyBanks_detail_autofillTypePercent": "Prozentsatz",
+  "piggyBanks_detail_autofillTypeFixed": "Fester Betrag",
+  "piggyBanks_detail_autofillPercentLabel": "Prozentsatz vom Einkommen",
+  "piggyBanks_detail_autofillFixedLabel": "Fester Betrag",
+  "piggyBanks_detail_autofillEnabledSnackbar": "Automatisches Sparen ist wie eine unsichtbare Gewohnheit.",
+  "piggyBanks_detail_whenToReachGoalTitle": "Wann erreiche ich das Ziel?",
+  "piggyBanks_detail_calculateButton": "Berechnen",
+  "piggyBanks_detail_goalExceededTitle": "Ziel wird überschritten!",
+  "piggyBanks_detail_goalExceededMessage": "Wenn du {amount} zur Spardose \"{name}\" hinzufügst, beträgt der neue Betrag {newAmount}, was das Ziel von {targetAmount} überschreitet. Fortfahren?",
+  "@piggyBanks_detail_goalExceededMessage": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "amount": {"type": "String"},
+      "newAmount": {"type": "String"},
+      "targetAmount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_topUpTransactionNote": "Spardose \"{name}\" aufladen",
+  "@piggyBanks_detail_topUpTransactionNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_successAnimationGoalReached": "🎉 Ziel erreicht!",
+  "piggyBanks_detail_successAnimationDaysCloser": "+{amount} • Ziel ist {count} {days} näher 🚀",
+  "@piggyBanks_detail_successAnimationDaysCloser": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "count": {"type": "int"},
+      "days": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_successAnimationSimpleTopUp": "Spardose um {amount} aufgeladen",
+  "@piggyBanks_detail_successAnimationSimpleTopUp": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_noFundsError": "Kein Geld in der Spardose zum Abheben.",
+  "piggyBanks_detail_noOtherPiggiesError": "Keine anderen Spardosen zum Überweisen.",
+  "piggyBanks_detail_insufficientFundsError": "Nicht genügend Geld in der Spardose.",
+  "piggyBanks_detail_withdrawToWalletNote": "Abhebung von Spardose \"{name}\" → Geldbeutel",
+  "@piggyBanks_detail_withdrawToWalletNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_withdrawToWalletSnackbar": "{amount} in den Geldbeutel überwiesen",
+  "@piggyBanks_detail_withdrawToWalletSnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_spendFromPiggyNote": "Kauf aus Spardose \"{name}\"",
+  "@piggyBanks_detail_spendFromPiggyNote": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_spendFromPiggySnackbar": "{amount} aus der Spardose ausgegeben",
+  "@piggyBanks_detail_spendFromPiggySnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_transferNote": "Überweisung zwischen Spardosen: \"{fromBank}\" → \"{toBank}\"",
+  "@piggyBanks_detail_transferNote": {
+    "placeholders": {
+      "fromBank": {"type": "String"},
+      "toBank": {"type": "String"}
+    }
+  },
+  "piggyBanks_detail_transferSnackbar": "{amount} nach \"{toBank}\" überwiesen",
+  "@piggyBanks_detail_transferSnackbar": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "toBank": {"type": "String"}
+    }
+  },
+
+  "piggyBanks_operationSheet_addTitle": "Spardose aufladen",
+  "piggyBanks_operationSheet_transferTitle": "In eine andere Spardose überweisen",
+  "piggyBanks_operationSheet_spendTitle": "Aus der Spardose ausgeben",
+  "piggyBanks_operationSheet_withdrawTitle": "In den Geldbeutel abheben",
+  "piggyBanks_operationSheet_amountLabel": "Betrag",
+  "piggyBanks_operationSheet_maxAmountHint": "Maximum: {amount}",
+  "@piggyBanks_operationSheet_maxAmountHint": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "piggyBanks_operationSheet_enterAmountHint": "Betrag eingeben",
+  "piggyBanks_operationSheet_categoryLabel": "Kategorie",
+  "piggyBanks_operationSheet_categoryHint": "Kategorie auswählen",
+  "piggyBanks_operationSheet_categoryFood": "Essen",
+  "piggyBanks_operationSheet_categoryTransport": "Transport",
+  "piggyBanks_operationSheet_categoryEntertainment": "Unterhaltung",
+  "piggyBanks_operationSheet_categoryOther": "Sonstiges",
+  "piggyBanks_operationSheet_noteLabel": "Name des Kaufs (optional)",
+  "piggyBanks_operationSheet_noteHint": "Namen eingeben...",
+  "piggyBanks_operationSheet_errorTooMuch": "Der Betrag übersteigt die verfügbaren Mittel",
+  "piggyBanks_operationSheet_errorInvalid": "Bitte gib einen gültigen Betrag ein",
+
+  "piggyBanks_withdrawMode_title": "Was soll mit dem Geld geschehen?",
+  "piggyBanks_withdrawMode_toWalletTitle": "In den Geldbeutel",
+  "piggyBanks_withdrawMode_toWalletSubtitle": "Geldbeutel +, Spardose −",
+  "piggyBanks_withdrawMode_spendTitle": "Direkt aus der Spardose ausgeben",
+  "piggyBanks_withdrawMode_spendSubtitle": "Geldbeutel unverändert, Spardose −",
+  "piggyBanks_withdrawMode_transferTitle": "In eine andere Spardose überweisen",
+  "piggyBanks_withdrawMode_transferSubtitle": "Geldbeutel unverändert, Spardose A −, Spardose B +",
+
+  "piggyBanks_picker_title": "Wähle eine Spardose für die Überweisung",
+  "piggyBanks_picker_defaultTitle": "Wähle eine Spardose",
+
+  "common_tryAgain": "Erneut versuchen",
+  "balance": "Guthaben",
+  "search": "Suchen",
+  "reset": "Zurücksetzen",
+  "done": "Fertig",
+
+  "balance_currentBalance": "Aktuelles Guthaben",
+  "balance_forecast": "Prognose",
+  "balance_fact": "Tatsächlich",
+  "balance_withPlannedExpenses": "Inkl. geplanter Ausgaben",
+  "balance_forecastForDay": "Tagesprognose",
+  "balance_forecastForWeek": "Wochenprognose",
+  "balance_forecastForMonth": "Monatsprognose",
+  "balance_forecastFor3Months": "3-Monats-Prognose",
+  "balance_level": "Level {level}",
+  "@balance_level": {
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+  "balance_toolsDescription": "Rechner und Tools für die Finanzplanung",
+  "balance_tools": "Werkzeuge",
+  "balance_filterDay": "Tag",
+  "balance_filterWeek": "Woche",
+  "balance_filterMonth": "Monat",
+  "balance_emptyStateIncome": "Noch nichts hier. Füge Einkommen hinzu!",
+  "balance_emptyStateNoTransactions": "Keine Transaktionen im gewählten Zeitraum",
+  "balance_addIncome": "Einkommen hinzufügen",
+  "balance_addExpense": "Ausgabe hinzufügen",
+  "balance_amount": "Betrag",
+  "balance_category": "Kategorie",
+  "balance_selectCategory": "Kategorie auswählen",
+  "balance_toPiggyBank": "Zur Spardose (optional)",
+  "balance_fromPiggyBank": "Aus Spardose (optional)",
+  "balance_note": "Notiz",
+  "balance_noteHint": "Notiz eingeben...",
+  "balance_save": "Speichern",
+  "balance_categories_food": "Essen",
+  "balance_categories_transport": "Transport",
+  "balance_categories_games": "Spiele",
+  "balance_categories_clothing": "Kleidung",
+  "balance_categories_entertainment": "Unterhaltung",
+  "balance_categories_other": "Sonstiges",
+  "balance_categories_pocketMoney": "Taschengeld",
+  "balance_categories_gift": "Geschenk",
+  "balance_categories_sideJob": "Nebenjob",
+
+  "settings_language": "Sprache",
+  "settings_selectCurrency": "Währung auswählen",
+  "settings_appearance": "Erscheinungsbild",
+  "settings_theme": "Design",
+  "settings_themeBlue": "Blau",
+  "settings_themePurple": "Lila",
+  "settings_themeGreen": "Grün",
+  "settings_explanationMode": "Erklärungsmodus",
+  "settings_howToExplain": "Wie erklären",
+  "settings_uxSimple": "Einfach",
+  "settings_uxPro": "Pro",
+  "settings_uxSimpleDescription": "Einfache Erklärungen",
+  "settings_uxProDescription": "Detaillierte Erklärungen",
+  "settings_currency": "Währung",
+  "settings_notifications": "Benachrichtigungen",
+  "settings_bari": "Bari Smart",
+  "settings_bariMode": "Bari-Modus",
+  "settings_bariModeOffline": "Offline",
+  "settings_bariModeOnline": "Online",
+  "settings_bariModeHybrid": "Hybrid",
+  "settings_showSources": "Quellen anzeigen",
+  "settings_showSourcesDescription": "Quellen für Tipps anzeigen",
+  "settings_smallTalk": "Smalltalk",
+  "settings_smallTalkDescription": "Smalltalk mit Bari erlauben",
+  "settings_parentZone": "Elternbereich",
+  "settings_parentZoneDescription": "Genehmigungen und Einstellungen verwalten",
+  "settings_tools": "Werkzeuge",
+  "settings_toolsDescription": "Rechner und andere Werkzeuge",
+  "settings_exportData": "Daten exportieren",
+  "settings_importData": "Daten importieren",
+  "settings_resetProgress": "Fortschritt zurücksetzen",
+  "settings_resetProgressWarning": "Bist du sicher, dass du den gesamten Fortschritt zurücksetzen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.",
+  "settings_cancel": "Abbrechen",
+  "settings_progressReset": "Fortschritt zurückgesetzt",
+  "settings_enterPinToConfirm": "PIN zur Bestätigung eingeben",
+  "settings_wrongPin": "Falsche PIN",
+
+  "priceComparisonCalculator_factSaved": "Fakten gespeichert",
+  "twentyFourHourRuleCalculator_enterItemName": "Artikelname eingeben",
+  "twentyFourHourRuleCalculator_reminderSet": "Erinnerung gesetzt",
+  "twentyFourHourRuleCalculator_no": "Nein",
+  "subscriptionsCalculator_no": "Nein",
+  "subscriptionsCalculator_repeatDaily": "Täglich",
+  "subscriptionsCalculator_repeatWeekly": "Wöchentlich",
+  "subscriptionsCalculator_repeatMonthly": "Monatlich",
+  "subscriptionsCalculator_repeatYearly": "Jährlich",
+  "subscriptionsCalculator_enterSubscriptionName": "Abonnementname eingeben",
+
+  "calendar_completed": "Abgeschlossen",
+  "calendar_edit": "Bearbeiten",
+  "calendar_reschedule": "Verschieben",
+  "calendar_completeNow": "Jetzt abschließen",
+  "calendar_showTransaction": "Transaktion anzeigen",
+  "calendar_restore": "Wiederherstellen",
+  "calendar_eventAlreadyCompleted": "Ereignis bereits abgeschlossen",
+  "calendar_noPiggyBanks": "Keine Spardosen",
+  "calendar_eventAlreadyCompletedWithTx": "Ereignis bereits abgeschlossen. Transaktion erstellt.",
+  "calendar_sentToParentForApproval": "An Eltern zur Genehmigung gesendet",
+  "calendar_addedToPiggyBank": "zur Spardose hinzugefügt",
+  "calendar_eventCompletedWithAmount": "Ereignis abgeschlossen: {amount}",
+  "@calendar_eventCompletedWithAmount": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "calendar_planContinues": "Plan läuft weiter",
+  "calendar_cancelEvent": "Ereignis abbrechen",
+  "calendar_cancelEventMessage": "Bist du sicher, dass du dieses Ereignis abbrechen möchtest?",
+  "calendar_no": "Nein",
+  "calendar_yesCancel": "Ja, abbrechen",
+  "calendar_wantToReschedule": "Möchtest du das Ereignis verschieben?",
+  "calendar_eventRestored": "Ereignis wiederhergestellt",
+  "calendar_eventUpdated": "Ereignis aktualisiert",
+  "calendar_deleteEventConfirm": "Ereignis löschen?",
+  "calendar_deleteEventSeriesMessage": "Gesamte Ereignisserie löschen?",
+  "calendar_deleteAllRepeatingConfirm": "Alle wiederholenden Ereignisse werden gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+  "calendar_undo": "Rückgängig",
+  "calendar_editScopeTitle": "Was bearbeiten?",
+  "calendar_editScopeSubtitle": "Wählen Sie den Anwendungsbereich der Änderungen",
+  "calendar_editThisEventOnly": "Nur dieses Ereignis",
+  "calendar_editThisEventOnlyDesc": "Änderungen betreffen nur das ausgewählte Ereignis",
+  "calendar_editAllRepeating": "Alle Wiederholungen",
+  "calendar_editAllRepeatingDesc": "Änderungen gelten für alle Ereignisse in der Serie",
+  "calendar_deleteScopeTitle": "Was löschen?",
+  "calendar_deleteScopeSubtitle": "Wählen Sie den Löschbereich",
+  "calendar_deleteAllRepeatingDesc": "Alle Ereignisse in der Serie werden gelöscht",
+  "calendar_cancel": "Abbrechen",
+  "calendar_transactionNotFound": "Transaktion nicht gefunden",
+  "calendar_transaction": "Transaktion",
+  "calendar_transactionAmount": "Betrag",
+  "calendar_transactionDate": "Datum",
+  "calendar_transactionCategory": "Kategorie",
+  "calendar_transactionNote": "Notiz",
+  "deletedEvents_title": "Gelöschte Ereignisse",
+  "deletedEvents_empty": "Papierkorb ist leer",
+  "deletedEvents_count": "{count} Ereignisse",
+  "@deletedEvents_count": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deletedEvents_restore": "Wiederherstellen",
+  "deletedEvents_deletePermanent": "Endgültig löschen",
+  "deletedEvents_deletedAt": "Gelöscht:",
+  "deletedEvents_restored": "Ereignis wiederhergestellt",
+  "deletedEvents_deleted": "Ereignis endgültig gelöscht",
+  "deletedEvents_permanentDeleteTitle": "Endgültig löschen?",
+  "deletedEvents_permanentDeleteMessage": "Diese Aktion kann nicht rückgängig gemacht werden. Das Ereignis wird ohne Wiederherstellungsmöglichkeit gelöscht.",
+  "deletedEvents_clearOld": "Alte löschen",
+  "deletedEvents_clearOldTitle": "Alte Ereignisse löschen?",
+  "deletedEvents_clearOldMessage": "Ereignisse löschen, die sich seit mehr als 30 Tagen im Papierkorb befinden?",
+  "deletedEvents_clearedCount": "{count} Ereignisse gelöscht",
+  "@deletedEvents_clearedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deletedEvents_restoreScopeTitle": "Was wiederherstellen?",
+  "deletedEvents_restoreScopeMessage": "Wählen Sie den Wiederherstellungsbereich",
+  "subscriptions_filter": "Filter",
+  "subscriptions_all": "Alle",
+  "subscriptions_income": "Einkommen",
+  "subscriptions_expense": "Ausgaben",
+  "subscriptions_type": "Typ",
+
+  "bariChat_title": "Chat mit Bari",
+  "bariChat_welcomeDefault": "Hallo! Ich bin Bari, dein Finanzhelfer. Wie kann ich helfen?",
+  "bariChat_welcomeCalculator": "Hallo! Du verwendest einen Rechner. Brauchst du Hilfe bei den Berechnungen?",
+  "bariChat_welcomePiggyBank": "Hallo! Reden wir über eine Spardose? Erzähl mir, was du wissen möchtest!",
+  "bariChat_welcomePlannedEvent": "Hallo! Du hast ein geplantes Ereignis. Fragen zur Planung?",
+  "bariChat_welcomeLesson": "Hallo! Du machst eine Lektion. Etwas unklar? Frag mich!",
+  "bariChat_welcomeTask": "Hallo! Lass uns über die Aufgabe \"{title}\" sprechen? Ich kann bei Belohnung, Zeit oder Schwierigkeit helfen.",
+  "@bariChat_welcomeTask": {
+    "placeholders": { "title": {"type": "String"} }
+  },
+  "bariChat_fallbackResponse": "Entschuldige, ich habe das nicht verstanden. Versuche, deine Frage umzuformulieren.",
+  "bariChat_source": "Quelle",
+  "bariChat_close": "Schließen",
+  "bariChat_inputHint": "Schreibe eine Nachricht...",
+  "bariChat_thinking": "Denke nach...",
+  "bariChat_task": "Aufgabe",
+
+  "calculatorsList_title": "Rechner",
+  "calculatorsList_piggyPlan": "Spardosen-Plan",
+  "calculatorsList_piggyPlanDesc": "Wie viel für ein Ziel sparen",
+  "calculatorsList_goalDate": "Wann erreiche ich mein Ziel",
+  "calculatorsList_goalDateDesc": "Erreichungsdatum bei regelmäßigen Beiträgen",
+  "calculatorsList_monthlyBudget": "Monatlicher Ausgabenplan",
+  "calculatorsList_monthlyBudgetDesc": "Limit und Rest für den Monat",
+  "calculatorsList_subscriptions": "Abos & regelmäßige Zahlungen",
+  "calculatorsList_subscriptionsDesc": "Was regelmäßige Ausgaben kosten",
+  "calculatorsList_canIBuy": "Kann ich das jetzt kaufen?",
+  "calculatorsList_canIBuyDesc": "Kaufbarkeit prüfen",
+  "calculatorsList_priceComparison": "Preisvergleich",
+  "calculatorsList_priceComparisonDesc": "Was ist günstiger",
+  "calculatorsList_24hRule": "24-Stunden-Regel",
+  "calculatorsList_24hRuleDesc": "Impulskäufe verschieben",
+  "calculatorsList_budget503020": "50/30/20 Budget",
+  "calculatorsList_budget503020Desc": "Einkommensverteilung",
+
+  "earningsLab_title": "Verdienst-Labor",
+  "earningsLab_explanationSimple": "Plane eine Aufgabe → erledige sie im Kalender → erhalte eine Belohnung.",
+  "earningsLab_explanationPro": "Verdienst-Labor: Plane zuerst eine Aufgabe für ein Datum, dann markiere sie im Kalender als erledigt. Die Belohnung wird automatisch gutgeschrieben. Planen hilft, wichtige Dinge nicht zu vergessen.",
+  "earningsLab_taskAdded": "Aufgabe hinzugefügt!",
+  "earningsLab_tabQuick": "Schnell",
+  "earningsLab_tabHome": "Zuhause",
+  "earningsLab_tabProjects": "Projekte",
+  "earningsLab_helpAtHome": "Zu Hause helfen",
+  "earningsLab_helpAtHomeDesc": "Wähle eine Aufgabe: Geschirr / Müll / Staub / Boden / Tisch. Mache 10-15 Minuten und schließe ab.",
+  "earningsLab_learnPoem": "Ein Gedicht lernen",
+  "earningsLab_learnPoemDesc": "3 Mal lesen, Zeile für Zeile lernen, dann ohne Hilfe vortragen.",
+  "earningsLab_cleanRoom": "Zimmer aufräumen",
+  "earningsLab_cleanRoomDesc": "10-15 Minuten aufräumen: Spielzeug wegräumen, Tisch sauber, Müll entsorgen.",
+  "earningsLab_readBook": "Ein Buch lesen",
+  "earningsLab_readBookDesc": "Lies ein Kapitel aus einem interessanten Buch. Lesen fördert Fantasie und Wortschatz.",
+  "earningsLab_helpCooking": "Beim Kochen helfen",
+  "earningsLab_helpCookingDesc": "Hilf den Eltern beim Mittag- oder Abendessen. Du lernst einfache Gerichte zu kochen!",
+  "earningsLab_homework": "Hausaufgaben machen",
+  "earningsLab_homeworkDesc": "Erledige alle Hausaufgaben ordentlich und pünktlich. Das ist deine Hauptaufgabe!",
+  "earningsLab_helpShopping": "Beim Einkaufen helfen",
+  "earningsLab_helpShoppingDesc": "Geh mit den Eltern einkaufen und hilf beim Tragen. Du lernst Ausgaben zu planen!",
+  "earningsLab_tagLearning": "Lernen",
+  "earningsLab_tagHelp": "Hilfe",
+  "earningsLab_tagCreativity": "Kreativität",
+
+  "rule24h_title": "24-Stunden-Regel",
+  "rule24h_subtitle": "Hilft, Impulskäufe zu vermeiden: Verschiebe die Entscheidung um einen Tag und prüfe dich erneut.",
+  "rule24h_step1": "Will",
+  "rule24h_step2": "Preis",
+  "rule24h_step3": "Pause",
+  "rule24h_wantToBuy": "Ich möchte kaufen",
+  "rule24h_example": "Zum Beispiel: Kopfhörer",
+  "rule24h_price": "Preis",
+  "rule24h_explanation": "Wenn du es nach 24 Stunden noch willst — ist der Kauf bewusster. Wenn nicht — hast du gespart und Selbstkontrolle geübt.",
+  "rule24h_postpone": "24 Stunden verschieben",
+  "rule24h_reminderSet": "Erinnerung gesetzt. Komm in 24 Stunden zurück, um dein Verlangen erneut zu prüfen.",
+  "rule24h_checkAgain": "Erneut prüfen",
+  "rule24h_dialogTitle": "Bestätigung",
+  "rule24h_dialogSubtitle": "Erinnerung erstellen",
+  "rule24h_dialogContent": "Eine Erinnerung in 24 Stunden erstellen, um zu prüfen, ob du \"{itemName}\" noch kaufen möchtest?",
+  "@rule24h_dialogContent": {
+    "placeholders": { "itemName": {"type": "String"} }
+  },
+  "rule24h_reminderIn24h": "Erinnerung kommt in 24 Stunden",
+  "rule24h_eventName": "Wunschprüfung: {itemName}",
+  "@rule24h_eventName": {
+    "placeholders": { "itemName": {"type": "String"} }
+  },
+  "rule24h_checkTitle": "Wunschprüfung",
+  "rule24h_checkSubtitle": "24 Stunden sind vergangen",
+  "rule24h_stillWant": "Willst du das noch kaufen?",
+  "rule24h_yes": "Ja",
+
+  "budget503020_title": "50/30/20 Budget",
+  "budget503020_subtitle": "Teile dein Einkommen in 3 Teile: Bedarf, Wünsche und Sparen.",
+  "budget503020_step1": "Einkommen",
+  "budget503020_step2": "Verteilung",
+  "budget503020_step3": "Spardosen",
+  "budget503020_incomeLabel": "Mein monatliches Einkommen",
+  "budget503020_needs50": "Bedarf (50%)",
+  "budget503020_wants30": "Wünsche (30%)",
+  "budget503020_savings20": "Sparen (20%)",
+  "budget503020_tip": "Tipp: Wenn du schneller sparen willst — beginne mit 10% Sparen und erhöhe schrittweise.",
+  "budget503020_createPiggyBanks": "3 Spardosen erstellen",
+  "budget503020_dialogTitle": "Bestätigung",
+  "budget503020_dialogSubtitle": "Spardosen nach der 50/30/20-Regel erstellen",
+
+  "priceComparison_title": "Preisvergleich",
+  "priceComparison_subtitle": "Vergleiche zwei Optionen und finde heraus, welche pro Einheit günstiger ist.",
+  "priceComparison_step1": "Option A",
+  "priceComparison_step2": "Option B",
+  "priceComparison_step3": "Ergebnis",
+  "priceComparison_priceA": "Preis A",
+  "priceComparison_quantityA": "Menge / Gewicht A",
+  "priceComparison_priceB": "Preis B",
+  "priceComparison_quantityB": "Menge / Gewicht B",
+  "priceComparison_result": "Ergebnis",
+  "priceComparison_pricePerUnitA": "Preis pro Einheit A",
+  "priceComparison_pricePerUnitB": "Preis pro Einheit B",
+  "priceComparison_betterOption": "Besser: Option {option} (Ersparnis ~{percent}%)",
+  "@priceComparison_betterOption": {
+    "placeholders": { "option": {"type": "String"}, "percent": {"type": "String"} }
+  },
+  "priceComparison_saveForBari": "Ergebnis für Bari speichern",
+
+  "subscriptions_title": "Abos & regelmäßige Zahlungen",
+  "subscriptions_regular": "Regelmäßige Zahlung",
+
+  "calendar_today": "Heute",
+  "calendar_noEvents": "Keine Ereignisse",
+  "calendar_eventsCount": "{count} {events}",
+  "@calendar_eventsCount": {
+    "placeholders": { "count": {"type": "int"}, "events": {"type": "String"} }
+  },
+  "calendar_event": "Ereignis",
+  "calendar_events234": "Ereignisse",
+  "calendar_events5plus": "Ereignisse",
+  "calendar_freeDay": "Freier Tag",
+  "calendar_noEventsOnDay": "Für diesen Tag ist nichts geplant.\nVielleicht ist es Zeit, etwas hinzuzufügen?",
+  "calendar_startPlanning": "Fang an zu planen! 🚀",
+  "calendar_createFirstEvent": "Erstelle dein erstes Ereignis — es macht Sparen und Erinnern einfacher",
+  "calendar_createFirstPlan": "Ersten Plan erstellen",
+  "calendar_addEvent": "Ereignis hinzufügen",
+  "calendar_income": "Einnahmen",
+  "calendar_expense": "Ausgaben",
+  "calendar_done": "Erledigt",
+  "calendar_confirmCompletion": "Abschluss bestätigen",
+  "calendar_amount": "Betrag",
+  "calendar_confirm": "Bestätigen",
+  "calendar_rescheduleEvent": "Ereignis verschieben",
+  "calendar_dateAndTime": "Datum und Uhrzeit",
+  "calendar_notification": "Benachrichtigung",
+  "calendar_move": "Verschieben",
+  "calendar_whereToAdd": "Wohin {amount} hinzufügen?",
+  "@calendar_whereToAdd": {
+    "placeholders": { "amount": {"type": "String"} }
+  },
+  "calendar_toWallet": "In den Geldbeutel",
+  "calendar_availableForSpending": "Verfügbar zum Ausgeben",
+  "calendar_toPiggyBank": "In die Spardose",
+  "calendar_forGoal": "Für ein Ziel",
+  "calendar_selectPiggyBank": "Spardose auswählen",
+  "calendar_eventCompleted": "Ereignis abgeschlossen! +15 XP",
+  "calendar_eventCancelled": "Ereignis abgebrochen",
+  "calendar_eventDeleted": "Ereignis gelöscht",
+  "calendar_eventCompletedXp": "Ereignis abgeschlossen! +15 XP",
+  "calendar_invalidAmount": "Bitte gib einen gültigen Betrag ein",
+  "calendar_date": "Datum",
+  "calendar_time": "Uhrzeit",
+  "calendar_everyDay": "Jeden Tag",
+  "calendar_everyWeek": "Jede Woche",
+  "calendar_everyMonth": "Jeden Monat",
+  "calendar_everyYear": "Jedes Jahr",
+  "calendar_repeat": "Wiederholen",
+  "calendar_noRepeat": "Keine",
+  "calendar_deleteAction": "Diese Aktion kann nicht rückgängig gemacht werden.",
+  "calendar_week": "Woche",
+  "calendar_month": "Monat",
+
+  "parentZone_title": "Elternbereich",
+  "parentZone_approvals": "Ausstehende Genehmigungen",
+  "parentZone_statistics": "Statistik",
+  "parentZone_settings": "Einstellungen",
+  "parentZone_pinMustBe4Digits": "PIN muss 4 Ziffern enthalten",
+  "parentZone_wrongPin": "Falsche PIN",
+  "parentZone_pinChanged": "PIN geändert",
+  "parentZone_premiumUnlocked": "Premium freigeschaltet",
+  "parentZone_resetData": "Daten zurücksetzen",
+  "parentZone_resetWarning": "WARNUNG! Diese Aktion löscht ALLE Anwendungsdaten.",
+  "parentZone_enterPinToConfirm": "PIN zur Bestätigung eingeben:",
+  "parentZone_pin": "PIN",
+  "parentZone_reset": "Zurücksetzen",
+  "parentZone_allDataDeleted": "Alle Daten gelöscht",
+  "parentZone_resetError": "Fehler beim Zurücksetzen: {error}",
+  "@parentZone_resetError": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "parentZone_login": "Anmelden",
+  "parentZone_unlockPremium": "Premium freischalten",
+  "parentZone_edit": "Bearbeiten",
+  "parentZone_close": "Schließen",
+  "parentZone_earningsApproved": "Verdienst genehmigt",
+  "parentZone_earningsRejected": "Verdienst abgelehnt",
+  "exportImport_title": "Export/Import",
+  "exportImport_exportData": "Daten exportieren",
+  "exportImport_exportDescription": "Alle Daten in JSON-Datei speichern",
+  "exportImport_export": "Exportieren",
+  "exportImport_importData": "Daten importieren",
+  "exportImport_importDescription": "Daten aus JSON-Datei laden",
+  "exportImport_import": "Importieren",
+  "exportImport_dataCopied": "Daten in Zwischenablage kopiert",
+  "exportImport_exportError": "Exportfehler: {error}",
+  "@exportImport_exportError": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "exportImport_importSuccess": "Daten erfolgreich importiert",
+  "exportImport_importError": "Importfehler",
+  "exportImport_importErrorDetails": "Daten konnten nicht importiert werden:\n{error}",
+  "@exportImport_importErrorDetails": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "exportImport_pasteJson": "JSON-Daten einfügen",
+  "minitrainers_result": "Ergebnis",
+  "minitrainers_correctAnswers": "Richtige Antworten: {score}/{total}\n+{xp} XP",
+  "@minitrainers_correctAnswers": {
+    "placeholders": { "score": {"type": "int"}, "total": {"type": "int"}, "xp": {"type": "int"} }
+  },
+  "minitrainers_great": "Großartig!",
+  "minitrainers_findExtraPurchase": "Finde den überflüssigen Kauf",
+  "minitrainers_answer": "Antworten",
+  "minitrainers_xpEarned": "+{xp} XP",
+  "@minitrainers_xpEarned": {
+    "placeholders": { "xp": {"type": "int"} }
+  },
+  "minitrainers_buildBudget": "Budget erstellen",
+  "minitrainers_check": "Prüfen",
+  "minitrainers_wellDone": "Gut gemacht!",
+  "minitrainers_xp15": "+15 XP",
+  "minitrainers_discountOrTrap": "Rabatt oder Falle?",
+  "minitrainers_yes": "Ja",
+  "minitrainers_no": "Nein",
+  "minitrainers_correct": "Richtig!",
+  "minitrainers_goodTry": "Guter Versuch",
+  "calculators_3PiggyBanksCreated": "3 Spardosen erstellt",
+  "rule24h_xp50": "🎉 +50 XP für Selbstkontrolle!",
+  "subscriptions_frequency": "Häufigkeit",
+  "statistics_title": "Statistik",
+  "calculators_nDaysSavings": "Ersparnisse für N Tage",
+  "calculators_weeklySavings": "Wöchentliche Ersparnisse",
+  "calculators_piggyGoal": "Spardosen-Ziel",
+  "earningsLab_schedule": "Planen",
+  "recommendations_newTip": "Neuer Tipp",
+  "earningsHistory_title": "Verdiensthistorie",
+  "earningsHistory_all": "Alle",
+  "calendarForecast_7days": "7 Tage",
+  "calendarForecast_30days": "30 Tage",
+  "calendarForecast_90days": "90 Tage",
+  "calendarForecast_year": "Jahr",
+  "calendarForecast_summary": "Zusammenfassung",
+  "calendarForecast_categories": "Kategorien",
+  "calendarForecast_dates": "Daten",
+  "calendarForecast_month": "Monat",
+  "calendarForecast_all": "Alle",
+  "calendarForecast_income": "Einnahmen",
+  "calendarForecast_expenses": "Ausgaben",
+  "calendarForecast_large": "Groß",
+  "planEvent_amount": "Betrag",
+  "planEvent_nameOptional": "Name (optional)",
+  "planEvent_category": "Kategorie",
+  "planEvent_date": "Datum",
+  "planEvent_time": "Uhrzeit",
+  "planEvent_repeat": "Wiederholen",
+  "planEvent_notification": "Benachrichtigung",
+  "planEvent_remindBefore": "Erinnern vor",
+  "planEvent_atMoment": "Zum Zeitpunkt",
+  "planEvent_15minutes": "15 Minuten vorher",
+  "planEvent_30minutes": "30 Minuten vorher",
+  "planEvent_1hour": "1 Stunde vorher",
+  "planEvent_1day": "1 Tag vorher",
+  "planEvent_eventChanged": "Ereignis geändert",
+  "planEvent_repeatingEventWarning": "Wiederholendes Ereignis",
+  "planEvent_repeatingEventDescription": "Dieses Ereignis ist Teil einer wiederholenden Serie. Änderungen gelten für alle zukünftigen Ereignisse.",
+  "calendar_editEvent": "Ereignis bearbeiten",
+  "calendar_planEvent": "Ereignis planen",
+  "planEvent_eventType": "Ereignistyp",
+  "transaction_income": "Einkommen",
+  "transaction_expense": "Ausgabe",
+  "category_food": "Essen",
+  "category_transport": "Transport",
+  "category_entertainment": "Unterhaltung",
+  "category_other": "Sonstiges",
+  "minitrainers_60seconds": "60 Sekunden",
+  "earningsLab_wrongPin": "Falscher PIN. Eltern-Genehmigung erforderlich.",
+  "earningsLab_noPiggyBanks": "Keine Sparschweine. Erstelle zuerst ein Sparschwein.",
+  "earningsLab_sentForApproval": "An Eltern zur Genehmigung gesendet",
+  "earningsLab_amountCannotBeNegative": "Betrag darf nicht negativ sein",
+  "earningsLab_wallet": "Geldbörse",
+  "earningsLab_piggyBank": "Sparschwein",
+  "earningsLab_no": "Nein",
+  "earningsLab_daily": "Täglich",
+  "earningsLab_weekly": "Wöchentlich",
+  "earningsLab_reminder": "Erinnerung",
+  "earningsLab_selectPiggyForReward": "Sparschwein für Belohnung auswählen",
+  "earningsLab_createPlan": "Plan erstellen",
+  "earningsLab_discussWithBari": "Mit Bari besprechen",
+  "earningsLab_parentApprovalRequired": "Eltern-Genehmigung erforderlich",
+  "earningsLab_fillRequiredFields": "Bitte füllen Sie die erforderlichen Felder aus",
+  "earningsLab_completed": "Abgeschlossen: {title}",
+  "@earningsLab_completed": {
+    "placeholders": { "title": {"type": "String"} }
+  },
+  "earningsLab_howMuchEarned": "Wie viel hast du verdient?",
+  "earningsLab_whatWasDifficult": "Was war schwierig?",
+  "earningsLab_addCustomTask": "Eigene Aufgabe hinzufügen",
+  "earningsLab_canRepeat": "Kann wiederholt werden",
+  "earningsLab_requiresParent": "Eltern erforderlich",
+  "earningsLab_taskName": "Aufgabename *",
+  "earningsLab_taskNameHint": "Zum Beispiel: Oma helfen",
+  "earningsLab_description": "Beschreibung",
+  "earningsLab_descriptionHint": "Was muss getan werden?",
+  "earningsLab_descriptionOptional": "Beschreibung (optional)",
+  "earningsLab_descriptionOptionalHint": "Zum Beispiel: was genau getan werden muss",
+  "earningsLab_time": "Zeit *",
+  "earningsLab_timeHint": "Zum Beispiel: 30 Min",
+  "earningsLab_reward": "Belohnung",
+  "earningsLab_xp": "XP",
+  "earningsLab_difficulty": "Schwierigkeit",
+  "earningsLab_repeat": "Wiederholen",
+  "earningsLab_rewardMustBePositive": "Belohnung muss größer als null sein",
+  "earningsLab_taskDescription": "Keine Beschreibung",
+  "earningsLab_rewardHelper": "Wie viel bekommst du für die Erfüllung",
+  "earningsLab_taskNameRequired": "Aufgabename eingeben",
+  "settings_aiModelGpt4oMini": "GPT-4o Mini (schnell)",
+  "settings_aiModelGpt4o": "GPT-4o (intelligent)",
+  "settings_aiModelGpt4Turbo": "GPT-4 Turbo",
+  "settings_aiModelGpt35": "GPT-3.5 (günstig)",
+  "settings_geminiNano": "KI auf dem Gerät (Gemini Nano)",
+  "settings_geminiNanoDescription": "Kostenlose KI, die ohne Internet funktioniert",
+  "settings_geminiNanoStatus": "Status",
+  "settings_geminiNanoAvailable": "Verfügbar",
+  "settings_geminiNanoNotAvailable": "Auf diesem Gerät nicht verfügbar",
+  "settings_geminiNanoDownloaded": "Heruntergeladen und bereit",
+  "settings_geminiNanoNotDownloaded": "Nicht heruntergeladen",
+  "settings_geminiNanoDownload": "Modell herunterladen (~2,5 GB)",
+  "settings_geminiNanoDownloading": "Wird heruntergeladen...",
+  "settings_geminiNanoDelete": "Modell löschen",
+  "settings_geminiNanoAdvantages": "Vorteile",
+  "settings_geminiNanoAdvantagesTitle": "Warum Gemini Nano herunterladen?",
+  "settings_geminiNanoAdvantage1": "💰 Völlig kostenlos — ohne Limits",
+  "settings_geminiNanoAdvantage2": "⚡ Sofortige Antworten — ohne Netzwerkverzögerung",
+  "settings_geminiNanoAdvantage3": "🔒 100% Privatsphäre — Daten bleiben auf dem Gerät",
+  "settings_geminiNanoAdvantage4": "📱 Funktioniert offline — kein Internet nötig",
+  "settings_geminiNanoAdvantage5": "🌍 Unterstützt 3 Sprachen — Deutsch, Englisch, Russisch",
+  "settings_geminiNanoRequirements": "Anforderungen",
+  "settings_geminiNanoRequirement1": "Android 14+ (Google Pixel 8+, Samsung S24+, OnePlus 12+)",
+  "settings_geminiNanoRequirement2": "~2,5 GB freier Speicherplatz",
+  "settings_geminiNanoRequirement3": "6 GB RAM",
+  "settings_geminiNanoDownloadConfirm": "Gemini Nano Modell herunterladen?",
+  "settings_geminiNanoDownloadConfirmDescription": "Das Modell benötigt ~2,5 GB Speicherplatz, gibt Ihnen aber kostenlose KI ohne Internet.",
+  "settings_geminiNanoDeleteConfirm": "Modell löschen?",
+  "settings_geminiNanoDeleteConfirmDescription": "Gibt ~2,5 GB Speicherplatz frei, aber die KI auf dem Gerät funktioniert nicht mehr.",
+  "settings_geminiNanoError": "Fehler",
+  "settings_geminiNanoErrorDownload": "Modell konnte nicht heruntergeladen werden. Überprüfen Sie Ihre Internetverbindung.",
+  "settings_geminiNanoErrorDelete": "Modell konnte nicht gelöscht werden.",
+  "settings_geminiNanoSuccessDownload": "Modell erfolgreich heruntergeladen!",
+  "settings_geminiNanoSuccessDelete": "Modell gelöscht.",
+
+  "bari_emptyMessage": "Schreibe eine Frage 🙂",
+  "bari_emptyMessageAdvice": "Zum Beispiel: \"kann ich für 20€ kaufen\" oder \"was ist Inflation\"",
+  "bari_balance": "Kontostand",
+  "bari_piggyBanks": "Sparschweine",
+
+  "bari_spending_noData": "Noch nicht genug Daten über deine Einnahmen und Ausgaben.",
+  "bari_spending_noDataAdvice": "Fahre fort, Transaktionen aufzuzeichnen — dann kann ich bessere Ratschläge geben.",
+
+  "bari_goal_noPiggyBanks": "Du hast noch keine Sparschweine.",
+  "bari_goal_noPiggyBanksAdvice": "Erstelle dein erstes Sparschwein mit einem Ziel — das ist der Hauptschritt zum Sparen! Was möchtest du kaufen?",
+  "bari_goal_createPiggyBank": "Sparschwein erstellen",
+  "bari_goal_whenWillReach": "Wann erreiche ich das Ziel",
+  "bari_goal_piggyBanks": "Sparschweine",
+  "bari_goal_onePiggyBank": "Du hast 1 Sparschwein mit {amount} drin.",
+  "@bari_goal_onePiggyBank": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "bari_goal_multiplePiggyBanks": "Du hast {count} Sparschweine, insgesamt gespart {total}.",
+  "@bari_goal_multiplePiggyBanks": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "total": {"type": "String"}
+    }
+  },
+  "bari_goal_almostFull": "Sparschwein \"{name}\" ist fast voll ({percent}%)! 🎉 Ziel bald!",
+  "@bari_goal_almostFull": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_goal_justStarted": "Sparschwein \"{name}\" wurde gerade gestartet ({percent}%). Zeit zum Auffüllen!",
+  "@bari_goal_justStarted": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_goal_goodProgress": "Guter Fortschritt! Spare weiter regelmäßig.",
+  "bari_goal_createFirst": "Du hast noch keine Sparschweine — erstelle dein erstes!",
+  "bari_goal_createFirstAdvice": "Wähle ein Ziel: Spielzeug, Gadget, Geschenk. Und beginne mit kleinen Beiträgen.",
+  "bari_goal_deadlineSoon": "Fülle \"{name}\" auf — noch {days} Tage bis zum Termin!",
+  "@bari_goal_deadlineSoon": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "days": {"type": "int"}
+    }
+  },
+  "bari_goal_closeToGoal": "Ich rate dir, \"{name}\" aufzufüllen ({progress}%) — noch {remaining}, du bist nah am Ziel!",
+  "@bari_goal_closeToGoal": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "progress": {"type": "int"},
+      "remaining": {"type": "String"}
+    }
+  },
+  "bari_goal_allFullOrEmpty": "Alle Sparschweine sind voll oder leer. Erstelle ein neues Ziel!",
+  "bari_goal_whichPiggyBankAdvice": "Besser das Sparschwein auffüllen, das näher am Ziel ist oder bald einen Termin hat.",
+  "bari_goal_alreadyEnough": "Ja, du hast schon genug Geld! 🎉",
+  "bari_goal_alreadyEnoughAdvice": "Insgesamt verfügbar {available} (Geldbörse + Sparschweine), benötigt {target}.",
+  "@bari_goal_alreadyEnoughAdvice": {
+    "placeholders": {
+      "available": {"type": "String"},
+      "target": {"type": "String"}
+    }
+  },
+  "bari_goal_needToSave": "Noch {needed} sparen",
+  "@bari_goal_needToSave": {
+    "placeholders": {
+      "needed": {"type": "String"}
+    }
+  },
+  "bari_goal_savePerMonth": "Wenn du {perMonth} pro Monat sparst, schaffst du es! Erstelle ein Sparschwein mit einem Ziel.",
+  "@bari_goal_savePerMonth": {
+    "placeholders": {
+      "perMonth": {"type": "String"}
+    }
+  },
+  "bari_goal_emptyWallet": "Geldbörse ist fast leer ({balance}). Zeit zum Sparen!",
+  "@bari_goal_emptyWallet": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_lowBalance": "Geldbörse hat {balance} — kann Sparschwein auffüllen oder für Ausgaben lassen.",
+  "@bari_goal_lowBalance": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_goodBalance": "Geldbörse hat {balance} — großartiger Kontostand! Kann Sparschweine auffüllen.",
+  "@bari_goal_goodBalance": {
+    "placeholders": {
+      "balance": {"type": "String"}
+    }
+  },
+  "bari_goal_createFirstPiggyBank": "Erstelle dein erstes Sparschwein — ein Ziel motiviert zum Sparen.",
+  "bari_goal_setDeadline": "Setze einen Termin für das Sparschwein — einfacher zu planen.",
+  "bari_goal_regularTopUps": "Fülle Sparschweine regelmäßig auf, auch mit kleinen Beträgen.",
+  "bari_goal_checkProgress": "Prüfe den Fortschritt der Sparschweine — das motiviert!",
+  "bari_goal_completeLessons": "Absolviere Lektionen zum Sparen — du lernst nützliche Tipps.",
+  "bari_goal_savingSecret": "Das Hauptgeheimnis des Sparens — Regelmäßigkeit!",
+
+  "bari_math_percentOfResult": "{percent}% von {base} = {result}",
+  "@bari_math_percentOfResult": {
+    "placeholders": {
+      "percent": {"type": "String"},
+      "base": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_percentAdviceWithPercent": "Gut zu wissen: Wenn du {percent}% des Einkommens sparst, hilft das regelmäßig zu sparen.",
+  "@bari_math_percentAdviceWithPercent": {
+    "placeholders": {
+      "percent": {"type": "String"}
+    }
+  },
+  "bari_math_calculator503020": "50/30/20 Rechner",
+  "bari_math_explainSimpler": "Einfacher erklären",
+  "bari_math_monthlyToYearlyResult": "{monthly} pro Monat = {yearly} pro Jahr",
+  "@bari_math_monthlyToYearlyResult": {
+    "placeholders": {
+      "monthly": {"type": "String"},
+      "yearly": {"type": "String"}
+    }
+  },
+  "bari_math_subscriptionsCalculator": "Abonnement-Rechner",
+  "bari_math_saveYearlyResult": "Wenn du {monthly} pro Monat sparst, sammelst du {yearly} pro Jahr",
+  "@bari_math_saveYearlyResult": {
+    "placeholders": {
+      "monthly": {"type": "String"},
+      "yearly": {"type": "String"}
+    }
+  },
+  "bari_math_savePerPeriodResult": "Um {target} zu sparen, muss man {perPeriod} pro {period} sparen",
+  "@bari_math_savePerPeriodResult": {
+    "placeholders": {
+      "target": {"type": "String"},
+      "perPeriod": {"type": "String"},
+      "period": {"type": "String"}
+    }
+  },
+  "bari_math_createPiggyBank": "Sparschwein erstellen",
+  "bari_math_whenWillReach": "Wann erreiche ich das Ziel",
+  "bari_math_remainingToSaveResult": "Noch {remaining} sparen (bereits {percent}% vom Ziel)",
+  "@bari_math_remainingToSaveResult": {
+    "placeholders": {
+      "remaining": {"type": "String"},
+      "percent": {"type": "int"}
+    }
+  },
+  "bari_math_multiplyResult": "{a} × {b} = {result}",
+  "@bari_math_multiplyResult": {
+    "placeholders": {
+      "a": {"type": "String"},
+      "b": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_divideResult": "{a} ÷ {b} = {result}",
+  "@bari_math_divideResult": {
+    "placeholders": {
+      "a": {"type": "String"},
+      "b": {"type": "String"},
+      "result": {"type": "String"}
+    }
+  },
+  "bari_math_priceComparisonResult": "Option {better} ist besser! ({price1} pro Einheit vs {price2})",
+  "@bari_math_priceComparisonResult": {
+    "placeholders": {
+      "better": {"type": "int"},
+      "price1": {"type": "String"},
+      "price2": {"type": "String"}
+    }
+  },
+  "bari_math_priceComparisonAdviceWithSavings": "Ersparnis ~{savings}%. Aber prüfe: wirst du die größere Packung nutzen?",
+  "@bari_math_priceComparisonAdviceWithSavings": {
+    "placeholders": {
+      "savings": {"type": "int"}
+    }
+  },
+  "bari_math_priceComparisonCalculator": "Preisvergleich",
+  "bari_math_rule72Result": "Bei {rate}% Jahreszins verdoppelt sich das Geld in etwa {years} Jahren",
+  "@bari_math_rule72Result": {
+    "placeholders": {
+      "rate": {"type": "String"},
+      "years": {"type": "String"}
+    }
+  },
+  "bari_math_rule72AdviceWithRate": "Das ist die \"72er-Regel\" — ein schneller Weg, das Sparwachstum zu schätzen. Je höher der %, desto schneller das Wachstum, aber auch das Risiko.",
+  "@bari_math_rule72AdviceWithRate": {
+    "placeholders": {
+      "rate": {"type": "String"}
+    }
+  },
+  "bari_math_lessons": "Lektionen",
+  "bari_math_inflationResult": "{amount} in {years} Jahren werden \"wert\" sein wie {realValue} heute",
+  "@bari_math_inflationResult": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "years": {"type": "String"},
+      "realValue": {"type": "String"}
+    }
+  },
+  "bari_math_inflationAdviceWithAmount": "Inflation \"frisst\" Geld. Deshalb ist es wichtig, nicht nur zu sparen, sondern auch zu lernen zu investieren (wenn du älter wirst).",
+  "@bari_math_inflationAdviceWithAmount": {
+    "placeholders": {
+      "amount": {"type": "String"},
+      "years": {"type": "String"}
+    }
+  },
+  "bari_math_calculators": "Rechner",
+  "bari_math_multiplyAdvice": "Multiplikation hilft regelmäßige Ausgaben zu zählen: tägliche für einen Monat, monatliche für ein Jahr.",
+  "bari_math_divideAdvice": "Division hilft zu verstehen, wie viel pro Woche/Monat für ein Ziel gespart werden muss.",
+  "bari_math_monthlyToYearlyAdvice": "Kleine regelmäßige Beträge sammeln sich! Abonnements sind auch wert, pro Jahr zu zählen.",
+  "bari_math_saveYearlyAdvice": "Regelmäßigkeit ist wichtiger als Betrag! Beginne klein und steigere allmählich.",
+  "bari_math_savePerPeriodAdvice": "Erstelle ein Sparschwein mit diesem Ziel — einfacher nicht zu vergessen!",
+  "bari_math_remainingAdvice": "Du bist auf dem richtigen Weg! Halte das Tempo.",
+  "bari_math_alreadyEnough": "Du hast schon genug gespart! 🎉",
+  "bari_math_alreadyEnoughAdvice": "Ziel erreicht — du kannst ausgeben oder weiter für etwas Größeres sparen.",
+  "bari_math_divideByZero": "Kann nicht durch null teilen!",
+  "bari_math_divideByZeroAdvice": "Es ist wie Pizza unter null Freunden zu teilen — niemand zum Essen.",
+
+  "achievement_firstTransaction": "Erste Transaktion",
+  "achievement_firstTransactionDesc": "Erstelle deine erste Transaktion",
+  "achievement_firstPiggy": "Erstes Sparschwein",
+  "achievement_firstPiggyDesc": "Erstelle dein erstes Sparschwein",
+  "achievement_level5": "Erfahrener Finanzier",
+  "achievement_level5Desc": "Erreiche Level 5",
+  "achievement_level10": "Finanzmeister",
+  "achievement_level10Desc": "Erreiche Level 10",
+  "achievement_streak7": "Woche der Aktivität",
+  "achievement_streak7Desc": "Aktivität für 7 Tage hintereinander",
+  "achievement_streak30": "Monat der Aktivität",
+  "achievement_streak30Desc": "Aktivität für 30 Tage hintereinander",
+  "achievement_save100": "Sparer",
+  "achievement_save100Desc": "Spare 100 in Sparschweinen",
+  "achievement_save1000": "Großer Sparer",
+  "achievement_save1000Desc": "Spare 1000 in Sparschweinen",
+  "achievement_transactions10": "Aktiver Benutzer",
+  "achievement_transactions10Desc": "Erstelle 10 Transaktionen",
+  "achievement_transactions100": "Erfahrener Benutzer",
+  "achievement_transactions100Desc": "Erstelle 100 Transaktionen",
+  "achievement_selfControl80": "Selbstkontrolle",
+  "achievement_selfControl80Desc": "Erreiche 80 Selbstkontrollpunkte",
+  "achievement_completePiggy": "Ziel erreicht",
+  "achievement_completePiggyDesc": "Fülle Sparschwein bis zum Ziel",
+
+  "dailyTask_addTransaction": "Transaktion hinzufügen",
+  "dailyTask_addTransactionDesc": "Erstelle heute Einnahme oder Ausgabe",
+  "dailyTask_addPiggyDeposit": "Sparschwein auffüllen",
+  "dailyTask_addPiggyDepositDesc": "Füge Geld zu einem Sparschwein hinzu",
+  "dailyTask_planEvent": "Ereignis planen",
+  "dailyTask_planEventDesc": "Erstelle ein geplantes Ereignis",
+  "dailyTask_checkBalance": "Kontostand prüfen",
+  "dailyTask_checkBalanceDesc": "Öffne Kontostand-Bildschirm",
+
+  "earningsLab_explanationSimple": "Aufgabe planen → im Kalender erledigen → Belohnung erhalten.",
+  "earningsLab_explanationPro": "Verdienstlabor: Plane zuerst eine Aufgabe für ein Datum, markiere sie dann im Kalender als erledigt. Belohnung wird automatisch gutgeschrieben. Planung hilft, wichtige Dinge nicht zu vergessen.",
+  "earningsLab_tabQuick": "Schnell",
+  "earningsLab_tabHome": "Zuhause",
+  "earningsLab_tabProjects": "Projekte",
+  "earningsLab_piggyBankNotFound": "Sparschwein nicht gefunden",
+  "earningsLab_noTransactions": "Noch keine Transaktionen für dieses Sparschwein",
+  "earningsLab_transactionHistory": "Transaktionshistorie für dieses Sparschwein",
+  "earningsLab_topUp": "Sparschwein-Auffüllung",
+  "earningsLab_withdrawal": "Abhebung vom Sparschwein",
+  "earningsLab_goalReached": "Ziel erreicht 🎉",
+  "earningsLab_goalReachedSubtitle": "Gut gemacht! Du kannst ein neues Ziel erstellen oder Geld in die Geldbörse überweisen.",
+  "earningsLab_almostThere": "Fast geschafft",
+  "earningsLab_almostThereSubtitle": "Überlege, 1-2 weitere Auffüllungen zu machen — und das Ziel wird erreicht.",
+  "earningsLab_halfway": "Halbzeit",
+  "earningsLab_halfwaySubtitle": "Wenn du das Sparschwein regelmäßig auffüllst, erreichst du das Ziel viel schneller.",
+  "earningsLab_goodStart": "Guter Start",
+  "earningsLab_goodStartSubtitle": "Versuche, die automatische Auffüllung einzurichten oder eine Aufgabe im Verdienstlabor speziell für dieses Ziel hinzuzufügen."
+}
