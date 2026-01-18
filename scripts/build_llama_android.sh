@@ -23,6 +23,12 @@ fi
 
 echo "NDK Path: $NDK_PATH"
 
+# Проверяем наличие NDK
+if [ ! -d "$NDK_PATH" ]; then
+    echo "ERROR: NDK directory does not exist: $NDK_PATH"
+    exit 1
+fi
+
 # Клонируем llama.cpp если еще не клонирован
 if [ ! -d "$LLAMA_CPP_DIR" ]; then
     echo "Cloning llama.cpp repository..."
@@ -36,60 +42,60 @@ fi
 mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
 
-# Настройки сборки для разных архитектур
-ARCHITECTURES=("arm64-v8a" "x86_64")
+# Собираем только для arm64-v8a (основная архитектура для Android)
+ARCH="arm64-v8a"
+ANDROID_ABI="arm64-v8a"
 
-for ARCH in "${ARCHITECTURES[@]}"; do
-    echo ""
-    echo "=== Building for $ARCH ==="
-    
-    ARCH_BUILD_DIR="build-$ARCH"
-    mkdir -p "$ARCH_BUILD_DIR"
-    cd "$ARCH_BUILD_DIR"
-    
-    # Определяем ABI для CMake
-    case $ARCH in
-        "arm64-v8a")
-            ANDROID_ABI="arm64-v8a"
-            ;;
-        "x86_64")
-            ANDROID_ABI="x86_64"
-            ;;
-        *)
-            echo "Unknown architecture: $ARCH"
-            exit 1
-            ;;
-    esac
-    
-    # Конфигурируем CMake
-    cmake ../"$LLAMA_CPP_DIR" \
-        -DCMAKE_TOOLCHAIN_FILE="$NDK_PATH/build/cmake/android.toolchain.cmake" \
-        -DANDROID_ABI="$ANDROID_ABI" \
-        -DANDROID_PLATFORM=android-23 \
-        -DANDROID_STL=c++_shared \
-        -DCMAKE_BUILD_TYPE=Release \
-        -DBUILD_SHARED_LIBS=ON \
-        -DGGML_METAL=OFF \
-        -DGGML_CUDA=OFF \
-        -DGGML_OPENBLAS=OFF \
-        -DGGML_BLAS=OFF
-    
-    # Собираем
-    cmake --build . --config Release -j$(nproc)
-    
-    # Копируем библиотеку в нужное место
-    OUTPUT_DIR="../../android/app/src/main/jniLibs/$ANDROID_ABI"
-    mkdir -p "$OUTPUT_DIR"
-    
-    if [ -f "libllama.so" ]; then
-        cp libllama.so "$OUTPUT_DIR/"
-        echo "Copied libllama.so to $OUTPUT_DIR"
-    else
-        echo "WARNING: libllama.so not found in build directory"
-    fi
-    
-    cd ..
-done
+echo ""
+echo "=== Building for $ARCH ==="
+
+# Конфигурируем CMake
+cmake ../"$LLAMA_CPP_DIR" \
+    -DCMAKE_TOOLCHAIN_FILE="$NDK_PATH/build/cmake/android.toolchain.cmake" \
+    -DANDROID_ABI="$ANDROID_ABI" \
+    -DANDROID_PLATFORM=android-23 \
+    -DANDROID_STL=c++_shared \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLLAMA_BUILD_EXAMPLES=OFF \
+    -DLLAMA_BUILD_TESTS=OFF \
+    -DLLAMA_BUILD_SERVER=OFF \
+    -DBUILD_SHARED_LIBS=ON \
+    -DGGML_METAL=OFF \
+    -DGGML_CUDA=OFF \
+    -DGGML_OPENBLAS=OFF \
+    -DGGML_BLAS=OFF
+
+if [ $? -ne 0 ]; then
+    echo "ERROR: CMake configuration failed"
+    exit 1
+fi
+
+# Собираем
+echo "Building..."
+cmake --build . --config Release -j$(nproc)
+
+if [ $? -ne 0 ]; then
+    echo "ERROR: Build failed"
+    exit 1
+fi
+
+# Копируем библиотеку в нужное место
+OUTPUT_DIR="../../android/app/src/main/jniLibs/$ANDROID_ABI"
+mkdir -p "$OUTPUT_DIR"
+
+# Ищем скомпилированную библиотеку
+if [ -f "libllama.so" ]; then
+    cp libllama.so "$OUTPUT_DIR/"
+    echo "✅ Copied libllama.so to $OUTPUT_DIR"
+elif [ -f "build/libllama.so" ]; then
+    cp build/libllama.so "$OUTPUT_DIR/"
+    echo "✅ Copied libllama.so to $OUTPUT_DIR"
+else
+    echo "WARNING: libllama.so not found in build directory"
+    echo "Searching for .so files..."
+    find . -name "*.so" -type f
+    exit 1
+fi
 
 echo ""
 echo "=== Build complete ==="
