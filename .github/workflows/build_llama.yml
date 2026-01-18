@@ -39,6 +39,18 @@ jobs:
           ls -la $ANDROID_NDK_ROOT 2>/dev/null | head -10 || echo "NDK root not accessible"
           bash scripts/build_llama_android.sh
       
+      - name: Debug build output
+        if: failure()
+        run: |
+          echo "=== Build directory contents ==="
+          find build-android -type f \( -name "*.so" -o -name "*.a" \) 2>/dev/null | head -20 || echo "No libraries found"
+          echo ""
+          echo "=== CMakeCache.txt (BUILD_SHARED_LIBS) ==="
+          grep -i "BUILD_SHARED_LIBS\|LLAMA_BUILD_SHARED_LIBS" build-android/CMakeCache.txt 2>/dev/null || echo "Not found"
+          echo ""
+          echo "=== All .so files in build directory ==="
+          find build-android -name "*.so" -type f 2>/dev/null || echo "No .so files found"
+      
       - name: Check build artifacts
         run: |
           if [ -f "android/app/src/main/jniLibs/arm64-v8a/libllama.so" ]; then

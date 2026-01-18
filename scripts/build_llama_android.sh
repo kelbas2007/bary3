@@ -62,14 +62,14 @@ fi
 echo "Using toolchain: $TOOLCHAIN_FILE"
 
 # Конфигурируем CMake
-# Используем оба флага для надежности: BUILD_SHARED_LIBS и LLAMA_BUILD_SHARED_LIBS
+# Пробуем собрать shared библиотеку через LLAMA_BUILD_SHARED_LIBS
+# Если не сработает, соберем статическую и создадим shared из неё
 cmake ../"$LLAMA_CPP_DIR" \
     -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN_FILE" \
     -DANDROID_ABI="$ANDROID_ABI" \
     -DANDROID_PLATFORM=android-23 \
     -DANDROID_STL=c++_shared \
     -DCMAKE_BUILD_TYPE=Release \
-    -DBUILD_SHARED_LIBS=ON \
     -DLLAMA_BUILD_SHARED_LIBS=ON \
     -DLLAMA_BUILD_EXAMPLES=OFF \
     -DLLAMA_BUILD_TESTS=OFF \
@@ -126,17 +126,23 @@ mkdir -p "$OUTPUT_DIR"
 LIB_FOUND=false
 
 # Проверяем возможные расположения (включая статические библиотеки)
+# CMake может создавать библиотеки в разных местах в зависимости от генератора
 POSSIBLE_PATHS=(
     "libllama.so"
     "lib/llama.so"
     "lib/libllama.so"
+    "bin/libllama.so"
+    "bin/llama.so"
     "Release/libllama.so"
+    "Release/bin/libllama.so"
     "lib/Release/libllama.so"
     "build/libllama.so"
     "libllama.a"
     "lib/llama.a"
     "lib/libllama.a"
+    "bin/libllama.a"
     "Release/libllama.a"
+    "Release/bin/libllama.a"
     "lib/Release/libllama.a"
     "build/libllama.a"
 )

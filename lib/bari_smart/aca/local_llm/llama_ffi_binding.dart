@@ -36,12 +36,22 @@ class LlamaFFIBinding implements LLMEngine {
 
     try {
       if (Platform.isAndroid) {
-        // Android: загружаем из jniLibs
+        // Android: используем DynamicLibrary.process() для загрузки из jniLibs
+        // Библиотека должна быть в android/app/src/main/jniLibs/arm64-v8a/libllama.so
+        // Flutter автоматически включает её в APK, и она доступна через process()
         try {
-          _lib = DynamicLibrary.open('libllama.so');
-        } catch (e) {
-          // Fallback: попробуем через process
           _lib = DynamicLibrary.process();
+          // Проверяем, что библиотека действительно загружена
+          // Попробуем найти хотя бы одну функцию
+          try {
+            _lib!.lookup('llama_model_default_params');
+          } catch (e) {
+            // Если функция не найдена, пробуем явно открыть
+            _lib = DynamicLibrary.open('libllama.so');
+          }
+        } catch (e) {
+          // Последняя попытка: явное открытие
+          _lib = DynamicLibrary.open('libllama.so');
         }
       } else if (Platform.isIOS) {
         // iOS: загружаем из Frameworks
