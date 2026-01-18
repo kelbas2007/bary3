@@ -8,6 +8,10 @@
 
 set -e
 
+# Проектный корень (репозитория) — сохраняем текущую рабочую директорию, чтобы потом копировать в корень репозитория
+PROJECT_ROOT="$(pwd)"
+echo "PROJECT_ROOT: $PROJECT_ROOT"
+
 echo "=== Building llama.cpp for Android ==="
 
 # Настройки
@@ -193,7 +197,7 @@ if [ "$LIB_FOUND" = false ]; then
                     -Wl,--whole-archive "$FOUND_LIB" \
                     -Wl,--no-whole-archive \
                     -Wl,-soname,libllama.so \
-                    -llog -landroid
+                    -llog -landroid                
                 
                 if [ -f "$OUTPUT_DIR/libllama.so" ]; then
                     echo "✅ Created shared library from static library"
