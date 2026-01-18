@@ -81,18 +81,34 @@ FRAMEWORK_DIR="ios/Frameworks/llama.framework"
 mkdir -p "$FRAMEWORK_DIR"
 
 # Ищем скомпилированную библиотеку
+LIB_FOUND=false
+
 if [ -f "$BUILD_DIR/libllama.dylib" ]; then
     cp "$BUILD_DIR/libllama.dylib" "$FRAMEWORK_DIR/llama"
-    echo "✅ Framework created at $FRAMEWORK_DIR"
+    LIB_FOUND=true
 elif [ -f "$BUILD_DIR/Release/libllama.dylib" ]; then
     cp "$BUILD_DIR/Release/libllama.dylib" "$FRAMEWORK_DIR/llama"
-    echo "✅ Framework created at $FRAMEWORK_DIR"
-else
-    echo "WARNING: libllama.dylib not found in expected locations"
-    echo "Searching for .dylib files..."
-    find "$BUILD_DIR" -name "*.dylib" -type f
+    LIB_FOUND=true
+elif [ -f "$BUILD_DIR/libllama.a" ]; then
+    # Статическая библиотека - создаем framework из .a
+    cp "$BUILD_DIR/libllama.a" "$FRAMEWORK_DIR/llama"
+    LIB_FOUND=true
+elif [ -f "$BUILD_DIR/Release/libllama.a" ]; then
+    cp "$BUILD_DIR/Release/libllama.a" "$FRAMEWORK_DIR/llama"
+    LIB_FOUND=true
+fi
+
+if [ "$LIB_FOUND" = false ]; then
+    echo "WARNING: libllama.dylib or libllama.a not found in expected locations"
+    echo "Searching for library files..."
+    find "$BUILD_DIR" -name "*.dylib" -o -name "*.a" | head -5
+    echo ""
+    echo "Listing build directory contents:"
+    ls -la "$BUILD_DIR" | head -10
     exit 1
 fi
+
+echo "✅ Framework created at $FRAMEWORK_DIR"
 
 echo ""
 echo "=== Build complete ==="
