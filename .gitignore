@@ -47,3 +47,6 @@ app.*.map.json
 # Large model files (use Git LFS or download separately)
 assets/aka/models/*.bin
 assets/aka/models/*.gguf
+
+# Large HTML files (likely build artifacts)
+index.html
