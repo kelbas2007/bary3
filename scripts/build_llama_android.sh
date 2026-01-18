@@ -62,7 +62,8 @@ fi
 echo "Using toolchain: $TOOLCHAIN_FILE"
 
 # Конфигурируем CMake
-# ВАЖНО: llama.cpp использует LLAMA_BUILD_SHARED_LIBS, а не BUILD_SHARED_LIBS
+# Пробуем разные варианты флагов для shared library
+# llama.cpp может использовать разные флаги в зависимости от версии
 cmake ../"$LLAMA_CPP_DIR" \
     -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN_FILE" \
     -DANDROID_ABI="$ANDROID_ABI" \
@@ -72,6 +73,7 @@ cmake ../"$LLAMA_CPP_DIR" \
     -DLLAMA_BUILD_EXAMPLES=OFF \
     -DLLAMA_BUILD_TESTS=OFF \
     -DLLAMA_BUILD_SERVER=OFF \
+    -DLLAMA_SHARED=ON \
     -DLLAMA_BUILD_SHARED_LIBS=ON \
     -DBUILD_SHARED_LIBS=ON \
     -DGGML_METAL=OFF \

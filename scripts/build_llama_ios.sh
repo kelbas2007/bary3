@@ -43,7 +43,8 @@ echo "iOS SDK Path: $IOS_SDK_PATH"
 echo "iOS SDK Version: $IOS_SDK_VERSION"
 
 # Конфигурируем CMake
-# ВАЖНО: llama.cpp использует LLAMA_BUILD_SHARED_LIBS, а не BUILD_SHARED_LIBS
+# Пробуем разные варианты флагов для shared library
+# llama.cpp может использовать разные флаги в зависимости от версии
 cmake ../"$LLAMA_CPP_DIR" \
     -DCMAKE_SYSTEM_NAME=iOS \
     -DCMAKE_SYSTEM_VERSION="$IOS_SDK_VERSION" \
@@ -54,6 +55,7 @@ cmake ../"$LLAMA_CPP_DIR" \
     -DLLAMA_BUILD_EXAMPLES=OFF \
     -DLLAMA_BUILD_TESTS=OFF \
     -DLLAMA_BUILD_SERVER=OFF \
+    -DLLAMA_SHARED=ON \
     -DLLAMA_BUILD_SHARED_LIBS=ON \
     -DBUILD_SHARED_LIBS=ON \
     -DGGML_METAL=ON \
