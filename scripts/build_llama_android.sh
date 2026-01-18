@@ -87,16 +87,29 @@ fi
 # Собираем
 echo "Building..."
 echo "Using $(nproc) parallel jobs"
-cmake --build . --config Release -j$(nproc) || cmake --build . -j$(nproc)
+# Отключаем set -e временно для обработки ошибок
+set +e
+cmake --build . --config Release -j$(nproc)
+BUILD_RESULT=$?
+set -e
 
-if [ $? -ne 0 ]; then
-    echo "ERROR: Build failed"
+if [ $BUILD_RESULT -ne 0 ]; then
+    echo "ERROR: Build failed with exit code $BUILD_RESULT"
     echo "Build directory contents:"
     ls -la
     echo ""
     echo "CMakeCache.txt (first 50 lines):"
     head -50 CMakeCache.txt 2>/dev/null || echo "CMakeCache.txt not found"
-    exit 1
+    echo ""
+    echo "Trying to build without --config flag (for non-VS generators)..."
+    set +e
+    cmake --build . -j$(nproc)
+    BUILD_RESULT=$?
+    set -e
+    if [ $BUILD_RESULT -ne 0 ]; then
+        echo "ERROR: Build failed again with exit code $BUILD_RESULT"
+        exit 1
+    fi
 fi
 
 echo "Build completed. Checking for output files..."
@@ -110,14 +123,20 @@ mkdir -p "$OUTPUT_DIR"
 # CMake может создавать библиотеку в разных местах в зависимости от конфигурации
 LIB_FOUND=false
 
-# Проверяем возможные расположения
+# Проверяем возможные расположения (включая статические библиотеки)
 POSSIBLE_PATHS=(
     "libllama.so"
+    "libllama.a"
     "lib/llama.so"
     "lib/libllama.so"
+    "lib/llama.a"
+    "lib/libllama.a"
     "Release/libllama.so"
+    "Release/libllama.a"
     "lib/Release/libllama.so"
+    "lib/Release/libllama.a"
     "build/libllama.so"
+    "build/libllama.a"
 )
 
 echo "Searching for libllama.so..."
@@ -131,18 +150,32 @@ for path in "${POSSIBLE_PATHS[@]}"; do
     fi
 done
 
-# Если не нашли, ищем все .so файлы
+# Если не нашли, ищем все библиотеки (и .so, и .a)
 if [ "$LIB_FOUND" = false ]; then
     echo "WARNING: libllama.so not found in expected locations"
-    echo "Searching for all .so files in build directory..."
-    find . -name "*.so" -type f | head -10
+    echo "Searching for all library files in build directory..."
+    echo "--- .so files ---"
+    find . -name "*.so" -type f 2>/dev/null | head -10
+    echo "--- .a files ---"
+    find . -name "*.a" -type f 2>/dev/null | head -10
     
-    # Попробуем найти любую библиотеку llama
-    FOUND_LIB=$(find . -name "*llama*.so" -type f | head -1)
+    # Попробуем найти любую библиотеку llama (и .so, и .a)
+    FOUND_LIB=$(find . -name "*llama*.so" -o -name "*llama*.a" 2>/dev/null | head -1)
     if [ -n "$FOUND_LIB" ]; then
         echo "Found llama library at: $FOUND_LIB"
-        cp "$FOUND_LIB" "$OUTPUT_DIR/libllama.so"
-        echo "✅ Copied to $OUTPUT_DIR/libllama.so"
+        # Если это .a файл, нужно будет создать .so из него или использовать как есть
+        if [[ "$FOUND_LIB" == *.a ]]; then
+            echo "WARNING: Found static library (.a), but need shared library (.so)"
+            echo "Trying to use static library as fallback..."
+            # Для Android можно использовать статическую библиотеку, но нужно изменить подход
+            # Пока просто копируем и переименовываем
+            cp "$FOUND_LIB" "$OUTPUT_DIR/libllama.a"
+            echo "✅ Copied static library to $OUTPUT_DIR/libllama.a"
+            echo "NOTE: Static library may not work with FFI. Consider building as shared library."
+        else
+            cp "$FOUND_LIB" "$OUTPUT_DIR/libllama.so"
+            echo "✅ Copied to $OUTPUT_DIR/libllama.so"
+        fi
         LIB_FOUND=true
     fi
 fi
