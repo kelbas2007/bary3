@@ -35,6 +35,7 @@ import 'dart:async';
 import '../screens/notes_screen.dart';
 import '../screens/tools_hub_screen.dart';
 import '../screens/calendar_forecast_screen.dart';
+import '../screens/achievements_screen.dart';
 import '../services/deep_link_service.dart';
 import '../screens/calculators/piggy_plan_calculator.dart';
 import '../utils/haptic_feedback_util.dart';
@@ -227,6 +228,12 @@ class _MainScreenState extends ConsumerState<MainScreen>
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const CalendarForecastScreen()),
+        );
+        break;
+      case 'achievements':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const AchievementsScreen()),
         );
         break;
     }
@@ -700,6 +707,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
       BariActionType.piggyBankCreated => l10n.bariTip_piggyBankCreated,
       BariActionType.piggyBankCompleted => l10n.bariTip_piggyBankCompleted,
       BariActionType.lessonCompleted => l10n.bariTip_lessonCompleted,
+      BariActionType.levelUp => l10n.bariTip_levelUp,
     };
     memory.addTip(tip);
     await StorageService.saveBariMemory(memory);

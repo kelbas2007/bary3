@@ -15,6 +15,7 @@ import '../domain/ux_detail_level.dart';
 import '../widgets/async_error_widget.dart';
 import '../state/providers.dart';
 import '../state/transactions_notifier.dart';
+import '../state/player_profile_notifier.dart';
 import '../widgets/aurora_bottom_sheet.dart';
 import '../widgets/aurora_text_field.dart';
 import '../widgets/aurora_button.dart';
@@ -82,6 +83,10 @@ class _PiggyBanksScreenState extends ConsumerState<PiggyBanksScreen> {
         ),
       );
       await StorageService.saveBariMemory(memory);
+
+      // Начисляем XP за создание копилки
+      await ref.read(playerProfileRepositoryProvider).addXp(15);
+      await ref.read(playerProfileProvider.notifier).refresh();
     }
   }
 
@@ -774,6 +779,17 @@ class _PiggyBankDetailScreenState
       );
       await ref.read(transactionsProvider.notifier).add(transaction);
 
+      // Вычисляем прогресс копилки для начисления XP
+      final progressPercent = (newAmount / currentBank.targetAmount * 100).round();
+      final previousProgressPercent = (currentBank.currentAmount / currentBank.targetAmount * 100).round();
+
+      // Начисляем XP за каждые 10% прогресса
+      if (progressPercent ~/ 10 > previousProgressPercent ~/ 10) {
+        final milestonesReached = (progressPercent ~/ 10) - (previousProgressPercent ~/ 10);
+        await ref.read(playerProfileRepositoryProvider).addXp(milestonesReached * 5);
+        await ref.read(playerProfileProvider.notifier).refresh();
+      }
+
       if (newAmount >= currentBank.targetAmount) {
         final memory = await StorageService.getBariMemory();
         memory.addAction(
@@ -785,6 +801,10 @@ class _PiggyBankDetailScreenState
           ),
         );
         await StorageService.saveBariMemory(memory);
+
+        // Начисляем XP за достижение цели
+        await ref.read(playerProfileRepositoryProvider).addXp(50);
+        await ref.read(playerProfileProvider.notifier).refresh();
       }
       
       await ref.read(piggyBanksProvider.notifier).refresh();

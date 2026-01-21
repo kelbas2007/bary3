@@ -177,6 +177,8 @@ class BariContextAdapter {
         return 'calendar';
       case BariActionType.piggyBankCompleted:
         return 'piggy_banks';
+      case BariActionType.levelUp:
+        return 'balance'; // Уровень отображается на экране баланса
     }
   }
 }

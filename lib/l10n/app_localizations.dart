@@ -370,6 +370,12 @@ abstract class AppLocalizations {
   /// **'Урок пройден! Новые знания — суперсила!'**
   String get bariTip_lessonCompleted;
 
+  /// No description provided for @bariTip_levelUp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый уровень! Ты растешь как финансист!'**
+  String get bariTip_levelUp;
+
   /// No description provided for @period_day.
   ///
   /// In ru, this message translates to:
@@ -1834,6 +1840,138 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Уведомления'**
   String get settings_notifications;
+
+  /// No description provided for @settings_dailyExpenseReminder.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напоминания о записи расходов'**
+  String get settings_dailyExpenseReminder;
+
+  /// No description provided for @settings_dailyExpenseReminderDescription.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ежедневные напоминания вечером о записи расходов'**
+  String get settings_dailyExpenseReminderDescription;
+
+  /// No description provided for @settings_weeklyReview.
+  ///
+  /// In ru, this message translates to:
+  /// **'Еженедельные обзоры'**
+  String get settings_weeklyReview;
+
+  /// No description provided for @settings_weeklyReviewDescription.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напоминания о подведении итогов недели'**
+  String get settings_weeklyReviewDescription;
+
+  /// No description provided for @settings_levelUpNotifications.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления о повышении уровня'**
+  String get settings_levelUpNotifications;
+
+  /// No description provided for @settings_levelUpNotificationsDescription.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления при достижении нового уровня'**
+  String get settings_levelUpNotificationsDescription;
+
+  /// No description provided for @achievements_title.
+  ///
+  /// In ru, this message translates to:
+  /// **'Достижения'**
+  String get achievements_title;
+
+  /// No description provided for @achievements_empty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет достижений'**
+  String get achievements_empty;
+
+  /// No description provided for @achievements_unlockedCount.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разблокировано достижений: {count}'**
+  String achievements_unlockedCount(int count);
+
+  /// No description provided for @achievements_unlockedAt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разблокировано: {date}'**
+  String achievements_unlockedAt(String date);
+
+  /// No description provided for @notifications_dailyReminderTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бари напоминает'**
+  String get notifications_dailyReminderTitle;
+
+  /// No description provided for @notifications_dailyReminderBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не забудь записать сегодняшние расходы! 💰'**
+  String get notifications_dailyReminderBody;
+
+  /// No description provided for @notifications_weeklyReviewTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бари напоминает'**
+  String get notifications_weeklyReviewTitle;
+
+  /// No description provided for @notifications_weeklyReviewBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пора подвести итоги недели! Посмотри, сколько ты сэкономил 📊'**
+  String get notifications_weeklyReviewBody;
+
+  /// No description provided for @notifications_levelUpTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'🎉 Новый уровень!'**
+  String get notifications_levelUpTitle;
+
+  /// No description provided for @notifications_levelUpBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поздравляю! Ты достиг уровня {level}'**
+  String notifications_levelUpBody(int level);
+
+  /// No description provided for @notifications_channelName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напоминания Бари'**
+  String get notifications_channelName;
+
+  /// No description provided for @notifications_channelDescription.
+  ///
+  /// In ru, this message translates to:
+  /// **'Персональные напоминания от Бари'**
+  String get notifications_channelDescription;
+
+  /// No description provided for @notifications_levelUpChannelName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повышение уровня'**
+  String get notifications_levelUpChannelName;
+
+  /// No description provided for @notifications_levelUpChannelDescription.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления о повышении уровня'**
+  String get notifications_levelUpChannelDescription;
+
+  /// No description provided for @charts_expensesByCategory.
+  ///
+  /// In ru, this message translates to:
+  /// **'Расходы по категориям'**
+  String get charts_expensesByCategory;
+
+  /// No description provided for @charts_incomeByCategory.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доходы по категориям'**
+  String get charts_incomeByCategory;
 
   /// No description provided for @settings_bari.
   ///
@@ -3389,6 +3527,24 @@ abstract class AppLocalizations {
   /// **'Закрыть'**
   String get parentZone_close;
 
+  /// No description provided for @parentZone_aiSummaryTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'AI-саммари для родителей'**
+  String get parentZone_aiSummaryTitle;
+
+  /// No description provided for @parentZone_modelNotAvailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Локальная модель недоступна. Скачайте модель в настройках.'**
+  String get parentZone_modelNotAvailable;
+
+  /// No description provided for @parentZone_summaryGenerationFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось сгенерировать саммари. Попробуйте позже.'**
+  String get parentZone_summaryGenerationFailed;
+
   /// No description provided for @parentZone_earningsApproved.
   ///
   /// In ru, this message translates to:
@@ -4084,210 +4240,6 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Напиши название'**
   String get earningsLab_taskNameRequired;
-
-  /// No description provided for @settings_aiModelGpt4oMini.
-  ///
-  /// In ru, this message translates to:
-  /// **'GPT-4o Mini (быстрый)'**
-  String get settings_aiModelGpt4oMini;
-
-  /// No description provided for @settings_aiModelGpt4o.
-  ///
-  /// In ru, this message translates to:
-  /// **'GPT-4o (умный)'**
-  String get settings_aiModelGpt4o;
-
-  /// No description provided for @settings_aiModelGpt4Turbo.
-  ///
-  /// In ru, this message translates to:
-  /// **'GPT-4 Turbo'**
-  String get settings_aiModelGpt4Turbo;
-
-  /// No description provided for @settings_aiModelGpt35.
-  ///
-  /// In ru, this message translates to:
-  /// **'GPT-3.5 (дешёвый)'**
-  String get settings_aiModelGpt35;
-
-  /// Заголовок секции Gemini Nano
-  ///
-  /// In ru, this message translates to:
-  /// **'AI на устройстве (Gemini Nano)'**
-  String get settings_geminiNano;
-
-  /// No description provided for @settings_geminiNanoDescription.
-  ///
-  /// In ru, this message translates to:
-  /// **'Бесплатный AI, который работает без интернета'**
-  String get settings_geminiNanoDescription;
-
-  /// No description provided for @settings_geminiNanoStatus.
-  ///
-  /// In ru, this message translates to:
-  /// **'Статус'**
-  String get settings_geminiNanoStatus;
-
-  /// No description provided for @settings_geminiNanoAvailable.
-  ///
-  /// In ru, this message translates to:
-  /// **'Доступен'**
-  String get settings_geminiNanoAvailable;
-
-  /// No description provided for @settings_geminiNanoNotAvailable.
-  ///
-  /// In ru, this message translates to:
-  /// **'Недоступен на этом устройстве'**
-  String get settings_geminiNanoNotAvailable;
-
-  /// No description provided for @settings_geminiNanoDownloaded.
-  ///
-  /// In ru, this message translates to:
-  /// **'Скачан и готов к работе'**
-  String get settings_geminiNanoDownloaded;
-
-  /// No description provided for @settings_geminiNanoNotDownloaded.
-  ///
-  /// In ru, this message translates to:
-  /// **'Не скачан'**
-  String get settings_geminiNanoNotDownloaded;
-
-  /// No description provided for @settings_geminiNanoDownload.
-  ///
-  /// In ru, this message translates to:
-  /// **'Скачать модель (~2.5 GB)'**
-  String get settings_geminiNanoDownload;
-
-  /// No description provided for @settings_geminiNanoDownloading.
-  ///
-  /// In ru, this message translates to:
-  /// **'Скачивание...'**
-  String get settings_geminiNanoDownloading;
-
-  /// No description provided for @settings_geminiNanoDelete.
-  ///
-  /// In ru, this message translates to:
-  /// **'Удалить модель'**
-  String get settings_geminiNanoDelete;
-
-  /// No description provided for @settings_geminiNanoAdvantages.
-  ///
-  /// In ru, this message translates to:
-  /// **'Преимущества'**
-  String get settings_geminiNanoAdvantages;
-
-  /// No description provided for @settings_geminiNanoAdvantagesTitle.
-  ///
-  /// In ru, this message translates to:
-  /// **'Почему стоит скачать Gemini Nano?'**
-  String get settings_geminiNanoAdvantagesTitle;
-
-  /// No description provided for @settings_geminiNanoAdvantage1.
-  ///
-  /// In ru, this message translates to:
-  /// **'💰 Полностью бесплатно — без ограничений'**
-  String get settings_geminiNanoAdvantage1;
-
-  /// No description provided for @settings_geminiNanoAdvantage2.
-  ///
-  /// In ru, this message translates to:
-  /// **'⚡ Мгновенные ответы — без задержки сети'**
-  String get settings_geminiNanoAdvantage2;
-
-  /// No description provided for @settings_geminiNanoAdvantage3.
-  ///
-  /// In ru, this message translates to:
-  /// **'🔒 100% приватность — данные не покидают устройство'**
-  String get settings_geminiNanoAdvantage3;
-
-  /// No description provided for @settings_geminiNanoAdvantage4.
-  ///
-  /// In ru, this message translates to:
-  /// **'📱 Работает офлайн — без интернета'**
-  String get settings_geminiNanoAdvantage4;
-
-  /// No description provided for @settings_geminiNanoAdvantage5.
-  ///
-  /// In ru, this message translates to:
-  /// **'🌍 Поддержка 3 языков — русский, английский, немецкий'**
-  String get settings_geminiNanoAdvantage5;
-
-  /// No description provided for @settings_geminiNanoRequirements.
-  ///
-  /// In ru, this message translates to:
-  /// **'Требования'**
-  String get settings_geminiNanoRequirements;
-
-  /// No description provided for @settings_geminiNanoRequirement1.
-  ///
-  /// In ru, this message translates to:
-  /// **'Android 14+ (Google Pixel 8+, Samsung S24+, OnePlus 12+)'**
-  String get settings_geminiNanoRequirement1;
-
-  /// No description provided for @settings_geminiNanoRequirement2.
-  ///
-  /// In ru, this message translates to:
-  /// **'~2.5 GB свободного места'**
-  String get settings_geminiNanoRequirement2;
-
-  /// No description provided for @settings_geminiNanoRequirement3.
-  ///
-  /// In ru, this message translates to:
-  /// **'6 GB оперативной памяти'**
-  String get settings_geminiNanoRequirement3;
-
-  /// No description provided for @settings_geminiNanoDownloadConfirm.
-  ///
-  /// In ru, this message translates to:
-  /// **'Скачать модель Gemini Nano?'**
-  String get settings_geminiNanoDownloadConfirm;
-
-  /// No description provided for @settings_geminiNanoDownloadConfirmDescription.
-  ///
-  /// In ru, this message translates to:
-  /// **'Модель займёт ~2.5 GB места, но даст вам бесплатный AI без интернета.'**
-  String get settings_geminiNanoDownloadConfirmDescription;
-
-  /// No description provided for @settings_geminiNanoDeleteConfirm.
-  ///
-  /// In ru, this message translates to:
-  /// **'Удалить модель?'**
-  String get settings_geminiNanoDeleteConfirm;
-
-  /// No description provided for @settings_geminiNanoDeleteConfirmDescription.
-  ///
-  /// In ru, this message translates to:
-  /// **'Освободит ~2.5 GB места, но AI на устройстве перестанет работать.'**
-  String get settings_geminiNanoDeleteConfirmDescription;
-
-  /// No description provided for @settings_geminiNanoError.
-  ///
-  /// In ru, this message translates to:
-  /// **'Ошибка'**
-  String get settings_geminiNanoError;
-
-  /// No description provided for @settings_geminiNanoErrorDownload.
-  ///
-  /// In ru, this message translates to:
-  /// **'Не удалось скачать модель. Проверьте подключение к интернету.'**
-  String get settings_geminiNanoErrorDownload;
-
-  /// No description provided for @settings_geminiNanoErrorDelete.
-  ///
-  /// In ru, this message translates to:
-  /// **'Не удалось удалить модель.'**
-  String get settings_geminiNanoErrorDelete;
-
-  /// No description provided for @settings_geminiNanoSuccessDownload.
-  ///
-  /// In ru, this message translates to:
-  /// **'Модель успешно скачана!'**
-  String get settings_geminiNanoSuccessDownload;
-
-  /// No description provided for @settings_geminiNanoSuccessDelete.
-  ///
-  /// In ru, this message translates to:
-  /// **'Модель удалена.'**
-  String get settings_geminiNanoSuccessDelete;
 
   /// No description provided for @bari_goal_noPiggyBanks.
   ///
@@ -5678,6 +5630,66 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Синхронизация...'**
   String get calendarSync_syncInProgress;
+
+  /// No description provided for @modelLoader_title.
+  ///
+  /// In ru, this message translates to:
+  /// **'Загрузка модели ИИ'**
+  String get modelLoader_title;
+
+  /// No description provided for @modelLoader_loading.
+  ///
+  /// In ru, this message translates to:
+  /// **'Загрузка модели из приложения...'**
+  String get modelLoader_loading;
+
+  /// No description provided for @modelLoader_preparing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Модель загружена, подготовка к распаковке...'**
+  String get modelLoader_preparing;
+
+  /// No description provided for @modelLoader_decompressing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Распаковка модели (это может занять минуту)...'**
+  String get modelLoader_decompressing;
+
+  /// No description provided for @modelLoader_saving.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сохранение... {percent}%'**
+  String modelLoader_saving(String percent);
+
+  /// No description provided for @modelLoader_complete.
+  ///
+  /// In ru, this message translates to:
+  /// **'Модель готова!'**
+  String get modelLoader_complete;
+
+  /// No description provided for @modelLoader_error.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка загрузки модели'**
+  String get modelLoader_error;
+
+  /// No description provided for @modelLoader_errorMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось загрузить модель ИИ. Пожалуйста, попробуйте снова или обратитесь в поддержку.'**
+  String get modelLoader_errorMessage;
+
+  /// No description provided for @modelLoader_retry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторить'**
+  String get modelLoader_retry;
+
+  /// No description provided for @modelLoader_cancel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отмена'**
+  String get modelLoader_cancel;
 }
 
 class _AppLocalizationsDelegate

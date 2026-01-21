@@ -1,5 +1,6 @@
 import '../bari_context.dart';
 import '../bari_models.dart';
+import '../bari_features_hub.dart';
 import 'bari_provider.dart';
 
 /// Провайдер, который знает все функции приложения и может их использовать
@@ -250,96 +251,19 @@ class AppFeaturesProvider implements BariProvider {
   ) async {
     final features = <BariAction>[];
     
-    // Основные экраны
-    features.addAll(_getScreenActions(locale));
+    // Используем BariFeaturesHub для структурированного списка
+    final featuresByCategory = BariFeaturesHub.getFeaturesByCategory(locale);
+    features.addAll(featuresByCategory['finance'] ?? []);
+    features.addAll(featuresByCategory['learning'] ?? []);
+    features.addAll(featuresByCategory['analytics'] ?? []);
+    features.addAll(featuresByCategory['achievements'] ?? []);
+    features.addAll(featuresByCategory['calculators'] ?? []);
     
-    // Калькуляторы
-    features.addAll(_getCalculatorActions(locale));
-    
-    // Инструменты
+    // Дополнительные инструменты
     features.addAll(_getToolsActions(locale));
-    
-    // Действия
     features.addAll(_getActionActions(locale));
     
     return features;
-  }
-
-  List<BariAction> _getScreenActions(String locale) {
-    final screens = {
-      'ru': [
-        const BariAction(type: BariActionType.openScreen, label: '💰 Баланс', payload: 'balance'),
-        const BariAction(type: BariActionType.openScreen, label: '🐷 Копилки', payload: 'piggy_banks'),
-        const BariAction(type: BariActionType.openScreen, label: '📅 Календарь', payload: 'calendar'),
-        const BariAction(type: BariActionType.openScreen, label: '📚 Уроки', payload: 'lessons'),
-        const BariAction(type: BariActionType.openScreen, label: '⚙️ Настройки', payload: 'settings'),
-        const BariAction(type: BariActionType.openScreen, label: '💼 Лаборатория заработка', payload: 'earnings_lab'),
-        const BariAction(type: BariActionType.openScreen, label: '📝 Заметки', payload: 'notes'),
-        const BariAction(type: BariActionType.openScreen, label: '🛠️ Инструменты', payload: 'tools'),
-      ],
-      'en': [
-        const BariAction(type: BariActionType.openScreen, label: '💰 Balance', payload: 'balance'),
-        const BariAction(type: BariActionType.openScreen, label: '🐷 Piggy Banks', payload: 'piggy_banks'),
-        const BariAction(type: BariActionType.openScreen, label: '📅 Calendar', payload: 'calendar'),
-        const BariAction(type: BariActionType.openScreen, label: '📚 Lessons', payload: 'lessons'),
-        const BariAction(type: BariActionType.openScreen, label: '⚙️ Settings', payload: 'settings'),
-        const BariAction(type: BariActionType.openScreen, label: '💼 Earnings Lab', payload: 'earnings_lab'),
-        const BariAction(type: BariActionType.openScreen, label: '📝 Notes', payload: 'notes'),
-        const BariAction(type: BariActionType.openScreen, label: '🛠️ Tools', payload: 'tools'),
-      ],
-      'de': [
-        const BariAction(type: BariActionType.openScreen, label: '💰 Kontostand', payload: 'balance'),
-        const BariAction(type: BariActionType.openScreen, label: '🐷 Sparschweine', payload: 'piggy_banks'),
-        const BariAction(type: BariActionType.openScreen, label: '📅 Kalender', payload: 'calendar'),
-        const BariAction(type: BariActionType.openScreen, label: '📚 Lektionen', payload: 'lessons'),
-        const BariAction(type: BariActionType.openScreen, label: '⚙️ Einstellungen', payload: 'settings'),
-        const BariAction(type: BariActionType.openScreen, label: '💼 Verdienstlabor', payload: 'earnings_lab'),
-        const BariAction(type: BariActionType.openScreen, label: '📝 Notizen', payload: 'notes'),
-        const BariAction(type: BariActionType.openScreen, label: '🛠️ Werkzeuge', payload: 'tools'),
-      ],
-    };
-    
-    return screens[locale] ?? screens['ru']!;
-  }
-
-  List<BariAction> _getCalculatorActions(String locale) {
-    final calculators = {
-      'ru': [
-        const BariAction(type: BariActionType.openCalculator, label: '📊 План копилки', payload: 'piggy_plan'),
-        const BariAction(type: BariActionType.openCalculator, label: '📅 Дата цели', payload: 'goal_date'),
-        const BariAction(type: BariActionType.openCalculator, label: '💰 Месячный бюджет', payload: 'monthly_budget'),
-        const BariAction(type: BariActionType.openCalculator, label: '📱 Подписки', payload: 'subscriptions'),
-        const BariAction(type: BariActionType.openCalculator, label: '🛒 Можно ли купить?', payload: 'can_i_buy'),
-        const BariAction(type: BariActionType.openCalculator, label: '⚖️ Сравнение цен', payload: 'price_comparison'),
-        const BariAction(type: BariActionType.openCalculator, label: '⏰ Правило 24 часов', payload: '24h_rule'),
-        const BariAction(type: BariActionType.openCalculator, label: '📈 Бюджет 50/30/20', payload: '50_30_20'),
-        const BariAction(type: BariActionType.openCalculator, label: '🔮 Прогноз календаря', payload: 'calendar_forecast'),
-      ],
-      'en': [
-        const BariAction(type: BariActionType.openCalculator, label: '📊 Piggy Plan', payload: 'piggy_plan'),
-        const BariAction(type: BariActionType.openCalculator, label: '📅 Goal Date', payload: 'goal_date'),
-        const BariAction(type: BariActionType.openCalculator, label: '💰 Monthly Budget', payload: 'monthly_budget'),
-        const BariAction(type: BariActionType.openCalculator, label: '📱 Subscriptions', payload: 'subscriptions'),
-        const BariAction(type: BariActionType.openCalculator, label: '🛒 Can I Buy?', payload: 'can_i_buy'),
-        const BariAction(type: BariActionType.openCalculator, label: '⚖️ Price Comparison', payload: 'price_comparison'),
-        const BariAction(type: BariActionType.openCalculator, label: '⏰ 24h Rule', payload: '24h_rule'),
-        const BariAction(type: BariActionType.openCalculator, label: '📈 50/30/20 Budget', payload: '50_30_20'),
-        const BariAction(type: BariActionType.openCalculator, label: '🔮 Calendar Forecast', payload: 'calendar_forecast'),
-      ],
-      'de': [
-        const BariAction(type: BariActionType.openCalculator, label: '📊 Sparschwein Plan', payload: 'piggy_plan'),
-        const BariAction(type: BariActionType.openCalculator, label: '📅 Ziel Datum', payload: 'goal_date'),
-        const BariAction(type: BariActionType.openCalculator, label: '💰 Monatsbudget', payload: 'monthly_budget'),
-        const BariAction(type: BariActionType.openCalculator, label: '📱 Abonnements', payload: 'subscriptions'),
-        const BariAction(type: BariActionType.openCalculator, label: '🛒 Kann ich kaufen?', payload: 'can_i_buy'),
-        const BariAction(type: BariActionType.openCalculator, label: '⚖️ Preisvergleich', payload: 'price_comparison'),
-        const BariAction(type: BariActionType.openCalculator, label: '⏰ 24h Regel', payload: '24h_rule'),
-        const BariAction(type: BariActionType.openCalculator, label: '📈 50/30/20 Budget', payload: '50_30_20'),
-        const BariAction(type: BariActionType.openCalculator, label: '🔮 Kalender Prognose', payload: 'calendar_forecast'),
-      ],
-    };
-    
-    return calculators[locale] ?? calculators['ru']!;
   }
 
   List<BariAction> _getToolsActions(String locale) {

@@ -151,6 +151,9 @@ class AppLocalizationsRu extends AppLocalizations {
       'Урок пройден! Новые знания — суперсила!';
 
   @override
+  String get bariTip_levelUp => 'Новый уровень! Ты растешь как финансист!';
+
+  @override
   String get period_day => 'День';
 
   @override
@@ -1007,6 +1010,85 @@ class AppLocalizationsRu extends AppLocalizations {
   String get settings_notifications => 'Уведомления';
 
   @override
+  String get settings_dailyExpenseReminder => 'Напоминания о записи расходов';
+
+  @override
+  String get settings_dailyExpenseReminderDescription =>
+      'Ежедневные напоминания вечером о записи расходов';
+
+  @override
+  String get settings_weeklyReview => 'Еженедельные обзоры';
+
+  @override
+  String get settings_weeklyReviewDescription =>
+      'Напоминания о подведении итогов недели';
+
+  @override
+  String get settings_levelUpNotifications => 'Уведомления о повышении уровня';
+
+  @override
+  String get settings_levelUpNotificationsDescription =>
+      'Уведомления при достижении нового уровня';
+
+  @override
+  String get achievements_title => 'Достижения';
+
+  @override
+  String get achievements_empty => 'Нет достижений';
+
+  @override
+  String achievements_unlockedCount(int count) {
+    return 'Разблокировано достижений: $count';
+  }
+
+  @override
+  String achievements_unlockedAt(String date) {
+    return 'Разблокировано: $date';
+  }
+
+  @override
+  String get notifications_dailyReminderTitle => 'Бари напоминает';
+
+  @override
+  String get notifications_dailyReminderBody =>
+      'Не забудь записать сегодняшние расходы! 💰';
+
+  @override
+  String get notifications_weeklyReviewTitle => 'Бари напоминает';
+
+  @override
+  String get notifications_weeklyReviewBody =>
+      'Пора подвести итоги недели! Посмотри, сколько ты сэкономил 📊';
+
+  @override
+  String get notifications_levelUpTitle => '🎉 Новый уровень!';
+
+  @override
+  String notifications_levelUpBody(int level) {
+    return 'Поздравляю! Ты достиг уровня $level';
+  }
+
+  @override
+  String get notifications_channelName => 'Напоминания Бари';
+
+  @override
+  String get notifications_channelDescription =>
+      'Персональные напоминания от Бари';
+
+  @override
+  String get notifications_levelUpChannelName => 'Повышение уровня';
+
+  @override
+  String get notifications_levelUpChannelDescription =>
+      'Уведомления о повышении уровня';
+
+  @override
+  String get charts_expensesByCategory => 'Расходы по категориям';
+
+  @override
+  String get charts_incomeByCategory => 'Доходы по категориям';
+
+  @override
   String get settings_bari => 'Bari Smart';
 
   @override
@@ -1848,6 +1930,17 @@ class AppLocalizationsRu extends AppLocalizations {
   String get parentZone_close => 'Закрыть';
 
   @override
+  String get parentZone_aiSummaryTitle => 'AI-саммари для родителей';
+
+  @override
+  String get parentZone_modelNotAvailable =>
+      'Локальная модель недоступна. Скачайте модель в настройках.';
+
+  @override
+  String get parentZone_summaryGenerationFailed =>
+      'Не удалось сгенерировать саммари. Попробуйте позже.';
+
+  @override
   String get parentZone_earningsApproved => 'Заработок одобрен';
 
   @override
@@ -2209,120 +2302,6 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get earningsLab_taskNameRequired => 'Напиши название';
-
-  @override
-  String get settings_aiModelGpt4oMini => 'GPT-4o Mini (быстрый)';
-
-  @override
-  String get settings_aiModelGpt4o => 'GPT-4o (умный)';
-
-  @override
-  String get settings_aiModelGpt4Turbo => 'GPT-4 Turbo';
-
-  @override
-  String get settings_aiModelGpt35 => 'GPT-3.5 (дешёвый)';
-
-  @override
-  String get settings_geminiNano => 'AI на устройстве (Gemini Nano)';
-
-  @override
-  String get settings_geminiNanoDescription =>
-      'Бесплатный AI, который работает без интернета';
-
-  @override
-  String get settings_geminiNanoStatus => 'Статус';
-
-  @override
-  String get settings_geminiNanoAvailable => 'Доступен';
-
-  @override
-  String get settings_geminiNanoNotAvailable => 'Недоступен на этом устройстве';
-
-  @override
-  String get settings_geminiNanoDownloaded => 'Скачан и готов к работе';
-
-  @override
-  String get settings_geminiNanoNotDownloaded => 'Не скачан';
-
-  @override
-  String get settings_geminiNanoDownload => 'Скачать модель (~2.5 GB)';
-
-  @override
-  String get settings_geminiNanoDownloading => 'Скачивание...';
-
-  @override
-  String get settings_geminiNanoDelete => 'Удалить модель';
-
-  @override
-  String get settings_geminiNanoAdvantages => 'Преимущества';
-
-  @override
-  String get settings_geminiNanoAdvantagesTitle =>
-      'Почему стоит скачать Gemini Nano?';
-
-  @override
-  String get settings_geminiNanoAdvantage1 =>
-      '💰 Полностью бесплатно — без ограничений';
-
-  @override
-  String get settings_geminiNanoAdvantage2 =>
-      '⚡ Мгновенные ответы — без задержки сети';
-
-  @override
-  String get settings_geminiNanoAdvantage3 =>
-      '🔒 100% приватность — данные не покидают устройство';
-
-  @override
-  String get settings_geminiNanoAdvantage4 =>
-      '📱 Работает офлайн — без интернета';
-
-  @override
-  String get settings_geminiNanoAdvantage5 =>
-      '🌍 Поддержка 3 языков — русский, английский, немецкий';
-
-  @override
-  String get settings_geminiNanoRequirements => 'Требования';
-
-  @override
-  String get settings_geminiNanoRequirement1 =>
-      'Android 14+ (Google Pixel 8+, Samsung S24+, OnePlus 12+)';
-
-  @override
-  String get settings_geminiNanoRequirement2 => '~2.5 GB свободного места';
-
-  @override
-  String get settings_geminiNanoRequirement3 => '6 GB оперативной памяти';
-
-  @override
-  String get settings_geminiNanoDownloadConfirm =>
-      'Скачать модель Gemini Nano?';
-
-  @override
-  String get settings_geminiNanoDownloadConfirmDescription =>
-      'Модель займёт ~2.5 GB места, но даст вам бесплатный AI без интернета.';
-
-  @override
-  String get settings_geminiNanoDeleteConfirm => 'Удалить модель?';
-
-  @override
-  String get settings_geminiNanoDeleteConfirmDescription =>
-      'Освободит ~2.5 GB места, но AI на устройстве перестанет работать.';
-
-  @override
-  String get settings_geminiNanoError => 'Ошибка';
-
-  @override
-  String get settings_geminiNanoErrorDownload =>
-      'Не удалось скачать модель. Проверьте подключение к интернету.';
-
-  @override
-  String get settings_geminiNanoErrorDelete => 'Не удалось удалить модель.';
-
-  @override
-  String get settings_geminiNanoSuccessDownload => 'Модель успешно скачана!';
-
-  @override
-  String get settings_geminiNanoSuccessDelete => 'Модель удалена.';
 
   @override
   String get bari_goal_noPiggyBanks => 'У тебя пока нет копилок.';
@@ -3177,4 +3156,39 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get calendarSync_syncInProgress => 'Синхронизация...';
+
+  @override
+  String get modelLoader_title => 'Загрузка модели ИИ';
+
+  @override
+  String get modelLoader_loading => 'Загрузка модели из приложения...';
+
+  @override
+  String get modelLoader_preparing =>
+      'Модель загружена, подготовка к распаковке...';
+
+  @override
+  String get modelLoader_decompressing =>
+      'Распаковка модели (это может занять минуту)...';
+
+  @override
+  String modelLoader_saving(String percent) {
+    return 'Сохранение... $percent%';
+  }
+
+  @override
+  String get modelLoader_complete => 'Модель готова!';
+
+  @override
+  String get modelLoader_error => 'Ошибка загрузки модели';
+
+  @override
+  String get modelLoader_errorMessage =>
+      'Не удалось загрузить модель ИИ. Пожалуйста, попробуйте снова или обратитесь в поддержку.';
+
+  @override
+  String get modelLoader_retry => 'Повторить';
+
+  @override
+  String get modelLoader_cancel => 'Отмена';
 }

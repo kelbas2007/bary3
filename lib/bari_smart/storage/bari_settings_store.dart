@@ -4,7 +4,6 @@ enum BariMode {
   offline, // Offline Coach (default)
   online,  // Online Reference (Wikipedia, DuckDuckGo)
   hybrid,  // Hybrid (сначала офлайн, если не нашёл — онлайн)
-  ai,      // AI Mode (OpenAI GPT или совместимый API)
 }
 
 class BariSettingsStore {
@@ -12,11 +11,6 @@ class BariSettingsStore {
   bool showSources = true;
   bool smallTalkEnabled = true;
   bool useSystemAssistant = true; // Использовать системный ассистент как fallback
-  
-  // AI Settings
-  String? aiApiKey;
-  String aiBaseUrl = 'https://api.openai.com/v1';
-  String aiModel = 'gpt-4o-mini';
 
   Future<void> load() async {
     final modeStr = await StorageService.getBariMode();
@@ -27,11 +21,6 @@ class BariSettingsStore {
     showSources = await StorageService.getBariShowSources();
     smallTalkEnabled = await StorageService.getBariSmallTalkEnabled();
     useSystemAssistant = await StorageService.getBariUseSystemAssistant();
-    
-    // Load AI settings
-    aiApiKey = await StorageService.getAiApiKey();
-    aiBaseUrl = await StorageService.getAiBaseUrl() ?? 'https://api.openai.com/v1';
-    aiModel = await StorageService.getAiModel() ?? 'gpt-4o-mini';
   }
 
   Future<void> setMode(BariMode v) async {
@@ -54,24 +43,8 @@ class BariSettingsStore {
     await StorageService.setBariUseSystemAssistant(v);
   }
 
-  Future<void> setAiApiKey(String? key) async {
-    aiApiKey = key;
-    await StorageService.setAiApiKey(key);
-  }
-
-  Future<void> setAiBaseUrl(String url) async {
-    aiBaseUrl = url;
-    await StorageService.setAiBaseUrl(url);
-  }
-
-  Future<void> setAiModel(String model) async {
-    aiModel = model;
-    await StorageService.setAiModel(model);
-  }
-
   // Удобные геттеры для совместимости
   bool get onlineEnabled => mode == BariMode.online || mode == BariMode.hybrid;
   bool get manualOnly => mode == BariMode.hybrid; // В hybrid режиме онлайн только по запросу
-  bool get aiEnabled => mode == BariMode.ai && aiApiKey != null && aiApiKey!.isNotEmpty;
 }
 

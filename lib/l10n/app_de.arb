@@ -51,6 +51,7 @@
   "bariTip_piggyBankCreated": "Neue Spardose! Wofür sparen wir?",
   "bariTip_piggyBankCompleted": "Spardose ist voll! Herzlichen Glückwunsch zum Erreichen deines Ziels!",
   "bariTip_lessonCompleted": "Lektion abgeschlossen! Neues Wissen ist eine Superkraft!",
+  "bariTip_levelUp": "Neues Level! Du wächst als Finanzexperte!",
 
   "period_day": "Tag",
   "period_week": "Woche",
@@ -538,6 +539,43 @@
   "settings_uxProDescription": "Detaillierte Erklärungen",
   "settings_currency": "Währung",
   "settings_notifications": "Benachrichtigungen",
+  "settings_dailyExpenseReminder": "Tägliche Ausgabenerinnerungen",
+  "settings_dailyExpenseReminderDescription": "Tägliche abendliche Erinnerungen, Ausgaben zu erfassen",
+  "settings_weeklyReview": "Wöchentliche Übersichten",
+  "settings_weeklyReviewDescription": "Erinnerungen zur wöchentlichen Übersicht",
+  "settings_levelUpNotifications": "Level-Up-Benachrichtigungen",
+  "settings_levelUpNotificationsDescription": "Benachrichtigungen beim Erreichen eines neuen Levels",
+  "achievements_title": "Erfolge",
+  "achievements_empty": "Keine Erfolge",
+  "achievements_unlockedCount": "Freigeschaltete Erfolge: {count}",
+  "@achievements_unlockedCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "achievements_unlockedAt": "Freigeschaltet: {date}",
+  "@achievements_unlockedAt": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  "notifications_dailyReminderTitle": "Bari erinnert",
+  "notifications_dailyReminderBody": "Vergiss nicht, die heutigen Ausgaben zu erfassen! 💰",
+  "notifications_weeklyReviewTitle": "Bari erinnert",
+  "notifications_weeklyReviewBody": "Zeit für die Wochenübersicht! Sieh, wie viel du gespart hast 📊",
+  "notifications_levelUpTitle": "🎉 Neues Level!",
+  "notifications_levelUpBody": "Glückwunsch! Du hast Level {level} erreicht",
+  "@notifications_levelUpBody": {
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+  "notifications_channelName": "Bari Erinnerungen",
+  "notifications_channelDescription": "Persönliche Erinnerungen von Bari",
+  "notifications_levelUpChannelName": "Level-Up",
+  "notifications_levelUpChannelDescription": "Level-Up-Benachrichtigungen",
+  "charts_expensesByCategory": "Ausgaben nach Kategorie",
+  "charts_incomeByCategory": "Einnahmen nach Kategorie",
   "settings_bari": "Bari Smart",
   "settings_bariMode": "Bari-Modus",
   "settings_bariModeOffline": "Offline",
@@ -848,6 +886,9 @@
   "parentZone_unlockPremium": "Premium freischalten",
   "parentZone_edit": "Bearbeiten",
   "parentZone_close": "Schließen",
+  "parentZone_aiSummaryTitle": "KI-Zusammenfassung für Eltern",
+  "parentZone_modelNotAvailable": "Lokales Modell nicht verfügbar. Laden Sie das Modell in den Einstellungen herunter.",
+  "parentZone_summaryGenerationFailed": "Zusammenfassung konnte nicht generiert werden. Bitte versuchen Sie es später erneut.",
   "parentZone_earningsApproved": "Verdienst genehmigt",
   "parentZone_earningsRejected": "Verdienst abgelehnt",
   "exportImport_title": "Export/Import",
@@ -979,40 +1020,6 @@
   "earningsLab_taskDescription": "Keine Beschreibung",
   "earningsLab_rewardHelper": "Wie viel bekommst du für die Erfüllung",
   "earningsLab_taskNameRequired": "Aufgabename eingeben",
-  "settings_aiModelGpt4oMini": "GPT-4o Mini (schnell)",
-  "settings_aiModelGpt4o": "GPT-4o (intelligent)",
-  "settings_aiModelGpt4Turbo": "GPT-4 Turbo",
-  "settings_aiModelGpt35": "GPT-3.5 (günstig)",
-  "settings_geminiNano": "KI auf dem Gerät (Gemini Nano)",
-  "settings_geminiNanoDescription": "Kostenlose KI, die ohne Internet funktioniert",
-  "settings_geminiNanoStatus": "Status",
-  "settings_geminiNanoAvailable": "Verfügbar",
-  "settings_geminiNanoNotAvailable": "Auf diesem Gerät nicht verfügbar",
-  "settings_geminiNanoDownloaded": "Heruntergeladen und bereit",
-  "settings_geminiNanoNotDownloaded": "Nicht heruntergeladen",
-  "settings_geminiNanoDownload": "Modell herunterladen (~2,5 GB)",
-  "settings_geminiNanoDownloading": "Wird heruntergeladen...",
-  "settings_geminiNanoDelete": "Modell löschen",
-  "settings_geminiNanoAdvantages": "Vorteile",
-  "settings_geminiNanoAdvantagesTitle": "Warum Gemini Nano herunterladen?",
-  "settings_geminiNanoAdvantage1": "💰 Völlig kostenlos — ohne Limits",
-  "settings_geminiNanoAdvantage2": "⚡ Sofortige Antworten — ohne Netzwerkverzögerung",
-  "settings_geminiNanoAdvantage3": "🔒 100% Privatsphäre — Daten bleiben auf dem Gerät",
-  "settings_geminiNanoAdvantage4": "📱 Funktioniert offline — kein Internet nötig",
-  "settings_geminiNanoAdvantage5": "🌍 Unterstützt 3 Sprachen — Deutsch, Englisch, Russisch",
-  "settings_geminiNanoRequirements": "Anforderungen",
-  "settings_geminiNanoRequirement1": "Android 14+ (Google Pixel 8+, Samsung S24+, OnePlus 12+)",
-  "settings_geminiNanoRequirement2": "~2,5 GB freier Speicherplatz",
-  "settings_geminiNanoRequirement3": "6 GB RAM",
-  "settings_geminiNanoDownloadConfirm": "Gemini Nano Modell herunterladen?",
-  "settings_geminiNanoDownloadConfirmDescription": "Das Modell benötigt ~2,5 GB Speicherplatz, gibt Ihnen aber kostenlose KI ohne Internet.",
-  "settings_geminiNanoDeleteConfirm": "Modell löschen?",
-  "settings_geminiNanoDeleteConfirmDescription": "Gibt ~2,5 GB Speicherplatz frei, aber die KI auf dem Gerät funktioniert nicht mehr.",
-  "settings_geminiNanoError": "Fehler",
-  "settings_geminiNanoErrorDownload": "Modell konnte nicht heruntergeladen werden. Überprüfen Sie Ihre Internetverbindung.",
-  "settings_geminiNanoErrorDelete": "Modell konnte nicht gelöscht werden.",
-  "settings_geminiNanoSuccessDownload": "Modell erfolgreich heruntergeladen!",
-  "settings_geminiNanoSuccessDelete": "Modell gelöscht.",
 
   "bari_emptyMessage": "Schreibe eine Frage 🙂",
   "bari_emptyMessageAdvice": "Zum Beispiel: \"kann ich für 20€ kaufen\" oder \"was ist Inflation\"",
@@ -1290,5 +1297,22 @@
   "earningsLab_halfway": "Halbzeit",
   "earningsLab_halfwaySubtitle": "Wenn du das Sparschwein regelmäßig auffüllst, erreichst du das Ziel viel schneller.",
   "earningsLab_goodStart": "Guter Start",
-  "earningsLab_goodStartSubtitle": "Versuche, die automatische Auffüllung einzurichten oder eine Aufgabe im Verdienstlabor speziell für dieses Ziel hinzuzufügen."
+  "earningsLab_goodStartSubtitle": "Versuche, die automatische Auffüllung einzurichten oder eine Aufgabe im Verdienstlabor speziell für dieses Ziel hinzuzufügen.",
+  "modelLoader_title": "KI-Modell wird geladen",
+  "modelLoader_loading": "Modell wird aus der App geladen...",
+  "modelLoader_preparing": "Modell geladen, Vorbereitung zur Entpackung...",
+  "modelLoader_decompressing": "Modell wird entpackt (dies kann eine Minute dauern)...",
+  "modelLoader_saving": "Wird gespeichert... {percent}%",
+  "@modelLoader_saving": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "modelLoader_complete": "Modell bereit!",
+  "modelLoader_error": "Fehler beim Laden des Modells",
+  "modelLoader_errorMessage": "KI-Modell konnte nicht geladen werden. Bitte versuchen Sie es erneut oder kontaktieren Sie den Support.",
+  "modelLoader_retry": "Wiederholen",
+  "modelLoader_cancel": "Abbrechen"
 }

@@ -45,8 +45,11 @@ app.*.map.json
 /android/app/release
 
 # Large model files (use Git LFS or download separately)
+# Note: .xz compressed files are included in assets (smaller size)
 assets/aka/models/*.bin
 assets/aka/models/*.gguf
+# Keep compressed .xz files - they are small enough for git
+# assets/aka/models/*.xz
 
 # Large HTML files (likely build artifacts)
 index.html

@@ -326,16 +326,31 @@ class LlamaFFIBinding implements LLMEngine {
       malloc.free(tokensPtr);
 
       // 4. Детокенизация результата
-      // TODO: Реализовать детокенизацию через llama_detokenize или аналогичную функцию
-      // Пока возвращаем информацию о сгенерированных токенах
-      final response =
-          'Generated ${generatedTokens.length} tokens (stub: needs detokenization)';
+      // Используем llama_get_vocab для преобразования токенов в текст
+      final responseBuffer = StringBuffer();
+      for (final tokenId in generatedTokens) {
+        try {
+          final vocabPtr = _llamaGetVocab(_ctx!, tokenId);
+          if (vocabPtr.address != 0) {
+            final tokenText = vocabPtr.toDartString();
+            responseBuffer.write(tokenText);
+          }
+        } catch (e) {
+          if (kDebugMode) {
+            debugPrint('[LlamaFFI] Error detokenizing token $tokenId: $e');
+          }
+          // Пропускаем токен, если не удалось детокенизировать
+        }
+      }
+
+      final response = responseBuffer.toString().trim();
 
       if (kDebugMode) {
         debugPrint('[LlamaFFI] Generated ${generatedTokens.length} tokens');
+        debugPrint('[LlamaFFI] Detokenized response length: ${response.length}');
       }
 
-      return response;
+      return response.isEmpty ? null : response;
     } catch (e) {
       if (kDebugMode) {
         debugPrint('[LlamaFFI] Error generating: $e');

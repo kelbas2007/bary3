@@ -1,5 +1,6 @@
 import '../models/player_profile.dart';
 import '../services/storage_service.dart';
+import '../services/level_service.dart';
 
 class PlayerProfileRepository {
   const PlayerProfileRepository();
@@ -13,8 +14,10 @@ class PlayerProfileRepository {
   }
 
   Future<void> addXp(int delta) async {
-    final profile = await StorageService.getPlayerProfile();
-    await StorageService.savePlayerProfile(profile.copyWith(xp: profile.xp + delta));
+    final oldProfile = await StorageService.getPlayerProfile();
+    final newProfile = oldProfile.copyWith(xp: oldProfile.xp + delta);
+    await StorageService.savePlayerProfile(newProfile);
+    await LevelService.checkLevelUp(oldProfile, newProfile);
   }
 }
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../services/storage_service.dart';
-import '../services/gemini_nano_service.dart';
 import '../services/currency_scope.dart';
 import '../theme/aurora_theme.dart';
 import '../domain/ux_detail_level.dart';
@@ -12,6 +11,8 @@ import 'test_data_screen.dart';
 import 'package:flutter/foundation.dart';
 import '../l10n/app_localizations.dart';
 import '../services/deleted_events_service.dart';
+import '../services/bari_notification_service.dart';
+import '../services/notification_service.dart';
 import '../main.dart' show appKey;
 
 class SettingsScreen extends StatefulWidget {
@@ -30,21 +31,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   bool _bariSmallTalkEnabled = true;
   UxDetailLevel _uxDetailLevel = UxDetailLevel.simple;
   
-  // AI Settings
-  String? _aiApiKey;
-  // ignore: unused_field - Reserved for future custom API endpoint support
-  final String _aiBaseUrl = 'https://api.openai.com/v1';
-  String _aiModel = 'gpt-4o-mini';
-  final TextEditingController _aiApiKeyController = TextEditingController();
-
-  // Gemini Nano Settings
-  // ignore: unused_field - Reserved for future use
-  bool _geminiNanoEnabled = false;
-  bool _geminiNanoAvailable = false;
-  bool _geminiNanoDownloaded = false;
-  final bool _geminiNanoDownloading = false;
-  final double _geminiNanoDownloadProgress = 0.0;
-  final GeminiNanoService _geminiNanoService = GeminiNanoService();
+  // Notification settings
+  bool _dailyExpenseReminderEnabled = true;
+  bool _weeklyReviewEnabled = true;
+  bool _levelUpNotificationsEnabled = true;
 
   @override
   void initState() {
@@ -54,7 +44,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
   
   @override
   void dispose() {
-    _aiApiKeyController.dispose();
     super.dispose();
   }
 
@@ -67,14 +56,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final bariSmallTalkEnabled = await StorageService.getBariSmallTalkEnabled();
     final uxLevelRaw = await StorageService.getUxDetailLevel();
     
-    // AI Settings
-    final aiApiKey = await StorageService.getAiApiKey();
-    final aiModel = await StorageService.getAiModel();
-    
-    // Gemini Nano Settings
-    final geminiNanoEnabled = await StorageService.getGeminiNanoEnabled();
-    final geminiNanoAvailable = await _geminiNanoService.checkAvailability();
-    final geminiNanoDownloaded = await _geminiNanoService.checkDownloaded();
+    // Notification settings
+    final dailyReminder = await StorageService.getDailyExpenseReminderEnabled();
+    final weeklyReview = await StorageService.getWeeklyReviewEnabled();
+    final levelUpNotifications = await StorageService.getLevelUpNotificationsEnabled();
     
     setState(() {
       _language = language;
@@ -84,12 +69,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
       _bariShowSources = bariShowSources;
       _bariSmallTalkEnabled = bariSmallTalkEnabled;
       _uxDetailLevel = UxDetailLevelX.fromStorage(uxLevelRaw);
-      _aiApiKey = aiApiKey;
-      _aiModel = aiModel ?? 'gpt-4o-mini';
-      _aiApiKeyController.text = aiApiKey ?? '';
-      _geminiNanoEnabled = geminiNanoEnabled;
-      _geminiNanoAvailable = geminiNanoAvailable;
-      _geminiNanoDownloaded = geminiNanoDownloaded;
+      _dailyExpenseReminderEnabled = dailyReminder;
+      _weeklyReviewEnabled = weeklyReview;
+      _levelUpNotificationsEnabled = levelUpNotifications;
     });
   }
 
@@ -263,18 +245,88 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const SizedBox(height: 16),
             // Уведомления
             AuroraTheme.glassCard(
-              child: SwitchListTile(
-                title: Text(
+              child: Column(
+                children: [
+                  SwitchListTile(
+                    title: Text(
                       AppLocalizations.of(context)!.settings_notifications,
-                  style: const TextStyle(color: Colors.white),
-                ),
-                value: _notificationsEnabled,
-                onChanged: (value) async {
-                  setState(() {
-                    _notificationsEnabled = value;
-                  });
-                  await StorageService.setNotificationsEnabled(value);
-                },
+                      style: const TextStyle(color: Colors.white),
+                    ),
+                    value: _notificationsEnabled,
+                    onChanged: (value) async {
+                      setState(() {
+                        _notificationsEnabled = value;
+                      });
+                      await StorageService.setNotificationsEnabled(value);
+                    },
+                  ),
+                  if (_notificationsEnabled) ...[
+                    const Divider(height: 1),
+                    SwitchListTile(
+                      title: Text(
+                        AppLocalizations.of(context)!.settings_dailyExpenseReminder,
+                        style: const TextStyle(color: Colors.white70, fontSize: 14),
+                      ),
+                      subtitle: Text(
+                        AppLocalizations.of(context)!.settings_dailyExpenseReminderDescription,
+                        style: const TextStyle(color: Colors.white54, fontSize: 12),
+                      ),
+                      value: _dailyExpenseReminderEnabled,
+                      onChanged: (value) async {
+                        setState(() {
+                          _dailyExpenseReminderEnabled = value;
+                        });
+                        await StorageService.setDailyExpenseReminderEnabled(value);
+                        // Перепланируем уведомления
+                        if (value) {
+                          await BariNotificationService.scheduleSmartReminders();
+                        } else {
+                          await NotificationService.cancel(1001);
+                        }
+                      },
+                    ),
+                    SwitchListTile(
+                      title: Text(
+                        AppLocalizations.of(context)!.settings_weeklyReview,
+                        style: const TextStyle(color: Colors.white70, fontSize: 14),
+                      ),
+                      subtitle: Text(
+                        AppLocalizations.of(context)!.settings_weeklyReviewDescription,
+                        style: const TextStyle(color: Colors.white54, fontSize: 12),
+                      ),
+                      value: _weeklyReviewEnabled,
+                      onChanged: (value) async {
+                        setState(() {
+                          _weeklyReviewEnabled = value;
+                        });
+                        await StorageService.setWeeklyReviewEnabled(value);
+                        // Перепланируем уведомления
+                        if (value) {
+                          await BariNotificationService.scheduleSmartReminders();
+                        } else {
+                          await NotificationService.cancel(1002);
+                        }
+                      },
+                    ),
+                    SwitchListTile(
+                      title: Text(
+                        AppLocalizations.of(context)!.settings_levelUpNotifications,
+                        style: const TextStyle(color: Colors.white70, fontSize: 14),
+                      ),
+                      subtitle: Text(
+                        AppLocalizations.of(context)!.settings_levelUpNotificationsDescription,
+                        style: const TextStyle(color: Colors.white54, fontSize: 12),
+                      ),
+                      value: _levelUpNotificationsEnabled,
+                      onChanged: (value) async {
+                        setState(() {
+                          _levelUpNotificationsEnabled = value;
+                        });
+                        await StorageService.setLevelUpNotificationsEnabled(value);
+                      },
+                    ),
+                  ],
+                ],
               ),
             ),
             const SizedBox(height: 16),
@@ -333,136 +385,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             }
                           },
                         ),
-                        ChoiceChip(
-                          label: const Text('🤖 AI'),
-                          selected: _bariMode == 'ai',
-                          selectedColor: AuroraTheme.neonPurple,
-                          onSelected: (selected) async {
-                            if (selected) {
-                              setState(() => _bariMode = 'ai');
-                              await StorageService.setBariMode('ai');
-                            }
-                          },
-                        ),
                       ],
                     ),
-                    
-                    // AI API Settings (показываем только если выбран AI режим)
-                    if (_bariMode == 'ai') ...[
-                      const SizedBox(height: 16),
-                      Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: AuroraTheme.neonPurple.withValues(alpha: 0.1),
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(
-                            color: AuroraTheme.neonPurple.withValues(alpha: 0.3),
-                          ),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                const Icon(Icons.psychology, color: Colors.white70, size: 20),
-                                const SizedBox(width: 8),
-                                const Text(
-                                  'AI Настройки',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                const Spacer(),
-                                if (_aiApiKey != null && _aiApiKey!.isNotEmpty)
-                                  const Icon(Icons.check_circle, color: Colors.green, size: 18)
-                                else
-                                  const Icon(Icons.warning, color: Colors.orange, size: 18),
-                              ],
-                            ),
-                            const SizedBox(height: 12),
-                            TextField(
-                              controller: _aiApiKeyController,
-                              decoration: InputDecoration(
-                                labelText: 'API Ключ (OpenAI)',
-                                hintText: 'sk-...',
-                                labelStyle: const TextStyle(color: Colors.white70),
-                                hintStyle: TextStyle(color: Colors.white.withValues(alpha: 0.3)),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                suffixIcon: IconButton(
-                                  icon: const Icon(Icons.help_outline, size: 18),
-                                  color: Colors.white54,
-                                  onPressed: () => _showApiKeyHelp(),
-                                ),
-                              ),
-                              style: const TextStyle(color: Colors.white),
-                              obscureText: true,
-                              onChanged: (value) async {
-                                setState(() => _aiApiKey = value.isEmpty ? null : value);
-                                await StorageService.setAiApiKey(value.isEmpty ? null : value);
-                              },
-                            ),
-                            const SizedBox(height: 8),
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 12),
-                              decoration: BoxDecoration(
-                                border: Border.all(color: Colors.white24),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: DropdownButton<String>(
-                                value: _aiModel,
-                                isExpanded: true,
-                                underline: const SizedBox(),
-                                dropdownColor: AuroraTheme.spaceBlue,
-                                style: const TextStyle(color: Colors.white),
-                                items: [
-                                  DropdownMenuItem(
-                                    value: 'gpt-4o-mini',
-                                    child: Text(AppLocalizations.of(context)!.settings_aiModelGpt4oMini),
-                                  ),
-                                  DropdownMenuItem(
-                                    value: 'gpt-4o',
-                                    child: Text(AppLocalizations.of(context)!.settings_aiModelGpt4o),
-                                  ),
-                                  DropdownMenuItem(
-                                    value: 'gpt-4-turbo',
-                                    child: Text(AppLocalizations.of(context)!.settings_aiModelGpt4Turbo),
-                                  ),
-                                  DropdownMenuItem(
-                                    value: 'gpt-3.5-turbo',
-                                    child: Text(AppLocalizations.of(context)!.settings_aiModelGpt35),
-                                  ),
-                                ],
-                                onChanged: (value) async {
-                                  if (value != null) {
-                                    setState(() => _aiModel = value);
-                                    await StorageService.setAiModel(value);
-                                  }
-                                },
-                              ),
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              _aiApiKey == null || _aiApiKey!.isEmpty
-                                  ? '⚠️ Введите API ключ для работы AI'
-                                  : '✓ AI готов к работе',
-                              style: TextStyle(
-                                color: _aiApiKey == null || _aiApiKey!.isEmpty
-                                    ? Colors.orange
-                                    : Colors.green,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                    
-                    // Gemini Nano Settings (показываем всегда)
-                    const SizedBox(height: 16),
-                    _buildGeminiNanoSection(),
                     
                     const SizedBox(height: 16),
                     SwitchListTile(
@@ -807,69 +731,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
-  void _showApiKeyHelp() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: AuroraTheme.spaceBlue,
-        title: const Row(
-          children: [
-            Icon(Icons.psychology, color: Colors.white),
-            SizedBox(width: 8),
-            Text('Как получить API ключ?', style: TextStyle(color: Colors.white)),
-          ],
-        ),
-        content: const SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                '1. Зайдите на platform.openai.com',
-                style: TextStyle(color: Colors.white),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '2. Создайте аккаунт или войдите',
-                style: TextStyle(color: Colors.white),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '3. Перейдите в API Keys',
-                style: TextStyle(color: Colors.white),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '4. Нажмите "Create new secret key"',
-                style: TextStyle(color: Colors.white),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '5. Скопируйте ключ и вставьте сюда',
-                style: TextStyle(color: Colors.white),
-              ),
-              SizedBox(height: 16),
-              Text(
-                '💡 Рекомендуем модель gpt-4o-mini — она быстрая и недорогая (примерно \$0.001 за ответ).',
-                style: TextStyle(color: Colors.white70, fontSize: 12),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '🔒 API ключ хранится только на вашем устройстве и никуда не передаётся.',
-                style: TextStyle(color: Colors.white70, fontSize: 12),
-              ),
-            ],
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(AppLocalizations.of(context)!.common_understand),
-          ),
-        ],
-      ),
-    );
-  }
 
   void _showCurrencyPicker() {
     showModalBottomSheet<String>(
@@ -928,348 +789,4 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  Widget _buildGeminiNanoSection() {
-    final l10n = AppLocalizations.of(context)!;
-    
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: AuroraTheme.neonPurple.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: AuroraTheme.neonPurple.withValues(alpha: 0.3),
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Icon(Icons.phone_android, color: Colors.white70, size: 20),
-              const SizedBox(width: 8),
-              Text(
-                l10n.settings_geminiNano,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const Spacer(),
-              if (_geminiNanoDownloaded)
-                const Icon(Icons.check_circle, color: Colors.green, size: 20)
-              else if (!_geminiNanoAvailable)
-                const Icon(Icons.info_outline, color: Colors.orange, size: 20),
-            ],
-          ),
-          const SizedBox(height: 12),
-          Text(
-            l10n.settings_geminiNanoDescription,
-            style: const TextStyle(color: Colors.white70, fontSize: 12),
-          ),
-          const SizedBox(height: 16),
-          
-          // Статус
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Text(
-                  l10n.settings_geminiNanoStatus,
-                  style: const TextStyle(color: Colors.white70),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              const SizedBox(width: 8),
-              Text(
-                _getGeminiNanoStatusText(),
-                style: TextStyle(
-                  color: _getGeminiNanoStatusColor(),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-          
-          if (!_geminiNanoAvailable) ...[
-            const SizedBox(height: 12),
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.orange.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: Colors.orange.withValues(alpha: 0.3)),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    '⚠️ Требования:',
-                    style: TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    l10n.settings_geminiNanoRequirement1,
-                    style: const TextStyle(color: Colors.white70, fontSize: 12),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    l10n.settings_geminiNanoRequirement2,
-                    style: const TextStyle(color: Colors.white70, fontSize: 12),
-                  ),
-                ],
-              ),
-            ),
-          ] else ...[
-            const SizedBox(height: 16),
-            
-            // Прогресс скачивания
-            if (_geminiNanoDownloading) ...[
-              Column(
-                children: [
-                  LinearProgressIndicator(
-                    value: _geminiNanoDownloadProgress,
-                    backgroundColor: Colors.white24,
-                    valueColor: const AlwaysStoppedAnimation<Color>(Colors.green),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    '${(_geminiNanoDownloadProgress * 100).toStringAsFixed(0)}%',
-                    style: const TextStyle(color: Colors.white70, fontSize: 12),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-            ],
-            
-            // Кнопки действий
-            if (!_geminiNanoDownloaded && !_geminiNanoDownloading)
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: () {
-                    // Временная заглушка - функция в разработке
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text('${l10n.settings_geminiNanoDownload} — функция в разработке'),
-                        duration: const Duration(seconds: 2),
-                      ),
-                    );
-                  },
-                  icon: const Icon(Icons.download),
-                  label: Text('${l10n.settings_geminiNanoDownload} (скоро)'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey.shade700,
-                    foregroundColor: Colors.white70,
-                  ),
-                ),
-              )
-            else if (_geminiNanoDownloaded)
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton.icon(
-                  onPressed: () => _showGeminiNanoDeleteDialog(),
-                  icon: const Icon(Icons.delete_outline),
-                  label: Text(l10n.settings_geminiNanoDelete),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.red,
-                    side: const BorderSide(color: Colors.red),
-                  ),
-                ),
-              ),
-            
-            const SizedBox(height: 12),
-            
-            // Кнопка "Преимущества"
-            TextButton.icon(
-              onPressed: () => _showGeminiNanoAdvantages(),
-              icon: const Icon(Icons.info_outline, size: 18),
-              label: Text(l10n.settings_geminiNanoAdvantages),
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.white70,
-              ),
-            ),
-          ],
-        ],
-      ),
-    );
-  }
-
-  String _getGeminiNanoStatusText() {
-    final l10n = AppLocalizations.of(context)!;
-    // Всегда честно говорим, что функция в разработке
-    return '${l10n.settings_geminiNanoNotAvailable} — функция в разработке';
-  }
-
-  Color _getGeminiNanoStatusColor() {
-    if (!_geminiNanoAvailable) return Colors.orange;
-    if (_geminiNanoDownloaded) return Colors.green;
-    return Colors.white70;
-  }
-
-  // NOTE: Gemini Nano SDK пока не доступен публично. Методы _showGeminiNanoDownloadDialog
-  // и _downloadGeminiNano будут реализованы, когда SDK станет доступен.
-  // Следите за обновлениями ML Kit GenAI на https://developers.google.com/ml-kit/genai
-
-  Future<void> _showGeminiNanoDeleteDialog() async {
-    final l10n = AppLocalizations.of(context)!;
-    final confirmed = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: AuroraTheme.spaceBlue,
-        title: Text(l10n.settings_geminiNanoDeleteConfirm),
-        content: Text(l10n.settings_geminiNanoDeleteConfirmDescription),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: Text(l10n.common_cancel),
-          ),
-          ElevatedButton(
-            onPressed: () => Navigator.pop(context, true),
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-            child: Text(l10n.settings_geminiNanoDelete),
-          ),
-        ],
-      ),
-    );
-
-    if (confirmed == true) {
-      await _deleteGeminiNano();
-    }
-  }
-
-  Future<void> _deleteGeminiNano() async {
-    final l10n = AppLocalizations.of(context)!;
-    final success = await _geminiNanoService.deleteModel();
-
-    if (mounted) {
-      setState(() {
-        _geminiNanoDownloaded = !success;
-      });
-
-      if (success) {
-        await StorageService.setGeminiNanoDownloaded(false);
-        await StorageService.setGeminiNanoEnabled(false);
-        
-        if (!mounted) return;
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(l10n.settings_geminiNanoSuccessDelete),
-            backgroundColor: Colors.green,
-          ),
-        );
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(l10n.settings_geminiNanoErrorDelete),
-            backgroundColor: Colors.red,
-          ),
-        );
-      }
-    }
-  }
-
-  void _showGeminiNanoAdvantages() {
-    final l10n = AppLocalizations.of(context)!;
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: AuroraTheme.spaceBlue,
-        title: Row(
-          children: [
-            const Icon(Icons.star, color: Colors.amber),
-            const SizedBox(width: 8),
-            Text(
-              l10n.settings_geminiNanoAdvantagesTitle,
-              style: const TextStyle(color: Colors.white),
-            ),
-          ],
-        ),
-        content: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              _buildAdvantageItem(
-                Icons.attach_money,
-                Colors.green,
-                l10n.settings_geminiNanoAdvantage1,
-              ),
-              const SizedBox(height: 12),
-              _buildAdvantageItem(
-                Icons.flash_on,
-                Colors.amber,
-                l10n.settings_geminiNanoAdvantage2,
-              ),
-              const SizedBox(height: 12),
-              _buildAdvantageItem(
-                Icons.lock,
-                Colors.blue,
-                l10n.settings_geminiNanoAdvantage3,
-              ),
-              const SizedBox(height: 12),
-              _buildAdvantageItem(
-                Icons.phone_android,
-                Colors.purple,
-                l10n.settings_geminiNanoAdvantage4,
-              ),
-              const SizedBox(height: 12),
-              _buildAdvantageItem(
-                Icons.language,
-                Colors.teal,
-                l10n.settings_geminiNanoAdvantage5,
-              ),
-              const SizedBox(height: 16),
-              const Divider(),
-              const SizedBox(height: 8),
-              Text(
-                l10n.settings_geminiNanoRequirements,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                l10n.settings_geminiNanoRequirement1,
-                style: const TextStyle(color: Colors.white70, fontSize: 12),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                l10n.settings_geminiNanoRequirement2,
-                style: const TextStyle(color: Colors.white70, fontSize: 12),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                l10n.settings_geminiNanoRequirement3,
-                style: const TextStyle(color: Colors.white70, fontSize: 12),
-              ),
-            ],
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(l10n.common_understand),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildAdvantageItem(IconData icon, Color color, String text) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Icon(icon, color: color, size: 20),
-        const SizedBox(width: 12),
-        Expanded(
-          child: Text(
-            text,
-            style: const TextStyle(color: Colors.white),
-          ),
-        ),
-      ],
-    );
-  }
 }

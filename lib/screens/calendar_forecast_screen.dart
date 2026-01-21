@@ -9,6 +9,8 @@ import '../widgets/aurora_calculator_scaffold.dart';
 import '../domain/finance_rules.dart';
 import '../l10n/app_localizations.dart';
 import '../utils/date_formatter.dart';
+import '../widgets/spending_chart_widget.dart';
+import '../services/currency_scope.dart';
 
 class CalendarForecastScreen extends StatefulWidget {
   const CalendarForecastScreen({super.key});
@@ -897,6 +899,20 @@ class _CalendarForecastScreenState extends State<CalendarForecastScreen> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           // Расходы по категориям
+          if (_categoryExpenses.isNotEmpty || _categoryIncome.isNotEmpty) ...[
+            AuroraTheme.glassCard(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: SpendingChartWidget(
+                  categoryExpenses: _categoryExpenses,
+                  categoryIncome: _categoryIncome,
+                  currencyCode: CurrencyScope.of(context).currencyCode,
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+          ],
+          
           if (_categoryExpenses.isNotEmpty) ...[
             AuroraTheme.glassCard(
               child: Padding(

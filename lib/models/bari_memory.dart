@@ -129,5 +129,6 @@ enum BariActionType {
   piggyBankCreated,
   piggyBankCompleted,
   lessonCompleted,
+  levelUp,
 }
 

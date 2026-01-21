@@ -20,6 +20,7 @@ import 'screens/calculators/calendar_forecast_calculator.dart';
 import 'theme/aurora_theme.dart';
 import 'services/storage_service.dart';
 import 'services/notification_service.dart';
+import 'services/bari_notification_service.dart';
 import 'services/currency_controller.dart';
 import 'services/currency_scope.dart';
 import 'services/deep_link_service.dart';
@@ -44,6 +45,13 @@ void main() async {
   // Инициализируем сервисы с обработкой ошибок
   try {
     await NotificationService.initialize();
+    
+    // Инициализируем умные напоминания Бари
+    try {
+      await BariNotificationService.scheduleSmartReminders();
+    } catch (e) {
+      debugPrint('[main] Error initializing Bari notifications: $e');
+    }
   } catch (e) {
     debugPrint('[main] Error initializing NotificationService: $e');
   }

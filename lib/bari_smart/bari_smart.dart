@@ -12,8 +12,7 @@ import 'providers/spending_rules_provider.dart';
 import 'providers/context_aware_provider.dart';
 import 'providers/knowledge_pack_provider.dart';
 import 'providers/online_reference_provider.dart';
-import 'providers/ai_provider.dart';
-import 'providers/gemini_nano_provider.dart';
+import 'providers/local_llm_provider.dart';
 import 'providers/fallback_provider.dart';
 import 'providers/system_assistant_provider.dart';
 import 'storage/bari_settings_store.dart';
@@ -25,10 +24,7 @@ class BariSmart {
 
   late final BariSettingsStore settings;
   late final KnowledgePackProvider knowledge;
-  late final GeminiNanoProvider geminiNano;
-  // NOTE: Gemini Nano SDK пока не доступен публично.
-  // Когда SDK станет доступен, раскомментировать строку ниже и использовать локальную модель.
-  // final GeminiNanoService _geminiNanoService = GeminiNanoService();
+  late final LocalLLMProvider localLLM;
 
   bool _inited = false;
 
@@ -38,7 +34,7 @@ class BariSmart {
     await settings.load();
     knowledge = KnowledgePackProvider();
     await knowledge.init(); // loads assets/bari_knowledge/ru.json
-    geminiNano = GeminiNanoProvider();
+    localLLM = LocalLLMProvider();
     _inited = true;
   }
 
@@ -79,32 +75,8 @@ class BariSmart {
 
     if (kDebugMode) {
       debugPrint(
-        '[BariSmart] mode=${settings.mode.name} aiEnabled=${settings.aiEnabled} onlineEnabled=${settings.onlineEnabled} forceOnline=$forceOnline intent=$intent msg="$text"',
+        '[BariSmart] mode=${settings.mode.name} onlineEnabled=${settings.onlineEnabled} forceOnline=$forceOnline intent=$intent msg="$text"',
       );
-    }
-
-    // === AI MODE: Если включён AI, сначала пробуем его ===
-    if (settings.mode == BariMode.ai && settings.aiEnabled) {
-      if (kDebugMode) {
-        debugPrint('[BariSmart] Trying AiProvider (model=${settings.aiModel})');
-      }
-
-      final aiProvider = AiProvider(
-        apiKey: settings.aiApiKey,
-        baseUrl: settings.aiBaseUrl,
-        model: settings.aiModel,
-      );
-
-      final aiRes = await aiProvider.tryRespond(text, ctx, forceOnline: true);
-      if (aiRes != null) {
-        if (kDebugMode) {
-          debugPrint('[BariSmart] AiProvider ответил (confidence=${aiRes.confidence})');
-        }
-        return aiRes;
-      }
-      if (kDebugMode) {
-        debugPrint('[BariSmart] AiProvider не дал ответа, fallback to offline');
-      }
     }
 
     // Офлайн провайдеры (всегда доступны как fallback)
@@ -127,31 +99,22 @@ class BariSmart {
       if (r != null && r.confidence > 0.7) return r;
     }
 
-    // TIER 2: Gemini Nano (on-device AI)
-    // Пока отключено, так как SDK не доступен публично
-    // Включить, когда появится реальный ML Kit GenAI SDK
-    // final geminiNanoEnabled = await StorageService.getGeminiNanoEnabled();
-    // if (geminiNanoEnabled) {
-    //   final geminiNanoAvailable = await _geminiNanoService.checkAvailability();
-    //   final geminiNanoDownloaded = await _geminiNanoService.checkDownloaded();
-    //   
-    //   if (geminiNanoAvailable && geminiNanoDownloaded) {
-    //     if (kDebugMode) {
-    //       debugPrint('[BariSmart] Trying GeminiNanoProvider');
-    //     }
-    //     
-    //     final nanoRes = await geminiNano.tryRespond(text, ctx);
-    //     if (nanoRes != null) {
-    //       if (kDebugMode) {
-    //         debugPrint('[BariSmart] GeminiNanoProvider ответил (confidence=${nanoRes.confidence})');
-    //       }
-    //       return nanoRes;
-    //     }
-    //     if (kDebugMode) {
-    //       debugPrint('[BariSmart] GeminiNanoProvider не дал ответа');
-    //     }
-    //   }
-    // }
+    // TIER 2: Local LLM (on-device AI через llama.cpp)
+    if (kDebugMode) {
+      debugPrint('[BariSmart] Trying LocalLLMProvider');
+    }
+    
+    final localLLMRes = await localLLM.tryRespond(text, ctx);
+    if (localLLMRes != null) {
+      if (kDebugMode) {
+        debugPrint('[BariSmart] LocalLLMProvider ответил (confidence=${localLLMRes.confidence})');
+      }
+      return localLLMRes;
+    }
+    if (kDebugMode) {
+      debugPrint('[BariSmart] LocalLLMProvider не дал ответа');
+    }
+
 
     // Если hybrid или online режим, пробуем онлайн (Wikipedia, DuckDuckGo)
     final shouldTryOnline =

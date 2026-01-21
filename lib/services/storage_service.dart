@@ -28,6 +28,9 @@ class StorageService {
   static const String _keyLanguage = 'language';
   static const String _keyTheme = 'theme';
   static const String _keyNotificationsEnabled = 'notifications_enabled';
+  static const String _keyDailyExpenseReminderEnabled = 'daily_expense_reminder_enabled';
+  static const String _keyWeeklyReviewEnabled = 'weekly_review_enabled';
+  static const String _keyLevelUpNotificationsEnabled = 'level_up_notifications_enabled';
   static const String _keyCustomTasks = 'custom_tasks';
   static const String _keyEarningsStreak = 'earnings_streak';
   static const String _keyLastStreakDate = 'last_streak_date';
@@ -463,6 +466,36 @@ class StorageService {
     await prefs.setBool(_keyNotificationsEnabled, enabled);
   }
 
+  static Future<bool> getDailyExpenseReminderEnabled() async {
+    final prefs = await _prefs;
+    return prefs.getBool(_keyDailyExpenseReminderEnabled) ?? true;
+  }
+
+  static Future<void> setDailyExpenseReminderEnabled(bool enabled) async {
+    final prefs = await _prefs;
+    await prefs.setBool(_keyDailyExpenseReminderEnabled, enabled);
+  }
+
+  static Future<bool> getWeeklyReviewEnabled() async {
+    final prefs = await _prefs;
+    return prefs.getBool(_keyWeeklyReviewEnabled) ?? true;
+  }
+
+  static Future<void> setWeeklyReviewEnabled(bool enabled) async {
+    final prefs = await _prefs;
+    await prefs.setBool(_keyWeeklyReviewEnabled, enabled);
+  }
+
+  static Future<bool> getLevelUpNotificationsEnabled() async {
+    final prefs = await _prefs;
+    return prefs.getBool(_keyLevelUpNotificationsEnabled) ?? true;
+  }
+
+  static Future<void> setLevelUpNotificationsEnabled(bool enabled) async {
+    final prefs = await _prefs;
+    await prefs.setBool(_keyLevelUpNotificationsEnabled, enabled);
+  }
+
   // UX: уровень подробности объяснений
   static Future<String> getUxDetailLevel() async {
     final prefs = await _prefs;
@@ -784,65 +817,6 @@ class StorageService {
   static Future<void> setBariUseSystemAssistant(bool enabled) async {
     final prefs = await _prefs;
     await prefs.setBool('bari_use_system_assistant', enabled);
-  }
-
-  // AI Settings
-  static Future<String?> getAiApiKey() async {
-    final prefs = await _prefs;
-    return prefs.getString('ai_api_key');
-  }
-
-  static Future<void> setAiApiKey(String? key) async {
-    final prefs = await _prefs;
-    if (key == null || key.isEmpty) {
-      await prefs.remove('ai_api_key');
-    } else {
-      await prefs.setString('ai_api_key', key);
-    }
-  }
-
-  static Future<String?> getAiBaseUrl() async {
-    final prefs = await _prefs;
-    return prefs.getString('ai_base_url');
-  }
-
-  static Future<void> setAiBaseUrl(String url) async {
-    final prefs = await _prefs;
-    await prefs.setString('ai_base_url', url);
-  }
-
-  static Future<String?> getAiModel() async {
-    final prefs = await _prefs;
-    return prefs.getString('ai_model');
-  }
-
-  static Future<void> setAiModel(String model) async {
-    final prefs = await _prefs;
-    await prefs.setString('ai_model', model);
-  }
-
-  // Gemini Nano Settings
-  static const String _keyGeminiNanoEnabled = 'gemini_nano_enabled';
-  static const String _keyGeminiNanoDownloaded = 'gemini_nano_downloaded';
-
-  static Future<bool> getGeminiNanoEnabled() async {
-    final prefs = await _prefs;
-    return prefs.getBool(_keyGeminiNanoEnabled) ?? false;
-  }
-
-  static Future<void> setGeminiNanoEnabled(bool enabled) async {
-    final prefs = await _prefs;
-    await prefs.setBool(_keyGeminiNanoEnabled, enabled);
-  }
-
-  static Future<bool> getGeminiNanoDownloaded() async {
-    final prefs = await _prefs;
-    return prefs.getBool(_keyGeminiNanoDownloaded) ?? false;
-  }
-
-  static Future<void> setGeminiNanoDownloaded(bool downloaded) async {
-    final prefs = await _prefs;
-    await prefs.setBool(_keyGeminiNanoDownloaded, downloaded);
   }
 
   // Notes

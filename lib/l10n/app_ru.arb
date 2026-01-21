@@ -56,6 +56,7 @@
   "bariTip_piggyBankCreated": "Новая копилка! На что копим?",
   "bariTip_piggyBankCompleted": "Копилка заполнена! Поздравляю с достижением цели!",
   "bariTip_lessonCompleted": "Урок пройден! Новые знания — суперсила!",
+  "bariTip_levelUp": "Новый уровень! Ты растешь как финансист!",
 
   "period_day": "День",
   "period_week": "Неделя",
@@ -540,6 +541,43 @@
   "settings_uxProDescription": "Подробные объяснения",
   "settings_currency": "Валюта",
   "settings_notifications": "Уведомления",
+  "settings_dailyExpenseReminder": "Напоминания о записи расходов",
+  "settings_dailyExpenseReminderDescription": "Ежедневные напоминания вечером о записи расходов",
+  "settings_weeklyReview": "Еженедельные обзоры",
+  "settings_weeklyReviewDescription": "Напоминания о подведении итогов недели",
+  "settings_levelUpNotifications": "Уведомления о повышении уровня",
+  "settings_levelUpNotificationsDescription": "Уведомления при достижении нового уровня",
+  "achievements_title": "Достижения",
+  "achievements_empty": "Нет достижений",
+  "achievements_unlockedCount": "Разблокировано достижений: {count}",
+  "@achievements_unlockedCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "achievements_unlockedAt": "Разблокировано: {date}",
+  "@achievements_unlockedAt": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  "notifications_dailyReminderTitle": "Бари напоминает",
+  "notifications_dailyReminderBody": "Не забудь записать сегодняшние расходы! 💰",
+  "notifications_weeklyReviewTitle": "Бари напоминает",
+  "notifications_weeklyReviewBody": "Пора подвести итоги недели! Посмотри, сколько ты сэкономил 📊",
+  "notifications_levelUpTitle": "🎉 Новый уровень!",
+  "notifications_levelUpBody": "Поздравляю! Ты достиг уровня {level}",
+  "@notifications_levelUpBody": {
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+  "notifications_channelName": "Напоминания Бари",
+  "notifications_channelDescription": "Персональные напоминания от Бари",
+  "notifications_levelUpChannelName": "Повышение уровня",
+  "notifications_levelUpChannelDescription": "Уведомления о повышении уровня",
+  "charts_expensesByCategory": "Расходы по категориям",
+  "charts_incomeByCategory": "Доходы по категориям",
   "settings_bari": "Bari Smart",
   "settings_bariMode": "Режим Bari",
   "settings_bariModeOffline": "Офлайн",
@@ -850,6 +888,9 @@
   "parentZone_unlockPremium": "Разблокировать премиум",
   "parentZone_edit": "Изменить",
   "parentZone_close": "Закрыть",
+  "parentZone_aiSummaryTitle": "AI-саммари для родителей",
+  "parentZone_modelNotAvailable": "Локальная модель недоступна. Скачайте модель в настройках.",
+  "parentZone_summaryGenerationFailed": "Не удалось сгенерировать саммари. Попробуйте позже.",
   "parentZone_earningsApproved": "Заработок одобрен",
   "parentZone_earningsRejected": "Заработок отклонён",
   "exportImport_title": "Экспорт/Импорт",
@@ -981,43 +1022,6 @@
   "earningsLab_taskDescription": "Описание не задано",
   "earningsLab_rewardHelper": "Сколько ты получишь за выполнение",
   "earningsLab_taskNameRequired": "Напиши название",
-  "settings_aiModelGpt4oMini": "GPT-4o Mini (быстрый)",
-  "settings_aiModelGpt4o": "GPT-4o (умный)",
-  "settings_aiModelGpt4Turbo": "GPT-4 Turbo",
-  "settings_aiModelGpt35": "GPT-3.5 (дешёвый)",
-  "settings_geminiNano": "AI на устройстве (Gemini Nano)",
-  "@settings_geminiNano": {
-    "description": "Заголовок секции Gemini Nano"
-  },
-  "settings_geminiNanoDescription": "Бесплатный AI, который работает без интернета",
-  "settings_geminiNanoStatus": "Статус",
-  "settings_geminiNanoAvailable": "Доступен",
-  "settings_geminiNanoNotAvailable": "Недоступен на этом устройстве",
-  "settings_geminiNanoDownloaded": "Скачан и готов к работе",
-  "settings_geminiNanoNotDownloaded": "Не скачан",
-  "settings_geminiNanoDownload": "Скачать модель (~2.5 GB)",
-  "settings_geminiNanoDownloading": "Скачивание...",
-  "settings_geminiNanoDelete": "Удалить модель",
-  "settings_geminiNanoAdvantages": "Преимущества",
-  "settings_geminiNanoAdvantagesTitle": "Почему стоит скачать Gemini Nano?",
-  "settings_geminiNanoAdvantage1": "💰 Полностью бесплатно — без ограничений",
-  "settings_geminiNanoAdvantage2": "⚡ Мгновенные ответы — без задержки сети",
-  "settings_geminiNanoAdvantage3": "🔒 100% приватность — данные не покидают устройство",
-  "settings_geminiNanoAdvantage4": "📱 Работает офлайн — без интернета",
-  "settings_geminiNanoAdvantage5": "🌍 Поддержка 3 языков — русский, английский, немецкий",
-  "settings_geminiNanoRequirements": "Требования",
-  "settings_geminiNanoRequirement1": "Android 14+ (Google Pixel 8+, Samsung S24+, OnePlus 12+)",
-  "settings_geminiNanoRequirement2": "~2.5 GB свободного места",
-  "settings_geminiNanoRequirement3": "6 GB оперативной памяти",
-  "settings_geminiNanoDownloadConfirm": "Скачать модель Gemini Nano?",
-  "settings_geminiNanoDownloadConfirmDescription": "Модель займёт ~2.5 GB места, но даст вам бесплатный AI без интернета.",
-  "settings_geminiNanoDeleteConfirm": "Удалить модель?",
-  "settings_geminiNanoDeleteConfirmDescription": "Освободит ~2.5 GB места, но AI на устройстве перестанет работать.",
-  "settings_geminiNanoError": "Ошибка",
-  "settings_geminiNanoErrorDownload": "Не удалось скачать модель. Проверьте подключение к интернету.",
-  "settings_geminiNanoErrorDelete": "Не удалось удалить модель.",
-  "settings_geminiNanoSuccessDownload": "Модель успешно скачана!",
-  "settings_geminiNanoSuccessDelete": "Модель удалена.",
 
   "bari_goal_noPiggyBanks": "У тебя пока нет копилок.",
   "bari_goal_noPiggyBanksAdvice": "Создай первую копилку с целью — это главный шаг к накоплениям! Что хочешь купить?",
@@ -1679,5 +1683,22 @@
   "calendarSync_localEvents": "Локальные",
   "calendarSync_errorEvents": "Ошибки",
   "calendarSync_successRate": "Успешность",
-  "calendarSync_syncInProgress": "Синхронизация..."
+  "calendarSync_syncInProgress": "Синхронизация...",
+  "modelLoader_title": "Загрузка модели ИИ",
+  "modelLoader_loading": "Загрузка модели из приложения...",
+  "modelLoader_preparing": "Модель загружена, подготовка к распаковке...",
+  "modelLoader_decompressing": "Распаковка модели (это может занять минуту)...",
+  "modelLoader_saving": "Сохранение... {percent}%",
+  "@modelLoader_saving": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "modelLoader_complete": "Модель готова!",
+  "modelLoader_error": "Ошибка загрузки модели",
+  "modelLoader_errorMessage": "Не удалось загрузить модель ИИ. Пожалуйста, попробуйте снова или обратитесь в поддержку.",
+  "modelLoader_retry": "Повторить",
+  "modelLoader_cancel": "Отмена"
 }

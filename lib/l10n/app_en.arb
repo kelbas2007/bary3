@@ -51,6 +51,7 @@
   "bariTip_piggyBankCreated": "New piggy bank! What are we saving for?",
   "bariTip_piggyBankCompleted": "Piggy bank is full! Congratulations on reaching your goal!",
   "bariTip_lessonCompleted": "Lesson completed! New knowledge is a superpower!",
+  "bariTip_levelUp": "New level! You're growing as a financier!",
 
   "period_day": "Day",
   "period_week": "Week",
@@ -541,6 +542,43 @@
   "settings_uxProDescription": "Detailed explanations",
   "settings_currency": "Currency",
   "settings_notifications": "Notifications",
+  "settings_dailyExpenseReminder": "Daily expense reminders",
+  "settings_dailyExpenseReminderDescription": "Daily evening reminders to log expenses",
+  "settings_weeklyReview": "Weekly reviews",
+  "settings_weeklyReviewDescription": "Reminders to review weekly progress",
+  "settings_levelUpNotifications": "Level up notifications",
+  "settings_levelUpNotificationsDescription": "Notifications when reaching a new level",
+  "achievements_title": "Achievements",
+  "achievements_empty": "No achievements",
+  "achievements_unlockedCount": "Unlocked achievements: {count}",
+  "@achievements_unlockedCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "achievements_unlockedAt": "Unlocked: {date}",
+  "@achievements_unlockedAt": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  "notifications_dailyReminderTitle": "Bari reminds",
+  "notifications_dailyReminderBody": "Don't forget to log today's expenses! 💰",
+  "notifications_weeklyReviewTitle": "Bari reminds",
+  "notifications_weeklyReviewBody": "Time to review the week! See how much you saved 📊",
+  "notifications_levelUpTitle": "🎉 New level!",
+  "notifications_levelUpBody": "Congratulations! You reached level {level}",
+  "@notifications_levelUpBody": {
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+  "notifications_channelName": "Bari Reminders",
+  "notifications_channelDescription": "Personal reminders from Bari",
+  "notifications_levelUpChannelName": "Level Up",
+  "notifications_levelUpChannelDescription": "Level up notifications",
+  "charts_expensesByCategory": "Expenses by category",
+  "charts_incomeByCategory": "Income by category",
   "settings_bari": "Bari Smart",
   "settings_bariMode": "Bari mode",
   "settings_bariModeOffline": "Offline",
@@ -851,6 +889,9 @@
   "parentZone_unlockPremium": "Unlock premium",
   "parentZone_edit": "Edit",
   "parentZone_close": "Close",
+  "parentZone_aiSummaryTitle": "AI Summary for Parents",
+  "parentZone_modelNotAvailable": "Local model not available. Download model in settings.",
+  "parentZone_summaryGenerationFailed": "Failed to generate summary. Please try again later.",
   "parentZone_earningsApproved": "Earnings approved",
   "parentZone_earningsRejected": "Earnings rejected",
   "exportImport_title": "Export/Import",
@@ -982,40 +1023,6 @@
   "earningsLab_taskDescription": "No description",
   "earningsLab_rewardHelper": "How much will you get for completion",
   "earningsLab_taskNameRequired": "Enter task name",
-  "settings_aiModelGpt4oMini": "GPT-4o Mini (fast)",
-  "settings_aiModelGpt4o": "GPT-4o (smart)",
-  "settings_aiModelGpt4Turbo": "GPT-4 Turbo",
-  "settings_aiModelGpt35": "GPT-3.5 (cheap)",
-  "settings_geminiNano": "On-Device AI (Gemini Nano)",
-  "settings_geminiNanoDescription": "Free AI that works without internet",
-  "settings_geminiNanoStatus": "Status",
-  "settings_geminiNanoAvailable": "Available",
-  "settings_geminiNanoNotAvailable": "Not available on this device",
-  "settings_geminiNanoDownloaded": "Downloaded and ready",
-  "settings_geminiNanoNotDownloaded": "Not downloaded",
-  "settings_geminiNanoDownload": "Download model (~2.5 GB)",
-  "settings_geminiNanoDownloading": "Downloading...",
-  "settings_geminiNanoDelete": "Delete model",
-  "settings_geminiNanoAdvantages": "Advantages",
-  "settings_geminiNanoAdvantagesTitle": "Why download Gemini Nano?",
-  "settings_geminiNanoAdvantage1": "💰 Completely free — no limits",
-  "settings_geminiNanoAdvantage2": "⚡ Instant responses — no network delay",
-  "settings_geminiNanoAdvantage3": "🔒 100% privacy — data stays on device",
-  "settings_geminiNanoAdvantage4": "📱 Works offline — no internet needed",
-  "settings_geminiNanoAdvantage5": "🌍 Supports 3 languages — English, German, Russian",
-  "settings_geminiNanoRequirements": "Requirements",
-  "settings_geminiNanoRequirement1": "Android 14+ (Google Pixel 8+, Samsung S24+, OnePlus 12+)",
-  "settings_geminiNanoRequirement2": "~2.5 GB free space",
-  "settings_geminiNanoRequirement3": "6 GB RAM",
-  "settings_geminiNanoDownloadConfirm": "Download Gemini Nano model?",
-  "settings_geminiNanoDownloadConfirmDescription": "The model will take ~2.5 GB of space, but gives you free AI without internet.",
-  "settings_geminiNanoDeleteConfirm": "Delete model?",
-  "settings_geminiNanoDeleteConfirmDescription": "Will free ~2.5 GB of space, but on-device AI will stop working.",
-  "settings_geminiNanoError": "Error",
-  "settings_geminiNanoErrorDownload": "Failed to download model. Check your internet connection.",
-  "settings_geminiNanoErrorDelete": "Failed to delete model.",
-  "settings_geminiNanoSuccessDownload": "Model downloaded successfully!",
-  "settings_geminiNanoSuccessDelete": "Model deleted.",
 
   "bari_emptyMessage": "Write a question 🙂",
   "bari_emptyMessageAdvice": "For example: \"can I buy for 20€\" or \"what is inflation\"",
@@ -1403,5 +1410,22 @@
   "calendarSync_localEvents": "Local",
   "calendarSync_errorEvents": "Errors",
   "calendarSync_successRate": "Success rate",
-  "calendarSync_syncInProgress": "Syncing..."
+  "calendarSync_syncInProgress": "Syncing...",
+  "modelLoader_title": "Loading AI Model",
+  "modelLoader_loading": "Loading model from app...",
+  "modelLoader_preparing": "Model loaded, preparing to decompress...",
+  "modelLoader_decompressing": "Decompressing model (this may take a minute)...",
+  "modelLoader_saving": "Saving... {percent}%",
+  "@modelLoader_saving": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "modelLoader_complete": "Model ready!",
+  "modelLoader_error": "Model Loading Error",
+  "modelLoader_errorMessage": "Failed to load AI model. Please try again or contact support.",
+  "modelLoader_retry": "Retry",
+  "modelLoader_cancel": "Cancel"
 }

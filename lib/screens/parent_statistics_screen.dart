@@ -6,8 +6,8 @@ import '../services/money_ui.dart';
 import '../theme/aurora_theme.dart';
 import '../l10n/app_localizations.dart';
 import '../bari_smart/bari_context_adapter.dart';
-import '../bari_smart/providers/gemini_nano_provider.dart';
-import '../services/gemini_nano_service.dart';
+import '../bari_smart/providers/local_llm_provider.dart';
+import '../bari_smart/aca/local_llm/model_loader.dart';
 
 class ParentStatisticsScreen extends StatefulWidget {
   const ParentStatisticsScreen({super.key});
@@ -183,17 +183,24 @@ class _ParentStatisticsScreenState extends State<ParentStatisticsScreen> {
   }
 
   Future<void> _generateAISummary() async {
-    // Проверяем доступность Gemini Nano
-    final geminiService = GeminiNanoService();
-    final isAvailable = await geminiService.checkAvailability();
-    final isDownloaded = await geminiService.checkDownloaded();
-
-    if (!isAvailable || !isDownloaded) {
+    // Проверяем доступность локальной модели
+    final modelLoader = ModelLoader();
+    try {
+      await modelLoader.loadModel();
+    } catch (e) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context);
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Gemini Nano недоступен. Скачайте модель в настройках.'),
+          SnackBar(
+            content: Text(
+              l10n?.parentZone_modelNotAvailable ?? 'Локальная модель недоступна. Скачайте модель в настройках.',
+            ),
             backgroundColor: Colors.orange,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            margin: const EdgeInsets.all(16),
           ),
         );
       }
@@ -220,7 +227,7 @@ class _ParentStatisticsScreenState extends State<ParentStatisticsScreen> {
                        : 'de';
       
       // Генерируем саммари
-      final provider = GeminiNanoProvider();
+      final provider = LocalLLMProvider();
       final summary = await provider.generateParentSummary(
         ctx,
         startDate,
@@ -235,10 +242,18 @@ class _ParentStatisticsScreenState extends State<ParentStatisticsScreen> {
 
       if (summary == null || summary.isEmpty) {
         if (mounted) {
+          final l10n = AppLocalizations.of(context);
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Не удалось сгенерировать саммари. Попробуйте позже.'),
+            SnackBar(
+              content: Text(
+                l10n?.parentZone_summaryGenerationFailed ?? 'Не удалось сгенерировать саммари. Попробуйте позже.',
+              ),
               backgroundColor: Colors.red,
+              behavior: SnackBarBehavior.floating,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              margin: const EdgeInsets.all(16),
             ),
           );
         }
@@ -247,19 +262,29 @@ class _ParentStatisticsScreenState extends State<ParentStatisticsScreen> {
 
       // Показываем диалог с саммари
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: const Text('AI-саммари для родителей'),
+            title: Text(
+              l10n.parentZone_aiSummaryTitle,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
             content: SingleChildScrollView(
-              child: Text(summary),
+              child: Text(
+                summary,
+                style: const TextStyle(fontSize: 14),
+              ),
             ),
             actions: [
               TextButton(
                 onPressed: () => Navigator.of(context).pop(),
-                child: const Text('Закрыть'),
+                child: Text(l10n.parentZone_close),
               ),
             ],
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
           ),
         );
       }
@@ -269,10 +294,18 @@ class _ParentStatisticsScreenState extends State<ParentStatisticsScreen> {
       });
       
       if (mounted) {
+        final l10n = AppLocalizations.of(context);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка: $e'),
+            content: Text(
+              l10n?.parentZone_summaryGenerationFailed ?? 'Ошибка: $e',
+            ),
             backgroundColor: Colors.red,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            margin: const EdgeInsets.all(16),
           ),
         );
       }

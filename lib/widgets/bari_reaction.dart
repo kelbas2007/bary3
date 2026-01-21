@@ -72,6 +72,8 @@ class _BariReactionState extends State<BariReaction>
         return 'Ачивка! Ты достиг цели!';
       case BariActionType.lessonCompleted:
         return '+XP, вот что ты понял…';
+      case BariActionType.levelUp:
+        return 'Новый уровень! Так держать 🚀';
     }
   }
 
@@ -91,6 +93,8 @@ class _BariReactionState extends State<BariReaction>
         return '🌟'; // Звезда
       case BariActionType.piggyBankCreated:
         return '✨'; // Мечты
+      case BariActionType.levelUp:
+        return '🚀'; // Рост уровня
       case BariActionType.expense:
         // Зависит от настроения
         break;
@@ -133,6 +137,8 @@ class _BariReactionState extends State<BariReaction>
         return Colors.pinkAccent;
       case BariActionType.lessonCompleted:
         return Colors.purpleAccent;
+      case BariActionType.levelUp:
+        return Colors.lightGreenAccent;
     }
   }
 

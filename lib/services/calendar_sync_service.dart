@@ -279,8 +279,9 @@ class CalendarSyncService {
     //
     // For now, we'll skip recurrence rules to avoid API compatibility issues
     // The event will be created without recurrence
-    // TODO: Implement proper RecurrenceRule when device_calendar API is confirmed
-    // Check RecurrenceFrequency enum values and RecurrenceRule constructor signature
+    // NOTE: RecurrenceRule is intentionally not implemented here, because the
+    // device_calendar API needs to be re-checked (RecurrenceFrequency values
+    // and RecurrenceRule constructor signature) before enabling it.
     debugPrint(
       'Recurrence rule requested for ${event.repeat}, '
       'but RecurrenceRule API needs verification with device_calendar 4.3.3',

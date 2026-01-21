@@ -9,7 +9,6 @@ import '../theme/aurora_theme.dart';
 import '../widgets/async_error_widget.dart';
 import '../services/money_formatter.dart';
 import '../services/currency_scope.dart';
-import '../utils/date_formatter.dart';
 import '../domain/ux_detail_level.dart';
 import '../state/transactions_notifier.dart';
 import '../state/planned_events_notifier.dart';
@@ -27,6 +26,7 @@ import '../widgets/swipeable_list_item.dart';
 import '../widgets/animated_list_view.dart';
 import '../widgets/accessibility_wrapper.dart';
 import '../widgets/quick_tools_grid.dart';
+import '../widgets/transaction_item.dart';
 
 class BalanceScreen extends ConsumerStatefulWidget {
   const BalanceScreen({super.key});
@@ -605,7 +605,7 @@ class _BalanceScreenState extends ConsumerState<BalanceScreen>
                                 rightActionColor: Colors.red,
                                 rightActionIcon: Icons.delete,
                                 rightActionLabel: 'Удалить',
-                                child: _TransactionItem(
+                                child: TransactionItem(
                                   key: ValueKey(tx.id),
                                   transaction: tx,
                                 ),
@@ -658,123 +658,6 @@ class _FilterChip extends StatelessWidget {
           style: TextStyle(
             color: selected ? Colors.white : Colors.white70,
             fontWeight: selected ? FontWeight.bold : FontWeight.normal,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _TransactionItem extends StatelessWidget {
-  final Transaction transaction;
-
-  const _TransactionItem({super.key, required this.transaction});
-
-  @override
-  Widget build(BuildContext context) {
-    final isIncome = transaction.type == TransactionType.income;
-    final currencyCode = CurrencyScope.of(context).currencyCode;
-    final l10n = AppLocalizations.of(context)!;
-
-    // Определяем иконку и цвет
-    IconData icon;
-    Color color;
-
-    if (transaction.piggyBankId != null) {
-      icon = Icons.savings;
-      color = Colors.orangeAccent;
-    } else if (isIncome) {
-      icon = Icons.arrow_downward;
-      color = Colors.greenAccent;
-    } else {
-      icon = Icons.arrow_upward;
-      color = Colors.redAccent;
-    }
-
-    // Переопределение иконки для категорий
-    if (transaction.category != null) {
-      // Простая логика иконок (можно расширить)
-      if (transaction.category!.toLowerCase().contains('еда') ||
-          transaction.category!.toLowerCase().contains('food')) {
-        icon = Icons.fastfood;
-      } else if (transaction.category!.toLowerCase().contains('транспорт') ||
-          transaction.category!.toLowerCase().contains('transport')) {
-        icon = Icons.directions_bus;
-      } else if (transaction.category!.toLowerCase().contains('игра') ||
-          transaction.category!.toLowerCase().contains('game')) {
-        icon = Icons.videogame_asset;
-      }
-    }
-
-    final categoryName = transaction.category ??
-        (isIncome ? l10n.common_income : l10n.common_expense);
-    final amountText = '${isIncome ? '+' : '-'}${formatMoney(amountMinor: transaction.amount, currencyCode: currencyCode, locale: Localizations.localeOf(context).toString())}';
-
-    return Semantics(
-      label: '$categoryName, $amountText',
-      hint: transaction.note ?? LocalizedDateFormatter.formatDateTime(context, transaction.date),
-      button: true,
-      child: Hero(
-        tag: 'transaction_${transaction.id}',
-        child: Material(
-          color: Colors.transparent,
-          child: InkWell(
-            onTap: () {
-              HapticFeedbackUtil.lightImpact();
-              // Можно добавить детальный просмотр транзакции
-            },
-            borderRadius: BorderRadius.circular(16),
-            child: Container(
-              margin: const EdgeInsets.only(bottom: 12),
-              decoration: BoxDecoration(
-                color: AuroraTheme.spaceBlue.withValues(alpha: 0.3),
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Colors.white10),
-              ),
-              child: ListTile(
-                leading: Hero(
-                  tag: 'transaction_icon_${transaction.id}',
-                  child: Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: color.withValues(alpha: 0.2),
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(icon, color: color, size: 24),
-                  ),
-                ),
-                title: Text(
-                  categoryName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                ),
-                subtitle: transaction.note != null
-                    ? Text(
-                        transaction.note!,
-                        style: const TextStyle(color: Colors.white54),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      )
-                    : Text(
-                        LocalizedDateFormatter.formatDateTime(context, transaction.date),
-                        style: const TextStyle(color: Colors.white38, fontSize: 12),
-                      ),
-                trailing: Hero(
-                  tag: 'transaction_amount_${transaction.id}',
-                  child: Text(
-                    amountText,
-                    style: TextStyle(
-                      color: isIncome ? Colors.greenAccent : Colors.redAccent,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-              ),
-            ),
           ),
         ),
       ),
