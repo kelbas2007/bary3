@@ -1,4 +1,7 @@
 name: CI
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 on:
   push:
@@ -6,66 +9,142 @@ on:
   pull_request:
     branches: [ main, develop ]
 
+env:
+  FLUTTER_VERSION: 'stable'
+
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Cache pub
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.pub-cache
+            .dart_tool
+          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-
+
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.38.5'
+          flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: 'stable'
+
       - name: Show Dart version
         run: dart --version
+
       - name: Install dependencies
         run: flutter pub get
+
       - name: Verify formatting
         run: dart format --set-exit-if-changed .
+
       - name: Analyze code
         run: flutter analyze
+
       - name: Check hardcoded strings
         run: dart scripts/check_hardcoded_strings.dart
+
       - name: Check translations completeness
         run: dart scripts/check_translations.dart
 
   test:
     name: Test
     runs-on: ubuntu-latest
+    needs: analyze
     steps:
       - uses: actions/checkout@v4
+
+      - name: Cache pub
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.pub-cache
+            .dart_tool
+          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-
+
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.38.5'
+          flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: 'stable'
+
       - name: Show Dart version
         run: dart --version
+
       - name: Install dependencies
         run: flutter pub get
+
       - name: Generate localization files
         run: flutter gen-l10n
+
       - name: Run tests
         run: flutter test
+
       - name: Run localization tests
         run: flutter test test/localization_test.dart
 
-  build:
-    name: Build
+  build-android:
+    name: Build Android
     runs-on: ubuntu-latest
+    needs: test
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+
+      - name: Cache pub
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.pub-cache
+            .dart_tool
+          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-
+
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.38.5'
+          flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: 'stable'
+
       - name: Show Dart version
         run: dart --version
+
       - name: Install dependencies
         run: flutter pub get
+
       - name: Generate localization files
         run: flutter gen-l10n
+
       - name: Build APK
         run: flutter build apk --release
-      - name: Build iOS (if on macOS)
-        if: runner.os == 'macOS'
+
+  build-ios:
+    name: Build iOS
+    runs-on: macos-latest
+    needs: test
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: 'stable'
+
+      - name: Show Dart version
+        run: dart --version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Generate localization files
+        run: flutter gen-l10n
+
+      - name: Build iOS (no codesign)
         run: flutter build ios --release --no-codesign

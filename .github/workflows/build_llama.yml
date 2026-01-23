@@ -14,32 +14,35 @@ jobs:
   build-android:
     runs-on: ubuntu-latest
     timeout-minutes: 60
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Set up Android NDK
         uses: android-actions/setup-android@v3
         with:
           packages: 'ndk;26.3.11579264'
-      
+
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake build-essential git
-      
+
+      - name: Show NDK environment
+        run: |
+          echo "ANDROID_NDK_ROOT=$ANDROID_NDK_ROOT"
+          echo "ANDROID_NDK_HOME=$ANDROID_NDK_HOME"
+          ls -la "${ANDROID_NDK_ROOT:-/opt/android-ndk}" 2>/dev/null || echo "NDK path not accessible"
+
       - name: Build for ARM64
         run: |
           chmod +x scripts/build_llama_android.sh
-          export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
-          export ANDROID_NDK_ROOT=$ANDROID_NDK_ROOT
-          echo "ANDROID_NDK_ROOT: $ANDROID_NDK_ROOT"
-          echo "ANDROID_NDK_HOME: $ANDROID_NDK_HOME"
-          ls -la $ANDROID_NDK_ROOT 2>/dev/null | head -10 || echo "NDK root not accessible"
+          # build script should rely on environment variables provided by setup action;
+          # if your script expects ANDROID_NDK_HOME, ensure it reads ANDROID_NDK_ROOT
           bash scripts/build_llama_android.sh
-      
-      - name: Debug build output
+
+      - name: Debug build output (on failure)
         if: failure()
         run: |
           echo "=== Build directory contents ==="
@@ -50,18 +53,19 @@ jobs:
           echo ""
           echo "=== All .so files in build directory ==="
           find build-android -name "*.so" -type f 2>/dev/null || echo "No .so files found"
-      
+
       - name: Check build artifacts
         run: |
+          # adjust this path if your build script places libraries elsewhere
           if [ -f "android/app/src/main/jniLibs/arm64-v8a/libllama.so" ]; then
             echo "✅ Library built successfully"
             ls -lh android/app/src/main/jniLibs/arm64-v8a/
           else
-            echo "❌ Library not found"
+            echo "❌ Library not found at android/app/src/main/jniLibs/arm64-v8a/libllama.so"
             find . -name "libllama.so" -type f 2>/dev/null || echo "No .so files found"
             exit 1
           fi
-      
+
       - name: Upload Android libraries
         uses: actions/upload-artifact@v4
         with:
@@ -73,16 +77,15 @@ jobs:
   build-ios:
     runs-on: macos-latest
     timeout-minutes: 60
-    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Build for iOS
         run: |
           chmod +x scripts/build_llama_ios.sh
           bash scripts/build_llama_ios.sh
-      
+
       - name: Check build artifacts
         run: |
           if [ -d "ios/Frameworks/llama.framework" ]; then
@@ -90,14 +93,6 @@ jobs:
             ls -lh ios/Frameworks/llama.framework/
           else
             echo "❌ Framework not found"
-            find . -name "llama.framework" -type d 2>/dev/null || echo "No framework found"
+            find . -name "llama.framework" -type d 2>/dev/null || echo "No frameworks found"
             exit 1
           fi
-      
-      - name: Upload iOS framework
-        uses: actions/upload-artifact@v4
-        with:
-          name: llama-ios-framework
-          path: ios/Frameworks/llama.framework/
-          retention-days: 30
-          if-no-files-found: error

@@ -17,5 +17,9 @@ void main() {
 
     // Verify that the app launches
     expect(find.byType(MaterialApp), findsOneWidget);
+
+    // Даем время для завершения всех асинхронных операций
+    // Используем pump с ограничением по времени вместо pumpAndSettle
+    await tester.pump(const Duration(seconds: 1));
   });
 }

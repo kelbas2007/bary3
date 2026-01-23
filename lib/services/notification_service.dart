@@ -37,7 +37,7 @@ class NotificationService {
     // ID 2000+ - повышение уровня
     // Все эти уведомления открывают экран баланса
     debugPrint('[NotificationService] Notification tapped: id=$id');
-    
+
     // Используем tabNotifier для переключения на экран баланса
     WidgetsBinding.instance.addPostFrameCallback((_) {
       try {
@@ -83,8 +83,6 @@ class NotificationService {
           'Запланированные события',
           channelDescription:
               'Уведомления о запланированных доходах и расходах',
-          importance: Importance.high,
-          priority: Priority.high,
         ),
         iOS: DarwinNotificationDetails(),
       ),
@@ -133,7 +131,7 @@ class NotificationService {
     // Загружаем все запланированные события и создаём уведомления
     final events = await StorageService.getPlannedEvents();
     for (var event in events) {
-      if (event.notificationEnabled && 
+      if (event.notificationEnabled &&
           event.status == PlannedEventStatus.planned &&
           event.dateTime.isAfter(DateTime.now())) {
         await scheduleEventNotification(event);
@@ -144,20 +142,29 @@ class NotificationService {
   /// Ежедневное напоминание о записи расходов (вечером в 20:00)
   static Future<void> scheduleDailyExpenseReminder() async {
     final now = DateTime.now();
-    var scheduledTime = DateTime(now.year, now.month, now.day, 20, 0);
+    var scheduledTime = DateTime(now.year, now.month, now.day, 20);
     if (scheduledTime.isBefore(now)) {
-      scheduledTime = scheduledTime.add(Duration(days: 1));
+      scheduledTime = scheduledTime.add(const Duration(days: 1));
     }
 
     // Получаем язык для локализации
     final language = await StorageService.getLanguage();
     final locale = language;
-    
+
     // Локализованные строки
-    final title = _getLocalizedString('notifications_dailyReminderTitle', locale);
+    final title = _getLocalizedString(
+      'notifications_dailyReminderTitle',
+      locale,
+    );
     final body = _getLocalizedString('notifications_dailyReminderBody', locale);
-    final channelName = _getLocalizedString('notifications_channelName', locale);
-    final channelDescription = _getLocalizedString('notifications_channelDescription', locale);
+    final channelName = _getLocalizedString(
+      'notifications_channelName',
+      locale,
+    );
+    final channelDescription = _getLocalizedString(
+      'notifications_channelDescription',
+      locale,
+    );
 
     await _notifications.zonedSchedule(
       1001, // ID для ежедневных напоминаний
@@ -183,24 +190,36 @@ class NotificationService {
   static Future<void> scheduleWeeklyReview() async {
     final now = DateTime.now();
     // Находим следующее воскресенье
-    var scheduledTime = DateTime(now.year, now.month, now.day, 18, 0);
+    var scheduledTime = DateTime(now.year, now.month, now.day, 18);
     final daysUntilSunday = (7 - now.weekday) % 7;
     if (daysUntilSunday == 0 && scheduledTime.isBefore(now)) {
       // Если сегодня воскресенье, но время прошло, планируем на следующее
-      scheduledTime = scheduledTime.add(Duration(days: 7));
+      scheduledTime = scheduledTime.add(const Duration(days: 7));
     } else {
-      scheduledTime = scheduledTime.add(Duration(days: daysUntilSunday == 0 ? 7 : daysUntilSunday));
+      scheduledTime = scheduledTime.add(
+        // ignore: prefer_const_constructors
+        Duration(days: daysUntilSunday == 0 ? 7 : daysUntilSunday),
+      );
     }
 
     // Получаем язык для локализации
     final language = await StorageService.getLanguage();
     final locale = language;
-    
+
     // Локализованные строки
-    final title = _getLocalizedString('notifications_weeklyReviewTitle', locale);
+    final title = _getLocalizedString(
+      'notifications_weeklyReviewTitle',
+      locale,
+    );
     final body = _getLocalizedString('notifications_weeklyReviewBody', locale);
-    final channelName = _getLocalizedString('notifications_channelName', locale);
-    final channelDescription = _getLocalizedString('notifications_channelDescription', locale);
+    final channelName = _getLocalizedString(
+      'notifications_channelName',
+      locale,
+    );
+    final channelDescription = _getLocalizedString(
+      'notifications_channelDescription',
+      locale,
+    );
 
     await _notifications.zonedSchedule(
       1002, // ID для еженедельных обзоров
@@ -227,12 +246,21 @@ class NotificationService {
     // Получаем язык для локализации
     final language = await StorageService.getLanguage();
     final locale = language;
-    
+
     // Локализованные строки
     final title = _getLocalizedString('notifications_levelUpTitle', locale);
-    final body = _getLocalizedString('notifications_levelUpBody', locale).replaceAll('{level}', newLevel.toString());
-    final channelName = _getLocalizedString('notifications_levelUpChannelName', locale);
-    final channelDescription = _getLocalizedString('notifications_levelUpChannelDescription', locale);
+    final body = _getLocalizedString(
+      'notifications_levelUpBody',
+      locale,
+    ).replaceAll('{level}', newLevel.toString());
+    final channelName = _getLocalizedString(
+      'notifications_levelUpChannelName',
+      locale,
+    );
+    final channelDescription = _getLocalizedString(
+      'notifications_levelUpChannelDescription',
+      locale,
+    );
 
     await _notifications.show(
       2000 + newLevel,
@@ -243,8 +271,6 @@ class NotificationService {
           'level_up',
           channelName,
           channelDescription: channelDescription,
-          importance: Importance.high,
-          priority: Priority.high,
         ),
         iOS: const DarwinNotificationDetails(),
       ),
@@ -256,23 +282,29 @@ class NotificationService {
     final localeMap = {
       'ru': {
         'notifications_dailyReminderTitle': 'Бари напоминает',
-        'notifications_dailyReminderBody': 'Не забудь записать сегодняшние расходы! 💰',
+        'notifications_dailyReminderBody':
+            'Не забудь записать сегодняшние расходы! 💰',
         'notifications_weeklyReviewTitle': 'Бари напоминает',
-        'notifications_weeklyReviewBody': 'Пора подвести итоги недели! Посмотри, сколько ты сэкономил 📊',
+        'notifications_weeklyReviewBody':
+            'Пора подвести итоги недели! Посмотри, сколько ты сэкономил 📊',
         'notifications_levelUpTitle': '🎉 Новый уровень!',
         'notifications_levelUpBody': 'Поздравляю! Ты достиг уровня {level}',
         'notifications_channelName': 'Напоминания Бари',
         'notifications_channelDescription': 'Персональные напоминания от Бари',
         'notifications_levelUpChannelName': 'Повышение уровня',
-        'notifications_levelUpChannelDescription': 'Уведомления о повышении уровня',
+        'notifications_levelUpChannelDescription':
+            'Уведомления о повышении уровня',
       },
       'en': {
         'notifications_dailyReminderTitle': 'Bari reminds',
-        'notifications_dailyReminderBody': 'Don\'t forget to log today\'s expenses! 💰',
+        'notifications_dailyReminderBody':
+            'Don\'t forget to log today\'s expenses! 💰',
         'notifications_weeklyReviewTitle': 'Bari reminds',
-        'notifications_weeklyReviewBody': 'Time to review the week! See how much you saved 📊',
+        'notifications_weeklyReviewBody':
+            'Time to review the week! See how much you saved 📊',
         'notifications_levelUpTitle': '🎉 New level!',
-        'notifications_levelUpBody': 'Congratulations! You reached level {level}',
+        'notifications_levelUpBody':
+            'Congratulations! You reached level {level}',
         'notifications_channelName': 'Bari Reminders',
         'notifications_channelDescription': 'Personal reminders from Bari',
         'notifications_levelUpChannelName': 'Level Up',
@@ -280,19 +312,29 @@ class NotificationService {
       },
       'de': {
         'notifications_dailyReminderTitle': 'Bari erinnert',
-        'notifications_dailyReminderBody': 'Vergiss nicht, die heutigen Ausgaben zu erfassen! 💰',
+        'notifications_dailyReminderBody':
+            'Vergiss nicht, die heutigen Ausgaben zu erfassen! 💰',
         'notifications_weeklyReviewTitle': 'Bari erinnert',
-        'notifications_weeklyReviewBody': 'Zeit für die Wochenübersicht! Sieh, wie viel du gespart hast 📊',
+        'notifications_weeklyReviewBody':
+            'Zeit für die Wochenübersicht! Sieh, wie viel du gespart hast 📊',
         'notifications_levelUpTitle': '🎉 Neues Level!',
-        'notifications_levelUpBody': 'Glückwunsch! Du hast Level {level} erreicht',
+        'notifications_levelUpBody':
+            'Glückwunsch! Du hast Level {level} erreicht',
         'notifications_channelName': 'Bari Erinnerungen',
         'notifications_channelDescription': 'Persönliche Erinnerungen von Bari',
         'notifications_levelUpChannelName': 'Level-Up',
-        'notifications_levelUpChannelDescription': 'Level-Up-Benachrichtigungen',
+        'notifications_levelUpChannelDescription':
+            'Level-Up-Benachrichtigungen',
       },
     };
-    
-    final lang = locale.startsWith('ru') ? 'ru' : locale.startsWith('en') ? 'en' : locale.startsWith('de') ? 'de' : 'ru';
+
+    final lang = locale.startsWith('ru')
+        ? 'ru'
+        : locale.startsWith('en')
+        ? 'en'
+        : locale.startsWith('de')
+        ? 'de'
+        : 'ru';
     return localeMap[lang]?[key] ?? localeMap['ru']![key]!;
   }
 }

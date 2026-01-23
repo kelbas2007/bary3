@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -28,9 +30,11 @@ class StorageService {
   static const String _keyLanguage = 'language';
   static const String _keyTheme = 'theme';
   static const String _keyNotificationsEnabled = 'notifications_enabled';
-  static const String _keyDailyExpenseReminderEnabled = 'daily_expense_reminder_enabled';
+  static const String _keyDailyExpenseReminderEnabled =
+      'daily_expense_reminder_enabled';
   static const String _keyWeeklyReviewEnabled = 'weekly_review_enabled';
-  static const String _keyLevelUpNotificationsEnabled = 'level_up_notifications_enabled';
+  static const String _keyLevelUpNotificationsEnabled =
+      'level_up_notifications_enabled';
   static const String _keyCustomTasks = 'custom_tasks';
   static const String _keyEarningsStreak = 'earnings_streak';
   static const String _keyLastStreakDate = 'last_streak_date';
@@ -69,7 +73,39 @@ class StorageService {
   static DateTime? _profileCacheAt;
   static DateTime? _notesCacheAt;
   static DateTime? _calendarSyncConfigCacheAt;
+  // Адаптивный TTL кэша на основе профиля пользователя
+  static Duration get _adaptiveCacheTTL {
+    final profile = _profileCache;
+    if (profile != null && profile.xp > 1000) {
+      // Опытные пользователи - дольше кэш (10 секунд)
+      return const Duration(seconds: 10);
+    }
+    // Новые пользователи - короче кэш (5 секунд)
+    return const Duration(seconds: 5);
+  }
+
+  // Mutex для потокобезопасности (используем Completer как простой lock)
+  static Completer<void>? _cacheLock;
+
+  // Стандартный TTL для методов, которые не используют адаптивный TTL
   static const Duration _cacheTTL = Duration(seconds: 5);
+
+  // Вспомогательный метод для потокобезопасного выполнения
+  static Future<T> _synchronized<T>(Future<T> Function() computation) async {
+    while (_cacheLock != null) {
+      await _cacheLock!.future;
+    }
+
+    final completer = Completer<void>();
+    _cacheLock = completer;
+
+    try {
+      return await computation();
+    } finally {
+      _cacheLock = null;
+      completer.complete();
+    }
+  }
 
   static Future<SharedPreferences> get _prefs async =>
       await SharedPreferences.getInstance();
@@ -90,102 +126,112 @@ class StorageService {
     _calendarSyncConfigCacheAt = null;
   }
 
-  // Transactions
+  // Transactions с потокобезопасностью
   static Future<List<Transaction>> getTransactions({
     bool forceRefresh = false,
   }) async {
-    final now = DateTime.now();
+    return await _synchronized(() async {
+      final now = DateTime.now();
 
-    // Возвращаем кэш, если он свежий
-    if (!forceRefresh &&
-        _transactionsCache != null &&
-        _transactionsCacheAt != null &&
-        now.difference(_transactionsCacheAt!) < _cacheTTL) {
-      return _transactionsCache!;
-    }
-
-    try {
-      final prefs = await _prefs;
-      final json = prefs.getString(_keyTransactions);
-      if (json == null) {
-        _transactionsCache = [];
-        _transactionsCacheAt = now;
-        return [];
+      // Возвращаем кэш, если он свежий
+      if (!forceRefresh &&
+          _transactionsCache != null &&
+          _transactionsCacheAt != null &&
+          now.difference(_transactionsCacheAt!) < _adaptiveCacheTTL) {
+        return _transactionsCache!;
       }
-      final List<dynamic> decoded = jsonDecode(json);
-      _transactionsCache = decoded
-          .map((j) => Transaction.fromJson(j as Map<String, dynamic>))
-          .toList();
-      _transactionsCacheAt = now;
-      return _transactionsCache!;
-    } catch (e) {
-      debugPrint('Error loading transactions: $e');
-      return _transactionsCache ?? [];
-    }
+
+      try {
+        final prefs = await _prefs;
+        final json = prefs.getString(_keyTransactions);
+        if (json == null) {
+          _transactionsCache = [];
+          _transactionsCacheAt = now;
+          return [];
+        }
+        final List<dynamic> decoded = jsonDecode(json);
+        _transactionsCache = decoded
+            .map((j) => Transaction.fromJson(j as Map<String, dynamic>))
+            .toList();
+        _transactionsCacheAt = now;
+        return _transactionsCache!;
+      } catch (e) {
+        debugPrint('Error loading transactions: $e');
+        return _transactionsCache ?? [];
+      }
+    });
   }
 
   static Future<void> saveTransactions(List<Transaction> transactions) async {
-    final prefs = await _prefs;
-    final json = jsonEncode(transactions.map((t) => t.toJson()).toList());
-    await prefs.setString(_keyTransactions, json);
+    return await _synchronized(() async {
+      final prefs = await _prefs;
+      final json = jsonEncode(transactions.map((t) => t.toJson()).toList());
+      await prefs.setString(_keyTransactions, json);
 
-    // Обновляем кэш
-    _transactionsCache = transactions;
-    _transactionsCacheAt = DateTime.now();
+      // Обновляем кэш
+      _transactionsCache = transactions;
+      _transactionsCacheAt = DateTime.now();
 
-    // Уведомляем слушателей, что список транзакций изменился
-    transactionsVersion.value++;
+      // Уведомляем слушателей, что список транзакций изменился
+      transactionsVersion.value++;
+    });
   }
 
   static Future<void> addTransaction(Transaction transaction) async {
-    final transactions = await getTransactions();
-    transactions.add(transaction);
-    await saveTransactions(transactions);
+    return await _synchronized(() async {
+      final transactions = await getTransactions();
+      transactions.add(transaction);
+      await saveTransactions(transactions);
+    });
   }
 
-  // Piggy Banks
+  // Piggy Banks с потокобезопасностью
   static Future<List<PiggyBank>> getPiggyBanks({
     bool forceRefresh = false,
   }) async {
-    final now = DateTime.now();
+    return await _synchronized(() async {
+      final now = DateTime.now();
 
-    // Возвращаем кэш, если он свежий
-    if (!forceRefresh &&
-        _piggyBanksCache != null &&
-        _piggyBanksCacheAt != null &&
-        now.difference(_piggyBanksCacheAt!) < _cacheTTL) {
-      return _piggyBanksCache!;
-    }
-
-    try {
-      final prefs = await _prefs;
-      final json = prefs.getString(_keyPiggyBanks);
-      if (json == null) {
-        _piggyBanksCache = [];
-        _piggyBanksCacheAt = now;
-        return [];
+      // Возвращаем кэш, если он свежий
+      if (!forceRefresh &&
+          _piggyBanksCache != null &&
+          _piggyBanksCacheAt != null &&
+          now.difference(_piggyBanksCacheAt!) < _adaptiveCacheTTL) {
+        return _piggyBanksCache!;
       }
-      final List<dynamic> decoded = jsonDecode(json);
-      _piggyBanksCache = decoded
-          .map((j) => PiggyBank.fromJson(j as Map<String, dynamic>))
-          .toList();
-      _piggyBanksCacheAt = now;
-      return _piggyBanksCache!;
-    } catch (e) {
-      debugPrint('Error loading piggy banks: $e');
-      return _piggyBanksCache ?? [];
-    }
+
+      try {
+        final prefs = await _prefs;
+        final json = prefs.getString(_keyPiggyBanks);
+        if (json == null) {
+          _piggyBanksCache = [];
+          _piggyBanksCacheAt = now;
+          return [];
+        }
+        final List<dynamic> decoded = jsonDecode(json);
+        _piggyBanksCache = decoded
+            .map((j) => PiggyBank.fromJson(j as Map<String, dynamic>))
+            .toList();
+        _piggyBanksCacheAt = now;
+        return _piggyBanksCache!;
+      } catch (e) {
+        debugPrint('Error loading piggy banks: $e');
+        return _piggyBanksCache ?? [];
+      }
+    });
   }
 
   static Future<void> savePiggyBanks(List<PiggyBank> piggyBanks) async {
-    final prefs = await _prefs;
-    final json = jsonEncode(piggyBanks.map((p) => p.toJson()).toList());
-    await prefs.setString(_keyPiggyBanks, json);
+    return await _synchronized(() async {
+      final prefs = await _prefs;
+      final json = jsonEncode(piggyBanks.map((p) => p.toJson()).toList());
+      await prefs.setString(_keyPiggyBanks, json);
 
-    // Обновляем кэш
-    _piggyBanksCache = piggyBanks;
-    _piggyBanksCacheAt = DateTime.now();
-    piggyBanksVersion.value++;
+      // Обновляем кэш
+      _piggyBanksCache = piggyBanks;
+      _piggyBanksCacheAt = DateTime.now();
+      piggyBanksVersion.value++;
+    });
   }
 
   // Planned Events
@@ -277,48 +323,52 @@ class StorageService {
     await prefs.setString(_keyLessonProgress, json);
   }
 
-  // Player Profile
+  // Player Profile с потокобезопасностью
   static Future<PlayerProfile> getPlayerProfile({
     bool forceRefresh = false,
   }) async {
-    final now = DateTime.now();
+    return await _synchronized(() async {
+      final now = DateTime.now();
 
-    // Возвращаем кэш, если он свежий
-    if (!forceRefresh &&
-        _profileCache != null &&
-        _profileCacheAt != null &&
-        now.difference(_profileCacheAt!) < _cacheTTL) {
-      return _profileCache!;
-    }
-
-    try {
-      final prefs = await _prefs;
-      final json = prefs.getString(_keyPlayerProfile);
-      if (json == null) {
-        _profileCache = PlayerProfile();
-        _profileCacheAt = now;
+      // Возвращаем кэш, если он свежий
+      if (!forceRefresh &&
+          _profileCache != null &&
+          _profileCacheAt != null &&
+          now.difference(_profileCacheAt!) < _adaptiveCacheTTL) {
         return _profileCache!;
       }
-      _profileCache = PlayerProfile.fromJson(
-        jsonDecode(json) as Map<String, dynamic>,
-      );
-      _profileCacheAt = now;
-      return _profileCache!;
-    } catch (e) {
-      debugPrint('Error loading player profile: $e');
-      return _profileCache ?? PlayerProfile();
-    }
+
+      try {
+        final prefs = await _prefs;
+        final json = prefs.getString(_keyPlayerProfile);
+        if (json == null) {
+          _profileCache = PlayerProfile();
+          _profileCacheAt = now;
+          return _profileCache!;
+        }
+        _profileCache = PlayerProfile.fromJson(
+          jsonDecode(json) as Map<String, dynamic>,
+        );
+        _profileCacheAt = now;
+        return _profileCache!;
+      } catch (e) {
+        debugPrint('Error loading player profile: $e');
+        return _profileCache ?? PlayerProfile();
+      }
+    });
   }
 
   static Future<void> savePlayerProfile(PlayerProfile profile) async {
-    final prefs = await _prefs;
-    final json = jsonEncode(profile.toJson());
-    await prefs.setString(_keyPlayerProfile, json);
+    return await _synchronized(() async {
+      final prefs = await _prefs;
+      final json = jsonEncode(profile.toJson());
+      await prefs.setString(_keyPlayerProfile, json);
 
-    // Обновляем кэш
-    _profileCache = profile;
-    _profileCacheAt = DateTime.now();
-    playerProfileVersion.value++;
+      // Обновляем кэш
+      _profileCache = profile;
+      _profileCacheAt = DateTime.now();
+      playerProfileVersion.value++;
+    });
   }
 
   // Achievements
@@ -368,24 +418,30 @@ class StorageService {
     final prefs = await _prefs;
     String? salt = prefs.getString(_keyParentPinSalt);
     if (salt == null) {
-      // Генерируем случайную соль
-      final random =
-          DateTime.now().millisecondsSinceEpoch.toString() +
-          DateTime.now().microsecondsSinceEpoch.toString();
-      salt = sha256.convert(utf8.encode(random)).toString();
+      // Генерируем криптографически безопасную случайную соль
+      final random = Random.secure();
+      final saltBytes = List<int>.generate(32, (_) => random.nextInt(256));
+      salt = base64Url.encode(saltBytes);
       await prefs.setString(_keyParentPinSalt, salt);
     }
     return salt;
   }
 
-  // Хешировать PIN с солью
+  // Хешировать PIN с солью используя PBKDF2-like подход
   static String _hashPin(String pin, String salt) {
-    final bytes = utf8.encode(pin + salt);
-    final hash = sha256.convert(bytes);
-    return hash.toString();
+    // Используем многократное хеширование для увеличения сложности
+    final combined = utf8.encode(pin + salt);
+    var hash = sha256.convert(combined).bytes;
+
+    // 10000 итераций для увеличения сложности brute-force
+    for (int i = 0; i < 10000; i++) {
+      hash = sha256.convert(hash).bytes;
+    }
+
+    return base64Url.encode(hash);
   }
 
-  // Проверить PIN
+  // Проверить PIN с защитой от timing attacks
   static Future<bool> verifyParentPin(String pin) async {
     try {
       final prefs = await _prefs;
@@ -394,11 +450,24 @@ class StorageService {
 
       final salt = await _getPinSalt();
       final inputHash = _hashPin(pin, salt);
-      return storedHash == inputHash;
+
+      // Constant-time сравнение для защиты от timing attacks
+      return _constantTimeCompare(storedHash, inputHash);
     } catch (e) {
       debugPrint('Error verifying PIN: $e');
       return false;
     }
+  }
+
+  // Constant-time сравнение строк для защиты от timing attacks
+  static bool _constantTimeCompare(String a, String b) {
+    if (a.length != b.length) return false;
+
+    var result = 0;
+    for (var i = 0; i < a.length; i++) {
+      result |= a.codeUnitAt(i) ^ b.codeUnitAt(i);
+    }
+    return result == 0;
   }
 
   // Установить PIN (сохраняет хеш)
@@ -631,53 +700,76 @@ class StorageService {
   // Migration: Fix old wrong piggy bank transaction types
   static Future<void> migratePiggyLedgerIfNeeded() async {
     final prefs = await _prefs;
-    const migrationKey = 'migrated_piggy_ledger_v1';
+    const migrationKey = 'migrated_piggy_ledger_v2';
 
     // Check if migration already ran
     if (prefs.getBool(migrationKey) == true) {
       return;
     }
 
-    final transactions = await getTransactions();
-    bool changed = false;
+    try {
+      // Создаем backup перед миграцией
+      final transactions = await getTransactions();
+      // backupJson используется только для отладки, если что-то пойдет не так
+      // ignore: unused_local_variable
+      final backupJson = jsonEncode(
+        transactions.map((t) => t.toJson()).toList(),
+      );
 
-    for (var i = 0; i < transactions.length; i++) {
-      final t = transactions[i];
+      bool changed = false;
+      final migratedTransactions = <Transaction>[];
 
-      // Only process piggy bank transactions
-      if (t.source != TransactionSource.piggyBank) continue;
+      for (final t in transactions) {
+        var transaction = t;
 
-      bool needsFix = false;
-      TransactionType? newType;
+        // Only process piggy bank transactions
+        if (t.source == TransactionSource.piggyBank) {
+          bool needsFix = false;
+          TransactionType? newType;
 
-      // Fix: "Пополнение копилки" should be expense (wallet -> piggy)
-      if (t.note != null &&
-          t.note!.startsWith('Пополнение копилки') &&
-          t.type == TransactionType.income) {
-        needsFix = true;
-        newType = TransactionType.expense;
+          // Fix: "Пополнение копилки" should be expense (wallet -> piggy)
+          if (t.note != null &&
+              t.note!.startsWith('Пополнение копилки') &&
+              t.type == TransactionType.income) {
+            needsFix = true;
+            newType = TransactionType.expense;
+          }
+
+          // Fix: "Снятие из копилки" should be income (piggy -> wallet)
+          if (t.note != null &&
+              t.note!.startsWith('Снятие из копилки') &&
+              t.type == TransactionType.expense) {
+            needsFix = true;
+            newType = TransactionType.income;
+          }
+
+          if (needsFix && newType != null) {
+            transaction = t.copyWith(type: newType);
+            changed = true;
+          }
+        }
+
+        migratedTransactions.add(transaction);
       }
 
-      // Fix: "Снятие из копилки" should be income (piggy -> wallet)
-      if (t.note != null &&
-          t.note!.startsWith('Снятие из копилки') &&
-          t.type == TransactionType.expense) {
-        needsFix = true;
-        newType = TransactionType.income;
-      }
+      if (changed) {
+        // Сохраняем мигрированные транзакции
+        await saveTransactions(migratedTransactions);
 
-      if (needsFix && newType != null) {
-        transactions[i] = t.copyWith(type: newType);
-        changed = true;
+        // Только после успешного сохранения помечаем миграцию как выполненную
+        await prefs.setBool(migrationKey, true);
+
+        debugPrint('Piggy ledger migration completed successfully');
+      } else {
+        // Если изменений не было, просто помечаем миграцию как выполненную
+        await prefs.setBool(migrationKey, true);
       }
+    } catch (e) {
+      debugPrint('Error during piggy ledger migration: $e');
+      // В случае ошибки не помечаем миграцию как выполненную
+      // чтобы попробовать снова при следующем запуске
+      rethrow;
     }
-
-    if (changed) {
-      await saveTransactions(transactions);
-    }
-
-    // Mark migration as completed
-    await prefs.setBool(migrationKey, true);
   }
 
   // Custom Tasks

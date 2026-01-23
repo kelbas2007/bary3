@@ -16,7 +16,9 @@ import 'providers/local_llm_provider.dart';
 import 'providers/fallback_provider.dart';
 import 'providers/system_assistant_provider.dart';
 import 'storage/bari_settings_store.dart';
+import 'utils/prompt_sanitizer.dart';
 import 'package:flutter/foundation.dart';
+import 'dart:async';
 
 class BariSmart {
   BariSmart._();
@@ -49,7 +51,19 @@ class BariSmart {
     // Перечитываем перед каждым ответом, чтобы Online/Hybrid/AI режим работал без перезапуска.
     await settings.load();
 
-    final text = message.trim();
+    // Санитизация входящего сообщения для защиты от инъекций
+    final sanitizedMessage = PromptSanitizer.sanitize(message);
+    final text = sanitizedMessage.trim();
+
+    // Валидация промпта для отладки
+    if (kDebugMode) {
+      final validation = PromptSanitizer.validate(text);
+      if (!validation.isSafe) {
+        debugPrint(
+          '[BariSmart] Prompt validation issues: ${validation.summary}',
+        );
+      }
+    }
     if (text.isEmpty) {
       return const BariResponse(
         meaning: 'Напиши вопрос 🙂',
@@ -82,39 +96,74 @@ class BariSmart {
     // Офлайн провайдеры (всегда доступны как fallback)
     // Порядок важен: от более специфичных к более общим
     final offlineProviders = <BariProvider>[
-      SmallTalkProvider(settings: settings),  // Приветствия, болтовня
-      AppFeaturesProvider(),                  // Знание всех функций приложения
-      SmartMathProvider(),                     // Расчёты: %, умножение, прогнозы
-      GoalAdvisorProvider(),                   // Персональные советы по копилкам
-      SpendingRulesProvider(),                 // Rule-based анализ трат
-      ContextAwareProvider(),                  // Умные ответы на основе контекста
-      FinanceCoachProvider(),                  // Финансовые вопросы
-      AppHelpProvider(),                       // Помощь по приложению
-      knowledge,                               // База знаний
+      SmallTalkProvider(settings: settings), // Приветствия, болтовня
+      AppFeaturesProvider(), // Знание всех функций приложения
+      SmartMathProvider(), // Расчёты: %, умножение, прогнозы
+      GoalAdvisorProvider(), // Персональные советы по копилкам
+      SpendingRulesProvider(), // Rule-based анализ трат
+      ContextAwareProvider(), // Умные ответы на основе контекста
+      FinanceCoachProvider(), // Финансовые вопросы
+      AppHelpProvider(), // Помощь по приложению
+      knowledge, // База знаний
     ];
 
-    // Пробуем офлайн провайдеры
+    // Пробуем офлайн провайдеры с timeout
     for (final p in offlineProviders) {
-      final r = await p.tryRespond(text, ctx);
-      if (r != null && r.confidence > 0.7) return r;
+      try {
+        final r = await p
+            .tryRespond(text, ctx)
+            .timeout(
+              const Duration(seconds: 2),
+              onTimeout: () {
+                if (kDebugMode) {
+                  debugPrint('[BariSmart] Provider ${p.runtimeType} timeout');
+                }
+                return null;
+              },
+            );
+        if (r != null && r.confidence > 0.7) return r;
+      } catch (e) {
+        if (kDebugMode) {
+          debugPrint('[BariSmart] Provider ${p.runtimeType} error: $e');
+        }
+        continue;
+      }
     }
 
-    // TIER 2: Local LLM (on-device AI через llama.cpp)
+    // TIER 2: Local LLM (on-device AI через llama.cpp) с timeout
     if (kDebugMode) {
       debugPrint('[BariSmart] Trying LocalLLMProvider');
     }
-    
-    final localLLMRes = await localLLM.tryRespond(text, ctx);
-    if (localLLMRes != null) {
-      if (kDebugMode) {
-        debugPrint('[BariSmart] LocalLLMProvider ответил (confidence=${localLLMRes.confidence})');
-      }
-      return localLLMRes;
-    }
-    if (kDebugMode) {
-      debugPrint('[BariSmart] LocalLLMProvider не дал ответа');
-    }
 
+    try {
+      final localLLMRes = await localLLM
+          .tryRespond(text, ctx)
+          .timeout(
+            const Duration(seconds: 10),
+            onTimeout: () {
+              if (kDebugMode) {
+                debugPrint('[BariSmart] LocalLLMProvider timeout (10s)');
+              }
+              return null;
+            },
+          );
+
+      if (localLLMRes != null) {
+        if (kDebugMode) {
+          debugPrint(
+            '[BariSmart] LocalLLMProvider ответил (confidence=${localLLMRes.confidence})',
+          );
+        }
+        return localLLMRes;
+      }
+      if (kDebugMode) {
+        debugPrint('[BariSmart] LocalLLMProvider не дал ответа');
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        debugPrint('[BariSmart] LocalLLMProvider error: $e');
+      }
+    }
 
     // Если hybrid или online режим, пробуем онлайн (Wikipedia, DuckDuckGo)
     final shouldTryOnline =
@@ -143,21 +192,36 @@ class BariSmart {
             settings.mode == BariMode.hybrid, // В hybrid только по запросу
       );
 
-      final onlineRes = await onlineProvider.tryRespond(
-        text,
-        ctx,
-        forceOnline: effectiveForceOnline,
-      );
-      if (onlineRes != null) {
-        if (kDebugMode) {
-          debugPrint(
-            '[BariSmart] OnlineReferenceProvider ответил (confidence=${onlineRes.confidence})',
-          );
+      try {
+        final onlineRes = await onlineProvider
+            .tryRespond(text, ctx, forceOnline: effectiveForceOnline)
+            .timeout(
+              const Duration(seconds: 5),
+              onTimeout: () {
+                if (kDebugMode) {
+                  debugPrint(
+                    '[BariSmart] OnlineReferenceProvider timeout (5s)',
+                  );
+                }
+                return null;
+              },
+            );
+
+        if (onlineRes != null) {
+          if (kDebugMode) {
+            debugPrint(
+              '[BariSmart] OnlineReferenceProvider ответил (confidence=${onlineRes.confidence})',
+            );
+          }
+          return onlineRes;
         }
-        return onlineRes;
-      }
-      if (kDebugMode) {
-        debugPrint('[BariSmart] OnlineReferenceProvider не дал ответа');
+        if (kDebugMode) {
+          debugPrint('[BariSmart] OnlineReferenceProvider не дал ответа');
+        }
+      } catch (e) {
+        if (kDebugMode) {
+          debugPrint('[BariSmart] OnlineReferenceProvider error: $e');
+        }
       }
     }
 
@@ -165,40 +229,69 @@ class BariSmart {
     // Если все провайдеры не дали хорошего ответа или это общий вопрос
     // Создаем один экземпляр для переиспользования
     final systemAssistantProvider = settings.useSystemAssistant
-        ? SystemAssistantProvider(
-            enabled: settings.useSystemAssistant,
-          )
+        ? SystemAssistantProvider(enabled: settings.useSystemAssistant)
         : null;
-    
+
     if (systemAssistantProvider != null) {
       if (kDebugMode) {
         debugPrint('[BariSmart] Trying SystemAssistantProvider');
       }
-      
-      final systemRes = await systemAssistantProvider.tryRespond(
-        text,
-        ctx,
-      );
-      
-      if (systemRes != null) {
-        if (kDebugMode) {
-          debugPrint('[BariSmart] SystemAssistantProvider ответил (confidence=${systemRes.confidence})');
+
+      try {
+        final systemRes = await systemAssistantProvider
+            .tryRespond(text, ctx)
+            .timeout(
+              const Duration(seconds: 3),
+              onTimeout: () {
+                if (kDebugMode) {
+                  debugPrint(
+                    '[BariSmart] SystemAssistantProvider timeout (3s)',
+                  );
+                }
+                return null;
+              },
+            );
+
+        if (systemRes != null) {
+          if (kDebugMode) {
+            debugPrint(
+              '[BariSmart] SystemAssistantProvider ответил (confidence=${systemRes.confidence})',
+            );
+          }
+          return systemRes;
         }
-        return systemRes;
-      }
-      if (kDebugMode) {
-        debugPrint('[BariSmart] SystemAssistantProvider не дал ответа');
+        if (kDebugMode) {
+          debugPrint('[BariSmart] SystemAssistantProvider не дал ответа');
+        }
+      } catch (e) {
+        if (kDebugMode) {
+          debugPrint('[BariSmart] SystemAssistantProvider error: $e');
+        }
       }
     }
 
     // Fallback всегда последний
     // Передаем системный ассистент в FallbackProvider для финальной попытки
     final fallback = FallbackProvider(systemAssistant: systemAssistantProvider);
-      final fallbackRes = await fallback.tryRespond(
-      text,
-      ctx,
-    );
-    if (fallbackRes != null) return fallbackRes;
+    try {
+      final fallbackRes = await fallback
+          .tryRespond(text, ctx)
+          .timeout(
+            const Duration(seconds: 2),
+            onTimeout: () {
+              if (kDebugMode) {
+                debugPrint('[BariSmart] FallbackProvider timeout (2s)');
+              }
+              return null;
+            },
+          );
+
+      if (fallbackRes != null) return fallbackRes;
+    } catch (e) {
+      if (kDebugMode) {
+        debugPrint('[BariSmart] FallbackProvider error: $e');
+      }
+    }
 
     // На всякий случай (FallbackProvider должен всегда вернуть ответ):
     return const BariResponse(
