@@ -3,7 +3,6 @@ enum BariActionType {
   openCalculator, 
   explainSimpler, 
   showSource, 
-  runOnlineSearch,
   createPlan,
   showMore,
 }

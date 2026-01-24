@@ -122,7 +122,7 @@ class _TemplateBuilderScreenState
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка создания заметки: $e'),
+            content: Text(AppLocalizations.of(context)!.templateBuilder_createError(e.toString())),
             backgroundColor: Colors.redAccent,
           ),
         );

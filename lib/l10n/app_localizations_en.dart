@@ -1945,6 +1945,83 @@ class AppLocalizationsEn extends AppLocalizations {
   String get parentZone_earningsRejected => 'Earnings rejected';
 
   @override
+  String get parentZone_enterPin => 'Enter PIN';
+
+  @override
+  String get parentZone_createPin => 'Create PIN';
+
+  @override
+  String get parentZone_premiumStatus => 'Premium';
+
+  @override
+  String get parentZone_premiumUnlockedStatus => 'Status: Unlocked';
+
+  @override
+  String get parentZone_premiumLockedStatus => 'Status: Locked';
+
+  @override
+  String get parentZone_statisticsTitle => 'Statistics';
+
+  @override
+  String get parentZone_statisticsSubtitle => 'Income, expenses, progress';
+
+  @override
+  String parentZone_pendingApprovals(int count) {
+    return 'Pending Approval ($count)';
+  }
+
+  @override
+  String get parentZone_pendingApprovalsSubtitle =>
+      'Earnings requiring confirmation';
+
+  @override
+  String get parentZone_exportImport => 'Export / Import';
+
+  @override
+  String get parentZone_exportImportSubtitle => 'Save or load data';
+
+  @override
+  String get parentZone_resetDataSubtitle => 'Delete all data (requires PIN)';
+
+  @override
+  String get parentZone_changePin => 'Change PIN';
+
+  @override
+  String get parentZone_newPinLabel => 'New PIN (4 digits)';
+
+  @override
+  String get parentZone_earningsDefault => 'Earnings';
+
+  @override
+  String parentZone_photosCount(int count) {
+    return '$count photos';
+  }
+
+  @override
+  String get parentZone_reward => 'Reward';
+
+  @override
+  String get parentZone_childComment => 'Child\'s comment';
+
+  @override
+  String get parentZone_resultPhotos => 'Result photos';
+
+  @override
+  String get parentZone_rateQuality => 'Rate quality';
+
+  @override
+  String get parentZone_feedbackPlaceholder => 'Comment for child (optional)';
+
+  @override
+  String get parentZone_pinLabel => 'PIN (4 digits)';
+
+  @override
+  String get parentZone_reject => 'Reject';
+
+  @override
+  String get parentZone_approve => 'Approve';
+
+  @override
   String get exportImport_title => 'Export/Import';
 
   @override
@@ -2349,12 +2426,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_goal_topUpSoonest(String name, int days) {
-    return 'Пополни \"$name\" — до дедлайна осталось $days дней!';
+    return 'Top up \"$name\" — $days days left!';
   }
 
   @override
   String bari_goal_topUpClosest(String name, int progress, String remaining) {
-    return 'Советую пополнить \"$name\" ($progress%) — осталось $remaining, ты близко к цели!';
+    return 'Advise topping up \"$name\" ($progress%) — $remaining left!';
   }
 
   @override
@@ -2363,45 +2440,45 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bari_goal_topUpAdvice =>
-      'Лучше пополнять ту копилку, которая ближе к цели или у которой скоро дедлайн.';
+      'Better to top up the piggy bank closest to goal or deadline.';
 
   @override
   String bari_goal_walletAlmostEmpty(String balance) {
-    return 'Сейчас в кошельке почти пусто ($balance). Время подкопить!';
+    return 'Wallet almost empty ($balance). Time to save!';
   }
 
   @override
   String bari_goal_walletEnoughForSmall(String balance) {
-    return 'В кошельке $balance — хватит на мелочи. Для большего нужен план.';
+    return 'Wallet has $balance — enough for small things.';
   }
 
   @override
   String bari_goal_walletGood(String balance) {
-    return 'В кошельке $balance — неплохо! Но помни про цели в копилках.';
+    return 'Wallet has $balance — good! Remember goals.';
   }
 
   @override
   String bari_goal_walletExcellent(String balance) {
-    return 'В кошельке $balance — отлично! Подумай, стоит ли часть перевести в копилку.';
+    return 'Wallet has $balance — excellent! Consider saving some.';
   }
 
   @override
   String bari_goal_walletBalance(String balance) {
-    return 'Сейчас в кошельке $balance';
+    return 'Current wallet balance: $balance';
   }
 
   @override
-  String get bari_goal_canIBuy => 'Можно ли купить?';
+  String get bari_goal_canIBuy => 'Can I buy?';
 
   @override
-  String get bari_goal_balance => 'Баланс';
+  String get bari_goal_balance => 'Balance';
 
   @override
-  String get bari_goal_enoughMoney => 'Да, у тебя уже достаточно денег! 🎉';
+  String get bari_goal_enoughMoney => 'Yes, you have enough money! 🎉';
 
   @override
   String bari_goal_enoughMoneyAdvice(String available, String target) {
-    return 'Всего есть $available (кошелёк + копилки), а нужно $target.';
+    return 'Total available: $available, needed: $target.';
   }
 
   @override
@@ -2411,7 +2488,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_goal_needToSaveAdvice(String perMonth) {
-    return 'Если откладывать по $perMonth в месяц, успеешь! Создай копилку с целью.';
+    return 'If you save $perMonth/mo, you\'ll make it!';
   }
 
   @override
@@ -2420,101 +2497,95 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bari_goal_hardToSave =>
-      'Копить сложно, когда нет привычки — это нормально!';
+      'Saving is hard without a habit — that\'s normal!';
 
   @override
-  String get bari_goal_optimalPercent =>
-      'Оптимально откладывать 10-20% от каждого дохода.';
+  String get bari_goal_optimalPercent => 'Optimal to save 10-20% of income.';
 
   @override
   String get bari_goal_createFirstPiggy =>
-      'Создай первую копилку — цель мотивирует откладывать.';
+      'Create first piggy bank — goal motivates saving.';
 
   @override
-  String get bari_hint_highSpending =>
-      'За последнюю неделю у тебя много расходов.';
+  String get bari_hint_highSpending => 'High spending last week.';
 
   @override
-  String get bari_hint_highSpendingAdvice =>
-      'Давай посмотрим, куда больше всего уходит денег.';
+  String get bari_hint_highSpendingAdvice => 'Let\'s see where money goes.';
 
   @override
-  String get bari_hint_mainExpenses => 'Основные траты';
+  String get bari_hint_mainExpenses => 'Main expenses';
 
   @override
   String bari_hint_stalledPiggy(String name) {
-    return 'Копилка \"$name\" давно не пополнялась.';
+    return 'Piggy bank \"$name\" hasn\'t been topped up in a while.';
   }
 
   @override
-  String get bari_hint_stalledPiggies => 'Копилки немного \"застыли\".';
+  String get bari_hint_stalledPiggies => 'Piggy banks are stalled.';
 
   @override
   String get bari_hint_stalledAdvice =>
-      'Могу помочь придумать задание в Лаборатории заработка.';
+      'I can help create a task in Earnings Lab.';
 
   @override
-  String get bari_hint_earningsLab => 'Лаборатория заработка';
+  String get bari_hint_earningsLab => 'Earnings Lab';
 
   @override
-  String get bari_hint_noLessons => 'Уроки давно не открывали.';
+  String get bari_hint_noLessons => 'Haven\'t opened lessons in a while.';
 
   @override
-  String get bari_hint_noLessonsAdvice => 'Хочешь короткий урок на 3–5 минут?';
+  String get bari_hint_noLessonsAdvice => 'Want a short 3-5 min lesson?';
 
   @override
-  String get bari_hint_lessons => 'Уроки';
+  String get bari_hint_lessons => 'Lessons';
 
   @override
-  String get bari_hint_noLessonsYet => 'Ещё не проходили уроки?';
+  String get bari_hint_noLessonsYet => 'Haven\'t taken lessons yet?';
 
   @override
   String get bari_hint_noLessonsYetAdvice =>
-      'Пройди первый урок — это займёт всего 3 минуты!';
+      'Take the first lesson — just 3 minutes!';
 
   @override
-  String get bari_hint_lowBalance =>
-      'Баланс низкий, а скоро запланированы расходы.';
+  String get bari_hint_lowBalance => 'Low balance, upcoming expenses.';
 
   @override
   String get bari_hint_lowBalanceAdvice =>
-      'Можешь заработать в Лаборатории заработка или посмотреть план.';
+      'Earn in Earnings Lab or check plan.';
 
   @override
-  String get bari_hint_calendar => 'Календарь';
+  String get bari_hint_calendar => 'Calendar';
 
   @override
-  String get bari_hint_highIncomeNoGoals =>
-      'У тебя хорошие доходы, но нет целей для накопления.';
+  String get bari_hint_highIncomeNoGoals => 'Good income but no goals.';
 
   @override
   String get bari_hint_highIncomeNoGoalsAdvice =>
-      'Создай копилку для важной покупки!';
+      'Create a piggy bank for a big purchase!';
 
   @override
   String bari_hint_manySpendingCategory(String category) {
-    return 'Много трат на \"$category\".';
+    return 'High spending on \"$category\".';
   }
 
   @override
-  String get bari_hint_manySpendingCategoryAdvice =>
-      'Проверь, не превышаешь ли ты бюджет. Открой калькулятор бюджета.';
+  String get bari_hint_manySpendingCategoryAdvice => 'Check budget calculator.';
 
   @override
-  String get bari_hint_budgetCalculator => 'Калькулятор бюджета';
+  String get bari_hint_budgetCalculator => 'Budget Calculator';
 
   @override
-  String get bari_hint_noPlannedEvents => 'Нет запланированных событий.';
+  String get bari_hint_noPlannedEvents => 'No planned events.';
 
   @override
   String get bari_hint_noPlannedEventsAdvice =>
-      'Запланируй доходы и расходы, чтобы лучше управлять деньгами.';
+      'Plan income and expenses to manage money better.';
 
   @override
-  String get bari_hint_createPlan => 'Создать план';
+  String get bari_hint_createPlan => 'Create Plan';
 
   @override
-  String get bari_hint_tipTitle => 'Подсказка Бари';
+  String get bari_hint_tipTitle => 'Bari\'s Tip';
 
   @override
   String get bari_emptyMessage => 'Write a question 🙂';
@@ -2531,12 +2602,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_math_percentOf(String percent, String base, String result) {
-    return '$percent% от $base = $result';
+    return '$percent% of $base = $result';
   }
 
   @override
   String bari_math_percentAdvice(String percent) {
-    return 'Полезно знать: если откладывать $percent% от дохода, это поможет копить регулярно.';
+    return 'Good to know: saving $percent% helps build habit.';
   }
 
   @override
@@ -2547,7 +2618,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_math_monthlyToYearly(String monthly, String yearly) {
-    return '$monthly в месяц = $yearly в год';
+    return '$monthly/mo = $yearly/yr';
   }
 
   @override
@@ -2559,7 +2630,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_math_saveYearly(String monthly, String yearly) {
-    return 'Если откладывать по $monthly в месяц, за год накопится $yearly';
+    return 'Saving $monthly/mo = $yearly/yr';
   }
 
   @override
@@ -2572,7 +2643,7 @@ class AppLocalizationsEn extends AppLocalizations {
     String perPeriod,
     String period,
   ) {
-    return 'Чтобы накопить $target, нужно откладывать по $perPeriod в $period';
+    return 'To save $target, save $perPeriod every $period';
   }
 
   @override
@@ -2588,7 +2659,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_math_remainingToSave(String remaining, int percent) {
-    return 'Осталось накопить $remaining (уже $percent% от цели)';
+    return '$remaining left to save ($percent%)';
   }
 
   @override
@@ -2625,12 +2696,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_math_priceComparison(int better, String price1, String price2) {
-    return 'Вариант $better выгоднее! ($price1 за единицу vs $price2)';
+    return 'Option $better is better! ($price1 vs $price2)';
   }
 
   @override
   String bari_math_priceComparisonAdvice(int savings) {
-    return 'Экономия ~$savings%. Но проверь: успеешь ли использовать большую упаковку?';
+    return 'Save ~$savings%.';
   }
 
   @override
@@ -2638,12 +2709,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_math_rule72(String rate, String years) {
-    return 'При $rate% годовых деньги удвоятся примерно за $years лет';
+    return 'At $rate%, money doubles in $years years';
   }
 
   @override
   String bari_math_rule72Advice(String rate) {
-    return 'Это \"Правило 72\" — быстрый способ оценить рост накоплений. Чем выше %, тем быстрее рост, но и риск выше.';
+    return 'Rule of 72 estimates growth.';
   }
 
   @override
@@ -2651,12 +2722,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bari_math_inflation(String amount, String years, String realValue) {
-    return '$amount через $years лет будут \"стоить\" как $realValue сегодня';
+    return '$amount in $years years = $realValue today';
   }
 
   @override
   String bari_math_inflationAdvice(String amount, String years) {
-    return 'Инфляция \"съедает\" деньги. Поэтому важно не только копить, но и учиться инвестировать (когда подрастёшь).';
+    return 'Inflation eats money. Learn to invest later.';
   }
 
   @override
@@ -3188,4 +3259,176 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get modelLoader_cancel => 'Cancel';
+
+  @override
+  String get testData_title => 'Test Data Generator';
+
+  @override
+  String get testData_success => 'Test data created successfully!';
+
+  @override
+  String testData_error(String error) {
+    return 'Error: $error';
+  }
+
+  @override
+  String get testData_generateWeekly => 'Generate Weekly Data';
+
+  @override
+  String get testData_clearTitle => 'Clear Test Data?';
+
+  @override
+  String get testData_clearCancel => 'Cancel';
+
+  @override
+  String get testData_cleared => 'Test data cleared';
+
+  @override
+  String testData_clearError(String error) {
+    return 'Error: $error';
+  }
+
+  @override
+  String get testData_clearButton => 'Clear Test Data';
+
+  @override
+  String get calendar_deleteError => 'Error deleting event';
+
+  @override
+  String get earningsLab_photoFeatureUnavailable => 'Photo feature unavailable';
+
+  @override
+  String get earningsLab_addPhoto => 'Add photo';
+
+  @override
+  String get noteEditor_unlinkedFromDate => 'Unlinked from date';
+
+  @override
+  String get noteEditor_imageAdded => 'Image added';
+
+  @override
+  String noteEditor_imageError(String error) {
+    return 'Error adding image: $error';
+  }
+
+  @override
+  String get noteEditor_fileAdded => 'File added';
+
+  @override
+  String noteEditor_fileError(String error) {
+    return 'Error adding file: $error';
+  }
+
+  @override
+  String get mainScreen_importSuccess => 'Import successful!';
+
+  @override
+  String mainScreen_importError(String error) {
+    return 'Import error: $error';
+  }
+
+  @override
+  String get parentReport_selectSectionError => 'Select at least one section';
+
+  @override
+  String parentReport_createError(String error) {
+    return 'Error creating report: $error';
+  }
+
+  @override
+  String templateBuilder_createError(String error) {
+    return 'Error creating template: $error';
+  }
+
+  @override
+  String get planEvent_viewAllNotes => 'View all notes';
+
+  @override
+  String calendarSync_loadError(String error) {
+    return 'Error loading: $error';
+  }
+
+  @override
+  String get calendarSync_permissionsGrantedMsg => 'Permissions granted';
+
+  @override
+  String get calendarSync_permissionsNotGrantedMsg => 'Permissions not granted';
+
+  @override
+  String calendarSync_permissionError(String error) {
+    return 'Error requesting permissions: $error';
+  }
+
+  @override
+  String get calendarSync_syncComplete => 'Sync complete';
+
+  @override
+  String calendarSync_syncError(String error) {
+    return 'Sync error: $error';
+  }
+
+  @override
+  String calendarSync_hours(int hours) {
+    return '$hours h.';
+  }
+
+  @override
+  String get calendarSync_unnamedCalendar => 'Unnamed Calendar';
+
+  @override
+  String paginatedList_error(String error) {
+    return 'Error: $error';
+  }
+
+  @override
+  String get paginatedList_retry => 'Retry';
+
+  @override
+  String get paginatedList_noData => 'No data';
+
+  @override
+  String get swipeable_confirm => 'Confirmation';
+
+  @override
+  String get swipeable_cancel => 'Cancel';
+
+  @override
+  String get swipeable_confirmAction => 'Confirm';
+
+  @override
+  String planEvent_foundRelatedEvents(int count) {
+    return 'Found related events: $count';
+  }
+
+  @override
+  String planEvent_saveError(String error) {
+    return 'Error saving: $error';
+  }
+
+  @override
+  String planEvent_createdRepeatingEvents(int count) {
+    return 'Created $count repeating events';
+  }
+
+  @override
+  String get planEvent_eventScheduled => 'Event scheduled';
+
+  @override
+  String get planEvent_autoExecute => 'Auto-execute on date';
+
+  @override
+  String get planEvent_autoExecuteSubtitle =>
+      'Amount will be automatically added/deducted from balance';
+
+  @override
+  String get planEvent_linkedNotes => 'Linked notes';
+
+  @override
+  String get planEvent_createNote => 'Create note';
+
+  @override
+  String get planEvent_noLinkedNotes => 'No linked notes';
+
+  @override
+  String get planEvent_untitledNote => 'Untitled';
 }

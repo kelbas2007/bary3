@@ -3557,6 +3557,150 @@ abstract class AppLocalizations {
   /// **'Заработок отклонён'**
   String get parentZone_earningsRejected;
 
+  /// No description provided for @parentZone_enterPin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Введите PIN'**
+  String get parentZone_enterPin;
+
+  /// No description provided for @parentZone_createPin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Создайте PIN'**
+  String get parentZone_createPin;
+
+  /// No description provided for @parentZone_premiumStatus.
+  ///
+  /// In ru, this message translates to:
+  /// **'Премиум'**
+  String get parentZone_premiumStatus;
+
+  /// No description provided for @parentZone_premiumUnlockedStatus.
+  ///
+  /// In ru, this message translates to:
+  /// **'Статус: Разблокирован'**
+  String get parentZone_premiumUnlockedStatus;
+
+  /// No description provided for @parentZone_premiumLockedStatus.
+  ///
+  /// In ru, this message translates to:
+  /// **'Статус: Заблокирован'**
+  String get parentZone_premiumLockedStatus;
+
+  /// No description provided for @parentZone_statisticsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Статистика'**
+  String get parentZone_statisticsTitle;
+
+  /// No description provided for @parentZone_statisticsSubtitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доходы, расходы, прогресс'**
+  String get parentZone_statisticsSubtitle;
+
+  /// No description provided for @parentZone_pendingApprovals.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ожидают одобрения ({count})'**
+  String parentZone_pendingApprovals(int count);
+
+  /// No description provided for @parentZone_pendingApprovalsSubtitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заработки, требующие подтверждения'**
+  String get parentZone_pendingApprovalsSubtitle;
+
+  /// No description provided for @parentZone_exportImport.
+  ///
+  /// In ru, this message translates to:
+  /// **'Экспорт / Импорт'**
+  String get parentZone_exportImport;
+
+  /// No description provided for @parentZone_exportImportSubtitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сохранить или загрузить данные'**
+  String get parentZone_exportImportSubtitle;
+
+  /// No description provided for @parentZone_resetDataSubtitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалить все данные (требует PIN)'**
+  String get parentZone_resetDataSubtitle;
+
+  /// No description provided for @parentZone_changePin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Изменить PIN'**
+  String get parentZone_changePin;
+
+  /// No description provided for @parentZone_newPinLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый PIN (4 цифры)'**
+  String get parentZone_newPinLabel;
+
+  /// No description provided for @parentZone_earningsDefault.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заработок'**
+  String get parentZone_earningsDefault;
+
+  /// No description provided for @parentZone_photosCount.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count} фото'**
+  String parentZone_photosCount(int count);
+
+  /// No description provided for @parentZone_reward.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награда'**
+  String get parentZone_reward;
+
+  /// No description provided for @parentZone_childComment.
+  ///
+  /// In ru, this message translates to:
+  /// **'Комментарий ребёнка'**
+  String get parentZone_childComment;
+
+  /// No description provided for @parentZone_resultPhotos.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото результата'**
+  String get parentZone_resultPhotos;
+
+  /// No description provided for @parentZone_rateQuality.
+  ///
+  /// In ru, this message translates to:
+  /// **'Оцени качество работы'**
+  String get parentZone_rateQuality;
+
+  /// No description provided for @parentZone_feedbackPlaceholder.
+  ///
+  /// In ru, this message translates to:
+  /// **'Комментарий для ребёнка (необязательно)'**
+  String get parentZone_feedbackPlaceholder;
+
+  /// No description provided for @parentZone_pinLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'PIN (4 цифры)'**
+  String get parentZone_pinLabel;
+
+  /// No description provided for @parentZone_reject.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отклонить'**
+  String get parentZone_reject;
+
+  /// No description provided for @parentZone_approve.
+  ///
+  /// In ru, this message translates to:
+  /// **'Одобрить'**
+  String get parentZone_approve;
+
   /// No description provided for @exportImport_title.
   ///
   /// In ru, this message translates to:
@@ -5690,6 +5834,288 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Отмена'**
   String get modelLoader_cancel;
+
+  /// No description provided for @testData_title.
+  ///
+  /// In ru, this message translates to:
+  /// **'Генератор тестовых данных'**
+  String get testData_title;
+
+  /// No description provided for @testData_success.
+  ///
+  /// In ru, this message translates to:
+  /// **'✅ Тестовые данные успешно созданы!'**
+  String get testData_success;
+
+  /// No description provided for @testData_error.
+  ///
+  /// In ru, this message translates to:
+  /// **'❌ Ошибка: {error}'**
+  String testData_error(String error);
+
+  /// No description provided for @testData_generateWeekly.
+  ///
+  /// In ru, this message translates to:
+  /// **'Создать недельные данные'**
+  String get testData_generateWeekly;
+
+  /// No description provided for @testData_clearTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Очистить тестовые данные?'**
+  String get testData_clearTitle;
+
+  /// No description provided for @testData_clearCancel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отмена'**
+  String get testData_clearCancel;
+
+  /// No description provided for @testData_cleared.
+  ///
+  /// In ru, this message translates to:
+  /// **'🗑️ Тестовые данные очищены'**
+  String get testData_cleared;
+
+  /// No description provided for @testData_clearError.
+  ///
+  /// In ru, this message translates to:
+  /// **'❌ Ошибка: {error}'**
+  String testData_clearError(String error);
+
+  /// No description provided for @testData_clearButton.
+  ///
+  /// In ru, this message translates to:
+  /// **'Очистить тестовые данные'**
+  String get testData_clearButton;
+
+  /// No description provided for @calendar_deleteError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Произошла ошибка при удалении'**
+  String get calendar_deleteError;
+
+  /// No description provided for @earningsLab_photoFeatureUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Функция фото будет доступна после установки image_picker'**
+  String get earningsLab_photoFeatureUnavailable;
+
+  /// No description provided for @earningsLab_addPhoto.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить фото (до 3)'**
+  String get earningsLab_addPhoto;
+
+  /// No description provided for @noteEditor_unlinkedFromDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заметка отвязана от даты'**
+  String get noteEditor_unlinkedFromDate;
+
+  /// No description provided for @noteEditor_imageAdded.
+  ///
+  /// In ru, this message translates to:
+  /// **'Изображение добавлено'**
+  String get noteEditor_imageAdded;
+
+  /// No description provided for @noteEditor_imageError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка добавления изображения: {error}'**
+  String noteEditor_imageError(String error);
+
+  /// No description provided for @noteEditor_fileAdded.
+  ///
+  /// In ru, this message translates to:
+  /// **'Файл добавлен'**
+  String get noteEditor_fileAdded;
+
+  /// No description provided for @noteEditor_fileError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка добавления файла: {error}'**
+  String noteEditor_fileError(String error);
+
+  /// No description provided for @mainScreen_importSuccess.
+  ///
+  /// In ru, this message translates to:
+  /// **'✅ Тестовые данные успешно импортированы!'**
+  String get mainScreen_importSuccess;
+
+  /// No description provided for @mainScreen_importError.
+  ///
+  /// In ru, this message translates to:
+  /// **'❌ Ошибка импорта: {error}'**
+  String mainScreen_importError(String error);
+
+  /// No description provided for @parentReport_selectSectionError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите хотя бы один раздел для отчета'**
+  String get parentReport_selectSectionError;
+
+  /// No description provided for @parentReport_createError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка создания отчета: {error}'**
+  String parentReport_createError(String error);
+
+  /// No description provided for @templateBuilder_createError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка создания заметки: {error}'**
+  String templateBuilder_createError(String error);
+
+  /// No description provided for @planEvent_viewAllNotes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Просмотреть все заметки'**
+  String get planEvent_viewAllNotes;
+
+  /// No description provided for @calendarSync_loadError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка загрузки: {error}'**
+  String calendarSync_loadError(String error);
+
+  /// No description provided for @calendarSync_permissionsGrantedMsg.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разрешения предоставлены'**
+  String get calendarSync_permissionsGrantedMsg;
+
+  /// No description provided for @calendarSync_permissionsNotGrantedMsg.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разрешения не предоставлены'**
+  String get calendarSync_permissionsNotGrantedMsg;
+
+  /// No description provided for @calendarSync_permissionError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка запроса разрешений: {error}'**
+  String calendarSync_permissionError(String error);
+
+  /// No description provided for @calendarSync_syncComplete.
+  ///
+  /// In ru, this message translates to:
+  /// **'Синхронизация завершена'**
+  String get calendarSync_syncComplete;
+
+  /// No description provided for @calendarSync_syncError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка синхронизации: {error}'**
+  String calendarSync_syncError(String error);
+
+  /// No description provided for @calendarSync_hours.
+  ///
+  /// In ru, this message translates to:
+  /// **'{hours} ч.'**
+  String calendarSync_hours(int hours);
+
+  /// No description provided for @calendarSync_unnamedCalendar.
+  ///
+  /// In ru, this message translates to:
+  /// **'Календарь без названия'**
+  String get calendarSync_unnamedCalendar;
+
+  /// No description provided for @paginatedList_error.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка: {error}'**
+  String paginatedList_error(String error);
+
+  /// No description provided for @paginatedList_retry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторить'**
+  String get paginatedList_retry;
+
+  /// No description provided for @paginatedList_noData.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет данных'**
+  String get paginatedList_noData;
+
+  /// No description provided for @swipeable_confirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подтверждение'**
+  String get swipeable_confirm;
+
+  /// No description provided for @swipeable_cancel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отмена'**
+  String get swipeable_cancel;
+
+  /// No description provided for @swipeable_confirmAction.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подтвердить'**
+  String get swipeable_confirmAction;
+
+  /// No description provided for @planEvent_foundRelatedEvents.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдено связанных событий: {count}'**
+  String planEvent_foundRelatedEvents(int count);
+
+  /// No description provided for @planEvent_saveError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка при сохранении: {error}'**
+  String planEvent_saveError(String error);
+
+  /// No description provided for @planEvent_createdRepeatingEvents.
+  ///
+  /// In ru, this message translates to:
+  /// **'Создано {count} повторяющихся событий'**
+  String planEvent_createdRepeatingEvents(int count);
+
+  /// No description provided for @planEvent_eventScheduled.
+  ///
+  /// In ru, this message translates to:
+  /// **'Событие запланировано'**
+  String get planEvent_eventScheduled;
+
+  /// No description provided for @planEvent_autoExecute.
+  ///
+  /// In ru, this message translates to:
+  /// **'Автоматически выполнить при наступлении даты'**
+  String get planEvent_autoExecute;
+
+  /// No description provided for @planEvent_autoExecuteSubtitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сумма будет автоматически добавлена или вычтена из баланса'**
+  String get planEvent_autoExecuteSubtitle;
+
+  /// No description provided for @planEvent_linkedNotes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Связанные заметки'**
+  String get planEvent_linkedNotes;
+
+  /// No description provided for @planEvent_createNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Создать заметку'**
+  String get planEvent_createNote;
+
+  /// No description provided for @planEvent_noLinkedNotes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет связанных заметок'**
+  String get planEvent_noLinkedNotes;
+
+  /// No description provided for @planEvent_untitledNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Без названия'**
+  String get planEvent_untitledNote;
 }
 
 class _AppLocalizationsDelegate

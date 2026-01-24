@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/haptic_feedback_util.dart';
+import '../l10n/app_localizations.dart';
 
 /// Swipeable элемент списка с действиями
 class SwipeableListItem extends StatelessWidget {
@@ -110,20 +111,20 @@ class SwipeableListItem extends StatelessWidget {
     DismissDirection direction,
   ) async {
     if (confirmMessage == null) return true;
-
+    final l10n = AppLocalizations.of(context)!;
     return showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Подтверждение'),
+        title: Text(l10n.swipeable_confirm),
         content: Text(confirmMessage!),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Отмена'),
+            child: Text(l10n.swipeable_cancel),
           ),
           ElevatedButton(
             onPressed: () => Navigator.pop(context, true),
-            child: const Text('Подтвердить'),
+            child: Text(l10n.swipeable_confirmAction),
           ),
         ],
       ),

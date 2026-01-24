@@ -40,11 +40,6 @@ class StorageService {
   static const String _keyLastStreakDate = 'last_streak_date';
   static const String _keyUxDetailLevel =
       'ux_detail_level'; // 'simple' or 'pro'
-  // Bari settings
-  static const String _keyBariMode = 'bari_mode'; // 'offline' or 'online'
-  static const String _keyBariShowSources = 'bari_show_sources';
-  static const String _keyBariAllowOnlineReference =
-      'bari_allow_online_reference';
   // Notes and Calendar Sync
   static const String _keyNotes = 'notes';
   static const String _keyCalendarSyncConfig = 'calendar_sync_config';
@@ -839,57 +834,7 @@ class StorageService {
     }
   }
 
-  // Bari Settings
-  static Future<String> getBariMode() async {
-    final prefs = await _prefs;
-    return prefs.getString(_keyBariMode) ?? 'offline';
-  }
-
-  static Future<void> setBariMode(String mode) async {
-    final prefs = await _prefs;
-    await prefs.setString(_keyBariMode, mode);
-  }
-
-  static Future<bool> getBariShowSources() async {
-    final prefs = await _prefs;
-    return prefs.getBool(_keyBariShowSources) ?? true;
-  }
-
-  static Future<void> setBariShowSources(bool show) async {
-    final prefs = await _prefs;
-    await prefs.setBool(_keyBariShowSources, show);
-  }
-
-  static Future<bool> getBariAllowOnlineReference() async {
-    final prefs = await _prefs;
-    return prefs.getBool(_keyBariAllowOnlineReference) ?? false;
-  }
-
-  static Future<void> setBariAllowOnlineReference(bool allow) async {
-    final prefs = await _prefs;
-    await prefs.setBool(_keyBariAllowOnlineReference, allow);
-  }
-
   // Bari Smart settings (новые)
-  static Future<bool> getBariOnlineEnabled() async {
-    final prefs = await _prefs;
-    return prefs.getBool('bari_online_enabled') ?? false;
-  }
-
-  static Future<void> setBariOnlineEnabled(bool enabled) async {
-    final prefs = await _prefs;
-    await prefs.setBool('bari_online_enabled', enabled);
-  }
-
-  static Future<bool> getBariOnlineManualOnly() async {
-    final prefs = await _prefs;
-    return prefs.getBool('bari_online_manual_only') ?? true;
-  }
-
-  static Future<void> setBariOnlineManualOnly(bool manualOnly) async {
-    final prefs = await _prefs;
-    await prefs.setBool('bari_online_manual_only', manualOnly);
-  }
 
   static Future<bool> getBariSmallTalkEnabled() async {
     final prefs = await _prefs;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../l10n/app_localizations.dart';
 
 /// ListView с пагинацией
 class PaginatedListView<T> extends StatefulWidget {
@@ -99,16 +100,17 @@ class _PaginatedListViewState<T> extends State<PaginatedListView<T>> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     if (_error != null && _items.isEmpty) {
       return widget.errorWidget ??
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Ошибка: $_error'),
+                Text(l10n.paginatedList_error(_error!)),
                 ElevatedButton(
                   onPressed: refresh,
-                  child: const Text('Повторить'),
+                  child: Text(l10n.paginatedList_retry),
                 ),
               ],
             ),
@@ -117,8 +119,8 @@ class _PaginatedListViewState<T> extends State<PaginatedListView<T>> {
 
     if (_items.isEmpty && !_isLoading) {
       return widget.emptyWidget ??
-          const Center(
-            child: Text('Нет данных'),
+           Center(
+            child: Text(l10n.paginatedList_noData),
           );
     }
 
