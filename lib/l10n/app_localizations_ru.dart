@@ -1947,6 +1947,85 @@ class AppLocalizationsRu extends AppLocalizations {
   String get parentZone_earningsRejected => 'Заработок отклонён';
 
   @override
+  String get parentZone_enterPin => 'Введите PIN';
+
+  @override
+  String get parentZone_createPin => 'Создайте PIN';
+
+  @override
+  String get parentZone_premiumStatus => 'Премиум';
+
+  @override
+  String get parentZone_premiumUnlockedStatus => 'Статус: Разблокирован';
+
+  @override
+  String get parentZone_premiumLockedStatus => 'Статус: Заблокирован';
+
+  @override
+  String get parentZone_statisticsTitle => 'Статистика';
+
+  @override
+  String get parentZone_statisticsSubtitle => 'Доходы, расходы, прогресс';
+
+  @override
+  String parentZone_pendingApprovals(int count) {
+    return 'Ожидают одобрения ($count)';
+  }
+
+  @override
+  String get parentZone_pendingApprovalsSubtitle =>
+      'Заработки, требующие подтверждения';
+
+  @override
+  String get parentZone_exportImport => 'Экспорт / Импорт';
+
+  @override
+  String get parentZone_exportImportSubtitle =>
+      'Сохранить или загрузить данные';
+
+  @override
+  String get parentZone_resetDataSubtitle => 'Удалить все данные (требует PIN)';
+
+  @override
+  String get parentZone_changePin => 'Изменить PIN';
+
+  @override
+  String get parentZone_newPinLabel => 'Новый PIN (4 цифры)';
+
+  @override
+  String get parentZone_earningsDefault => 'Заработок';
+
+  @override
+  String parentZone_photosCount(int count) {
+    return '$count фото';
+  }
+
+  @override
+  String get parentZone_reward => 'Награда';
+
+  @override
+  String get parentZone_childComment => 'Комментарий ребёнка';
+
+  @override
+  String get parentZone_resultPhotos => 'Фото результата';
+
+  @override
+  String get parentZone_rateQuality => 'Оцени качество работы';
+
+  @override
+  String get parentZone_feedbackPlaceholder =>
+      'Комментарий для ребёнка (необязательно)';
+
+  @override
+  String get parentZone_pinLabel => 'PIN (4 цифры)';
+
+  @override
+  String get parentZone_reject => 'Отклонить';
+
+  @override
+  String get parentZone_approve => 'Одобрить';
+
+  @override
   String get exportImport_title => 'Экспорт/Импорт';
 
   @override
@@ -3191,4 +3270,181 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get modelLoader_cancel => 'Отмена';
+
+  @override
+  String get testData_title => 'Генератор тестовых данных';
+
+  @override
+  String get testData_success => '✅ Тестовые данные успешно созданы!';
+
+  @override
+  String testData_error(String error) {
+    return '❌ Ошибка: $error';
+  }
+
+  @override
+  String get testData_generateWeekly => 'Создать недельные данные';
+
+  @override
+  String get testData_clearTitle => 'Очистить тестовые данные?';
+
+  @override
+  String get testData_clearCancel => 'Отмена';
+
+  @override
+  String get testData_cleared => '🗑️ Тестовые данные очищены';
+
+  @override
+  String testData_clearError(String error) {
+    return '❌ Ошибка: $error';
+  }
+
+  @override
+  String get testData_clearButton => 'Очистить тестовые данные';
+
+  @override
+  String get calendar_deleteError => 'Произошла ошибка при удалении';
+
+  @override
+  String get earningsLab_photoFeatureUnavailable =>
+      'Функция фото будет доступна после установки image_picker';
+
+  @override
+  String get earningsLab_addPhoto => 'Добавить фото (до 3)';
+
+  @override
+  String get noteEditor_unlinkedFromDate => 'Заметка отвязана от даты';
+
+  @override
+  String get noteEditor_imageAdded => 'Изображение добавлено';
+
+  @override
+  String noteEditor_imageError(String error) {
+    return 'Ошибка добавления изображения: $error';
+  }
+
+  @override
+  String get noteEditor_fileAdded => 'Файл добавлен';
+
+  @override
+  String noteEditor_fileError(String error) {
+    return 'Ошибка добавления файла: $error';
+  }
+
+  @override
+  String get mainScreen_importSuccess =>
+      '✅ Тестовые данные успешно импортированы!';
+
+  @override
+  String mainScreen_importError(String error) {
+    return '❌ Ошибка импорта: $error';
+  }
+
+  @override
+  String get parentReport_selectSectionError =>
+      'Выберите хотя бы один раздел для отчета';
+
+  @override
+  String parentReport_createError(String error) {
+    return 'Ошибка создания отчета: $error';
+  }
+
+  @override
+  String templateBuilder_createError(String error) {
+    return 'Ошибка создания заметки: $error';
+  }
+
+  @override
+  String get planEvent_viewAllNotes => 'Просмотреть все заметки';
+
+  @override
+  String calendarSync_loadError(String error) {
+    return 'Ошибка загрузки: $error';
+  }
+
+  @override
+  String get calendarSync_permissionsGrantedMsg => 'Разрешения предоставлены';
+
+  @override
+  String get calendarSync_permissionsNotGrantedMsg =>
+      'Разрешения не предоставлены';
+
+  @override
+  String calendarSync_permissionError(String error) {
+    return 'Ошибка запроса разрешений: $error';
+  }
+
+  @override
+  String get calendarSync_syncComplete => 'Синхронизация завершена';
+
+  @override
+  String calendarSync_syncError(String error) {
+    return 'Ошибка синхронизации: $error';
+  }
+
+  @override
+  String calendarSync_hours(int hours) {
+    return '$hours ч.';
+  }
+
+  @override
+  String get calendarSync_unnamedCalendar => 'Календарь без названия';
+
+  @override
+  String paginatedList_error(String error) {
+    return 'Ошибка: $error';
+  }
+
+  @override
+  String get paginatedList_retry => 'Повторить';
+
+  @override
+  String get paginatedList_noData => 'Нет данных';
+
+  @override
+  String get swipeable_confirm => 'Подтверждение';
+
+  @override
+  String get swipeable_cancel => 'Отмена';
+
+  @override
+  String get swipeable_confirmAction => 'Подтвердить';
+
+  @override
+  String planEvent_foundRelatedEvents(int count) {
+    return 'Найдено связанных событий: $count';
+  }
+
+  @override
+  String planEvent_saveError(String error) {
+    return 'Ошибка при сохранении: $error';
+  }
+
+  @override
+  String planEvent_createdRepeatingEvents(int count) {
+    return 'Создано $count повторяющихся событий';
+  }
+
+  @override
+  String get planEvent_eventScheduled => 'Событие запланировано';
+
+  @override
+  String get planEvent_autoExecute =>
+      'Автоматически выполнить при наступлении даты';
+
+  @override
+  String get planEvent_autoExecuteSubtitle =>
+      'Сумма будет автоматически добавлена или вычтена из баланса';
+
+  @override
+  String get planEvent_linkedNotes => 'Связанные заметки';
+
+  @override
+  String get planEvent_createNote => 'Создать заметку';
+
+  @override
+  String get planEvent_noLinkedNotes => 'Нет связанных заметок';
+
+  @override
+  String get planEvent_untitledNote => 'Без названия';
 }

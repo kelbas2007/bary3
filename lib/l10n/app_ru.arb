@@ -893,6 +893,37 @@
   "parentZone_summaryGenerationFailed": "Не удалось сгенерировать саммари. Попробуйте позже.",
   "parentZone_earningsApproved": "Заработок одобрен",
   "parentZone_earningsRejected": "Заработок отклонён",
+  "parentZone_enterPin": "Введите PIN",
+  "parentZone_createPin": "Создайте PIN",
+  "parentZone_premiumStatus": "Премиум",
+  "parentZone_premiumUnlockedStatus": "Статус: Разблокирован",
+  "parentZone_premiumLockedStatus": "Статус: Заблокирован",
+  "parentZone_statisticsTitle": "Статистика",
+  "parentZone_statisticsSubtitle": "Доходы, расходы, прогресс",
+  "parentZone_pendingApprovals": "Ожидают одобрения ({count})",
+  "@parentZone_pendingApprovals": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "parentZone_pendingApprovalsSubtitle": "Заработки, требующие подтверждения",
+  "parentZone_exportImport": "Экспорт / Импорт",
+  "parentZone_exportImportSubtitle": "Сохранить или загрузить данные",
+  "parentZone_resetDataSubtitle": "Удалить все данные (требует PIN)",
+  "parentZone_changePin": "Изменить PIN",
+  "parentZone_newPinLabel": "Новый PIN (4 цифры)",
+  "parentZone_earningsDefault": "Заработок",
+  "parentZone_photosCount": "{count} фото",
+  "@parentZone_photosCount": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "parentZone_reward": "Награда",
+  "parentZone_childComment": "Комментарий ребёнка",
+  "parentZone_resultPhotos": "Фото результата",
+  "parentZone_rateQuality": "Оцени качество работы",
+  "parentZone_feedbackPlaceholder": "Комментарий для ребёнка (необязательно)",
+  "parentZone_pinLabel": "PIN (4 цифры)",
+  "parentZone_reject": "Отклонить",
+  "parentZone_approve": "Одобрить",
+
   "exportImport_title": "Экспорт/Импорт",
   "exportImport_exportData": "Экспорт данных",
   "exportImport_exportDescription": "Сохранить все данные в JSON файл",
@@ -1700,5 +1731,136 @@
   "modelLoader_error": "Ошибка загрузки модели",
   "modelLoader_errorMessage": "Не удалось загрузить модель ИИ. Пожалуйста, попробуйте снова или обратитесь в поддержку.",
   "modelLoader_retry": "Повторить",
-  "modelLoader_cancel": "Отмена"
+  "modelLoader_cancel": "Отмена",
+
+  "testData_title": "Генератор тестовых данных",
+  "testData_success": "✅ Тестовые данные успешно созданы!",
+  "testData_error": "❌ Ошибка: {error}",
+  "@testData_error": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "testData_generateWeekly": "Создать недельные данные",
+  "testData_clearTitle": "Очистить тестовые данные?",
+  "testData_clearCancel": "Отмена",
+  "testData_cleared": "🗑️ Тестовые данные очищены",
+  "testData_clearError": "❌ Ошибка: {error}",
+  "@testData_clearError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "testData_clearButton": "Очистить тестовые данные",
+
+  "calendar_deleteError": "Произошла ошибка при удалении",
+
+  "earningsLab_photoFeatureUnavailable": "Функция фото будет доступна после установки image_picker",
+  "earningsLab_addPhoto": "Добавить фото (до 3)",
+
+  "noteEditor_unlinkedFromDate": "Заметка отвязана от даты",
+  "noteEditor_imageAdded": "Изображение добавлено",
+  "noteEditor_imageError": "Ошибка добавления изображения: {error}",
+  "@noteEditor_imageError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "noteEditor_fileAdded": "Файл добавлен",
+  "noteEditor_fileError": "Ошибка добавления файла: {error}",
+  "@noteEditor_fileError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+
+  "mainScreen_importSuccess": "✅ Тестовые данные успешно импортированы!",
+  "mainScreen_importError": "❌ Ошибка импорта: {error}",
+  "@mainScreen_importError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+
+  "parentReport_selectSectionError": "Выберите хотя бы один раздел для отчета",
+  "parentReport_createError": "Ошибка создания отчета: {error}",
+  "@parentReport_createError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+
+  "templateBuilder_createError": "Ошибка создания заметки: {error}",
+  "@templateBuilder_createError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+
+  "parentZone_reject": "Отклонить",
+  "parentZone_approve": "Одобрить",
+
+  "planEvent_viewAllNotes": "Просмотреть все заметки",
+
+  "calendarSync_loadError": "Ошибка загрузки: {error}",
+  "@calendarSync_loadError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "calendarSync_permissionsGrantedMsg": "Разрешения предоставлены",
+  "calendarSync_permissionsNotGrantedMsg": "Разрешения не предоставлены",
+  "calendarSync_permissionError": "Ошибка запроса разрешений: {error}",
+  "@calendarSync_permissionError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "calendarSync_syncComplete": "Синхронизация завершена",
+  "calendarSync_syncError": "Ошибка синхронизации: {error}",
+  "@calendarSync_syncError": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "calendarSync_hours": "{hours} ч.",
+  "@calendarSync_hours": {
+    "placeholders": {
+      "hours": { "type": "int" }
+    }
+  },
+  "calendarSync_unnamedCalendar": "Календарь без названия",
+
+  "paginatedList_error": "Ошибка: {error}",
+  "@paginatedList_error": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "paginatedList_retry": "Повторить",
+  "paginatedList_noData": "Нет данных",
+
+  "swipeable_confirm": "Подтверждение",
+  "swipeable_cancel": "Отмена",
+  "swipeable_confirmAction": "Подтвердить",
+
+  "planEvent_foundRelatedEvents": "Найдено связанных событий: {count}",
+  "@planEvent_foundRelatedEvents": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "planEvent_saveError": "Ошибка при сохранении: {error}",
+  "@planEvent_saveError": {
+    "placeholders": { "error": {"type": "String"} }
+  },
+  "planEvent_createdRepeatingEvents": "Создано {count} повторяющихся событий",
+  "@planEvent_createdRepeatingEvents": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "planEvent_eventScheduled": "Событие запланировано",
+  "planEvent_autoExecute": "Автоматически выполнить при наступлении даты",
+  "planEvent_autoExecuteSubtitle": "Сумма будет автоматически добавлена или вычтена из баланса",
+  "planEvent_linkedNotes": "Связанные заметки",
+  "planEvent_createNote": "Создать заметку",
+  "planEvent_noLinkedNotes": "Нет связанных заметок",
+  "planEvent_untitledNote": "Без названия"
 }
