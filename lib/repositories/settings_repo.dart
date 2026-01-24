@@ -13,11 +13,7 @@ class SettingsRepository {
   Future<bool> getNotificationsEnabled() => StorageService.getNotificationsEnabled();
   Future<void> setNotificationsEnabled(bool v) => StorageService.setNotificationsEnabled(v);
 
-  Future<String> getBariMode() => StorageService.getBariMode();
-  Future<void> setBariMode(String v) => StorageService.setBariMode(v);
-
-  Future<bool> getBariShowSources() => StorageService.getBariShowSources();
-  Future<void> setBariShowSources(bool v) => StorageService.setBariShowSources(v);
+  // Bari Mode и Show Sources удалены
 
   Future<bool> getBariSmallTalkEnabled() => StorageService.getBariSmallTalkEnabled();
   Future<void> setBariSmallTalkEnabled(bool v) => StorageService.setBariSmallTalkEnabled(v);
@@ -31,4 +27,3 @@ class SettingsRepository {
     return StorageService.setUxDetailLevel(v.storageValue);
   }
 }
-
