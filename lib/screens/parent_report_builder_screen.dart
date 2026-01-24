@@ -273,8 +273,8 @@ class _ParentReportBuilderScreenState
   Future<void> _generateReport() async {
     if (_selectedSections.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Выберите хотя бы один раздел для отчета'),
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.parentReport_selectSectionError),
           backgroundColor: Colors.orange,
         ),
       );
@@ -311,7 +311,7 @@ class _ParentReportBuilderScreenState
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка создания отчета: $e'),
+            content: Text(AppLocalizations.of(context)!.parentReport_createError(e.toString())),
             backgroundColor: Colors.redAccent,
           ),
         );

@@ -218,7 +218,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                       builder: (context, snapshot) {
                         final hasPin = snapshot.data ?? false;
                         return Text(
-                          hasPin ? 'Введите PIN' : 'Создайте PIN',
+                          hasPin ? l10n.parentZone_enterPin : l10n.parentZone_createPin,
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 20,
@@ -233,8 +233,8 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                       keyboardType: TextInputType.number,
                       obscureText: true,
                       maxLength: 4,
-                      decoration: const InputDecoration(
-                        labelText: 'PIN (4 цифры)',
+                      decoration: InputDecoration(
+                        labelText: l10n.parentZone_pinLabel,
                       ),
                     ),
                     const SizedBox(height: 24),
@@ -278,9 +278,9 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Премиум',
-                      style: TextStyle(
+                    Text(
+                      l10n.parentZone_premiumStatus,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -289,8 +289,8 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                     const SizedBox(height: 8),
                     Text(
                       _profile?.premiumUnlocked == true
-                          ? 'Статус: Разблокирован'
-                          : 'Статус: Заблокирован',
+                          ? l10n.parentZone_premiumUnlockedStatus
+                          : l10n.parentZone_premiumLockedStatus,
                       style: TextStyle(
                         color: _profile?.premiumUnlocked == true
                             ? Colors.green
@@ -311,13 +311,13 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
             const SizedBox(height: 16),
             AuroraTheme.glassCard(
               child: ListTile(
-                title: const Text(
-                  'Статистика',
-                  style: TextStyle(color: Colors.white),
+                title: Text(
+                  l10n.parentZone_statisticsTitle,
+                  style: const TextStyle(color: Colors.white),
                 ),
-                subtitle: const Text(
-                  'Доходы, расходы, прогресс',
-                  style: TextStyle(color: Colors.white70),
+                subtitle: Text(
+                  l10n.parentZone_statisticsSubtitle,
+                  style: const TextStyle(color: Colors.white70),
                 ),
                 trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                 onTap: () {
@@ -335,12 +335,12 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
               AuroraTheme.glassCard(
                 child: ListTile(
                   title: Text(
-                    'Ожидают одобрения (${pendingApprovals.length})',
+                    l10n.parentZone_pendingApprovals(pendingApprovals.length),
                     style: const TextStyle(color: Colors.orange),
                   ),
-                  subtitle: const Text(
-                    'Заработки, требующие подтверждения',
-                    style: TextStyle(color: Colors.white70),
+                  subtitle: Text(
+                    l10n.parentZone_pendingApprovalsSubtitle,
+                    style: const TextStyle(color: Colors.white70),
                   ),
                   trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                   onTap: () => _showPendingApprovals(context, pendingApprovals),
@@ -351,13 +351,13 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
             const SizedBox(height: 16),
             AuroraTheme.glassCard(
               child: ListTile(
-                title: const Text(
-                  'Экспорт / Импорт',
-                  style: TextStyle(color: Colors.white),
+                title: Text(
+                  l10n.parentZone_exportImport,
+                  style: const TextStyle(color: Colors.white),
                 ),
-                subtitle: const Text(
-                  'Сохранить или загрузить данные',
-                  style: TextStyle(color: Colors.white70),
+                subtitle: Text(
+                  l10n.parentZone_exportImportSubtitle,
+                  style: const TextStyle(color: Colors.white70),
                 ),
                 trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                 onTap: () {
@@ -373,13 +373,13 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
             const SizedBox(height: 16),
             AuroraTheme.glassCard(
               child: ListTile(
-                title: const Text(
-                  'Сброс данных',
-                  style: TextStyle(color: Colors.red),
+                title: Text(
+                  l10n.parentZone_resetData,
+                  style: const TextStyle(color: Colors.red),
                 ),
-                subtitle: const Text(
-                  'Удалить все данные (требует PIN)',
-                  style: TextStyle(color: Colors.white70),
+                subtitle: Text(
+                  l10n.parentZone_resetDataSubtitle,
+                  style: const TextStyle(color: Colors.white70),
                 ),
                 trailing: const Icon(Icons.delete, color: Colors.red),
                 onTap: () => _showResetDialog(context),
@@ -392,9 +392,9 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Изменить PIN',
-                      style: TextStyle(
+                    Text(
+                      l10n.parentZone_changePin,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -406,8 +406,8 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                       keyboardType: TextInputType.number,
                       obscureText: true,
                       maxLength: 4,
-                      decoration: const InputDecoration(
-                        labelText: 'Новый PIN (4 цифры)',
+                      decoration: InputDecoration(
+                        labelText: l10n.parentZone_newPinLabel,
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -446,7 +446,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        'Ожидают одобрения (${pending.length})',
+                        l10n.parentZone_pendingApprovals(pending.length),
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -482,7 +482,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                                   children: [
                                     Expanded(
                                       child: Text(
-                                        t.note ?? 'Заработок',
+                                        t.note ?? l10n.parentZone_earningsDefault,
                                         style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 16,
@@ -519,7 +519,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                                       const Icon(Icons.image, color: Colors.white54, size: 16),
                                       const SizedBox(width: 4),
                                       Text(
-                                        '${t.photoPaths!.length} фото',
+                                        l10n.parentZone_photosCount(t.photoPaths!.length),
                                         style: const TextStyle(
                                           color: Colors.white54,
                                           fontSize: 12,
@@ -535,7 +535,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                                     TextButton.icon(
                                       onPressed: () => _rejectTransaction(context, t),
                                       icon: const Icon(Icons.close, size: 18),
-                                      label: const Text('Отклонить'),
+                                      label: Text(l10n.parentZone_reject),
                                       style: TextButton.styleFrom(
                                         foregroundColor: Colors.red,
                                       ),
@@ -544,7 +544,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                                     ElevatedButton.icon(
                                       onPressed: () => _approveTransaction(context, t),
                                       icon: const Icon(Icons.check, size: 18),
-                                      label: const Text('Одобрить'),
+                                      label: Text(l10n.parentZone_approve),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Colors.green,
                                         foregroundColor: Colors.white,
@@ -580,6 +580,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
 
   Future<void> _showApprovalDetail(
       BuildContext context, Transaction transaction) async {
+    final l10n = AppLocalizations.of(context)!;
     int? rating;
     final feedbackController = TextEditingController();
     
@@ -603,7 +604,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                     children: [
                       Expanded(
                         child: Text(
-                          transaction.note ?? 'Заработок',
+                          transaction.note ?? l10n.parentZone_earningsDefault,
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 20,
@@ -624,9 +625,9 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            'Награда',
-                            style: TextStyle(
+                          Text(
+                            l10n.parentZone_reward,
+                            style: const TextStyle(
                               color: Colors.white70,
                               fontSize: 14,
                             ),
@@ -652,13 +653,13 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Row(
+                            Row(
                               children: [
-                                Icon(Icons.comment, color: Colors.white70, size: 18),
-                                SizedBox(width: 8),
+                                const Icon(Icons.comment, color: Colors.white70, size: 18),
+                                const SizedBox(width: 8),
                                 Text(
-                                  'Комментарий ребёнка',
-                                  style: TextStyle(
+                                  l10n.parentZone_childComment,
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
@@ -687,13 +688,13 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Row(
+                            Row(
                               children: [
-                                Icon(Icons.image, color: Colors.white70, size: 18),
-                                SizedBox(width: 8),
+                                const Icon(Icons.image, color: Colors.white70, size: 18),
+                                const SizedBox(width: 8),
                                 Text(
-                                  'Фото результата',
-                                  style: TextStyle(
+                                  l10n.parentZone_resultPhotos,
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
@@ -729,9 +730,9 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            'Оцени качество работы',
-                            style: TextStyle(
+                          Text(
+                            l10n.parentZone_rateQuality,
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -764,7 +765,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                           TextField(
                             controller: feedbackController,
                             decoration: InputDecoration(
-                              hintText: 'Комментарий для ребёнка (необязательно)',
+                              hintText: l10n.parentZone_feedbackPlaceholder,
                               hintStyle: const TextStyle(color: Colors.white38),
                               filled: true,
                               fillColor: Colors.white.withValues(alpha: 0.1),
@@ -786,7 +787,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                     children: [
                       TextButton(
                         onPressed: () => _rejectTransaction(context, transaction),
-                        child: const Text('Отклонить', style: TextStyle(color: Colors.red)),
+                        child: Text(l10n.parentZone_reject, style: const TextStyle(color: Colors.red)),
                       ),
                       const SizedBox(width: 8),
                       ElevatedButton(
@@ -802,7 +803,7 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
                           backgroundColor: Colors.green,
                           foregroundColor: Colors.white,
                         ),
-                        child: const Text('Одобрить'),
+                        child: Text(l10n.parentZone_approve),
                       ),
                     ],
                   ),
@@ -891,4 +892,3 @@ class _ParentZoneScreenState extends ConsumerState<ParentZoneScreen> {
     Navigator.pop(context);
   }
 }
-

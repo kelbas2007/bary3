@@ -2251,11 +2251,12 @@ class _TimelineEventCard extends ConsumerWidget {
             // Пытаемся закрыть все открытые диалоги и bottom sheets
             Navigator.popUntil(context, (route) => route.isFirst);
 
+            final l10n = AppLocalizations.of(context)!;
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Произошла ошибка при удалении'),
+              SnackBar(
+                content: Text(l10n.calendar_deleteError),
                 backgroundColor: Colors.red,
-                duration: Duration(seconds: 3),
+                duration: const Duration(seconds: 3),
               ),
             );
             debugPrint('_deleteEvent: error recovery completed');
@@ -2425,6 +2426,14 @@ class _TimelineEventCard extends ConsumerWidget {
               await ref.read(plannedEventsProvider.notifier).refresh();
             } catch (e) {
               debugPrint('Error restoring event: $e');
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(l10n.calendar_deleteError),
+                    backgroundColor: Colors.red,
+                  ),
+                );
+              }
             }
           },
         ),

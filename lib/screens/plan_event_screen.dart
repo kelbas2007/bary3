@@ -265,9 +265,10 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
     } catch (e) {
       debugPrint('Error saving event: $e');
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка при сохранении: ${e.toString()}'),
+            content: Text(l10n.planEvent_saveError(e.toString())),
             backgroundColor: Colors.red,
           ),
         );
@@ -416,6 +417,7 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
     // Показываем уведомление о создании
     if (mounted) {
       Navigator.pop(context, true);
+      final l10n = AppLocalizations.of(context)!;
       final events = await StorageService.getPlannedEvents();
 
       if (!mounted) return;
@@ -431,8 +433,8 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
         SnackBar(
           content: Text(
             count > 1
-                ? 'Создано $count повторяющихся событий'
-                : 'Событие запланировано',
+                ? l10n.planEvent_createdRepeatingEvents(count)
+                : l10n.planEvent_eventScheduled,
           ),
         ),
       );
@@ -533,7 +535,7 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 4),
                                   child: Text(
-                                    'Найдено связанных событий: $_relatedEventsCount',
+                                    l10n.planEvent_foundRelatedEvents(_relatedEventsCount),
                                     style: const TextStyle(
                                       color: Colors.white60,
                                       fontSize: 12,
@@ -753,13 +755,13 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
                       ],
                       const SizedBox(height: 24),
                       SwitchListTile(
-                        title: const Text(
-                          'Автоматически выполнить при наступлении даты',
-                          style: TextStyle(color: Colors.white),
+                        title: Text(
+                          l10n.planEvent_autoExecute,
+                          style: const TextStyle(color: Colors.white),
                         ),
-                        subtitle: const Text(
-                          'Сумма будет автоматически добавлена или вычтена из баланса',
-                          style: TextStyle(color: Colors.white70, fontSize: 12),
+                        subtitle: Text(
+                          l10n.planEvent_autoExecuteSubtitle,
+                          style: const TextStyle(color: Colors.white70, fontSize: 12),
                         ),
                         value: _autoExecute,
                         onChanged: (value) {
@@ -784,9 +786,9 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
-                              'Связанные заметки',
-                              style: TextStyle(
+                            Text(
+                              l10n.planEvent_linkedNotes,
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -809,7 +811,7 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
                                   setState(() {});
                                 }
                               },
-                              tooltip: 'Создать заметку',
+                              tooltip: l10n.planEvent_createNote,
                             ),
                           ],
                         ),
@@ -827,16 +829,16 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
                             }
                             final notes = snapshot.data ?? [];
                             if (notes.isEmpty) {
-                              return const Text(
-                                'Нет связанных заметок',
-                                style: TextStyle(color: Colors.white70),
+                              return Text(
+                                l10n.planEvent_noLinkedNotes,
+                                style: const TextStyle(color: Colors.white70),
                               );
                             }
                             return Column(
                               children: notes.map((note) {
                                 return ListTile(
                                   title: Text(
-                                    note['title'] ?? 'Без названия',
+                                    note['title'] ?? l10n.planEvent_untitledNote,
                                     style: const TextStyle(color: Colors.white),
                                   ),
                                   subtitle: Text(
@@ -893,7 +895,7 @@ class _PlanEventScreenState extends State<PlanEventScreen> {
                             }
                           },
                           icon: const Icon(Icons.note_add),
-                          label: const Text('Просмотреть все заметки'),
+                          label: Text(l10n.planEvent_viewAllNotes),
                           style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.white,
                           ),

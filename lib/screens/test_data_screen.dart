@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../l10n/app_localizations.dart';
 import '../theme/aurora_theme.dart';
 import '../utils/weekly_test_data_generator.dart';
 
@@ -9,9 +10,10 @@ class TestDataScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Генератор тестовых данных'),
+        title: Text(l10n.testData_title),
         backgroundColor: Colors.transparent,
       ),
       body: Container(
@@ -36,9 +38,9 @@ class TestDataScreen extends StatelessWidget {
                           size: 48,
                         ),
                         const SizedBox(height: 16),
-                        const Text(
-                          'Генератор тестовых данных',
-                          style: TextStyle(
+                        Text(
+                          l10n.testData_title,
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -63,22 +65,22 @@ class TestDataScreen extends StatelessWidget {
                     try {
                       await WeeklyTestDataGenerator.generateWeeklyData();
                       scaffoldMessenger.showSnackBar(
-                        const SnackBar(
-                          content: Text('✅ Тестовые данные успешно созданы!'),
+                        SnackBar(
+                          content: Text(l10n.testData_success),
                           backgroundColor: Colors.green,
                         ),
                       );
                     } catch (e) {
                       scaffoldMessenger.showSnackBar(
                         SnackBar(
-                          content: Text('❌ Ошибка: $e'),
+                          content: Text(l10n.testData_error(e.toString())),
                           backgroundColor: Colors.red,
                         ),
                       );
                     }
                   },
                   icon: const Icon(Icons.add_circle_outline),
-                  label: const Text('Создать недельные данные'),
+                  label: Text(l10n.testData_generateWeekly),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AuroraTheme.neonBlue,
                     foregroundColor: Colors.white,
@@ -95,18 +97,18 @@ class TestDataScreen extends StatelessWidget {
                     final confirmed = await showDialog<bool>(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: const Text('Очистить тестовые данные?'),
+                        title: Text(l10n.testData_clearTitle),
                         content: const Text(
                           'Это действие удалит все данные, созданные генератором тестовых данных.',
                         ),
                         actions: [
                           TextButton(
                             onPressed: () => Navigator.pop(context, false),
-                            child: const Text('Отмена'),
+                            child: Text(l10n.testData_clearCancel),
                           ),
                           TextButton(
                             onPressed: () => Navigator.pop(context, true),
-                            child: const Text('Очистить', style: TextStyle(color: Colors.red)),
+                            child: Text(l10n.reset, style: const TextStyle(color: Colors.red)),
                           ),
                         ],
                       ),
@@ -116,15 +118,15 @@ class TestDataScreen extends StatelessWidget {
                       try {
                         await WeeklyTestDataGenerator.clearTestData();
                         scaffoldMessenger.showSnackBar(
-                          const SnackBar(
-                            content: Text('🗑️ Тестовые данные очищены'),
+                          SnackBar(
+                            content: Text(l10n.testData_cleared),
                             backgroundColor: Colors.orange,
                           ),
                         );
                       } catch (e) {
                         scaffoldMessenger.showSnackBar(
                           SnackBar(
-                            content: Text('❌ Ошибка: $e'),
+                            content: Text(l10n.testData_clearError(e.toString())),
                             backgroundColor: Colors.red,
                           ),
                         );
@@ -132,7 +134,7 @@ class TestDataScreen extends StatelessWidget {
                     }
                   },
                   icon: const Icon(Icons.delete_outline),
-                  label: const Text('Очистить тестовые данные'),
+                  label: Text(l10n.testData_clearButton),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: Colors.white,
                     side: const BorderSide(color: Colors.red),

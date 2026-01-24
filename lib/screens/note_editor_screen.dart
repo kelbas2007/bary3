@@ -563,8 +563,8 @@ ${_generateInsights(weekIncome, weekExpense, monthIncome, monthExpense, complete
       });
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Заметка отвязана от даты'),
+          SnackBar(
+            content: Text(AppLocalizations.of(context)!.noteEditor_unlinkedFromDate),
             backgroundColor: Colors.blue,
           ),
         );
@@ -794,8 +794,8 @@ ${_generateInsights(weekIncome, weekExpense, monthIncome, monthExpense, complete
         });
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Изображение добавлено'),
+            SnackBar(
+              content: Text(AppLocalizations.of(context)!.noteEditor_imageAdded),
               backgroundColor: Colors.green,
             ),
           );
@@ -805,7 +805,7 @@ ${_generateInsights(weekIncome, weekExpense, monthIncome, monthExpense, complete
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка добавления изображения: $e'),
+            content: Text(AppLocalizations.of(context)!.noteEditor_imageError(e.toString())),
             backgroundColor: Colors.redAccent,
           ),
         );
@@ -829,8 +829,8 @@ ${_generateInsights(weekIncome, weekExpense, monthIncome, monthExpense, complete
         });
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Файл добавлен'),
+            SnackBar(
+              content: Text(AppLocalizations.of(context)!.noteEditor_fileAdded),
               backgroundColor: Colors.green,
             ),
           );
@@ -840,7 +840,7 @@ ${_generateInsights(weekIncome, weekExpense, monthIncome, monthExpense, complete
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка добавления файла: $e'),
+            content: Text(AppLocalizations.of(context)!.noteEditor_fileError(e.toString())),
             backgroundColor: Colors.redAccent,
           ),
         );

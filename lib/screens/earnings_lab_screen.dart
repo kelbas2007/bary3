@@ -1872,8 +1872,8 @@ class _CompleteTaskDialogState extends State<_CompleteTaskDialog> {
     // Пока просто показываем сообщение.
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Функция фото будет доступна после установки image_picker'),
+      SnackBar(
+        content: Text(AppLocalizations.of(context)!.earningsLab_photoFeatureUnavailable),
       ),
     );
   }
@@ -2063,7 +2063,7 @@ class _CompleteTaskDialogState extends State<_CompleteTaskDialog> {
                 OutlinedButton.icon(
                   onPressed: _pickImage,
                   icon: const Icon(Icons.camera_alt),
-                  label: const Text('Добавить фото (до 3)'),
+                  label: Text(AppLocalizations.of(context)!.earningsLab_addPhoto),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: Colors.white,
                     side: const BorderSide(color: Colors.white38),
