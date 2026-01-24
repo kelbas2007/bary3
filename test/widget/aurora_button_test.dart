@@ -8,7 +8,10 @@ void main() {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: AuroraButton(text: 'Test Button', onPressed: null),
+            body: AuroraButton(
+              text: 'Test Button',
+              onPressed: null,
+            ),
           ),
         ),
       );
@@ -21,25 +24,17 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: Center(
-              child: AuroraButton(
-                text: 'Test Button',
-                onPressed: () {
-                  tapped = true;
-                },
-              ),
+            body: AuroraButton(
+              text: 'Test Button',
+              onPressed: () {
+                tapped = true;
+              },
             ),
           ),
         ),
       );
 
-      await tester.pumpAndSettle();
-
-      // Используем find.byType для поиска кнопки и tap с warnIfMissed: false
-      final buttonFinder = find.byType(AuroraButton);
-      expect(buttonFinder, findsOneWidget);
-
-      await tester.tap(buttonFinder, warnIfMissed: false);
+      await tester.tap(find.text('Test Button'));
       await tester.pumpAndSettle();
 
       expect(tapped, isTrue);

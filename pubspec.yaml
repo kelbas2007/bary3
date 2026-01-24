@@ -29,15 +29,13 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animations: ^2.0.11
-  archive: ^3.4.0
   badges: ^3.0.0
   cached_network_image: ^3.4.1
   crypto: ^3.0.3
   cupertino_icons: ^1.0.8
   device_calendar: ^4.3.3
-  ffi: ^2.1.0
   file_picker: ^10.3.8
-  fl_chart: ^0.69.0
+  ffi: ^2.1.0
   flutter:
     sdk: flutter
   flutter_keyboard_visibility: ^5.4.1
@@ -57,6 +55,8 @@ dependencies:
   table_calendar: ^3.1.2
   timezone: ^0.9.0
   url_launcher: ^6.3.1
+  fl_chart: ^0.69.0
+  archive: ^3.4.0
 
 dev_dependencies:
   flutter_lints: ^6.0.0
@@ -87,7 +87,6 @@ flutter:
     - assets/bari_knowledge/
     - assets/bari/
     - assets/aka/models/
-    # NOTE: Model files are large (442MB) but included for offline functionality
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

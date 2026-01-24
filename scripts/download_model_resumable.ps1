@@ -29,7 +29,7 @@ if (Test-Path $MODEL_PATH) {
 }
 
 # Функция для скачивания с поддержкой возобновления
-function Save-FileWithResume {
+function Download-FileWithResume {
     param(
         [string]$Url,
         [string]$OutputPath,
@@ -121,7 +121,7 @@ Write-Host ""
 
 try {
     # Скачиваем модель с поддержкой возобновления
-    Save-FileWithResume -Url $MODEL_URL -OutputPath $TEMP_MODEL_PATH
+    Download-FileWithResume -Url $MODEL_URL -OutputPath $TEMP_MODEL_PATH
     
     $fileSize = (Get-Item $TEMP_MODEL_PATH).Length
     $fileSizeMB = [math]::Round($fileSize / 1MB, 2)

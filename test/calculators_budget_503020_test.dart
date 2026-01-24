@@ -2,24 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:bary3/screens/calculators/budget_50_30_20_calculator.dart';
-import 'package:bary3/services/currency_controller.dart';
-import 'package:bary3/services/currency_scope.dart';
 
 void main() {
   group('Budget503020Calculator', () {
     testWidgets('calculates 50/30/20 correctly for monthly income', (
       WidgetTester tester,
     ) async {
-      final currencyController = CurrencyController();
-
-      // Стартуем калькулятор внутри MaterialApp с CurrencyScope
+      // Стартуем калькулятор внутри MaterialApp
       await tester.pumpWidget(
-        MaterialApp(
-          home: CurrencyScope(
-            controller: currencyController,
-            child: const Budget503020Calculator(),
-          ),
-        ),
+        const MaterialApp(home: Budget503020Calculator()),
       );
 
       // Находим поле ввода дохода по тексту
@@ -41,29 +32,18 @@ void main() {
       expect(find.text('30% Желания'), findsOneWidget);
       expect(find.text('20% Накопления'), findsOneWidget);
 
-      // Проверяем результаты (могут быть отформатированы с валютой)
-      // Ищем числа 500, 300, 200 в любом формате
       expect(
-        find.descendant(
-          of: find.byType(Budget503020Calculator),
-          matching: find.textContaining('500'),
-        ),
+        find.text('500'),
         findsOneWidget,
         reason: '50% от 1000 должно быть 500',
       );
       expect(
-        find.descendant(
-          of: find.byType(Budget503020Calculator),
-          matching: find.textContaining('300'),
-        ),
+        find.text('300'),
         findsOneWidget,
         reason: '30% от 1000 должно быть 300',
       );
       expect(
-        find.descendant(
-          of: find.byType(Budget503020Calculator),
-          matching: find.textContaining('200'),
-        ),
+        find.text('200'),
         findsOneWidget,
         reason: '20% от 1000 должно быть 200',
       );
@@ -72,15 +52,8 @@ void main() {
     testWidgets('clears results when income is invalid', (
       WidgetTester tester,
     ) async {
-      final currencyController = CurrencyController();
-
       await tester.pumpWidget(
-        MaterialApp(
-          home: CurrencyScope(
-            controller: currencyController,
-            child: const Budget503020Calculator(),
-          ),
-        ),
+        const MaterialApp(home: Budget503020Calculator()),
       );
 
       final textField = find.byType(TextField);
