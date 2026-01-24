@@ -80,7 +80,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
   @override
   void initState() {
     super.initState();
-
+    
     // Слушаем deep links от системных ассистентов
     _deepLinkSubscription = DeepLinkService.instance.deepLinks.listen(
       _handleDeepLink,
@@ -88,7 +88,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
         debugPrint('[MainScreen] Deep link error: $error');
       },
     );
-
+    
     // Обрабатываем начальный deep link (если приложение запущено через deep link)
     DeepLinkService.instance.handleInitialLink();
     // Откладываем загрузку данных, чтобы не блокировать UI при запуске
@@ -137,27 +137,21 @@ class _MainScreenState extends ConsumerState<MainScreen>
     MainScreen.tabNotifier.removeListener(_tabListener);
     _fabController.dispose();
     _deepLinkSubscription?.cancel();
-    // Отменяем все таймеры
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      // Очищаем все отложенные задачи
-    });
     super.dispose();
   }
-
+  
   /// Обработка deep link от системного ассистента
   void _handleDeepLink(DeepLink link) {
-    debugPrint(
-      '[MainScreen] Handling deep link: ${link.scheme}://${link.host}${link.path}',
-    );
+    debugPrint('[MainScreen] Handling deep link: ${link.scheme}://${link.host}${link.path}');
     if (_isNavigating) return;
     _isNavigating = true;
-
+    
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) {
         _isNavigating = false;
         return;
       }
-
+      
       try {
         // Обработка импорта тестовых данных (проверяем первым)
         if (link.isImportTestData) {
@@ -193,7 +187,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
       }
     });
   }
-
+  
   void _navigateToScreen(String screen) {
     switch (screen) {
       case 'balance':
@@ -233,9 +227,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
       case 'calendar_forecast':
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => const CalendarForecastScreen(),
-          ),
+          MaterialPageRoute(builder: (context) => const CalendarForecastScreen()),
         );
         break;
       case 'achievements':
@@ -246,10 +238,10 @@ class _MainScreenState extends ConsumerState<MainScreen>
         break;
     }
   }
-
+  
   void _navigateToCalculator(String calculator) {
     Widget? targetCalculator;
-
+    
     // Определяем, какой калькулятор нужно открыть
     switch (calculator) {
       case 'piggy_plan':
@@ -280,35 +272,40 @@ class _MainScreenState extends ConsumerState<MainScreen>
         targetCalculator = const CalendarForecastCalculator();
         break;
     }
-
+    
     // Если калькулятор найден, открываем его, иначе открываем список
     final screen = targetCalculator ?? const CalculatorsListScreen();
-    Navigator.push(context, MaterialPageRoute(builder: (context) => screen));
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => screen),
+    );
   }
-
+  
   void _navigateToBariChat(String question) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => BariChatScreen(topicTitle: question),
+        builder: (context) => BariChatScreen(
+          topicTitle: question,
+        ),
       ),
     );
   }
-
+  
   void _navigateToCreateNote() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const NotesScreen()),
     );
   }
-
+  
   void _navigateToCreateEvent() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const PlanEventScreen()),
     );
   }
-
+  
   /// Автоматический импорт тестовых данных
   Future<void> _importTestData() async {
     debugPrint('[MainScreen] Starting automatic test data import...');
@@ -384,12 +381,12 @@ class _MainScreenState extends ConsumerState<MainScreen>
         // Сохраняем тип подсказки в память для избежания повторений
         final memory = await StorageService.getBariMemory();
         // Определяем тип подсказки по payload действия
-        final hintType = hint.actions.isNotEmpty
+        final hintType = hint.actions.isNotEmpty 
             ? _extractHintType(hint.actions.first.payload ?? '')
             : 'general';
         memory.addTip('hint_type:$hintType');
         await StorageService.saveBariMemory(memory);
-
+        
         setState(() {
           _proactiveHint = hint;
         });
@@ -404,7 +401,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
       debugPrint('Error getting proactive hint: $e');
     }
   }
-
+  
   /// Извлекает тип подсказки из payload
   String _extractHintType(String payload) {
     if (payload.contains('earnings_lab')) return 'earnings_lab';
@@ -740,23 +737,23 @@ class _MainScreenState extends ConsumerState<MainScreen>
 
     // Слушаем изменения транзакций для обновления подсказок
     // Проверяем, что данные загружены, прежде чем проверять подсказки
-    ref.listen<AsyncValue<List<Transaction>>>(transactionsProvider, (
-      previous,
-      next,
-    ) {
-      // Проверяем подсказки только если данные успешно загружены
-      if (next.hasValue && next.value != null && next.value!.isNotEmpty) {
-        // Откладываем проверку, чтобы не блокировать UI
-        Future.delayed(const Duration(milliseconds: 100), () {
-          if (mounted) {
-            _checkProactiveHintDebounced();
-          }
-        });
-      }
-    });
+    ref.listen<AsyncValue<List<Transaction>>>(
+      transactionsProvider,
+      (previous, next) {
+        // Проверяем подсказки только если данные успешно загружены
+        if (next.hasValue && next.value != null && next.value!.isNotEmpty) {
+          // Откладываем проверку, чтобы не блокировать UI
+          Future.delayed(const Duration(milliseconds: 100), () {
+            if (mounted) {
+              _checkProactiveHintDebounced();
+            }
+          });
+        }
+      },
+    );
 
     final isTablet = MediaQuery.of(context).size.width >= 600;
-
+    
     return Scaffold(
       body: Stack(
         children: [
@@ -1000,6 +997,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
     );
   }
 
+
   Widget _buildFabOption({
     required IconData icon,
     required String label,
@@ -1011,7 +1009,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          FloatingActionButton.extended(
+            FloatingActionButton.extended(
             heroTag: null,
             onPressed: () {
               HapticFeedbackUtil.mediumImpact();

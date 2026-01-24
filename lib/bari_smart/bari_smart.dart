@@ -15,9 +15,7 @@ import 'providers/local_llm_provider.dart';
 import 'providers/fallback_provider.dart';
 import 'providers/system_assistant_provider.dart';
 import 'storage/bari_settings_store.dart';
-import 'utils/prompt_sanitizer.dart';
 import 'package:flutter/foundation.dart';
-import 'dart:async';
 
 class BariSmart {
   BariSmart._();
@@ -39,29 +37,14 @@ class BariSmart {
     _inited = true;
   }
 
-  Future<BariResponse> respond(
-    String message,
-    BariContext ctx,
-  ) async {
+  Future<BariResponse> respond(String message, BariContext ctx) async {
     await init();
 
     // Настройки могли измениться в SettingsScreen после инициализации.
     // Перечитываем перед каждым ответом, чтобы Online/Hybrid/AI режим работал без перезапуска.
     await settings.load();
 
-    // Санитизация входящего сообщения для защиты от инъекций
-    final sanitizedMessage = PromptSanitizer.sanitize(message);
-    final text = sanitizedMessage.trim();
-
-    // Валидация промпта для отладки
-    if (kDebugMode) {
-      final validation = PromptSanitizer.validate(text);
-      if (!validation.isSafe) {
-        debugPrint(
-          '[BariSmart] Prompt validation issues: ${validation.summary}',
-        );
-      }
-    }
+    final text = message.trim();
     if (text.isEmpty) {
       return const BariResponse(
         meaning: 'Напиши вопрос 🙂',
@@ -105,62 +88,28 @@ class BariSmart {
       knowledge, // База знаний
     ];
 
-    // Пробуем офлайн провайдеры с timeout
+    // Пробуем офлайн провайдеры
     for (final p in offlineProviders) {
-      try {
-        final r = await p
-            .tryRespond(text, ctx)
-            .timeout(
-              const Duration(seconds: 2),
-              onTimeout: () {
-                if (kDebugMode) {
-                  debugPrint('[BariSmart] Provider ${p.runtimeType} timeout');
-                }
-                return null;
-              },
-            );
-        if (r != null && r.confidence > 0.7) return r;
-      } catch (e) {
-        if (kDebugMode) {
-          debugPrint('[BariSmart] Provider ${p.runtimeType} error: $e');
-        }
-        continue;
-      }
+      final r = await p.tryRespond(text, ctx);
+      if (r != null && r.confidence > 0.7) return r;
     }
 
-    // TIER 2: Local LLM (on-device AI через llama.cpp) с timeout
+    // TIER 2: Local LLM (on-device AI через llama.cpp)
     if (kDebugMode) {
       debugPrint('[BariSmart] Trying LocalLLMProvider');
     }
 
-    try {
-      final localLLMRes = await localLLM
-          .tryRespond(text, ctx)
-          .timeout(
-            const Duration(seconds: 10),
-            onTimeout: () {
-              if (kDebugMode) {
-                debugPrint('[BariSmart] LocalLLMProvider timeout (10s)');
-              }
-              return null;
-            },
-          );
-
-      if (localLLMRes != null) {
-        if (kDebugMode) {
-          debugPrint(
-            '[BariSmart] LocalLLMProvider ответил (confidence=${localLLMRes.confidence})',
-          );
-        }
-        return localLLMRes;
-      }
+    final localLLMRes = await localLLM.tryRespond(text, ctx);
+    if (localLLMRes != null) {
       if (kDebugMode) {
-        debugPrint('[BariSmart] LocalLLMProvider не дал ответа');
+        debugPrint(
+          '[BariSmart] LocalLLMProvider ответил (confidence=${localLLMRes.confidence})',
+        );
       }
-    } catch (e) {
-      if (kDebugMode) {
-        debugPrint('[BariSmart] LocalLLMProvider error: $e');
-      }
+      return localLLMRes;
+    }
+    if (kDebugMode) {
+      debugPrint('[BariSmart] LocalLLMProvider не дал ответа');
     }
 
     // === SYSTEM ASSISTANT: Используем встроенный ассистент как fallback ===
@@ -175,61 +124,26 @@ class BariSmart {
         debugPrint('[BariSmart] Trying SystemAssistantProvider');
       }
 
-      try {
-        final systemRes = await systemAssistantProvider
-            .tryRespond(text, ctx)
-            .timeout(
-              const Duration(seconds: 3),
-              onTimeout: () {
-                if (kDebugMode) {
-                  debugPrint(
-                    '[BariSmart] SystemAssistantProvider timeout (3s)',
-                  );
-                }
-                return null;
-              },
-            );
+      final systemRes = await systemAssistantProvider.tryRespond(text, ctx);
 
-        if (systemRes != null) {
-          if (kDebugMode) {
-            debugPrint(
-              '[BariSmart] SystemAssistantProvider ответил (confidence=${systemRes.confidence})',
-            );
-          }
-          return systemRes;
-        }
+      if (systemRes != null) {
         if (kDebugMode) {
-          debugPrint('[BariSmart] SystemAssistantProvider не дал ответа');
+          debugPrint(
+            '[BariSmart] SystemAssistantProvider ответил (confidence=${systemRes.confidence})',
+          );
         }
-      } catch (e) {
-        if (kDebugMode) {
-          debugPrint('[BariSmart] SystemAssistantProvider error: $e');
-        }
+        return systemRes;
+      }
+      if (kDebugMode) {
+        debugPrint('[BariSmart] SystemAssistantProvider не дал ответа');
       }
     }
 
     // Fallback всегда последний
     // Передаем системный ассистент в FallbackProvider для финальной попытки
     final fallback = FallbackProvider(systemAssistant: systemAssistantProvider);
-    try {
-      final fallbackRes = await fallback
-          .tryRespond(text, ctx)
-          .timeout(
-            const Duration(seconds: 2),
-            onTimeout: () {
-              if (kDebugMode) {
-                debugPrint('[BariSmart] FallbackProvider timeout (2s)');
-              }
-              return null;
-            },
-          );
-
-      if (fallbackRes != null) return fallbackRes;
-    } catch (e) {
-      if (kDebugMode) {
-        debugPrint('[BariSmart] FallbackProvider error: $e');
-      }
-    }
+    final fallbackRes = await fallback.tryRespond(text, ctx);
+    if (fallbackRes != null) return fallbackRes;
 
     // На всякий случай (FallbackProvider должен всегда вернуть ответ):
     return const BariResponse(
