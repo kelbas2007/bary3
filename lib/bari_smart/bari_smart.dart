@@ -11,7 +11,6 @@ import 'providers/goal_advisor_provider.dart';
 import 'providers/spending_rules_provider.dart';
 import 'providers/context_aware_provider.dart';
 import 'providers/knowledge_pack_provider.dart';
-import 'providers/online_reference_provider.dart';
 import 'providers/local_llm_provider.dart';
 import 'providers/fallback_provider.dart';
 import 'providers/system_assistant_provider.dart';
@@ -42,9 +41,8 @@ class BariSmart {
 
   Future<BariResponse> respond(
     String message,
-    BariContext ctx, {
-    bool forceOnline = false,
-  }) async {
+    BariContext ctx,
+  ) async {
     await init();
 
     // Настройки могли измениться в SettingsScreen после инициализации.
@@ -89,7 +87,7 @@ class BariSmart {
 
     if (kDebugMode) {
       debugPrint(
-        '[BariSmart] mode=${settings.mode.name} onlineEnabled=${settings.onlineEnabled} forceOnline=$forceOnline intent=$intent msg="$text"',
+        '[BariSmart] mode=${settings.mode.name} onlineEnabled=${settings.onlineEnabled} intent=$intent msg="$text"',
       );
     }
 
@@ -162,66 +160,6 @@ class BariSmart {
     } catch (e) {
       if (kDebugMode) {
         debugPrint('[BariSmart] LocalLLMProvider error: $e');
-      }
-    }
-
-    // Если hybrid или online режим, пробуем онлайн (Wikipedia, DuckDuckGo)
-    final shouldTryOnline =
-        forceOnline ||
-        settings.mode == BariMode.online ||
-        (settings.mode == BariMode.hybrid &&
-            intent == BariIntent.onlineReference);
-
-    if (shouldTryOnline && settings.onlineEnabled) {
-      if (kDebugMode) {
-        debugPrint(
-          '[BariSmart] Trying OnlineReferenceProvider (shouldTryOnline=$shouldTryOnline)',
-        );
-      }
-
-      // В hybrid-режиме OnlineReferenceProvider настроен как manualOnly.
-      // Для интента onlineReference считаем это явным запросом справки и форсируем онлайн.
-      final effectiveForceOnline =
-          forceOnline ||
-          (settings.mode == BariMode.hybrid &&
-              intent == BariIntent.onlineReference);
-      final onlineProvider = OnlineReferenceProvider(
-        enabled: settings.onlineEnabled,
-        showSources: settings.showSources,
-        manualOnly:
-            settings.mode == BariMode.hybrid, // В hybrid только по запросу
-      );
-
-      try {
-        final onlineRes = await onlineProvider
-            .tryRespond(text, ctx, forceOnline: effectiveForceOnline)
-            .timeout(
-              const Duration(seconds: 5),
-              onTimeout: () {
-                if (kDebugMode) {
-                  debugPrint(
-                    '[BariSmart] OnlineReferenceProvider timeout (5s)',
-                  );
-                }
-                return null;
-              },
-            );
-
-        if (onlineRes != null) {
-          if (kDebugMode) {
-            debugPrint(
-              '[BariSmart] OnlineReferenceProvider ответил (confidence=${onlineRes.confidence})',
-            );
-          }
-          return onlineRes;
-        }
-        if (kDebugMode) {
-          debugPrint('[BariSmart] OnlineReferenceProvider не дал ответа');
-        }
-      } catch (e) {
-        if (kDebugMode) {
-          debugPrint('[BariSmart] OnlineReferenceProvider error: $e');
-        }
       }
     }
 

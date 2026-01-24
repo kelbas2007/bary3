@@ -223,26 +223,7 @@ class _BariChatScreenState extends State<BariChatScreen> {
       return;
     }
 
-    if (action.type == BariActionType.runOnlineSearch) {
-      final ctx = await BariContextAdapter.build(currentScreenId: 'balance');
-      final response = await BariSmart.instance.respond(
-        action.payload ?? '',
-        ctx,
-        forceOnline: true,
-      );
-      if (!mounted) return;
-      _messages.add(
-        ChatMessage(
-          title: response.meaning,
-          advice: response.advice,
-          actions: response.actions,
-          isBari: true,
-          originalResponse: response,
-        ),
-      );
-      setState(() {});
-      return;
-    }
+    // BariActionType.runOnlineSearch удален
 
     // Обработка действий
     switch (action.type) {

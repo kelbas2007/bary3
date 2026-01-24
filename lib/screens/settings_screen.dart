@@ -26,8 +26,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
   String _language = 'ru';
   String _theme = 'blue';
   bool _notificationsEnabled = true;
-  String _bariMode = 'offline';
-  bool _bariShowSources = true;
   bool _bariSmallTalkEnabled = true;
   UxDetailLevel _uxDetailLevel = UxDetailLevel.simple;
   
@@ -51,8 +49,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final language = await StorageService.getLanguage();
     final theme = await StorageService.getTheme();
     final notifications = await StorageService.getNotificationsEnabled();
-    final bariMode = await StorageService.getBariMode();
-    final bariShowSources = await StorageService.getBariShowSources();
     final bariSmallTalkEnabled = await StorageService.getBariSmallTalkEnabled();
     final uxLevelRaw = await StorageService.getUxDetailLevel();
     
@@ -65,8 +61,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       _language = language;
       _theme = theme;
       _notificationsEnabled = notifications;
-      _bariMode = bariMode;
-      _bariShowSources = bariShowSources;
       _bariSmallTalkEnabled = bariSmallTalkEnabled;
       _uxDetailLevel = UxDetailLevelX.fromStorage(uxLevelRaw);
       _dailyExpenseReminderEnabled = dailyReminder;
@@ -346,70 +340,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ),
                     ),
                     const SizedBox(height: 16),
-                    Text(
-                      AppLocalizations.of(context)!.settings_bariMode,
-                      style: const TextStyle(color: Colors.white70),
-                    ),
-                    const SizedBox(height: 8),
-                    Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      children: [
-                        ChoiceChip(
-                          label: Text(AppLocalizations.of(context)!.settings_bariModeOffline),
-                          selected: _bariMode == 'offline',
-                          onSelected: (selected) async {
-                            if (selected) {
-                              setState(() => _bariMode = 'offline');
-                              await StorageService.setBariMode('offline');
-                            }
-                          },
-                        ),
-                        ChoiceChip(
-                          label: Text(AppLocalizations.of(context)!.settings_bariModeOnline),
-                          selected: _bariMode == 'online',
-                          onSelected: (selected) async {
-                            if (selected) {
-                              setState(() => _bariMode = 'online');
-                              await StorageService.setBariMode('online');
-                            }
-                          },
-                        ),
-                        ChoiceChip(
-                          label: Text(AppLocalizations.of(context)!.settings_bariModeHybrid),
-                          selected: _bariMode == 'hybrid',
-                          onSelected: (selected) async {
-                            if (selected) {
-                              setState(() => _bariMode = 'hybrid');
-                              await StorageService.setBariMode('hybrid');
-                            }
-                          },
-                        ),
-                      ],
-                    ),
-                    
-                    const SizedBox(height: 16),
-                    SwitchListTile(
-                      title: Text(
-                        AppLocalizations.of(context)!.settings_showSources,
-                        style: const TextStyle(color: Colors.white),
-                      ),
-                      subtitle: Text(
-                        AppLocalizations.of(context)!.settings_showSourcesDescription,
-                        style: const TextStyle(
-                          color: Colors.white70,
-                          fontSize: 12,
-                        ),
-                      ),
-                      value: _bariShowSources,
-                      onChanged: (value) async {
-                        setState(() {
-                          _bariShowSources = value;
-                        });
-                        await StorageService.setBariShowSources(value);
-                      },
-                    ),
-                    const SizedBox(height: 8),
                     SwitchListTile(
                       title: Text(
                         AppLocalizations.of(context)!.settings_smallTalk,
