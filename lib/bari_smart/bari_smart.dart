@@ -37,7 +37,10 @@ class BariSmart {
     _inited = true;
   }
 
-  Future<BariResponse> respond(String message, BariContext ctx) async {
+  Future<BariResponse> respond(
+    String message,
+    BariContext ctx,
+  ) async {
     await init();
 
     // Настройки могли измениться в SettingsScreen после инициализации.
