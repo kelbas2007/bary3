@@ -317,10 +317,10 @@ class _MainScreenState extends ConsumerState<MainScreen>
       debugPrint('[MainScreen] Test data import completed successfully!');
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('✅ Тестовые данные успешно импортированы!'),
+          SnackBar(
+            content: Text(AppLocalizations.of(context)!.mainScreen_importSuccess),
             backgroundColor: Colors.green,
-            duration: Duration(seconds: 3),
+            duration: const Duration(seconds: 3),
           ),
         );
       }
@@ -329,7 +329,7 @@ class _MainScreenState extends ConsumerState<MainScreen>
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('❌ Ошибка импорта: $e'),
+            content: Text(AppLocalizations.of(context)!.mainScreen_importError(e.toString())),
             backgroundColor: Colors.red,
             duration: const Duration(seconds: 3),
           ),

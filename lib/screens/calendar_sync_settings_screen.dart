@@ -40,9 +40,10 @@ class _CalendarSyncSettingsScreenState
       await _loadCalendars();
     } catch (e) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка загрузки: $e'),
+            content: Text(l10n.calendarSync_loadError(e.toString())),
             backgroundColor: Colors.redAccent,
           ),
         );
@@ -64,14 +65,15 @@ class _CalendarSyncSettingsScreenState
   }
 
   Future<void> _requestPermissions() async {
+    final l10n = AppLocalizations.of(context)!;
     try {
       final granted = await _syncService.requestPermissions();
       if (granted) {
         await _loadCalendars();
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Разрешения предоставлены'),
+            SnackBar(
+              content: Text(l10n.calendarSync_permissionsGrantedMsg),
               backgroundColor: Colors.green,
             ),
           );
@@ -79,8 +81,8 @@ class _CalendarSyncSettingsScreenState
       } else {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Разрешения не предоставлены'),
+            SnackBar(
+              content: Text(l10n.calendarSync_permissionsNotGrantedMsg),
               backgroundColor: Colors.redAccent,
             ),
           );
@@ -90,7 +92,7 @@ class _CalendarSyncSettingsScreenState
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка запроса разрешений: $e'),
+            content: Text(l10n.calendarSync_permissionError(e.toString())),
             backgroundColor: Colors.redAccent,
           ),
         );
@@ -106,14 +108,15 @@ class _CalendarSyncSettingsScreenState
   }
 
   Future<void> _syncNow() async {
+    final l10n = AppLocalizations.of(context)!;
     setState(() => _syncing = true);
     try {
       await _syncManager.syncAll();
       _syncReport = await _syncManager.getSyncReport();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Синхронизация завершена'),
+          SnackBar(
+            content: Text(l10n.calendarSync_syncComplete),
             backgroundColor: Colors.green,
           ),
         );
@@ -122,7 +125,7 @@ class _CalendarSyncSettingsScreenState
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Ошибка синхронизации: $e'),
+            content: Text(l10n.calendarSync_syncError(e.toString())),
             backgroundColor: Colors.redAccent,
           ),
         );
@@ -219,7 +222,7 @@ class _CalendarSyncSettingsScreenState
                             .contains(calendar.id);
                         return CheckboxListTile(
                           title: Text(
-                            calendar.name ?? 'Unnamed Calendar',
+                            calendar.name ?? l10n.calendarSync_unnamedCalendar,
                             style: const TextStyle(color: Colors.white),
                           ),
                           subtitle: calendar.accountName != null
@@ -371,7 +374,7 @@ class _CalendarSyncSettingsScreenState
                     style: const TextStyle(color: Colors.white),
                   ),
                     subtitle: Text(
-                      '${_config?.syncIntervalHours ?? 24} ч.',
+                      l10n.calendarSync_hours(_config?.syncIntervalHours ?? 24),
                       style: const TextStyle(color: Colors.white70),
                     ),
                   trailing: DropdownButton<int>(
@@ -379,7 +382,7 @@ class _CalendarSyncSettingsScreenState
                     items: [1, 6, 12, 24, 48].map((hours) {
                       return DropdownMenuItem(
                         value: hours,
-                        child: Text('$hours ч.'),
+                        child: Text(l10n.calendarSync_hours(hours)),
                       );
                     }).toList(),
                     onChanged: (value) {

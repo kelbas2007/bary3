@@ -1,37 +1,28 @@
 import '../../services/storage_service.dart';
 
+// BariMode удален, так как онлайн режим удален
 enum BariMode {
-  offline, // Offline Coach (default)
-  online,  // Online Reference (Wikipedia, DuckDuckGo)
-  hybrid,  // Hybrid (сначала офлайн, если не нашёл — онлайн)
+  offline,
 }
 
 class BariSettingsStore {
+  // Всегда offline
   BariMode mode = BariMode.offline;
-  bool showSources = true;
+  bool showSources = false; // Источники не показываем, так как нет онлайн поиска
   bool smallTalkEnabled = true;
-  bool useSystemAssistant = true; // Использовать системный ассистент как fallback
+  bool useSystemAssistant = true;
 
   Future<void> load() async {
-    final modeStr = await StorageService.getBariMode();
-    mode = BariMode.values.firstWhere(
-      (m) => m.name == modeStr,
-      orElse: () => BariMode.offline,
-    );
-    showSources = await StorageService.getBariShowSources();
+    // Режим всегда офлайн
+    mode = BariMode.offline;
+    // Источники отключены
+    showSources = false;
     smallTalkEnabled = await StorageService.getBariSmallTalkEnabled();
     useSystemAssistant = await StorageService.getBariUseSystemAssistant();
   }
 
-  Future<void> setMode(BariMode v) async {
-    mode = v;
-    await StorageService.setBariMode(v.name);
-  }
-
-  Future<void> setShowSources(bool v) async {
-    showSources = v;
-    await StorageService.setBariShowSources(v);
-  }
+  // Метод setMode удален
+  // Метод setShowSources удален
 
   Future<void> setSmallTalkEnabled(bool v) async {
     smallTalkEnabled = v;
@@ -43,8 +34,7 @@ class BariSettingsStore {
     await StorageService.setBariUseSystemAssistant(v);
   }
 
-  // Удобные геттеры для совместимости
-  bool get onlineEnabled => mode == BariMode.online || mode == BariMode.hybrid;
-  bool get manualOnly => mode == BariMode.hybrid; // В hybrid режиме онлайн только по запросу
+  // Для совместимости оставляем геттеры, но они всегда возвращают false
+  bool get onlineEnabled => false;
+  bool get manualOnly => true;
 }
-
